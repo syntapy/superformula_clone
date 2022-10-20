@@ -1,17 +1,87 @@
 import * as React from "react"
-import type { HeadFC } from "gatsby"
 
-interface NavButtonProps {
+interface StyleButtonProps {
+  style?: object // TODO: Make not optional when adding css
+}
+
+interface ButtonProps {
   href: string
   text: string
 }
 
-export function NavButton(props: NavButtonProps) {
+export function HomeNavButton(props: ButtonProps) {
   return (
-    <button
-      href={props.href}
-    >
-      {props.text}
+    <div>
+      <a href={props.href}>{props.text}</a>
+    </div>
+  )
+}
+
+export function NavButton(props: ButtonProps) {
+  return (
+    <div>
+      <a href={props.href}>{props.text}</a>
+    </div>
+  )
+}
+
+export function CareersNavButton(props: ButtonProps) {
+  return (
+    <div>
+      <a href={props.href}>{props.text}</a>
+    </div>
+  )
+}
+
+function Button(props: ButtonProps) {
+  return (
+    <div>
+      <a href={props.href}>{props.text}</a>
+    </div>
+  )
+}
+
+interface HRefProps {
+  href: string
+}
+
+function ButtonArrow(props: ButtonProps & StyleButtonProps) {
+  return (
+    <div style={props.style}>
+      <a href={props.href}>{props.text} → </a>
+    </div>
+  )
+}
+
+export function ButtonLight(props: ButtonProps) {
+  return (
+    <ButtonArrow href={props.href} text={props.text} />
+  )
+}
+
+export function ButtonDark(props: ButtonProps) {
+  return (
+    <ButtonArrow href={props.href} text={props.text} />
+  )
+}
+
+export function ArticleButton(props: ButtonProps) {
+  return (
+    <div>
+      <a href={props.href}>{props.text}</a>
+    </div>
+  )
+}
+
+interface SvgProps {
+  icon: string
+  alt: string
+}
+
+export function ButtonSvg(props: SvgProps & HRefProps) {
+  return (
+    <button href={props.href}>
+      <img src={props.svg_src} alt={props.alt} />
     </button>
   )
 }

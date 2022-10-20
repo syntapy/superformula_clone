@@ -1,20 +1,15 @@
 import * as React from "react"
-import { NavButton } from "./buttons"
+import { HomeNavButton, NavButton, CareersNavButton } from "./buttons"
 
 export default function NavBar() {
   return (
     <nav>
-      <ul>
-        <li>
-          <NavButton href="/" text="Home" />
-        </li>
-        <li>
-          <NavButton href="/about" text="About" />
-        </li>
-        <li>
-          <NavButton href="/contact" text="Contact" />
-        </li>
-      </ul>
+      <HomeNavButton href="/" text="Superformula." />
+      <NavButton href="/services" text="Services" />
+      <NavButton href="/work" text="Work" />
+      <NavButton href="/articles" text="Articles" />
+      <NavButton href="/contact" text="Contact" />
+      <CareersNavButton href="https://careers.superformula.com" text="Careers" />
     </nav>
   );
 }
