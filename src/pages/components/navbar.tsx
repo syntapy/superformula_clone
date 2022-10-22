@@ -1,13 +1,11 @@
 import * as React from "react"
 import { HomeNavButton, NavButton, CareersNavButton } from "./buttons"
 
-const navStyles = {
-  display: "flex",
-}
+import * as styles from "../styles/navbar.module.css"
 
 export default function NavBar() {
   return (
-    <nav style={navStyles}>
+    <nav className={styles.nav}>
       <HomeNavButton href="/" text="Superformula." />
       <NavButton href="/services" text="Services" />
       <NavButton href="/work" text="Work" />

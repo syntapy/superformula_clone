@@ -1,7 +1,8 @@
 import * as React from "react"
+import * as styles from "../styles/buttons.module.css"
 
-interface StyleButtonProps {
-  style?: object // TODO: Make not optional when adding css
+interface StyleProps {
+  className?: string
 }
 
 interface ButtonProps {
@@ -9,47 +10,25 @@ interface ButtonProps {
   text: string
 }
 
-const homeNavButtonStyles = {
-  flex: "1 1 0",
-}
-
 export function HomeNavButton(props: ButtonProps) {
   return (
-    <div style={homeNavButtonStyles}>
+    <div className={styles.homeNavButton}>
       <a href={props.href}>{props.text}</a>
     </div>
   )
-}
-
-const navButtonStyles = {
-  flex: "0 1 0",
-  padding: "0 1rem",
 }
 
 export function NavButton(props: ButtonProps) {
   return (
-    <div style={navButtonStyles}>
+    <div className={styles.navButton}>
       <a href={props.href}>{props.text}</a>
     </div>
   )
-}
-
-const careerNavButtonStyles = {
-  ...navButtonStyles,
-  padding: "0 0.5rem",
 }
 
 export function CareersNavButton(props: ButtonProps) {
   return (
-    <div style={careerNavButtonStyles}>
-      <a href={props.href}>{props.text}</a>
-    </div>
-  )
-}
-
-function Button(props: ButtonProps) {
-  return (
-    <div style={props.style}>
+    <div className={styles.careerNavButton}>
       <a href={props.href}>{props.text}</a>
     </div>
   )
@@ -59,9 +38,9 @@ interface HRefProps {
   href: string
 }
 
-function ButtonArrow(props: ButtonProps) {
+function ButtonArrow(props: ButtonProps & StyleProps) {
   return (
-    <div style={props.style}>
+    <div className={props.className}>
       <a href={props.href}>{props.text} → </a>
     </div>
   )
@@ -69,7 +48,7 @@ function ButtonArrow(props: ButtonProps) {
 
 export function ButtonLight(props: ButtonProps) {
   return (
-    <ButtonArrow style={props.style} href={props.href} text={props.text} />
+    <ButtonArrow href={props.href} text={props.text} />
   )
 }
 
