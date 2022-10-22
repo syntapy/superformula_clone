@@ -4,14 +4,16 @@ import { HomeNavButton, NavButton, CareersNavButton } from "./buttons"
 import * as styles from "../styles/navbar.module.css"
 
 export default function NavBar() {
+  const homeItem: string = styles.homeItem// + " " + styles.navItem
+  const pageItem: string = styles.pageItem// + " " + styles.navItem
   return (
     <nav className={styles.nav}>
-      <HomeNavButton href="/" text="Superformula." />
-      <NavButton href="/services" text="Services" />
-      <NavButton href="/work" text="Work" />
-      <NavButton href="/articles" text="Articles" />
-      <NavButton href="/contact" text="Contact" />
-      <CareersNavButton href="https://careers.superformula.com" text="Careers" />
+      <HomeNavButton className={homeItem} href="/" text="Superformula." />
+      <NavButton className={pageItem} href="/services" text="Services" />
+      <NavButton className={pageItem} href="/work" text="Work" />
+      <NavButton className={pageItem} href="/articles" text="Articles" />
+      <NavButton className={pageItem} href="/contact" text="Contact" />
+      <CareersNavButton className={pageItem} href="https://careers.superformula.com" text="Careers" />
     </nav>
   )
 }

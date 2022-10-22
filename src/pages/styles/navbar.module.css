@@ -1,4 +1,25 @@
+:import('./vars.css') {
+	$max-mobile-width: max-mobile-width;
+}
+
 .nav {
 	display: flex;
 	flex-direction: row;
+}
+
+@media (max-width: $max-mobile-width) {
+	.nav {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.homeItem {
+	flex: 1 1 0;
+	padding: 0 0.5rem;
+}
+
+.pageItem {
+	flex: 0 1 0;
+	padding: 0 1rem;
 }

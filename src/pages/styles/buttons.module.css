@@ -1,13 +1,10 @@
 .homeNavButton {
-	flex: 1 1 0;
 }
 
 .navButton {
- flex: 0 1 0;
- padding: 0 1rem;
+	padding: 0 1rem;
 }
 
-.careerNavButton {
- flex: 0 1 0;
- padding: 0 0.5rem;
+.careersNavButton {
+	padding: 0 0.5rem;
 }

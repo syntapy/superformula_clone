@@ -10,25 +10,29 @@ interface ButtonProps {
   text: string
 }
 
-export function HomeNavButton(props: ButtonProps) {
+export function HomeNavButton(props: ButtonProps & StyleProps) {
+  let className: string = styles.homeNavButton + " " + props.className
   return (
-    <div className={styles.homeNavButton}>
+    <div className={className}>
       <a href={props.href}>{props.text}</a>
     </div>
   )
 }
 
-export function NavButton(props: ButtonProps) {
+export function NavButton(props: ButtonProps & StyleProps) {
+  const className: string = styles.navButton + " " + props.className
+  console.log(className)
   return (
-    <div className={styles.navButton}>
+    <div className={className}>
       <a href={props.href}>{props.text}</a>
     </div>
   )
 }
 
-export function CareersNavButton(props: ButtonProps) {
+export function CareersNavButton(props: ButtonProps & StyleProps) {
+  const className: string = styles.careersNavButton + " " + props.className
   return (
-    <div className={styles.careerNavButton}>
+    <div className={className}>
       <a href={props.href}>{props.text}</a>
     </div>
   )
@@ -39,8 +43,9 @@ interface HRefProps {
 }
 
 function ButtonArrow(props: ButtonProps & StyleProps) {
+  const className: string = styles.buttonArrow + " " + props.className
   return (
-    <div className={props.className}>
+    <div className={className}>
       <a href={props.href}>{props.text} → </a>
     </div>
   )
