@@ -79,7 +79,6 @@ interface SvgProps {
 export function ButtonSvg(props: SvgProps & HRefProps) {
   return (
     <button href={props.href}>
-      <img src={props.svg_src} alt={props.alt} />
     </button>
   )
 }

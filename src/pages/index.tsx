@@ -11,12 +11,12 @@ import team2 from "../images/team/team2.png"
 import team3 from "../images/team/team3.png"
 import team4 from "../images/team/team4.png"
 
-import waves from "../images/sf-white-waves.svg"
+import waves from "../images/svg/sf-white-waves.svg"
 
-import ig from "../images/sm/ig.svg"
-import twitter from "../images/sm/twitter.svg"
-import dribble from "../images/sm/dribble.svg"
-import linkedin from "../images/sm/linkedin.svg"
+import ig from "../images/svg/ig.svg"
+import twitter from "../images/svg/twitter.svg"
+import dribble from "../images/svg/dribble.svg"
+import linkedin from "../images/svg/linkedin.svg"
 
 import { ButtonLight, ButtonDark, ButtonSvg } from "./components/buttons"
 import { Insight, Li, Ol } from "./components/info"
@@ -219,12 +219,6 @@ const IndexPage = () => {
         <SectionBlack>
           <p>Whether it’s our services that speak to you or joining our team seems like a dream come true, get in touch, or follow along on all our digital adventures.</p>
           <ButtonDark href="https://superformula.com/contact" text="Contact us" />
-          <div>
-            <ButtonSvg icon={ig} alt="Our Instagram page" />
-            <ButtonSvg icon={twitter} alt="Our Twitter page" />
-            <ButtonSvg icon={dribble} alt="Our Dribble page" />
-            <ButtonSvg icon={linkedin} alt="Our LinkedIn page" />
-          </div>
         </SectionBlack>
       </main>
     </div>
