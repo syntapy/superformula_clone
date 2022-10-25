@@ -23,14 +23,13 @@ import { Insight, Li, Ol } from "./components/info"
 import { SectionBlack, SectionWhite } from "./components/section"
 
 const pageStyles = {
-  color: "#232129",
-  padding: 96,
+  color: "#dcded6",
+  backgroundColor: "#000",
+  padding: 8,
+  paddingWidth: 16,
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
 }
 const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
 }
 const headingAccentStyles = {
   color: "#663399",
@@ -159,9 +158,9 @@ const links = [
 
 const IndexPage = () => {
   return (
-    <div>
+    <div style={pageStyles}>
       <Header />
-      <main style={pageStyles}>
+      <main>
         <SectionBlack>
           <h1 style={headingStyles}>
             We can go faster and further together
