@@ -10,11 +10,21 @@ interface ButtonProps {
   text: string
 }
 
+export function A(props: ButtonProps & StyleProps) {
+  const className: string = styles.a + " " + props.className
+  return (
+    <a className={className} href={props.href}>
+      {props.text}
+      {props.children}
+    </a>
+  )
+}
+
 export function HomeNavButton(props: ButtonProps & StyleProps) {
   let className: string = styles.homeNavButton + " " + props.className
   return (
     <div className={className}>
-      <a href={props.href}>{props.text}</a>
+      <A className={className} href={props.href}>{props.text}</A>
     </div>
   )
 }
@@ -24,7 +34,7 @@ export function NavButton(props: ButtonProps & StyleProps) {
   console.log(className)
   return (
     <div className={className}>
-      <a href={props.href}>{props.text}</a>
+      <A className={className} href={props.href}>{props.text}</A>
     </div>
   )
 }
@@ -33,7 +43,7 @@ export function CareersNavButton(props: ButtonProps & StyleProps) {
   const className: string = styles.careersNavButton + " " + props.className
   return (
     <div className={className}>
-      <a href={props.href}>{props.text}</a>
+      <A className={className} href={props.href}>{props.text}</A>
     </div>
   )
 }
@@ -46,27 +56,30 @@ function ButtonArrow(props: ButtonProps & StyleProps) {
   const className: string = styles.buttonArrow + " " + props.className
   return (
     <div className={className}>
-      <a href={props.href}>{props.text} → </a>
+      <A className={className} href={props.href}>{props.text} → </A>
     </div>
   )
 }
 
 export function ButtonLight(props: ButtonProps) {
+  const className: string = styles.buttonLight + " " + props.className
   return (
-    <ButtonArrow href={props.href} text={props.text} />
+    <ButtonArrow className={className} href={props.href} text={props.text} />
   )
 }
 
 export function ButtonDark(props: ButtonProps) {
+  const className: string = styles.buttonDark + " " + props.className
   return (
-    <ButtonArrow href={props.href} text={props.text} />
+    <ButtonArrow className={className} href={props.href} text={props.text} />
   )
 }
 
 export function ArticleButton(props: ButtonProps) {
+  const className: string = styles.articleButton + " " + props.className
   return (
     <div>
-      <a href={props.href}>{props.text}</a>
+      <A className={className} href={props.href}>{props.text}</A>
     </div>
   )
 }
