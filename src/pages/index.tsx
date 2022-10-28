@@ -83,11 +83,11 @@ const IndexPage = () => {
             description="Because we’re a team of passionate problem solvers doing work we love in a way that works, in every respect. In other words, low-ego, high-drive—and it makes all the difference"
             href="https://careers.superformula.com/culture-values" text="Explore our culture"
             imgList={[
-              {src: {team1}, alt: "Team 1"},
-              {src: {team2}, alt: "Team 2"},
-              {src: {team3}, alt: "Team 3"},
-              {src: {team4}, alt: "Team 4"},
-              {src: {waves}}
+              {src: team1, alt: "Team 1"},
+              {src: team2, alt: "Team 2"},
+              {src: team3, alt: "Team 3"},
+              {src: team4, alt: "Team 4"},
+              {src: waves}
             ]}
           />
         </SectionWhite>
