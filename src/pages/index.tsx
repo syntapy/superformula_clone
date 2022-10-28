@@ -22,7 +22,8 @@ import * as styles from "./styles/index.module.css"
 
 import { ButtonLight, ButtonDark, ButtonSvg } from "./components/buttons"
 import { HeaderSection, InsightsSection } from "./components/info"
-import { Insight, Li, Ol } from "./components/info"
+import { OlSection } from "./components/info"
+import { Insight } from "./components/info"
 import { SectionBlack, SectionWhite } from "./components/section"
 
 const IndexPage = () => {
@@ -55,14 +56,16 @@ const IndexPage = () => {
           </InsightsSection>
         </SectionBlack>
         <SectionBlack>
-          <h3>How we do it</h3>
-          <Ol>
-            <Li>Expertise (not ego) in all things digital</Li>
-            <Li>Next-level creative problem solving (no smoke and mirrors here)</Li>
-            <Li>Design thinking and digital tools to build know-how and skill</Li>
-            <Li>Process improvements that are a no-brainer to implement</Li>
-            <Li>Fully remote company culture, totally dialed infrastructure</Li>
-          </Ol>
+          <OlSection
+            title="How we do it"
+            items={[
+              "Expertise (not ego) in all things digital",
+              "Next-level creative problem solving (no smoke and mirrors here)",
+              "Design thinking and digital tools to build know-how and skill",
+              "Process improvements that are a no-brainer to implement",
+              "Fully remote company culture, totally dialed infrastructure",
+            ]}
+          />
         </SectionBlack>
         <SectionWhite>
           <h4>Services</h4>

@@ -34,6 +34,24 @@ export function InsightsSection(props: InsightsSectionProps) {
   )
 }
 
+interface OlSectionProps {
+  title: string
+  items: string[]
+}
+
+export function OlSection(props: BulletsSectionProps) {
+  return (
+    <React.Fragment>
+      <h3>{props.title}</h3>
+      <Ol>
+        {props.items.map((item) => (
+          <Li>{item}</Li>
+        ))}
+      </Ol>
+    </React.Fragment>
+  )
+}
+
 interface HashTagsProps {
   tags: string[]
 }
