@@ -21,6 +21,7 @@ import linkedin from "../images/svg/linkedin.svg"
 import * as styles from "./styles/index.module.css"
 
 import { ButtonLight, ButtonDark, ButtonSvg } from "./components/buttons"
+import { HeaderSection, InsightsSection } from "./components/info"
 import { Insight, Li, Ol } from "./components/info"
 import { SectionBlack, SectionWhite } from "./components/section"
 
@@ -30,17 +31,15 @@ const IndexPage = () => {
       <Header />
       <main>
         <SectionBlack>
-          <h1>
-            We can go faster and further together
-          </h1>
-          <p>
-            We are digital experts driven by the passion needed to accelerate and transform your business.
-          </p>
-          <ButtonDark href="/services" text="Explore our services" />
+          <HeaderSection
+            title="We can go faster and further together"
+            description="We are digital experts driven by the passion needed to accelerate and transform your business."
+            href="/services" 
+            buttonText="Explore our services"
+          />
         </SectionBlack>
         <SectionBlack>
-          <h2>Our insights</h2>
-          <div>
+          <InsightsSection title="Our Insights">
             <Insight 
               title="Opportunities: How Superformula team members step up" 
               href="/articles/unexpected-opportunities-how-superformula-team-members-step-up"
@@ -53,7 +52,7 @@ const IndexPage = () => {
               src={img_b}
               tags={["flutter", "dart", "tips"]}
             />
-          </div>
+          </InsightsSection>
         </SectionBlack>
         <SectionBlack>
           <h3>How we do it</h3>

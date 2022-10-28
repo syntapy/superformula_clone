@@ -1,6 +1,38 @@
 import * as React from "react"
+import { A, ButtonDark } from "./buttons"
 
-import { A } from "./buttons"
+interface HeaderSectionProps {
+  title: string
+  description: string
+  href: string
+  buttonText: string
+}
+
+export function HeaderSection(props: HeaderSectionProps) {
+  return (
+    <React.Fragment>
+      <h1>{props.title}</h1>
+      <p>{props.description}</p>
+      <ButtonDark href={props.href} text={props.buttonText} />
+    </React.Fragment>
+  )
+}
+
+interface InsightsSectionProps {
+  title: string
+  children: JSX.Element
+}
+
+export function InsightsSection(props: InsightsSectionProps) {
+  return (
+    <React.Fragment>
+      <h2>{props.title}</h2>
+        <div>
+          {props.children}
+        </div>
+    </React.Fragment>
+  )
+}
 
 interface HashTagsProps {
   tags: string[]
