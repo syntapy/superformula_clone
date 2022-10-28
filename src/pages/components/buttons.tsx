@@ -1,7 +1,8 @@
 import * as React from "react"
+import * as styles from "../styles/buttons.module.css"
 
-interface StyleButtonProps {
-  style?: object // TODO: Make not optional when adding css
+interface StyleProps {
+  className?: string
 }
 
 interface ButtonProps {
@@ -9,33 +10,29 @@ interface ButtonProps {
   text: string
 }
 
-export function HomeNavButton(props: ButtonProps) {
+export function HomeNavButton(props: ButtonProps & StyleProps) {
+  let className: string = styles.homeNavButton + " " + props.className
   return (
-    <div>
+    <div className={className}>
       <a href={props.href}>{props.text}</a>
     </div>
   )
 }
 
-export function NavButton(props: ButtonProps) {
+export function NavButton(props: ButtonProps & StyleProps) {
+  const className: string = styles.navButton + " " + props.className
+  console.log(className)
   return (
-    <div>
+    <div className={className}>
       <a href={props.href}>{props.text}</a>
     </div>
   )
 }
 
-export function CareersNavButton(props: ButtonProps) {
+export function CareersNavButton(props: ButtonProps & StyleProps) {
+  const className: string = styles.careersNavButton + " " + props.className
   return (
-    <div>
-      <a href={props.href}>{props.text}</a>
-    </div>
-  )
-}
-
-function Button(props: ButtonProps) {
-  return (
-    <div>
+    <div className={className}>
       <a href={props.href}>{props.text}</a>
     </div>
   )
@@ -45,9 +42,10 @@ interface HRefProps {
   href: string
 }
 
-function ButtonArrow(props: ButtonProps & StyleButtonProps) {
+function ButtonArrow(props: ButtonProps & StyleProps) {
+  const className: string = styles.buttonArrow + " " + props.className
   return (
-    <div style={props.style}>
+    <div className={className}>
       <a href={props.href}>{props.text} → </a>
     </div>
   )
@@ -81,7 +79,6 @@ interface SvgProps {
 export function ButtonSvg(props: SvgProps & HRefProps) {
   return (
     <button href={props.href}>
-      <img src={props.svg_src} alt={props.alt} />
     </button>
   )
 }

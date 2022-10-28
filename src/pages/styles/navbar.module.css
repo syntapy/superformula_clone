@@ -1,0 +1,48 @@
+:import('./vars.css') {
+	$max-mobile-width: max-mobile-width;
+}
+
+.chilidog {
+	display: none;
+	border: 0px solid #f00;
+	transform: scale(0.80);
+}
+
+.navContainer {
+	border: 1px solid #dcded6;
+	border-width: 0 0 1px 0;
+	padding: 0px 10px 15px 10px;
+}
+
+.nav {
+	display: flex;
+	flex-direction: row;
+}
+
+.navItem {
+}
+
+@media (max-width: $max-mobile-width) {
+	.chilidog {
+		display: block;
+	}
+
+	.nav {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.navItem {
+		display: none;
+	}
+}
+
+.homeItem {
+	flex: 1 1 0;
+	padding: 0 0.5rem;
+}
+
+.pageItem {
+	flex: 0 1 0;
+	padding: 0 1rem;
+}
