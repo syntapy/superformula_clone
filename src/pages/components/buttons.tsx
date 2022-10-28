@@ -10,21 +10,32 @@ interface ButtonProps {
   text: string
 }
 
+export function A(props: ButtonProps & StyleProps) {
+  const className: string = styles.a + " " + props.className
+  return (
+    <a className={className} href={props.href}>
+      {props.text}
+      {props.children}
+    </a>
+  )
+}
+
 export function HomeNavButton(props: ButtonProps & StyleProps) {
   let className: string = styles.homeNavButton + " " + props.className
   return (
     <div className={className}>
-      <a href={props.href}>{props.text}</a>
+      <A className={styles.link} href={props.href}>{props.text}</A>
     </div>
   )
 }
 
 export function NavButton(props: ButtonProps & StyleProps) {
   const className: string = styles.navButton + " " + props.className
+  const linkClassName: string = styles.link
   console.log(className)
   return (
     <div className={className}>
-      <a href={props.href}>{props.text}</a>
+      <A className={styles.link} href={props.href}>{props.text}</A>
     </div>
   )
 }
@@ -33,7 +44,7 @@ export function CareersNavButton(props: ButtonProps & StyleProps) {
   const className: string = styles.careersNavButton + " " + props.className
   return (
     <div className={className}>
-      <a href={props.href}>{props.text}</a>
+      <A className={styles.link} href={props.href}>{props.text}</A>
     </div>
   )
 }
@@ -46,7 +57,7 @@ function ButtonArrow(props: ButtonProps & StyleProps) {
   const className: string = styles.buttonArrow + " " + props.className
   return (
     <div className={className}>
-      <a href={props.href}>{props.text} → </a>
+      <A className={styles.link} href={props.href}>{props.text} → </A>
     </div>
   )
 }
@@ -66,7 +77,7 @@ export function ButtonDark(props: ButtonProps) {
 export function ArticleButton(props: ButtonProps) {
   return (
     <div>
-      <a href={props.href}>{props.text}</a>
+      <A className={styles.link} href={props.href}>{props.text}</A>
     </div>
   )
 }

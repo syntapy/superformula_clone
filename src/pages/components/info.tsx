@@ -1,5 +1,7 @@
 import * as React from "react"
 
+import { A } from "./buttons"
+
 interface HashTagsProps {
   tags: string[]
 }
@@ -23,12 +25,12 @@ interface InsightProps {
 export function Insight(props: InsightProps) {
   return (
     <div>
-      <a href={props.href}>
+      <A href={props.href}>
         <img src={props.src} alt={props.alt} />
         <HashTags tags={props.tags} />
         <p>{props.title}</p>
         <p>Read more →</p>
-      </a>
+      </A>
     </div>
   )
 }
