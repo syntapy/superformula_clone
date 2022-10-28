@@ -125,3 +125,18 @@ export function CultureSection(props: CultureSectionProps) {
     </React.Fragment>
   )
 }
+
+interface ContactSectionProps {
+  title: string
+  href: string
+  buttonText: string
+}
+
+export function ContactSection(props: ContactSectionProps) {
+  return (
+    <React.Fragment>
+      <p>{props.title}</p>
+      <ButtonDark href={props.href} text={props.buttonText} />
+    </React.Fragment>
+  )
+}

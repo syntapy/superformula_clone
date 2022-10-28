@@ -21,7 +21,7 @@ import linkedin from "../images/svg/linkedin.svg"
 import * as styles from "./styles/index.module.css"
 
 import { ButtonLight, ButtonDark, ButtonSvg } from "./components/buttons"
-import { HeaderSection, InsightsSection, ServicesSection, CultureSection } from "./components/section"
+import { HeaderSection, InsightsSection, ServicesSection, CultureSection, ContactSection } from "./components/section"
 import { OlSection } from "./components/section"
 import { Insight } from "./components/info"
 import { SectionBlack, SectionWhite } from "./components/section"
@@ -92,8 +92,9 @@ const IndexPage = () => {
           />
         </SectionWhite>
         <SectionBlack>
-          <p>Whether it’s our services that speak to you or joining our team seems like a dream come true, get in touch, or follow along on all our digital adventures.</p>
-          <ButtonDark href="https://superformula.com/contact" text="Contact us" />
+          <ContactSection
+            title="Whether it’s our services that speak to you or joining our team seems like a dream come true, get in touch, or follow along on all our digital adventures"
+            href="https://superformula.com/contact" text="Contact us" />
         </SectionBlack>
       </main>
     </div>
