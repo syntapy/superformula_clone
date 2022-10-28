@@ -21,7 +21,9 @@ import linkedin from "../images/svg/linkedin.svg"
 import * as styles from "./styles/index.module.css"
 
 import { ButtonLight, ButtonDark, ButtonSvg } from "./components/buttons"
-import { Insight, Li, Ol } from "./components/info"
+import { HeaderSection, InsightsSection, ServicesSection, CultureSection, ContactSection } from "./components/section"
+import { OlSection } from "./components/section"
+import { Insight } from "./components/info"
 import { SectionBlack, SectionWhite } from "./components/section"
 
 const IndexPage = () => {
@@ -30,17 +32,15 @@ const IndexPage = () => {
       <Header />
       <main>
         <SectionBlack>
-          <h1>
-            We can go faster and further together
-          </h1>
-          <p>
-            We are digital experts driven by the passion needed to accelerate and transform your business.
-          </p>
-          <ButtonDark href="/services" text="Explore our services" />
+          <HeaderSection
+            title="We can go faster and further together"
+            description="We are digital experts driven by the passion needed to accelerate and transform your business."
+            href="/services" 
+            buttonText="Explore our services"
+          />
         </SectionBlack>
         <SectionBlack>
-          <h2>Our insights</h2>
-          <div>
+          <InsightsSection title="Our Insights">
             <Insight 
               title="Opportunities: How Superformula team members step up" 
               href="/articles/unexpected-opportunities-how-superformula-team-members-step-up"
@@ -53,39 +53,48 @@ const IndexPage = () => {
               src={img_b}
               tags={["flutter", "dart", "tips"]}
             />
-          </div>
+          </InsightsSection>
         </SectionBlack>
         <SectionBlack>
-          <h3>How we do it</h3>
-          <Ol>
-            <Li>Expertise (not ego) in all things digital</Li>
-            <Li>Next-level creative problem solving (no smoke and mirrors here)</Li>
-            <Li>Design thinking and digital tools to build know-how and skill</Li>
-            <Li>Process improvements that are a no-brainer to implement</Li>
-            <Li>Fully remote company culture, totally dialed infrastructure</Li>
-          </Ol>
+          <OlSection
+            title="How we do it"
+            items={[
+              "Expertise (not ego) in all things digital",
+              "Next-level creative problem solving (no smoke and mirrors here)",
+              "Design thinking and digital tools to build know-how and skill",
+              "Process improvements that are a no-brainer to implement",
+              "Fully remote company culture, totally dialed infrastructure",
+            ]}
+          />
         </SectionBlack>
         <SectionWhite>
-          <h4>Services</h4>
-          <h5>Flutter Experts</h5>
-          <p>With major releases under our belt, we've got the know-how needed to deliver premium experiences for our clients and their users.</p>
-          <img src={img_c} alt="Flutter Experts" />
-          <ButtonLight href="/services" text="Learn more" />
+          <ServicesSection
+            title="Services"
+            subtitle="Flutter Experts"
+            description="With major releases under our belt, we've got the know-how needed to deliver premium experiences for our clients and their users."
+            src={img_c} alt="Flutter Experts"
+            href="/services" buttonText="Learn more"
+          />
         </SectionWhite>
         <SectionWhite>
-          <h3>100% remote and loving it</h3>
-          <h5>Collaborative, diverse, and really, really good at what we do.</h5>
-          <p>Because we’re a team of passionate problem solvers doing work we love in a way that works, in every respect. In other words, low-ego, high-drive—and it makes all the difference.</p>
-          <ButtonLight href="https://careers.superformula.com/culture-values" text="Explore our culture" />
-          <img src={team1} alt="Team 1" />
-          <img src={team2} alt="Team 2" />
-          <img src={team3} alt="Team 3" />
-          <img src={team4} alt="Team 4" />
-          <img src={waves} />
+          <CultureSection
+            title="100% remote and loving it"
+            subtitle="Collaborative, diverse, and really, really good at what we do"
+            description="Because we’re a team of passionate problem solvers doing work we love in a way that works, in every respect. In other words, low-ego, high-drive—and it makes all the difference"
+            href="https://careers.superformula.com/culture-values" text="Explore our culture"
+            imgList={[
+              {src: team1, alt: "Team 1"},
+              {src: team2, alt: "Team 2"},
+              {src: team3, alt: "Team 3"},
+              {src: team4, alt: "Team 4"},
+              {src: waves}
+            ]}
+          />
         </SectionWhite>
         <SectionBlack>
-          <p>Whether it’s our services that speak to you or joining our team seems like a dream come true, get in touch, or follow along on all our digital adventures.</p>
-          <ButtonDark href="https://superformula.com/contact" text="Contact us" />
+          <ContactSection
+            title="Whether it’s our services that speak to you or joining our team seems like a dream come true, get in touch, or follow along on all our digital adventures"
+            href="https://superformula.com/contact" text="Contact us" />
         </SectionBlack>
       </main>
     </div>

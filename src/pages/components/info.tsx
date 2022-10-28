@@ -1,6 +1,5 @@
 import * as React from "react"
-
-import { A } from "./buttons"
+import { A, ButtonDark } from "./buttons"
 
 interface HashTagsProps {
   tags: string[]
