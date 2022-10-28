@@ -21,7 +21,7 @@ import linkedin from "../images/svg/linkedin.svg"
 import * as styles from "./styles/index.module.css"
 
 import { ButtonLight, ButtonDark, ButtonSvg } from "./components/buttons"
-import { HeaderSection, InsightsSection } from "./components/section"
+import { HeaderSection, InsightsSection, ServicesSection, CultureSection } from "./components/section"
 import { OlSection } from "./components/section"
 import { Insight } from "./components/info"
 import { SectionBlack, SectionWhite } from "./components/section"
@@ -68,22 +68,28 @@ const IndexPage = () => {
           />
         </SectionBlack>
         <SectionWhite>
-          <h4>Services</h4>
-          <h5>Flutter Experts</h5>
-          <p>With major releases under our belt, we've got the know-how needed to deliver premium experiences for our clients and their users.</p>
-          <img src={img_c} alt="Flutter Experts" />
-          <ButtonLight href="/services" text="Learn more" />
+          <ServicesSection
+            title="Services"
+            subtitle="Flutter Experts"
+            description="With major releases under our belt, we've got the know-how needed to deliver premium experiences for our clients and their users."
+            src={img_c} alt="Flutter Experts"
+            href="/services" buttonText="Learn more"
+          />
         </SectionWhite>
         <SectionWhite>
-          <h3>100% remote and loving it</h3>
-          <h5>Collaborative, diverse, and really, really good at what we do.</h5>
-          <p>Because we’re a team of passionate problem solvers doing work we love in a way that works, in every respect. In other words, low-ego, high-drive—and it makes all the difference.</p>
-          <ButtonLight href="https://careers.superformula.com/culture-values" text="Explore our culture" />
-          <img src={team1} alt="Team 1" />
-          <img src={team2} alt="Team 2" />
-          <img src={team3} alt="Team 3" />
-          <img src={team4} alt="Team 4" />
-          <img src={waves} />
+          <CultureSection
+            title="100% remote and loving it"
+            subtitle="Collaborative, diverse, and really, really good at what we do"
+            description="Because we’re a team of passionate problem solvers doing work we love in a way that works, in every respect. In other words, low-ego, high-drive—and it makes all the difference"
+            href="https://careers.superformula.com/culture-values" text="Explore our culture"
+            imgList={[
+              {src: {team1}, alt: "Team 1"},
+              {src: {team2}, alt: "Team 2"},
+              {src: {team3}, alt: "Team 3"},
+              {src: {team4}, alt: "Team 4"},
+              {src: {waves}}
+            ]}
+          />
         </SectionWhite>
         <SectionBlack>
           <p>Whether it’s our services that speak to you or joining our team seems like a dream come true, get in touch, or follow along on all our digital adventures.</p>

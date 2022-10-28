@@ -75,3 +75,53 @@ export function OlSection(props: BulletsSectionProps) {
     </React.Fragment>
   )
 }
+
+interface ServicesSectionProps {
+  title: string
+  subtitle: string
+  description: string
+  src: string
+  alt: string
+  href: string
+  buttonText: string
+}
+
+export function ServicesSection(props: ServicesSectionProps) {
+  return (
+    <React.Fragment>
+      <h4>{props.title}</h4>
+      <h5>{props.subtitle}</h5>
+      <p>{props.description}</p>
+      <img src={props.src} alt={props.alt} />
+      <ButtonLight href={props.href} text={props.buttonText} />
+    </React.Fragment>
+  )
+}
+
+interface img {
+  src: string
+  alt?: string
+}
+
+interface CultureSectionProps {
+  title: string
+  subtitle: string
+  description: string
+  href: string
+  buttonText: string
+  imgList: img[]
+}
+
+export function CultureSection(props: CultureSectionProps) {
+  return (
+    <React.Fragment>
+      <h3>{props.title}</h3>
+      <h5>{props.subtitle}</h5>
+      <p>{props.description}</p>
+      <ButtonLight href={props.href} text={props.buttonText} />
+      {props.imgList.map((img) => (
+        <img src={img.src} alt={img.alt} />
+      ))}
+    </React.Fragment>
+  )
+}
