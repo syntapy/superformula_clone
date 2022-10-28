@@ -21,8 +21,8 @@ import linkedin from "../images/svg/linkedin.svg"
 import * as styles from "./styles/index.module.css"
 
 import { ButtonLight, ButtonDark, ButtonSvg } from "./components/buttons"
-import { HeaderSection, InsightsSection } from "./components/info"
-import { OlSection } from "./components/info"
+import { HeaderSection, InsightsSection } from "./components/section"
+import { OlSection } from "./components/section"
 import { Insight } from "./components/info"
 import { SectionBlack, SectionWhite } from "./components/section"
 
