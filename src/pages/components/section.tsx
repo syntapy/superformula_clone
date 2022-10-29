@@ -48,12 +48,13 @@ interface InsightsSectionProps {
 }
 
 export function InsightsSection(props: InsightsSectionProps) {
+  const className: string = styles.insightItems
   return (
     <React.Fragment>
       <h2>{props.title}</h2>
-        <div>
-          {props.children}
-        </div>
+      <div className={className}>
+        {props.children}
+      </div>
     </React.Fragment>
   )
 }
@@ -87,12 +88,13 @@ interface ServicesSectionProps {
 }
 
 export function ServicesSection(props: ServicesSectionProps) {
+  const imgClassName: string = styles.img
   return (
     <React.Fragment>
       <h4>{props.title}</h4>
       <h5>{props.subtitle}</h5>
       <p>{props.description}</p>
-      <img src={props.src} alt={props.alt} />
+      <img className={imgClassName} src={props.src} alt={props.alt} />
       <ButtonLight href={props.href} text={props.buttonText} />
     </React.Fragment>
   )

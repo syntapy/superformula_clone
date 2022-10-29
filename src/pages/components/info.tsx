@@ -1,5 +1,6 @@
 import * as React from "react"
 import { A, ButtonDark } from "./buttons"
+import * as styles from "../styles/info.module.css"
 
 interface HashTagsProps {
   tags: string[]
@@ -22,10 +23,16 @@ interface InsightProps {
 }
 
 export function Insight(props: InsightProps) {
+  const className: string = styles.insight
+  const imgClassName: string = styles.insightImg
   return (
-    <div>
+    <div className={className}>
       <A href={props.href}>
-        <img src={props.src} alt={props.alt} />
+        <img
+          className={imgClassName}
+          src={props.src} 
+          alt={props.alt}
+        />
         <HashTags tags={props.tags} />
         <p>{props.title}</p>
         <p>Read more →</p>
