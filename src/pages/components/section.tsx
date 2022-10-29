@@ -48,12 +48,13 @@ interface InsightsSectionProps {
 }
 
 export function InsightsSection(props: InsightsSectionProps) {
+  const className: string = styles.insightItems
   return (
     <React.Fragment>
       <h2>{props.title}</h2>
-        <div>
-          {props.children}
-        </div>
+      <div className={className}>
+        {props.children}
+      </div>
     </React.Fragment>
   )
 }
