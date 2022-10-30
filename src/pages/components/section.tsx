@@ -8,7 +8,7 @@ interface SectionProps {
 }
 
 export function SectionBlack(props: SectionProps) {
-  const className: string = styles.sectionBlack + " " + props.className
+  const className: string = styles.section + " " + styles.sectionBlack + " " + props.className
   return (
     <section className={className}>
       {props.children}
@@ -17,7 +17,7 @@ export function SectionBlack(props: SectionProps) {
 }
 
 export function SectionWhite(props: SectionProps) {
-  const className: string = styles.sectionWhite + " " + props.className
+  const className: string = styles.section + " " + styles.sectionWhite + " " + props.className
   return (
     <section className={className}>
       {props.children}
