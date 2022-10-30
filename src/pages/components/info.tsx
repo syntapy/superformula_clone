@@ -1,6 +1,7 @@
 import * as React from "react"
 import { A, ButtonDark } from "./buttons"
 import * as styles from "../styles/info.module.css"
+import * as utilStyles from "../styles/utils.module.css"
 
 interface HashTagsProps {
   tags: string[]
@@ -23,7 +24,7 @@ interface InsightProps {
 }
 
 export function Insight(props: InsightProps) {
-  const className: string = styles.insight
+  const className: string = utilStyles.flexContainer + " " + styles.insight
   const imgClassName: string = styles.insightImg
   return (
     <div className={className}>

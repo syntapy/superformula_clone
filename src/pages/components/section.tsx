@@ -1,5 +1,6 @@
 import * as React from "react"
 import * as styles from "../styles/section.module.css"
+import * as utilStyles from "../styles/utils.module.css"
 import { ButtonLight, ButtonDark } from "./buttons"
 import { Ol, Li } from "./info"
 
@@ -48,7 +49,7 @@ interface InsightsSectionProps {
 }
 
 export function InsightsSection(props: InsightsSectionProps) {
-  const className: string = styles.insightItems
+  const className: string = utilStyles.flexContainer
   return (
     <React.Fragment>
       <h2>{props.title}</h2>
@@ -88,14 +89,19 @@ interface ServicesSectionProps {
 }
 
 export function ServicesSection(props: ServicesSectionProps) {
+  const className: string = utilStyles.flexContainer
   const imgClassName: string = styles.img
   return (
     <React.Fragment>
-      <h4>{props.title}</h4>
-      <h5>{props.subtitle}</h5>
-      <p>{props.description}</p>
-      <img className={imgClassName} src={props.src} alt={props.alt} />
-      <ButtonLight href={props.href} text={props.buttonText} />
+      <div className={className}>
+        <div>
+          <h4>{props.title}</h4>
+          <h5>{props.subtitle}</h5>
+          <p>{props.description}</p>
+          <ButtonLight href={props.href} text={props.buttonText} />
+        </div>
+        <img className={imgClassName} src={props.src} alt={props.alt} />
+      </div>
     </React.Fragment>
   )
 }

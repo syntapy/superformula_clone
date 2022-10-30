@@ -2,6 +2,7 @@ import * as React from "react"
 import { HomeNavButton, NavButton, CareersNavButton } from "./buttons"
 
 import * as styles from "../styles/navbar.module.css"
+import * as utilStyles from "../styles/utils.module.css"
 
 import Chilidogmenu from "../../images/svg/chilidogmenu.svg"
 
@@ -11,7 +12,7 @@ export default function NavBar() {
   return (
     <div className={styles.navContainer}>
       <Chilidogmenu className={styles.chilidog} />
-      <nav className={styles.nav}>
+      <nav className={utilStyles.flexContainer}>
         <HomeNavButton className={homeItem} href="/" text="Superformula." />
         <NavButton className={pageItem} href="/services" text="Services" />
         <NavButton className={pageItem} href="/work" text="Work" />

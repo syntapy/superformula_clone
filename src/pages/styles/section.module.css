@@ -8,8 +8,8 @@
 	width: 100%;
 	padding: 1rem 2rem;
 	margin: 0;
-  float: left;
-  clear: both;
+	float: left;
+	clear: both;
 }
 
 .sectionBlack {
@@ -35,17 +35,4 @@
 
 .img {
 	width: 100%;
-}
-
-.insightItems {
-	display: flex;
-	flex-direction: row;
-	width: 100%;
-	justify-content: space-between;
-}
-
-@media (max-width: $max-mobile-width) {
-	.insightItems {
-		flex-direction: column;
-	}
 }
