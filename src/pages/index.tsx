@@ -19,6 +19,8 @@ import dribble from "../images/svg/dribble.svg"
 import linkedin from "../images/svg/linkedin.svg"
 
 import * as styles from "./styles/index.module.css"
+import * as globalStyles from "./styles/global.module.css"
+import "./styles/global.css"
 
 import { ButtonLight, ButtonDark, ButtonSvg } from "./components/buttons"
 import { HeaderSection, InsightsSection, ServicesSection, CultureSection, ContactSection } from "./components/section"
@@ -94,7 +96,8 @@ const IndexPage = () => {
         <SectionBlack>
           <ContactSection
             title="Whether it’s our services that speak to you or joining our team seems like a dream come true, get in touch, or follow along on all our digital adventures"
-            href="https://superformula.com/contact" text="Contact us" />
+            href="https://superformula.com/contact" text="Contact us"
+          />
         </SectionBlack>
       </main>
     </div>
