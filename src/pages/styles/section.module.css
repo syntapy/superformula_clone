@@ -2,6 +2,16 @@
 	$max-mobile-width: max-mobile-width;
 }
 
+.section {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 1rem 2rem;
+	margin: 0;
+  float: left;
+  clear: both;
+}
+
 .sectionBlack {
 	background-color: #000;
 	color: #dcded6;
@@ -15,7 +25,7 @@
 }
 
 .sectionWhite {
-	background-color: #dcded6;
+	background-color: white;
 	color: #000;
 }
 
