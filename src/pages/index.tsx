@@ -89,7 +89,6 @@ const IndexPage = () => {
               {src: team2, alt: "Team 2"},
               {src: team3, alt: "Team 3"},
               {src: team4, alt: "Team 4"},
-              {src: waves}
             ]}
           />
         </SectionWhite>

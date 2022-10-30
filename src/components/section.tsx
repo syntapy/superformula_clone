@@ -121,15 +121,19 @@ interface CultureSectionProps {
 }
 
 export function CultureSection(props: CultureSectionProps) {
+  const wrapperClassName: string = utilStyles.auxWrapper
+  const itemClassName: string = utilStyles.auxItem + " " + styles.img
   return (
     <React.Fragment>
       <h3>{props.title}</h3>
       <h5>{props.subtitle}</h5>
       <p>{props.description}</p>
       <ButtonLight href={props.href} text={props.buttonText} />
-      {props.imgList.map((img) => (
-        <img src={img.src} alt={img.alt} />
-      ))}
+      <div className={wrapperClassName}>
+        {props.imgList.map((img) => (
+          <img className={itemClassName} src={img.src} alt={img.alt} />
+        ))}
+      </div>
     </React.Fragment>
   )
 }

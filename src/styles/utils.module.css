@@ -24,3 +24,25 @@
 		padding: 0;
 	}
 }
+
+.auxWrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 150rem;
+}
+
+.auxItem {
+	flex: 1 1 0;
+	width: 100%;
+	padding: 0 1rem;
+}
+
+@media (max-width: calc($max-mobile-width + 5rem)) {
+	.auxWrapper {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 1rem;
+		width: 100%;
+	}
+}
