@@ -18,15 +18,15 @@ import twitter from "../images/svg/twitter.svg"
 import dribble from "../images/svg/dribble.svg"
 import linkedin from "../images/svg/linkedin.svg"
 
-import * as styles from "./styles/index.module.css"
-import * as globalStyles from "./styles/global.module.css"
-import "./styles/global.css"
+import * as styles from "../styles/index.module.css"
+import * as globalStyles from "../styles/global.module.css"
+import "../styles/global.css"
 
-import { ButtonLight, ButtonDark, ButtonSvg } from "./components/buttons"
-import { HeaderSection, InsightsSection, ServicesSection, CultureSection, ContactSection } from "./components/section"
-import { OlSection } from "./components/section"
-import { Insight } from "./components/info"
-import { SectionBlack, SectionWhite } from "./components/section"
+import { ButtonLight, ButtonDark, ButtonSvg } from "../components/buttons"
+import { HeaderSection, InsightsSection, ServicesSection, CultureSection, ContactSection } from "../components/section"
+import { OlSection } from "../components/section"
+import { Insight } from "../components/info"
+import { SectionBlack, SectionWhite } from "../components/section"
 
 const IndexPage = () => {
   return (

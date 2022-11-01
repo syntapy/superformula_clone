@@ -4,7 +4,7 @@ import { HomeNavButton, NavButton, CareersNavButton } from "./buttons"
 import * as styles from "../styles/navbar.module.css"
 import * as utilStyles from "../styles/utils.module.css"
 
-import Chilidogmenu from "../../images/svg/chilidogmenu.svg"
+import Chilidogmenu from "../images/svg/chilidogmenu.svg"
 
 export default function NavBar() {
   const homeItem: string = styles.homeItem + " " + styles.navItem
