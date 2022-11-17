@@ -120,9 +120,17 @@ interface CultureSectionProps {
   imgList: img[]
 }
 
+function CultureImgMobile() {
+
+}
+
+function CultureImagDesktop() {
+
+}
+
 export function CultureSection(props: CultureSectionProps) {
   const wrapperClassName: string = utilStyles.auxWrapper
-  const itemClassName: string = utilStyles.auxItem + " " + styles.img
+  const itemClassName: string = utilStyles.auxItem
   return (
     <React.Fragment>
       <h3>{props.title}</h3>
@@ -130,9 +138,16 @@ export function CultureSection(props: CultureSectionProps) {
       <p>{props.description}</p>
       <ButtonLight href={props.href} text={props.buttonText} />
       <div className={wrapperClassName}>
-        {props.imgList.map((img) => (
-          <img className={itemClassName} src={img.src} alt={img.alt} />
-        ))}
+        {props.imgList.map((img, index) => {
+          let imgClassName: string = styles['img' + index.toString()]
+          return <div className={utilStyles.auxItemWrapper}>
+                  <img 
+                    className={itemClassName + ' ' + imgClassName} 
+                    src={img.src} 
+                    alt={img.alt}
+                  />
+                 </div>
+        })}
       </div>
     </React.Fragment>
   )
