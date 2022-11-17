@@ -128,7 +128,7 @@ function CultureImagDesktop() {
 
 }
 
-export function CultureSection(props: CultureSectionProps) {
+function CultureSectionDesktop(props: CultureSectionProps) {
   const wrapperClassName: string = utilStyles.auxWrapper
   const itemClassName: string = utilStyles.auxItem
   return (
@@ -151,6 +151,10 @@ export function CultureSection(props: CultureSectionProps) {
       </div>
     </React.Fragment>
   )
+}
+
+export function CultureSection(props: CultureSectionProps) {
+  return <CultureSectionDesktop {...props} />
 }
 
 interface ContactSectionProps {
