@@ -1,4 +1,4 @@
-:import('./vars.css') {
+:import('./vars.module.css') {
 	$max-mobile-width: max-mobile-width;
 }
 
@@ -35,4 +35,33 @@
 
 .img {
 	width: 100%;
+	height: auto;
+}
+
+.img0 {
+	height: auto;
+	width: 20rem;
+}
+
+.img1 {
+	height: auto;
+	width: 20rem;
+}
+
+.img2 {
+	height: auto;
+	width: 30rem;
+}
+
+.img3 {
+	height: auto;
+	width: 20rem;
+}
+
+.relative {
+	position: relative;
+}
+
+.relative_a{
+	top: 30px;
 }

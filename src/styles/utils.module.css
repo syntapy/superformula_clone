@@ -1,4 +1,4 @@
-:import('./vars.css') {
+:import('./vars.module.css') {
 	$max-mobile-width: max-mobile-width;
 }
 
@@ -22,5 +22,28 @@
 
 	.flexItem {
 		padding: 0;
+	}
+}
+
+.auxWrapper {
+	display: flex;
+	flex-direction: row;
+	width: 100rem;
+}
+
+.auxItemWrapper {
+	margin: auto;
+	flex: 0 0 auto;
+}
+
+.auxItem {
+}
+
+@media (max-width: calc($max-mobile-width + 5rem)) {
+	.auxWrapper {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 1rem;
+		width: 100%;
 	}
 }

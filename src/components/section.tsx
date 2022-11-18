@@ -1,8 +1,11 @@
 import * as React from "react"
 import * as styles from "../styles/section.module.css"
 import * as utilStyles from "../styles/utils.module.css"
+import * as styleVars from "../styles/vars.module.css"
 import { ButtonLight, ButtonDark } from "./buttons"
 import { Ol, Li } from "./info"
+
+import * as utils from "../utils"
 
 interface SectionProps {
   children: JSX.Element
@@ -117,21 +120,67 @@ interface CultureSectionProps {
   description: string
   href: string
   buttonText: string
-  imgList: img[]
+  imgListDesktop: img[]
+  imgMobile: img
 }
 
-export function CultureSection(props: CultureSectionProps) {
+function CultureImgMobile(props: img) {
+  const className: string = styles.img
+  return <img className={className} src={props.img.src} alt={props.img.alt} />
+}
+
+function CultureImgDesktop(props: {imgs: img[]}) {
+  const className: string = utilStyles.auxWrapper + ' ' + utilStyles.img
+  return <div className={className}>
+        {props.imgs.map((img, index) => {
+          let imgClassName: string = styles['img' + index.toString()]
+          return <div className={utilStyles.auxItemWrapper}>
+                  <img className={className + ' ' + imgClassName} 
+                    src={img.src} 
+                    alt={img.alt}
+                  />
+                </div>
+        })}
+      </div>
+}
+
+function CultureSectionHeader(props: CultureSectionProps) {
   return (
     <React.Fragment>
       <h3>{props.title}</h3>
       <h5>{props.subtitle}</h5>
       <p>{props.description}</p>
       <ButtonLight href={props.href} text={props.buttonText} />
-      {props.imgList.map((img) => (
-        <img src={img.src} alt={img.alt} />
-      ))}
+      {props.children}
     </React.Fragment>
   )
+}
+
+export function CultureSection(props: CultureSectionProps) {
+  const initialIsMobile: boolean = utils.isMobile()
+  const [isMobile, setIsMobile] = React.useState(initialIsMobile)
+
+  React.useEffect(() => {
+    const evenListener = () => setIsMobile(utils.isMobile())
+    window.addEventListener('resize',  evenListener)
+    return () => window.removeEventListener('resize', evenListener)
+  }, [])
+
+  if (isMobile) {
+    return (
+      <React.Fragment>
+        <CultureSectionHeader {...props} />
+        <CultureImgMobile img={props.imgMobile} />
+      </React.Fragment>
+    )
+  } else {
+    return (
+      <React.Fragment>
+        <CultureSectionHeader {...props} />
+        <CultureImgDesktop imgs={props.imgListDesktop} />
+      </React.Fragment>
+    )
+  }
 }
 
 interface ContactSectionProps {
