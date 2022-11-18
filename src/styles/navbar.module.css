@@ -26,7 +26,6 @@
 
 .navItem {
 	margin: auto 0;
-	border: 1px solid red;
 }
 
 .homeItem {
@@ -50,5 +49,5 @@
 
 .pageItem {
 	flex: 0 1 0;
-	padding: 0 1rem;
+	padding: 0 0.4rem;
 }
