@@ -126,7 +126,6 @@ interface CultureSectionProps {
 
 function CultureImgMobile(props: img) {
   const className: string = styles.img
-  console.log("PROPS: ", props)
   return <img className={className} src={props.img.src} alt={props.img.alt} />
 }
 

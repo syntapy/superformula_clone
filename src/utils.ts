@@ -14,10 +14,5 @@ export function getMobileWidth(offset: number = 0) {
 }
 
 export function isMobile(offset: number = 0) {
-  //console.log("="*50)
-  //console.log("WINDOW_WIDTH: ", getWindowDimensions().width)
-  //console.log("WINDOW_WIDTH_TYPE: ", typeof(getWindowDimensions().width))
-  //console.log("MOBILE_WIDTH: ", getMobileWidth(offset))
-  //console.log("MOBILE_WIDTH_TYPE: ", typeof(getMobileWidth(offset)))
   return getWindowDimensions().width < getMobileWidth(offset)
 }
