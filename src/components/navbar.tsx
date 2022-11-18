@@ -7,13 +7,13 @@ import * as utilStyles from "../styles/utils.module.css"
 import Chilidogmenu from "../images/svg/chilidogmenu.svg"
 
 export default function NavBar() {
-  const homeItem: string = styles.homeItem + " " + styles.navItem
+  const homeItem: string = styles.homeItem
   const pageItem: string = styles.pageItem + " " + styles.navItem
   return (
-    <div className={styles.navContainer}>
+    <div className={styles.container + " " + styles.navbar}>
       <Chilidogmenu className={styles.chilidog} />
-      <nav className={utilStyles.flexContainer}>
-        <HomeNavButton className={homeItem} href="/" text="Superformula." />
+      <HomeNavButton className={homeItem} href="/" text="Superformula." />
+      <nav className={styles.navItem + " " + styles.container}>
         <NavButton className={pageItem} href="/services" text="Services" />
         <NavButton className={pageItem} href="/work" text="Work" />
         <NavButton className={pageItem} href="/articles" text="Articles" />

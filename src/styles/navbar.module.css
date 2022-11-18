@@ -4,17 +4,23 @@
 
 .chilidog {
 	display: none;
-	border: 0px solid #f00;
 	transform: scale(0.80);
+	margin: auto 0;
 }
 
-.navContainer {
-	border: 1px solid #dcded6;
-	border-width: 0 0 1px 0;
+.navbar {
+	height: 3rem;
+	border: 0px solid #dcded6;
+	border-width: 0 0 0.5px 0;
 	padding: 0px 10px 15px 10px;
+	margin: 0 1rem;
 }
 
-.navContainer a {
+.container {
+	display: flex;
+}
+
+.container a {
 	color: #dcded6;
 }
 
@@ -24,6 +30,13 @@
 }
 
 .navItem {
+	margin: auto 0;
+	border: 1px solid red;
+}
+
+.homeItem {
+	padding: 0 0.5rem;
+	margin: auto;
 }
 
 @media (max-width: $max-mobile-width) {
@@ -39,11 +52,10 @@
 	.navItem {
 		display: none;
 	}
-}
 
-.homeItem {
-	flex: 1 1 0;
-	padding: 0 0.5rem;
+	.homeItem {
+		margin: auto;
+	}
 }
 
 .pageItem {
