@@ -2,12 +2,6 @@
 	$max-mobile-width: max-mobile-width;
 }
 
-.chilidog {
-	display: none;
-	transform: scale(0.80);
-	margin: auto 0;
-}
-
 .navbar {
 	height: 3rem;
 	border: 0px solid #dcded6;
@@ -20,13 +14,14 @@
 	display: flex;
 }
 
-.container a {
-	color: #dcded6;
+.chilidog {
+	display: none;
+	transform: scale(0.80);
+	margin: auto 0;
 }
 
-.nav {
-	display: flex;
-	flex-direction: row;
+.container a {
+	color: #dcded6;
 }
 
 .navItem {
@@ -42,11 +37,6 @@
 @media (max-width: $max-mobile-width) {
 	.chilidog {
 		display: block;
-	}
-
-	.nav {
-		display: flex;
-		flex-direction: column;
 	}
 
 	.navItem {
