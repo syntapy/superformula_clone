@@ -29,8 +29,7 @@
 }
 
 .homeItem {
-	padding: 0 0.5rem;
-	margin: auto;
+	margin: auto auto auto 0;
 }
 
 @media (max-width: $max-mobile-width) {
