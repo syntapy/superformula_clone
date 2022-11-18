@@ -1,4 +1,4 @@
-:import('./vars.css') {
+:import('./vars.module.css') {
 	$max-mobile-width: max-mobile-width;
 }
 

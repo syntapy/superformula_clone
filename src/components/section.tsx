@@ -1,8 +1,11 @@
 import * as React from "react"
 import * as styles from "../styles/section.module.css"
 import * as utilStyles from "../styles/utils.module.css"
+import * as styleVars from "../styles/vars.module.css"
 import { ButtonLight, ButtonDark } from "./buttons"
 import { Ol, Li } from "./info"
+
+import * as utils from "../utils"
 
 interface SectionProps {
   children: JSX.Element
@@ -117,44 +120,68 @@ interface CultureSectionProps {
   description: string
   href: string
   buttonText: string
-  imgList: img[]
+  imgListDesktop: img[]
+  imgMobile: img
 }
 
-function CultureImgMobile() {
-
+function CultureImgMobile(props: img) {
+  const className: string = styles.img
+  console.log("PROPS: ", props)
+  return <img className={className} src={props.img.src} alt={props.img.alt} />
 }
 
-function CultureImagDesktop() {
-
+function CultureImgDesktop(props: {imgs: img[]}) {
+  const className: string = utilStyles.auxWrapper + ' ' + utilStyles.img
+  return <div className={className}>
+        {props.imgs.map((img, index) => {
+          let imgClassName: string = styles['img' + index.toString()]
+          return <div className={utilStyles.auxItemWrapper}>
+                  <img className={className + ' ' + imgClassName} 
+                    src={img.src} 
+                    alt={img.alt}
+                  />
+                </div>
+        })}
+      </div>
 }
 
-function CultureSectionDesktop(props: CultureSectionProps) {
-  const wrapperClassName: string = utilStyles.auxWrapper
-  const itemClassName: string = utilStyles.auxItem
+function CultureSectionHeader(props: CultureSectionProps) {
   return (
     <React.Fragment>
       <h3>{props.title}</h3>
       <h5>{props.subtitle}</h5>
       <p>{props.description}</p>
       <ButtonLight href={props.href} text={props.buttonText} />
-      <div className={wrapperClassName}>
-        {props.imgList.map((img, index) => {
-          let imgClassName: string = styles['img' + index.toString()]
-          return <div className={utilStyles.auxItemWrapper}>
-                  <img 
-                    className={itemClassName + ' ' + imgClassName} 
-                    src={img.src} 
-                    alt={img.alt}
-                  />
-                 </div>
-        })}
-      </div>
+      {props.children}
     </React.Fragment>
   )
 }
 
 export function CultureSection(props: CultureSectionProps) {
-  return <CultureSectionDesktop {...props} />
+  const initialIsMobile: boolean = utils.isMobile()
+  const [isMobile, setIsMobile] = React.useState(initialIsMobile)
+
+  React.useEffect(() => {
+    const evenListener = () => setIsMobile(utils.isMobile())
+    window.addEventListener('resize',  evenListener)
+    return () => window.removeEventListener('resize', evenListener)
+  }, [])
+
+  if (isMobile) {
+    return (
+      <React.Fragment>
+        <CultureSectionHeader {...props} />
+        <CultureImgMobile img={props.imgMobile} />
+      </React.Fragment>
+    )
+  } else {
+    return (
+      <React.Fragment>
+        <CultureSectionHeader {...props} />
+        <CultureImgDesktop imgs={props.imgListDesktop} />
+      </React.Fragment>
+    )
+  }
 }
 
 interface ContactSectionProps {
