@@ -3,6 +3,8 @@ import renderer from "react-test-renderer"
 
 import Header from "../../pages/header"
 
+jest.mock("gatsby")
+
 describe("Header", () => {
 	it("renders correctly", () => {
 		const tree = renderer
