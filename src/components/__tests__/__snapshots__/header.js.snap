@@ -1,5 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`A renders correctly 1`] = `
+<a
+  className="undefined undefined"
+  href="test"
+>
+  test url
+  Test Url
+</a>
+`;
+
 exports[`Header renders correctly 1`] = `
 <header>
   <div
@@ -72,4 +82,76 @@ exports[`Header renders correctly 1`] = `
     </nav>
   </div>
 </header>
+`;
+
+exports[`NavBar renders correctly 1`] = `
+<div
+  className="undefined undefined"
+>
+  <SvgrURL />
+  <div
+    className="undefined undefined"
+  >
+    <a
+      className="undefined undefined undefined"
+      href="/"
+    >
+      Superformula.
+    </a>
+  </div>
+  <nav
+    className="undefined undefined"
+  >
+    <div
+      className="undefined undefined undefined"
+    >
+      <a
+        className="undefined undefined undefined undefined"
+        href="/services"
+      >
+        Services
+      </a>
+    </div>
+    <div
+      className="undefined undefined undefined"
+    >
+      <a
+        className="undefined undefined undefined undefined"
+        href="/work"
+      >
+        Work
+      </a>
+    </div>
+    <div
+      className="undefined undefined undefined"
+    >
+      <a
+        className="undefined undefined undefined undefined"
+        href="/articles"
+      >
+        Articles
+      </a>
+    </div>
+    <div
+      className="undefined undefined undefined"
+    >
+      <a
+        className="undefined undefined undefined undefined"
+        href="/contact"
+      >
+        Contact
+      </a>
+    </div>
+    <div
+      className="undefined undefined undefined"
+    >
+      <a
+        className="undefined undefined undefined undefined"
+        href="https://careers.superformula.com"
+      >
+        Careers
+      </a>
+    </div>
+  </nav>
+</div>
 `;
