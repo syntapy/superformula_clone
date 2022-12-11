@@ -1,7 +1,7 @@
 import React from "react"
 import renderer from "react-test-renderer"
 
-import Header from "../../pages/header"
+import Header from "../header"
 
 jest.mock("gatsby")
 
