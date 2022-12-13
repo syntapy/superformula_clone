@@ -3,67 +3,69 @@
 exports[`Header renders correctly 1`] = `
 <header>
   <div
-    className="undefined undefined"
+    className="container navbar"
   >
-    <SvgrURL />
+    <SvgrURL
+      className="chilidog"
+    />
     <div
-      className="undefined undefined"
+      className="home-nav-button home-item"
     >
       <a
-        className="undefined undefined undefined"
+        className="a home-nav-button home-item"
         href="/"
       >
         Superformula.
       </a>
     </div>
     <nav
-      className="undefined undefined"
+      className="nav-item container"
     >
       <div
-        className="undefined undefined undefined"
+        className="nav-button page-item nav-item"
       >
         <a
-          className="undefined undefined undefined undefined"
+          className="a nav-button page-item nav-item"
           href="/services"
         >
           Services
         </a>
       </div>
       <div
-        className="undefined undefined undefined"
+        className="nav-button page-item nav-item"
       >
         <a
-          className="undefined undefined undefined undefined"
+          className="a nav-button page-item nav-item"
           href="/work"
         >
           Work
         </a>
       </div>
       <div
-        className="undefined undefined undefined"
+        className="nav-button page-item nav-item"
       >
         <a
-          className="undefined undefined undefined undefined"
+          className="a nav-button page-item nav-item"
           href="/articles"
         >
           Articles
         </a>
       </div>
       <div
-        className="undefined undefined undefined"
+        className="nav-button page-item nav-item"
       >
         <a
-          className="undefined undefined undefined undefined"
+          className="a nav-button page-item nav-item"
           href="/contact"
         >
           Contact
         </a>
       </div>
       <div
-        className="undefined undefined undefined"
+        className="careers-nav-button page-item nav-item"
       >
         <a
-          className="undefined undefined undefined undefined"
+          className="a careers-nav-button page-item nav-item"
           href="https://careers.superformula.com"
         >
           Careers
@@ -76,10 +78,10 @@ exports[`Header renders correctly 1`] = `
 
 exports[`HomeNavButton renders correctly 1`] = `
 <div
-  className="undefined undefined"
+  className="home-nav-button undefined"
 >
   <a
-    className="undefined undefined undefined"
+    className="a home-nav-button undefined"
     href="test"
   >
     test url
@@ -89,67 +91,69 @@ exports[`HomeNavButton renders correctly 1`] = `
 
 exports[`NavBar renders correctly 1`] = `
 <div
-  className="undefined undefined"
+  className="container navbar"
 >
-  <SvgrURL />
+  <SvgrURL
+    className="chilidog"
+  />
   <div
-    className="undefined undefined"
+    className="home-nav-button home-item"
   >
     <a
-      className="undefined undefined undefined"
+      className="a home-nav-button home-item"
       href="/"
     >
       Superformula.
     </a>
   </div>
   <nav
-    className="undefined undefined"
+    className="nav-item container"
   >
     <div
-      className="undefined undefined undefined"
+      className="nav-button page-item nav-item"
     >
       <a
-        className="undefined undefined undefined undefined"
+        className="a nav-button page-item nav-item"
         href="/services"
       >
         Services
       </a>
     </div>
     <div
-      className="undefined undefined undefined"
+      className="nav-button page-item nav-item"
     >
       <a
-        className="undefined undefined undefined undefined"
+        className="a nav-button page-item nav-item"
         href="/work"
       >
         Work
       </a>
     </div>
     <div
-      className="undefined undefined undefined"
+      className="nav-button page-item nav-item"
     >
       <a
-        className="undefined undefined undefined undefined"
+        className="a nav-button page-item nav-item"
         href="/articles"
       >
         Articles
       </a>
     </div>
     <div
-      className="undefined undefined undefined"
+      className="nav-button page-item nav-item"
     >
       <a
-        className="undefined undefined undefined undefined"
+        className="a nav-button page-item nav-item"
         href="/contact"
       >
         Contact
       </a>
     </div>
     <div
-      className="undefined undefined undefined"
+      className="careers-nav-button page-item nav-item"
     >
       <a
-        className="undefined undefined undefined undefined"
+        className="a careers-nav-button page-item nav-item"
         href="https://careers.superformula.com"
       >
         Careers
