@@ -2,7 +2,7 @@ import React from "react"
 import renderer from "react-test-renderer"
 
 import Header from "../header"
-import { A } from "../buttons"
+import { HomeNavButton } from "../buttons"
 import NavBar from "../navbar"
 
 jest.mock("gatsby")
@@ -16,10 +16,10 @@ describe("Header", () => {
 	})
 })
 
-describe("A", () => {
+describe("HomeNavButton", () => {
 	it("renders correctly", () => {
 		const tree = renderer
-			.create(<A href={"test"} text={"test url"}>Test Url</A>)
+			.create(<HomeNavButton href={"test"} text={"test url"}>Test Url</HomeNavButton>)
 			.toJSON()
 		expect(tree).toMatchSnapshot()
 	})
