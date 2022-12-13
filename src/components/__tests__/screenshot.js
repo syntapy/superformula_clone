@@ -15,8 +15,10 @@ test('test HomeNavButton', () => {
 
 	const buttonClass = HomeNavButton.name
 
-	const element = screen.getByText(testMessage)
-	expect(element).toBeInTheDocument()
-	expect(element).toHaveAttribute('href', '/test')
-	expect(element).toHaveTextContent(testMessage)
+	const div = screen.getByText(testMessage).parentElement
+	const A = div.children[0]
+	expect(div.tagName).toBe('DIV')
+	expect(div).toBeInTheDocument()
+	expect(div).toHaveTextContent(testMessage)
+	expect(A).toHaveAttribute('href', '/test')
 })
