@@ -22,7 +22,6 @@ export function A(props: ButtonProps & StyleProps) {
 
 export function HomeNavButton(props: ButtonProps & StyleProps) {
   let className: string = styles.homeNavButton + " " + props.className
-  console.log(className)
   return (
     <div className={className}>
       <A className={className} href={props.href}>{props.text}</A>

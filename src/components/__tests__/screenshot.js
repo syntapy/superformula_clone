@@ -14,7 +14,6 @@ test('test HomeNavButton', () => {
 	render(<HomeNavButton href={"/test"} text={testMessage} className={styles.homeItem}/>)
 
 	const buttonClass = HomeNavButton.name
-	console.log(HomeNavButton())
 
 	const element = screen.getByText(testMessage)
 	expect(element).toBeInTheDocument()
