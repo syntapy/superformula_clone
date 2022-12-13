@@ -14,6 +14,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "jest",
+    "test help": "jest --help",
+    "test u": "jest -u",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
