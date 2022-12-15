@@ -9,63 +9,63 @@ exports[`Header renders correctly 1`] = `
       className="chilidog"
     />
     <div
-      className="home-nav-button home-item"
+      className="homeNavButton homeItem"
     >
       <a
-        className="a home-nav-button home-item"
+        className="a homeNavButton homeItem"
         href="/"
       >
         Superformula.
       </a>
     </div>
     <nav
-      className="nav-item container"
+      className="navItem container"
     >
       <div
-        className="nav-button page-item nav-item"
+        className="navButton pageItem navItem"
       >
         <a
-          className="a nav-button page-item nav-item"
+          className="a navButton pageItem navItem"
           href="/services"
         >
           Services
         </a>
       </div>
       <div
-        className="nav-button page-item nav-item"
+        className="navButton pageItem navItem"
       >
         <a
-          className="a nav-button page-item nav-item"
+          className="a navButton pageItem navItem"
           href="/work"
         >
           Work
         </a>
       </div>
       <div
-        className="nav-button page-item nav-item"
+        className="navButton pageItem navItem"
       >
         <a
-          className="a nav-button page-item nav-item"
+          className="a navButton pageItem navItem"
           href="/articles"
         >
           Articles
         </a>
       </div>
       <div
-        className="nav-button page-item nav-item"
+        className="navButton pageItem navItem"
       >
         <a
-          className="a nav-button page-item nav-item"
+          className="a navButton pageItem navItem"
           href="/contact"
         >
           Contact
         </a>
       </div>
       <div
-        className="careers-nav-button page-item nav-item"
+        className="careersNavButton pageItem navItem"
       >
         <a
-          className="a careers-nav-button page-item nav-item"
+          className="a careersNavButton pageItem navItem"
           href="https://careers.superformula.com"
         >
           Careers
@@ -78,10 +78,10 @@ exports[`Header renders correctly 1`] = `
 
 exports[`HomeNavButton renders correctly 1`] = `
 <div
-  className="home-nav-button undefined"
+  className="homeNavButton undefined"
 >
   <a
-    className="a home-nav-button undefined"
+    className="a homeNavButton undefined"
     href="test"
   >
     test url
@@ -97,63 +97,63 @@ exports[`NavBar renders correctly 1`] = `
     className="chilidog"
   />
   <div
-    className="home-nav-button home-item"
+    className="homeNavButton homeItem"
   >
     <a
-      className="a home-nav-button home-item"
+      className="a homeNavButton homeItem"
       href="/"
     >
       Superformula.
     </a>
   </div>
   <nav
-    className="nav-item container"
+    className="navItem container"
   >
     <div
-      className="nav-button page-item nav-item"
+      className="navButton pageItem navItem"
     >
       <a
-        className="a nav-button page-item nav-item"
+        className="a navButton pageItem navItem"
         href="/services"
       >
         Services
       </a>
     </div>
     <div
-      className="nav-button page-item nav-item"
+      className="navButton pageItem navItem"
     >
       <a
-        className="a nav-button page-item nav-item"
+        className="a navButton pageItem navItem"
         href="/work"
       >
         Work
       </a>
     </div>
     <div
-      className="nav-button page-item nav-item"
+      className="navButton pageItem navItem"
     >
       <a
-        className="a nav-button page-item nav-item"
+        className="a navButton pageItem navItem"
         href="/articles"
       >
         Articles
       </a>
     </div>
     <div
-      className="nav-button page-item nav-item"
+      className="navButton pageItem navItem"
     >
       <a
-        className="a nav-button page-item nav-item"
+        className="a navButton pageItem navItem"
         href="/contact"
       >
         Contact
       </a>
     </div>
     <div
-      className="careers-nav-button page-item nav-item"
+      className="careersNavButton pageItem navItem"
     >
       <a
-        className="a careers-nav-button page-item nav-item"
+        className="a careersNavButton pageItem navItem"
         href="https://careers.superformula.com"
       >
         Careers

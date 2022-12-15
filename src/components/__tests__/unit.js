@@ -5,8 +5,6 @@ import Header from "../header"
 import { HomeNavButton } from "../buttons"
 import NavBar from "../navbar"
 
-jest.mock("gatsby")
-
 describe("Header", () => {
 	it("renders correctly", () => {
 		const tree = renderer

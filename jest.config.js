@@ -1,9 +1,9 @@
 module.exports = {
   transform: {
     "^.+\\.[jt]sx?$": `<rootDir>/jest-preprocess.js`,
+    "^.+\\.module\\.(css)$": `jest-css-modules-transform`,
   },
   moduleNameMapper: {
-    ".+\\.(css|styl|less|sass|scss)$": `<rootDir>/identity-obj-proxy-css.js`,
     ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/file-mock.ts",
     ".+\\.svg": "<rootDir>/__mocks__/svg.js"
   },
