@@ -3,69 +3,69 @@
 exports[`Header renders correctly 1`] = `
 <header>
   <div
-    className="container navbar"
+    className="src-styles-_navbar-module_container src-styles-_navbar-module_navbar"
   >
     <SvgrURL
-      className="chilidog"
+      className="src-styles-_navbar-module_chilidog"
     />
     <div
-      className="homeNavButton homeItem"
+      className="src-styles-_buttons-module_homeNavButton src-styles-_navbar-module_homeItem"
     >
       <a
-        className="a homeNavButton homeItem"
+        className="src-styles-_buttons-module_a src-styles-_buttons-module_homeNavButton src-styles-_navbar-module_homeItem"
         href="/"
       >
         Superformula.
       </a>
     </div>
     <nav
-      className="navItem container"
+      className="src-styles-_navbar-module_navItem src-styles-_navbar-module_container"
     >
       <div
-        className="navButton pageItem navItem"
+        className="src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
       >
         <a
-          className="a navButton pageItem navItem"
+          className="src-styles-_buttons-module_a src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
           href="/services"
         >
           Services
         </a>
       </div>
       <div
-        className="navButton pageItem navItem"
+        className="src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
       >
         <a
-          className="a navButton pageItem navItem"
+          className="src-styles-_buttons-module_a src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
           href="/work"
         >
           Work
         </a>
       </div>
       <div
-        className="navButton pageItem navItem"
+        className="src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
       >
         <a
-          className="a navButton pageItem navItem"
+          className="src-styles-_buttons-module_a src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
           href="/articles"
         >
           Articles
         </a>
       </div>
       <div
-        className="navButton pageItem navItem"
+        className="src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
       >
         <a
-          className="a navButton pageItem navItem"
+          className="src-styles-_buttons-module_a src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
           href="/contact"
         >
           Contact
         </a>
       </div>
       <div
-        className="careersNavButton pageItem navItem"
+        className="src-styles-_buttons-module_careersNavButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
       >
         <a
-          className="a careersNavButton pageItem navItem"
+          className="src-styles-_buttons-module_a src-styles-_buttons-module_careersNavButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
           href="https://careers.superformula.com"
         >
           Careers
@@ -78,10 +78,10 @@ exports[`Header renders correctly 1`] = `
 
 exports[`HomeNavButton renders correctly 1`] = `
 <div
-  className="homeNavButton undefined"
+  className="src-styles-_buttons-module_homeNavButton undefined"
 >
   <a
-    className="a homeNavButton undefined"
+    className="src-styles-_buttons-module_a src-styles-_buttons-module_homeNavButton undefined"
     href="test"
   >
     test url
@@ -91,69 +91,69 @@ exports[`HomeNavButton renders correctly 1`] = `
 
 exports[`NavBar renders correctly 1`] = `
 <div
-  className="container navbar"
+  className="src-styles-_navbar-module_container src-styles-_navbar-module_navbar"
 >
   <SvgrURL
-    className="chilidog"
+    className="src-styles-_navbar-module_chilidog"
   />
   <div
-    className="homeNavButton homeItem"
+    className="src-styles-_buttons-module_homeNavButton src-styles-_navbar-module_homeItem"
   >
     <a
-      className="a homeNavButton homeItem"
+      className="src-styles-_buttons-module_a src-styles-_buttons-module_homeNavButton src-styles-_navbar-module_homeItem"
       href="/"
     >
       Superformula.
     </a>
   </div>
   <nav
-    className="navItem container"
+    className="src-styles-_navbar-module_navItem src-styles-_navbar-module_container"
   >
     <div
-      className="navButton pageItem navItem"
+      className="src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
     >
       <a
-        className="a navButton pageItem navItem"
+        className="src-styles-_buttons-module_a src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
         href="/services"
       >
         Services
       </a>
     </div>
     <div
-      className="navButton pageItem navItem"
+      className="src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
     >
       <a
-        className="a navButton pageItem navItem"
+        className="src-styles-_buttons-module_a src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
         href="/work"
       >
         Work
       </a>
     </div>
     <div
-      className="navButton pageItem navItem"
+      className="src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
     >
       <a
-        className="a navButton pageItem navItem"
+        className="src-styles-_buttons-module_a src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
         href="/articles"
       >
         Articles
       </a>
     </div>
     <div
-      className="navButton pageItem navItem"
+      className="src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
     >
       <a
-        className="a navButton pageItem navItem"
+        className="src-styles-_buttons-module_a src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
         href="/contact"
       >
         Contact
       </a>
     </div>
     <div
-      className="careersNavButton pageItem navItem"
+      className="src-styles-_buttons-module_careersNavButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
     >
       <a
-        className="a careersNavButton pageItem navItem"
+        className="src-styles-_buttons-module_a src-styles-_buttons-module_careersNavButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
         href="https://careers.superformula.com"
       >
         Careers
