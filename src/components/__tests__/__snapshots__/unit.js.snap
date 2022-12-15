@@ -1,0 +1,164 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<header>
+  <div
+    className="src-styles-_navbar-module_container src-styles-_navbar-module_navbar"
+  >
+    <SvgrURL
+      className="src-styles-_navbar-module_chilidog"
+    />
+    <div
+      className="src-styles-_buttons-module_homeNavButton src-styles-_navbar-module_homeItem"
+    >
+      <a
+        className="src-styles-_buttons-module_a src-styles-_buttons-module_homeNavButton src-styles-_navbar-module_homeItem"
+        href="/"
+      >
+        Superformula.
+      </a>
+    </div>
+    <nav
+      className="src-styles-_navbar-module_navItem src-styles-_navbar-module_container"
+    >
+      <div
+        className="src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+      >
+        <a
+          className="src-styles-_buttons-module_a src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+          href="/services"
+        >
+          Services
+        </a>
+      </div>
+      <div
+        className="src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+      >
+        <a
+          className="src-styles-_buttons-module_a src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+          href="/work"
+        >
+          Work
+        </a>
+      </div>
+      <div
+        className="src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+      >
+        <a
+          className="src-styles-_buttons-module_a src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+          href="/articles"
+        >
+          Articles
+        </a>
+      </div>
+      <div
+        className="src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+      >
+        <a
+          className="src-styles-_buttons-module_a src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+          href="/contact"
+        >
+          Contact
+        </a>
+      </div>
+      <div
+        className="src-styles-_buttons-module_careersNavButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+      >
+        <a
+          className="src-styles-_buttons-module_a src-styles-_buttons-module_careersNavButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+          href="https://careers.superformula.com"
+        >
+          Careers
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+`;
+
+exports[`HomeNavButton renders correctly 1`] = `
+<div
+  className="src-styles-_buttons-module_homeNavButton undefined"
+>
+  <a
+    className="src-styles-_buttons-module_a src-styles-_buttons-module_homeNavButton undefined"
+    href="test"
+  >
+    test url
+  </a>
+</div>
+`;
+
+exports[`NavBar renders correctly 1`] = `
+<div
+  className="src-styles-_navbar-module_container src-styles-_navbar-module_navbar"
+>
+  <SvgrURL
+    className="src-styles-_navbar-module_chilidog"
+  />
+  <div
+    className="src-styles-_buttons-module_homeNavButton src-styles-_navbar-module_homeItem"
+  >
+    <a
+      className="src-styles-_buttons-module_a src-styles-_buttons-module_homeNavButton src-styles-_navbar-module_homeItem"
+      href="/"
+    >
+      Superformula.
+    </a>
+  </div>
+  <nav
+    className="src-styles-_navbar-module_navItem src-styles-_navbar-module_container"
+  >
+    <div
+      className="src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+    >
+      <a
+        className="src-styles-_buttons-module_a src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+        href="/services"
+      >
+        Services
+      </a>
+    </div>
+    <div
+      className="src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+    >
+      <a
+        className="src-styles-_buttons-module_a src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+        href="/work"
+      >
+        Work
+      </a>
+    </div>
+    <div
+      className="src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+    >
+      <a
+        className="src-styles-_buttons-module_a src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+        href="/articles"
+      >
+        Articles
+      </a>
+    </div>
+    <div
+      className="src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+    >
+      <a
+        className="src-styles-_buttons-module_a src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+        href="/contact"
+      >
+        Contact
+      </a>
+    </div>
+    <div
+      className="src-styles-_buttons-module_careersNavButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+    >
+      <a
+        className="src-styles-_buttons-module_a src-styles-_buttons-module_careersNavButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+        href="https://careers.superformula.com"
+      >
+        Careers
+      </a>
+    </div>
+  </nav>
+</div>
+`;

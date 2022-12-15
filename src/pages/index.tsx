@@ -1,7 +1,7 @@
 import * as React from "react"
 import type { HeadFC } from "gatsby"
 
-import Header from "./header"
+import Header from "../components/header"
 import img_a from "../images/img_a.png"
 import img_b from "../images/img_b.png"
 import img_c from "../images/img_c.png"

@@ -31,7 +31,6 @@ export function HomeNavButton(props: ButtonProps & StyleProps) {
 
 export function NavButton(props: ButtonProps & StyleProps) {
   const className: string = styles.navButton + " " + props.className
-  console.log(className)
   return (
     <div className={className}>
       <A className={className} href={props.href}>{props.text}</A>
