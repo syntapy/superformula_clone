@@ -16,6 +16,8 @@ test('test HomeNavButton', () => {
 	const buttonClass = HomeNavButton.name
 
 	const div = screen.getByText(testMessage).parentElement
+	const computedStyle = window.getComputedStyle(div)
+	expect(computedStyle.margin).toBe('auto auto auto 0px')
 	const A = div.children[0]
 	expect(div.tagName).toBe('DIV')
 	expect(div).toBeInTheDocument()
