@@ -130,7 +130,7 @@ function CultureImgMobile(props: img) {
   return <img className={className} src={props.img.src} alt={props.img.alt} />
 }
 
-function CultureImgDesktop(props: {imgs: img[]}) {
+export function CultureImgDesktop(props: {imgs: img[]}) {
   const className: string = utilStyles.auxWrapper + ' ' + utilStyles.img
   return <div className={className}>
         {props.imgs.map((img, index) => {
