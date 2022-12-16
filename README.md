@@ -10,5 +10,7 @@ Main thing I'm proud about on this is my unit tests of CSS styles using [jest-tr
 ## Usage
 
 test: `npm run test`
+
 dev: `npm run develop`
+
 prod: `npm run serve`
