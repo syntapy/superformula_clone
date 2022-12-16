@@ -93,17 +93,18 @@ interface ServicesSectionProps {
 
 export function ServicesSection(props: ServicesSectionProps) {
   const className: string = utilStyles.flexContainer
-  const imgClassName: string = styles.img
+  const imgClassName: string = styles.img + ' ' + styles.imgMax
+  const flexItem: string = utilStyles.flexItem
   return (
     <React.Fragment>
       <div className={className}>
-        <div>
+        <div className={flexItem}>
           <h4>{props.title}</h4>
           <h5>{props.subtitle}</h5>
           <p>{props.description}</p>
           <ButtonLight href={props.href} text={props.buttonText} />
         </div>
-        <img className={imgClassName} src={props.src} alt={props.alt} />
+        <img className={flexItem} src={props.src} alt={props.alt} />
       </div>
     </React.Fragment>
   )

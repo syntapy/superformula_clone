@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom'
 
 import * as React from 'react'
-import {render, fireEvent, screen} from '@testing-library/react'
+import {render, screen} from '@testing-library/react'
 import * as styles from "../../styles/navbar.module.css"
 import { HomeNavButton } from "../buttons"
 
