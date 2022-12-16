@@ -9,18 +9,33 @@ import {render, fireEvent, screen} from '@testing-library/react'
 import * as styles from "../../styles/navbar.module.css"
 import { HomeNavButton } from "../buttons"
 
-test('test HomeNavButton', () => {
-	const testMessage = 'Test Message'
-	render(<HomeNavButton href={"/test"} text={testMessage} className={styles.homeItem}/>)
+describe('HomeNavButton', () => {
+	let div
+	let a
+	let computedStyle
+	let testMessage
 
-	const buttonClass = HomeNavButton.name
+	beforeEach(() => {
+		testMessage = 'Test Message'
+		render(<HomeNavButton href={"/test"} text={testMessage} className={styles.homeItem}/>)
+		a = screen.getByText(testMessage)
+		div = a.parentElement
 
-	const div = screen.getByText(testMessage).parentElement
-	const computedStyle = window.getComputedStyle(div)
-	expect(computedStyle.margin).toBe('auto auto auto 0px')
-	const A = div.children[0]
-	expect(div.tagName).toBe('DIV')
-	expect(div).toBeInTheDocument()
-	expect(div).toHaveTextContent(testMessage)
-	expect(A).toHaveAttribute('href', '/test')
+		computedStyle = window.getComputedStyle(div)
+	})
+
+	it('render <A />', () => {
+		const A = div.children[0]
+		expect(A).toBeInTheDocument()
+		expect(A).toHaveAttribute('href', '/test')
+	})
+
+	it('render <div />', () => {
+		const div = screen.getByText(testMessage).parentElement
+		expect(div).toBeInTheDocument()
+	})
+
+	it('check styles', () => {
+		expect(computedStyle).toHaveProperty('margin', 'auto auto auto 0px')
+	})
 })
