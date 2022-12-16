@@ -6,7 +6,7 @@ import * as utilStyles from '../../styles/utils.module.css'
 import { ServicesSection } from '../section'
 import img_c from '../images/img_c.png'
 
-describe('HomeNavButton', () => {
+describe('services section', () => {
 
 	let root_div
 	let computedStyle
