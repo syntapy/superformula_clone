@@ -140,7 +140,7 @@ export function CultureImgDesktop(props: {imgs: img[]}) {
           let imgClassName = stylesList[index] + ' ' + styles.cultureImgDesktop
           //console.log(styles)
           return <div className={utilStyles.auxItemWrapper} key={index.toString()}>
-                  <img className={className + ' ' + imgClassName} 
+                  <img className={imgClassName} 
                     src={img.src} 
                     alt={img.alt}
                   />
