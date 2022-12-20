@@ -93,7 +93,7 @@ interface ServicesSectionProps {
 
 export function ServicesSection(props: ServicesSectionProps) {
   const className: string = utilStyles.flexContainer
-  const imgClassName: string = styles.img + ' ' + styles.imgMax
+  const imgClassName: string = styles.servicesImg
   const flexItem: string = utilStyles.flexItem
   return (
     <React.Fragment>
@@ -123,6 +123,7 @@ interface CultureSectionProps {
   buttonText: string
   imgListDesktop: img[]
   imgMobile: img
+  isMobile: () => boolean
 }
 
 function CultureImgMobile(props: img) {
@@ -130,13 +131,16 @@ function CultureImgMobile(props: img) {
   return <img className={className} src={props.img.src} alt={props.img.alt} />
 }
 
-function CultureImgDesktop(props: {imgs: img[]}) {
-  const className: string = utilStyles.auxWrapper + ' ' + utilStyles.img
+export function CultureImgDesktop(props: {imgs: img[]}) {
+  const className: string = utilStyles.auxWrapper
+  const stylesList = [styles.img0, styles.img1, styles.img2, styles.img3]
   return <div className={className}>
         {props.imgs.map((img, index) => {
-          let imgClassName: string = styles['img' + index.toString()]
-          return <div className={utilStyles.auxItemWrapper}>
-                  <img className={className + ' ' + imgClassName} 
+          //let imgClassName: string = styles['img' + index.toString()]
+          let imgClassName = stylesList[index] + ' ' + styles.cultureImgDesktop
+          //console.log(styles)
+          return <div className={utilStyles.auxItemWrapper} key={index.toString()}>
+                  <img className={imgClassName} 
                     src={img.src} 
                     alt={img.alt}
                   />
@@ -158,11 +162,11 @@ function CultureSectionHeader(props: CultureSectionProps) {
 }
 
 export function CultureSection(props: CultureSectionProps) {
-  const initialIsMobile: boolean = utils.isMobile()
+  const initialIsMobile: boolean = props.isMobile()
   const [isMobile, setIsMobile] = React.useState(initialIsMobile)
 
   React.useEffect(() => {
-    const evenListener = () => setIsMobile(utils.isMobile())
+    const evenListener = () => setIsMobile(props.isMobile())
     window.addEventListener('resize',  evenListener)
     return () => window.removeEventListener('resize', evenListener)
   }, [])
