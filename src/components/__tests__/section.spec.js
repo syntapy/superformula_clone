@@ -81,9 +81,14 @@ describe('culture section desktop', () => {
 	})
 
 	it('CSS', () => {
-		for (const div of img_divs) {
-			expect(div).toHaveClass(utilStyles.auxItemWrapper)
-			//let computedStyle = window.getComputedStyle(div)
+		const width_list = ['20rem', '20rem', '30rem', '20rem']
+		for (let i = 0; i < img_divs.length; i++) {
+			let img_div = img_divs[i]
+			expect(img_div).toHaveClass(utilStyles.auxItemWrapper)
+			let img_div_style = window.getComputedStyle(img_div)
+			expect(img_div_style).toHaveProperty('height', 'auto')
+			expect(img_div_style).toHaveProperty('width', width_list[i])
+			expect(img_div_style).toHaveProperty('margin', '0px auto')
 		}
 	})
 })
