@@ -57,6 +57,7 @@ describe('culture section desktop', () => {
 	let h5
 	let p
 	let imgs
+	let img_divs
 
 	beforeEach(() => {
 		const { container } = render(getCultureSection(isMobileFalse))
@@ -64,13 +65,25 @@ describe('culture section desktop', () => {
 			h5 = container.querySelector('h5')
 			p = container.querySelector('p')
 			imgs = container.querySelectorAll('img')
+			img_divs = []
+			for (let i = 0; i < imgs.length; i++) {
+				img_divs.push(imgs[i].parentElement)
+			}
 	})
 
 	it('content', () => {
 		expect(h3).toHaveTextContent('100% remote and loving it')
 		expect(h5).toHaveTextContent('Collaborative, diverse, and really, really good at what we do')
 		expect(p).toHaveTextContent('Because we’re a team of passionate problem solvers doing work we love in a way that works, in every respect. In other words, low-ego, high-drive—and it makes all the difference')
+		expect(img_divs.length).toBe(4)
 		expect(imgs.length).toBe(4)
 		expect(imgs[0]).toHaveAttribute('src', './team1')
+	})
+
+	it('CSS', () => {
+		for (const div of img_divs) {
+			expect(div).toHaveClass(utilStyles.auxItemWrapper)
+			//let computedStyle = window.getComputedStyle(div)
+		}
 	})
 })
