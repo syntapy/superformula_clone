@@ -29,6 +29,8 @@ import { OlSection } from "../components/section"
 import { Insight } from "../components/info"
 import { SectionBlack, SectionWhite } from "../components/section"
 
+import * as utils from "../utils"
+
 const IndexPage = () => {
   return (
     <div className={styles.root}>
@@ -92,6 +94,7 @@ const IndexPage = () => {
               {src: team4, alt: "Team 4"},
             ]}
             imgMobile={{src: team_img, alt: "Team"}}
+            isMobile={utils.isMobile}
           />
         </SectionWhite>
         <SectionBlack>

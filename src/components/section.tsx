@@ -123,6 +123,7 @@ interface CultureSectionProps {
   buttonText: string
   imgListDesktop: img[]
   imgMobile: img
+  isMobile: () => boolean
 }
 
 function CultureImgMobile(props: img) {
@@ -131,7 +132,7 @@ function CultureImgMobile(props: img) {
 }
 
 export function CultureImgDesktop(props: {imgs: img[]}) {
-  const className: string = utilStyles.auxWrapper + ' ' + utilStyles.img
+  const className: string = utilStyles.auxWrapper
   return <div className={className}>
         {props.imgs.map((img, index) => {
           let imgClassName: string = styles['img' + index.toString()]
@@ -158,11 +159,11 @@ function CultureSectionHeader(props: CultureSectionProps) {
 }
 
 export function CultureSection(props: CultureSectionProps) {
-  const initialIsMobile: boolean = utils.isMobile()
+  const initialIsMobile: boolean = props.isMobile()
   const [isMobile, setIsMobile] = React.useState(initialIsMobile)
 
   React.useEffect(() => {
-    const evenListener = () => setIsMobile(utils.isMobile())
+    const evenListener = () => setIsMobile(props.isMobile())
     window.addEventListener('resize',  evenListener)
     return () => window.removeEventListener('resize', evenListener)
   }, [])
