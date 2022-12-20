@@ -65,7 +65,6 @@ describe('culture section', () => {
 	beforeEach(() => {
 		const { container } = render(
           <CultureSection
-						key="666"
             title="100% remote and loving it"
             subtitle="Collaborative, diverse, and really, really good at what we do"
             description="Because we’re a team of passionate problem solvers doing work we love in a way that works, in every respect. In other words, low-ego, high-drive—and it makes all the difference"

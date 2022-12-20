@@ -116,7 +116,6 @@ interface img {
 }
 
 interface CultureSectionProps {
-  key: string
   title: string
   subtitle: string
   description: string
@@ -134,8 +133,7 @@ function CultureImgMobile(props: img) {
 
 export function CultureImgDesktop(props: {imgs: img[]}) {
   const className: string = utilStyles.auxWrapper
-  console.log(className)
-  return <div className={className} key={props.key}>
+  return <div className={className}>
         {props.imgs.map((img, index) => {
           let imgClassName: string = styles['img' + index.toString()]
           return <div className={utilStyles.auxItemWrapper}>
