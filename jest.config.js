@@ -3,7 +3,7 @@ module.exports = {
     "^.+\\.[jt]sx?$": `<rootDir>/jest-preprocess.js`,
     "^.+\\.(css)$": [`jest-transform-css`, { 
       modules: true,
-      generateScopedName: '[path]_[name]_[local]'
+      generateScopedName: '[path][local]-[hash:base64:10]'
     }],
   },
   moduleNameMapper: {

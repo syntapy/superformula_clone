@@ -3,69 +3,69 @@
 exports[`Header renders correctly 1`] = `
 <header>
   <div
-    className="src-styles-_navbar-module_container src-styles-_navbar-module_navbar"
+    className="src-styles-container-8sTzKuoBNk src-styles-navbar-m-v7wwUaSW"
   >
     <SvgrURL
-      className="src-styles-_navbar-module_chilidog"
+      className="src-styles-chilidog-pBCE7RY2-t"
     />
     <div
-      className="src-styles-_buttons-module_homeNavButton src-styles-_navbar-module_homeItem"
+      className="src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"
     >
       <a
-        className="src-styles-_buttons-module_a src-styles-_buttons-module_homeNavButton src-styles-_navbar-module_homeItem"
+        className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"
         href="/"
       >
         Superformula.
       </a>
     </div>
     <nav
-      className="src-styles-_navbar-module_navItem src-styles-_navbar-module_container"
+      className="src-styles-navItem-MrimwUo-Wg src-styles-container-8sTzKuoBNk"
     >
       <div
-        className="src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+        className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
       >
         <a
-          className="src-styles-_buttons-module_a src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+          className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
           href="/services"
         >
           Services
         </a>
       </div>
       <div
-        className="src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+        className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
       >
         <a
-          className="src-styles-_buttons-module_a src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+          className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
           href="/work"
         >
           Work
         </a>
       </div>
       <div
-        className="src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+        className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
       >
         <a
-          className="src-styles-_buttons-module_a src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+          className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
           href="/articles"
         >
           Articles
         </a>
       </div>
       <div
-        className="src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+        className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
       >
         <a
-          className="src-styles-_buttons-module_a src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+          className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
           href="/contact"
         >
           Contact
         </a>
       </div>
       <div
-        className="src-styles-_buttons-module_careersNavButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+        className="src-styles-careersNavButton-sC5v2hJNN4 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
       >
         <a
-          className="src-styles-_buttons-module_a src-styles-_buttons-module_careersNavButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+          className="src-styles-a-g07BlHX8bK src-styles-careersNavButton-sC5v2hJNN4 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
           href="https://careers.superformula.com"
         >
           Careers
@@ -78,10 +78,10 @@ exports[`Header renders correctly 1`] = `
 
 exports[`HomeNavButton renders correctly 1`] = `
 <div
-  className="src-styles-_buttons-module_homeNavButton undefined"
+  className="src-styles-homeNavButton-FOVN2eOxu- undefined"
 >
   <a
-    className="src-styles-_buttons-module_a src-styles-_buttons-module_homeNavButton undefined"
+    className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- undefined"
     href="test"
   >
     test url
@@ -91,69 +91,69 @@ exports[`HomeNavButton renders correctly 1`] = `
 
 exports[`NavBar renders correctly 1`] = `
 <div
-  className="src-styles-_navbar-module_container src-styles-_navbar-module_navbar"
+  className="src-styles-container-8sTzKuoBNk src-styles-navbar-m-v7wwUaSW"
 >
   <SvgrURL
-    className="src-styles-_navbar-module_chilidog"
+    className="src-styles-chilidog-pBCE7RY2-t"
   />
   <div
-    className="src-styles-_buttons-module_homeNavButton src-styles-_navbar-module_homeItem"
+    className="src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"
   >
     <a
-      className="src-styles-_buttons-module_a src-styles-_buttons-module_homeNavButton src-styles-_navbar-module_homeItem"
+      className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"
       href="/"
     >
       Superformula.
     </a>
   </div>
   <nav
-    className="src-styles-_navbar-module_navItem src-styles-_navbar-module_container"
+    className="src-styles-navItem-MrimwUo-Wg src-styles-container-8sTzKuoBNk"
   >
     <div
-      className="src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+      className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
     >
       <a
-        className="src-styles-_buttons-module_a src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+        className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
         href="/services"
       >
         Services
       </a>
     </div>
     <div
-      className="src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+      className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
     >
       <a
-        className="src-styles-_buttons-module_a src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+        className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
         href="/work"
       >
         Work
       </a>
     </div>
     <div
-      className="src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+      className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
     >
       <a
-        className="src-styles-_buttons-module_a src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+        className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
         href="/articles"
       >
         Articles
       </a>
     </div>
     <div
-      className="src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+      className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
     >
       <a
-        className="src-styles-_buttons-module_a src-styles-_buttons-module_navButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+        className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
         href="/contact"
       >
         Contact
       </a>
     </div>
     <div
-      className="src-styles-_buttons-module_careersNavButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+      className="src-styles-careersNavButton-sC5v2hJNN4 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
     >
       <a
-        className="src-styles-_buttons-module_a src-styles-_buttons-module_careersNavButton src-styles-_navbar-module_pageItem src-styles-_navbar-module_navItem"
+        className="src-styles-a-g07BlHX8bK src-styles-careersNavButton-sC5v2hJNN4 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
         href="https://careers.superformula.com"
       >
         Careers
