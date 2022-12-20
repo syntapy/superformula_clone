@@ -93,7 +93,7 @@ interface ServicesSectionProps {
 
 export function ServicesSection(props: ServicesSectionProps) {
   const className: string = utilStyles.flexContainer
-  const imgClassName: string = styles.img + ' ' + styles.imgMax
+  const imgClassName: string = styles.img
   const flexItem: string = utilStyles.flexItem
   return (
     <React.Fragment>
