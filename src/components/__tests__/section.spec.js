@@ -3,6 +3,7 @@ import '@testing-library/jest-dom'
 import * as React from 'react'
 import {render, screen} from '@testing-library/react'
 import * as utilStyles from '../../styles/utils.module.css'
+import * as sectionStyles from "../../styles/section.module.css"
 import { ServicesSection, CultureSection } from '../section'
 import img_c from '../images/img_c.png'
 
@@ -82,13 +83,16 @@ describe('culture section desktop', () => {
 
 	it('CSS', () => {
 		const width_list = ['20rem', '20rem', '30rem', '20rem']
+		const imgStylesList = [sectionStyles.img0, sectionStyles.img1, sectionStyles.img2, sectionStyles.img3]
 		for (let i = 0; i < img_divs.length; i++) {
 			let img_div = img_divs[i]
+			let img = imgs[i]
 			expect(img_div).toHaveClass(utilStyles.auxItemWrapper)
-			let img_div_style = window.getComputedStyle(img_div)
-			expect(img_div_style).toHaveProperty('height', 'auto')
-			expect(img_div_style).toHaveProperty('width', width_list[i])
-			expect(img_div_style).toHaveProperty('margin', '0px auto')
+			expect(img).toHaveClass(imgStylesList[i])
+			let img_style = window.getComputedStyle(img)
+			expect(img_style).toHaveProperty('height', 'auto')
+			expect(img_style).toHaveProperty('width', width_list[i])
+			expect(img_style).toHaveProperty('margin', '0px auto')
 		}
 	})
 })
