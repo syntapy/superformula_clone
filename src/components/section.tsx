@@ -136,7 +136,7 @@ export function CultureImgDesktop(props: {imgs: img[]}) {
   return <div className={className}>
         {props.imgs.map((img, index) => {
           let imgClassName: string = styles['img' + index.toString()]
-          return <div className={utilStyles.auxItemWrapper}>
+          return <div className={utilStyles.auxItemWrapper} key={index.toString()}>
                   <img className={className + ' ' + imgClassName} 
                     src={img.src} 
                     alt={img.alt}
