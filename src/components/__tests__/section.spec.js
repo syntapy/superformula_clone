@@ -59,17 +59,19 @@ describe('culture section desktop', () => {
 	let p
 	let imgs
 	let img_divs
+	let container
 
 	beforeEach(() => {
-		const { container } = render(getCultureSection(isMobileFalse))
-			h3 = container.querySelector('h3')
-			h5 = container.querySelector('h5')
-			p = container.querySelector('p')
-			imgs = container.querySelectorAll('img')
-			img_divs = []
-			for (let i = 0; i < imgs.length; i++) {
-				img_divs.push(imgs[i].parentElement)
-			}
+		const rendered = render(getCultureSection(isMobileFalse))
+		container = rendered.container
+		h3 = container.querySelector('h3')
+		h5 = container.querySelector('h5')
+		p = container.querySelector('p')
+		imgs = container.querySelectorAll('img')
+		img_divs = []
+		for (let i = 0; i < imgs.length; i++) {
+			img_divs.push(imgs[i].parentElement)
+		}
 	})
 
 	it('content', () => {
@@ -81,15 +83,27 @@ describe('culture section desktop', () => {
 		expect(imgs[0]).toHaveAttribute('src', './team1')
 	})
 
-	it('CSS', () => {
-		const width_list = ['20rem', '20rem', '30rem', '20rem']
-		const imgStylesList = [sectionStyles.img0, sectionStyles.img1, sectionStyles.img2, sectionStyles.img3]
+	it('img_div CSS', () => {
 		for (let i = 0; i < img_divs.length; i++) {
 			let img_div = img_divs[i]
-			let img = imgs[i]
 			expect(img_div).toHaveClass(utilStyles.auxItemWrapper)
+		}
+	})
+
+	it('img CSS', () => {
+		const width_list = ['20rem', '20rem', '30rem', '20rem']
+		const imgStylesList = [sectionStyles.img0, sectionStyles.img1, sectionStyles.img2, sectionStyles.img3]
+		const div = container.querySelector('div')
+		const imgList = container.querySelectorAll('img')
+		const n = imgList.length
+		expect(n).toBe(4)
+		for (let i = 0; i < n; i++) {
+			let img = imgList[i]
 			expect(img).toHaveClass(imgStylesList[i])
 			let img_style = window.getComputedStyle(img)
+			expect(img_style).not.toHaveProperty('width', '100rem')
+			const className = imgStylesList[i] + ' ' + sectionStyles.cultureImgDesktop
+			expect(img.className).toBe(className)
 			expect(img_style).toHaveProperty('height', 'auto')
 			expect(img_style).toHaveProperty('width', width_list[i])
 			expect(img_style).toHaveProperty('margin', '0px auto')

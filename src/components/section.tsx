@@ -93,7 +93,7 @@ interface ServicesSectionProps {
 
 export function ServicesSection(props: ServicesSectionProps) {
   const className: string = utilStyles.flexContainer
-  const imgClassName: string = styles.img
+  const imgClassName: string = styles.servicesImg
   const flexItem: string = utilStyles.flexItem
   return (
     <React.Fragment>
@@ -137,7 +137,7 @@ export function CultureImgDesktop(props: {imgs: img[]}) {
   return <div className={className}>
         {props.imgs.map((img, index) => {
           //let imgClassName: string = styles['img' + index.toString()]
-          let imgClassName = stylesList[index]
+          let imgClassName = stylesList[index] + ' ' + styles.cultureImgDesktop
           //console.log(styles)
           return <div className={utilStyles.auxItemWrapper} key={index.toString()}>
                   <img className={className + ' ' + imgClassName} 
