@@ -10,7 +10,7 @@ export default function NavBar() {
   const navBarPadding: string = styles.navbarContainer
   const navBar: string = styles.container + " " + styles.navbar
   const homeItem: string = styles.homeItem
-  const pageItemList: string = styles.navItem + " " + styles.container
+  const pageItemList: string = styles.navItem + " " + styles.pageItems
   const pageItem: string = styles.pageItem + " " + styles.navItem
   const chilidogStyle: string = styles.chilidog
   function onChilidogClick() {

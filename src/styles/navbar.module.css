@@ -38,13 +38,29 @@
 	margin: auto auto auto 0;
 }
 
+.pageItems {
+	display: flex;
+}
+
 @media (max-width: $max-mobile-width) {
+	.container {
+	}
+
+	.pageItems {
+		position: fixed;
+		box-sizing: border-box;
+		flex-direction: column;
+		width: 100%;
+		padding: auto;
+		background-color: #1a1a1a;
+	}
+
 	.chilidog {
 		display: block;
 	}
 
 	.navItem {
-		display: none;
+		margin: 0 auto;
 	}
 
 	.homeItem {
