@@ -2,12 +2,18 @@
 	$max-mobile-width: max-mobile-width;
 }
 
+.navbarContainer {
+	position: fixed;
+	box-sizing: border-box;
+	padding: 0 1rem;
+	width: 100%;
+}
+
 .navbar {
 	height: 3rem;
+	width: 100%;
 	border: 0px solid #dcded6;
 	border-width: 0 0 0.5px 0;
-	padding: 0px 10px 15px 10px;
-	margin: 0 1rem;
 }
 
 .container {
