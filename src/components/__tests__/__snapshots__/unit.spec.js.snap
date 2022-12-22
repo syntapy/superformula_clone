@@ -23,8 +23,18 @@ exports[`Header renders correctly 1`] = `
         </a>
       </div>
       <nav
-        className="src-styles-navItem-MrimwUo-Wg src-styles-pageItems-d3pMtHNL6H"
+        className="src-styles-navItem-MrimwUo-Wg src-styles-pageItemList-zsb5979aQc"
       >
+        <div
+          className="src-styles-homeNavButton-FOVN2eOxu- src-styles-pageItem-LqEbulJmM- src-styles-mobileHomeItem-41KLrbOncI src-styles-navItem-MrimwUo-Wg"
+        >
+          <a
+            className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- src-styles-pageItem-LqEbulJmM- src-styles-mobileHomeItem-41KLrbOncI src-styles-navItem-MrimwUo-Wg"
+            href="/"
+          >
+            Superformula.
+          </a>
+        </div>
         <div
           className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
         >
@@ -116,8 +126,18 @@ exports[`NavBar renders correctly 1`] = `
       </a>
     </div>
     <nav
-      className="src-styles-navItem-MrimwUo-Wg src-styles-pageItems-d3pMtHNL6H"
+      className="src-styles-navItem-MrimwUo-Wg src-styles-pageItemList-zsb5979aQc"
     >
+      <div
+        className="src-styles-homeNavButton-FOVN2eOxu- src-styles-pageItem-LqEbulJmM- src-styles-mobileHomeItem-41KLrbOncI src-styles-navItem-MrimwUo-Wg"
+      >
+        <a
+          className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- src-styles-pageItem-LqEbulJmM- src-styles-mobileHomeItem-41KLrbOncI src-styles-navItem-MrimwUo-Wg"
+          href="/"
+        >
+          Superformula.
+        </a>
+      </div>
       <div
         className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
       >

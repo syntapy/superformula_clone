@@ -10,8 +10,9 @@ export default function NavBar() {
   const navBarPadding: string = styles.navbarContainer
   const navBar: string = styles.container + " " + styles.navbar
   const homeItem: string = styles.homeItem
-  const pageItemList: string = styles.navItem + " " + styles.pageItems
+  const pageItemList: string = styles.navItem + " " + styles.pageItemList
   const pageItem: string = styles.pageItem + " " + styles.navItem
+  const mobileHomeItem: string = styles.pageItem + " " + styles.mobileHomeItem + " " + styles.navItem
   const chilidogStyle: string = styles.chilidog
   function onChilidogClick() {
     console.log("Chilidog clicked")
@@ -22,6 +23,7 @@ export default function NavBar() {
         <Chilidogmenu onClick={onChilidogClick} className={chilidogStyle} />
         <HomeNavButton className={homeItem} href="/" text="Superformula." />
         <nav className={pageItemList}>
+          <HomeNavButton className={mobileHomeItem} href="/" text="Superformula." />
           <NavButton className={pageItem} href="/services" text="Services" />
           <NavButton className={pageItem} href="/work" text="Work" />
           <NavButton className={pageItem} href="/articles" text="Articles" />

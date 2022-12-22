@@ -38,7 +38,11 @@
 	margin: auto auto auto 0;
 }
 
-.pageItems {
+.mobileHomeItem {
+	display: none;
+}
+
+.pageItemList {
 	display: flex;
 }
 
@@ -46,10 +50,13 @@
 	.container {
 	}
 
-	.pageItems {
+	.pageItemList {
 		position: fixed;
 		box-sizing: border-box;
 		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
 		width: 100%;
 		padding: auto;
 		background-color: #1a1a1a;
@@ -60,11 +67,16 @@
 	}
 
 	.navItem {
-		margin: 0 auto;
+		margin: 0.5rem auto;
 	}
 
 	.homeItem {
-		margin: auto;
+		margin: 0 auto;
+	}
+
+	.mobileHomeItem {
+		display: block;
+		margin: 0 auto 2rem auto;
 	}
 }
 
