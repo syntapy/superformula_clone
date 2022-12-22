@@ -7,6 +7,7 @@ exports[`Header renders correctly 1`] = `
   >
     <SvgrURL
       className="src-styles-chilidog-pBCE7RY2-t"
+      onClick={[Function]}
     />
     <div
       className="src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"
@@ -95,6 +96,7 @@ exports[`NavBar renders correctly 1`] = `
 >
   <SvgrURL
     className="src-styles-chilidog-pBCE7RY2-t"
+    onClick={[Function]}
   />
   <div
     className="src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"

@@ -11,9 +11,12 @@ export default function NavBar() {
   const homeItem: string = styles.homeItem
   const pageItemList: string = styles.navItem + " " + styles.container
   const pageItem: string = styles.pageItem + " " + styles.navItem
+  function onChilidogClick() {
+    console.log("Chilidog clicked")
+  }
   return (
     <div className={navBar}>
-      <Chilidogmenu className={styles.chilidog} />
+      <Chilidogmenu onClick={onChilidogClick} className={styles.chilidog} />
       <HomeNavButton className={homeItem} href="/" text="Superformula." />
       <nav className={pageItemList}>
         <NavButton className={pageItem} href="/services" text="Services" />
