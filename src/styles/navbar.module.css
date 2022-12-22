@@ -50,18 +50,6 @@
 	.container {
 	}
 
-	.pageItemList {
-		position: fixed;
-		box-sizing: border-box;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		height: 100%;
-		width: 100%;
-		padding: auto;
-		background-color: #1a1a1a;
-	}
-
 	.chilidog {
 		display: block;
 	}
@@ -77,6 +65,20 @@
 	.mobileHomeItem {
 		display: block;
 		margin: 0 auto 2rem auto;
+	}
+
+	.pageItemList {
+		position: fixed;
+		box-sizing: border-box;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		width: 100%;
+		padding: auto;
+		margin: 0;
+		border: 2px solid red;
+		background-color: #1a1a1a;
 	}
 }
 
