@@ -78,6 +78,7 @@
 	.pageItemListMobile {
 		display: flex;
 		position: fixed;
+		bottom: 100%;
 		box-sizing: border-box;
 		flex-direction: column;
 		justify-content: center;
@@ -88,6 +89,10 @@
 		margin: 0;
 		background-color: #1a1a1a;
 	}
+}
+
+.mobileMenuOpen {
+	bottom: 0;
 }
 
 .pageItem {

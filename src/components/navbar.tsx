@@ -1,12 +1,15 @@
 import * as React from "react"
 import { HomeNavButton, NavButton, CareersNavButton } from "./buttons"
 
+import { isMobile } from "../utils"
+
 import * as styles from "../styles/navbar.module.css"
 import * as utilStyles from "../styles/utils.module.css"
 
 import Chilidogmenu from "../images/svg/chilidogmenu.svg"
 
 interface NavbarItemsProps {
+  id: string
   listClassName: string
   homeClassName: string
   itemClassName: string
@@ -14,7 +17,7 @@ interface NavbarItemsProps {
 
 function NavBarItems(props: NavbarItemsProps) {
   return (
-    <nav className={props.listClassName}>
+    <nav id={props.id} className={props.listClassName}>
       <HomeNavButton className={props.homeClassName} href="/" text="Superformula." />
       <NavButton className={props.itemClassName} href="/services" text="Services" />
       <NavButton className={props.itemClassName} href="/work" text="Work" />
@@ -26,6 +29,7 @@ function NavBarItems(props: NavbarItemsProps) {
 }
 
 export default function NavBar() {
+  const [isMobileMenuOpen, setIsMenuOpen] = React.useState(false)
   const navBarPadding: string = styles.navbarContainer
   const navBar: string = styles.container + " " + styles.navbar
   const homeItem: string = styles.homeItem
@@ -35,8 +39,15 @@ export default function NavBar() {
   const pageItem: string = styles.pageItem + " " + styles.navItem
   const chilidogStyle: string = styles.chilidog
   function onChilidogClick() {
-    console.log("Chilidog clicked")
+    if (isMobile()) {
+      if (!isMobileMenuOpen) {
+        const menu: HTMLElement | null = document.getElementById("mobile-menu")
+        menu.classList.add(styles.mobileMenuOpen)
+        setIsMenuOpen(true)
+      }
+    }
   }
+
   return (
     <>
       <div className={navBarPadding}>
@@ -46,7 +57,7 @@ export default function NavBar() {
           <NavBarItems listClassName={pageItemList} homeClassName={itemListHomeItem} itemClassName={styles.navItem} />
         </div>
       </div>
-      <NavBarItems listClassName={pageItemListMobile} homeClassName={itemListHomeItem} itemClassName={pageItem} />
+      <NavBarItems id={"mobile-menu"} listClassName={pageItemListMobile} homeClassName={itemListHomeItem} itemClassName={pageItem} />
     </>
   )
 }

@@ -90,6 +90,7 @@ exports[`Header renders correctly 1`] = `
   </div>
   <nav
     className="src-styles-navItem-MrimwUo-Wg src-styles-pageItemListMobile-OWSYDLp7Qb"
+    id="mobile-menu"
   >
     <div
       className="src-styles-homeNavButton-FOVN2eOxu- src-styles-itemListHomeItem-9NkznCL7LS"
@@ -258,6 +259,7 @@ exports[`NavBar renders correctly 1`] = `
   </div>,
   <nav
     className="src-styles-navItem-MrimwUo-Wg src-styles-pageItemListMobile-OWSYDLp7Qb"
+    id="mobile-menu"
   >
     <div
       className="src-styles-homeNavButton-FOVN2eOxu- src-styles-itemListHomeItem-9NkznCL7LS"
