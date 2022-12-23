@@ -38,7 +38,7 @@
 	margin: auto auto auto 0;
 }
 
-.mobileHomeItem {
+.itemListHomeItem {
 	display: none;
 }
 
@@ -63,12 +63,12 @@
 	}
 
 	.homeItem {
-		margin: 0 auto;
+		margin: auto;
 	}
 
-	.mobileHomeItem {
+	.itemListHomeItem {
 		display: block;
-		margin: 0 auto 2rem auto;
+		padding: 0 0 4rem 0;
 	}
 
 	.pageItemList {
@@ -86,7 +86,6 @@
 		width: 100%;
 		padding: auto;
 		margin: 0;
-		border: 2px solid red;
 		background-color: #1a1a1a;
 	}
 }

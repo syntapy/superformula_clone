@@ -29,6 +29,7 @@ export default function NavBar() {
   const navBarPadding: string = styles.navbarContainer
   const navBar: string = styles.container + " " + styles.navbar
   const homeItem: string = styles.homeItem
+  const itemListHomeItem: string = styles.itemListHomeItem
   const pageItemList: string = styles.navItem + " " + styles.pageItemList
   const pageItemListMobile: string = styles.navItem + " " + styles.pageItemListMobile
   const pageItem: string = styles.pageItem + " " + styles.navItem
@@ -42,10 +43,10 @@ export default function NavBar() {
         <div className={navBar}>
           <Chilidogmenu onClick={onChilidogClick} className={chilidogStyle} />
           <HomeNavButton className={homeItem} href="/" text="Superformula." />
-          <NavBarItems listClassName={pageItemList} homeClassName={homeItem} itemClassName={styles.navItem} />
+          <NavBarItems listClassName={pageItemList} homeClassName={itemListHomeItem} itemClassName={styles.navItem} />
         </div>
       </div>
-      <NavBarItems listClassName={pageItemListMobile} homeClassName={homeItem} itemClassName={pageItem} />
+      <NavBarItems listClassName={pageItemListMobile} homeClassName={itemListHomeItem} itemClassName={pageItem} />
     </>
   )
 }

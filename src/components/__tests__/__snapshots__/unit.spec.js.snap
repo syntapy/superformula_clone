@@ -26,10 +26,10 @@ exports[`Header renders correctly 1`] = `
         className="src-styles-navItem-MrimwUo-Wg src-styles-pageItemList-zsb5979aQc"
       >
         <div
-          className="src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"
+          className="src-styles-homeNavButton-FOVN2eOxu- src-styles-itemListHomeItem-9NkznCL7LS"
         >
           <a
-            className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"
+            className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- src-styles-itemListHomeItem-9NkznCL7LS"
             href="/"
           >
             Superformula.
@@ -92,10 +92,10 @@ exports[`Header renders correctly 1`] = `
     className="src-styles-navItem-MrimwUo-Wg src-styles-pageItemListMobile-OWSYDLp7Qb"
   >
     <div
-      className="src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"
+      className="src-styles-homeNavButton-FOVN2eOxu- src-styles-itemListHomeItem-9NkznCL7LS"
     >
       <a
-        className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"
+        className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- src-styles-itemListHomeItem-9NkznCL7LS"
         href="/"
       >
         Superformula.
@@ -194,10 +194,10 @@ exports[`NavBar renders correctly 1`] = `
         className="src-styles-navItem-MrimwUo-Wg src-styles-pageItemList-zsb5979aQc"
       >
         <div
-          className="src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"
+          className="src-styles-homeNavButton-FOVN2eOxu- src-styles-itemListHomeItem-9NkznCL7LS"
         >
           <a
-            className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"
+            className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- src-styles-itemListHomeItem-9NkznCL7LS"
             href="/"
           >
             Superformula.
@@ -260,10 +260,10 @@ exports[`NavBar renders correctly 1`] = `
     className="src-styles-navItem-MrimwUo-Wg src-styles-pageItemListMobile-OWSYDLp7Qb"
   >
     <div
-      className="src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"
+      className="src-styles-homeNavButton-FOVN2eOxu- src-styles-itemListHomeItem-9NkznCL7LS"
     >
       <a
-        className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"
+        className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- src-styles-itemListHomeItem-9NkznCL7LS"
         href="/"
       >
         Superformula.
