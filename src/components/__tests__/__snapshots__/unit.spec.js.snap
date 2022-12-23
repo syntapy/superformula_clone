@@ -26,60 +26,60 @@ exports[`Header renders correctly 1`] = `
         className="src-styles-navItem-MrimwUo-Wg src-styles-pageItemList-zsb5979aQc"
       >
         <div
-          className="src-styles-homeNavButton-FOVN2eOxu- src-styles-pageItem-LqEbulJmM- src-styles-mobileHomeItem-41KLrbOncI src-styles-navItem-MrimwUo-Wg"
+          className="src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"
         >
           <a
-            className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- src-styles-pageItem-LqEbulJmM- src-styles-mobileHomeItem-41KLrbOncI src-styles-navItem-MrimwUo-Wg"
+            className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"
             href="/"
           >
             Superformula.
           </a>
         </div>
         <div
-          className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+          className="src-styles-navButton-7LzWMSAco3 src-styles-navItem-MrimwUo-Wg"
         >
           <a
-            className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+            className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-navItem-MrimwUo-Wg"
             href="/services"
           >
             Services
           </a>
         </div>
         <div
-          className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+          className="src-styles-navButton-7LzWMSAco3 src-styles-navItem-MrimwUo-Wg"
         >
           <a
-            className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+            className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-navItem-MrimwUo-Wg"
             href="/work"
           >
             Work
           </a>
         </div>
         <div
-          className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+          className="src-styles-navButton-7LzWMSAco3 src-styles-navItem-MrimwUo-Wg"
         >
           <a
-            className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+            className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-navItem-MrimwUo-Wg"
             href="/articles"
           >
             Articles
           </a>
         </div>
         <div
-          className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+          className="src-styles-navButton-7LzWMSAco3 src-styles-navItem-MrimwUo-Wg"
         >
           <a
-            className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+            className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-navItem-MrimwUo-Wg"
             href="/contact"
           >
             Contact
           </a>
         </div>
         <div
-          className="src-styles-careersNavButton-sC5v2hJNN4 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+          className="src-styles-careersNavButton-sC5v2hJNN4 src-styles-navItem-MrimwUo-Wg"
         >
           <a
-            className="src-styles-a-g07BlHX8bK src-styles-careersNavButton-sC5v2hJNN4 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+            className="src-styles-a-g07BlHX8bK src-styles-careersNavButton-sC5v2hJNN4 src-styles-navItem-MrimwUo-Wg"
             href="https://careers.superformula.com"
           >
             Careers
@@ -88,6 +88,70 @@ exports[`Header renders correctly 1`] = `
       </nav>
     </div>
   </div>
+  <nav
+    className="src-styles-navItem-MrimwUo-Wg src-styles-pageItemListMobile-OWSYDLp7Qb"
+  >
+    <div
+      className="src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"
+    >
+      <a
+        className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"
+        href="/"
+      >
+        Superformula.
+      </a>
+    </div>
+    <div
+      className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+    >
+      <a
+        className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+        href="/services"
+      >
+        Services
+      </a>
+    </div>
+    <div
+      className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+    >
+      <a
+        className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+        href="/work"
+      >
+        Work
+      </a>
+    </div>
+    <div
+      className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+    >
+      <a
+        className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+        href="/articles"
+      >
+        Articles
+      </a>
+    </div>
+    <div
+      className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+    >
+      <a
+        className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+        href="/contact"
+      >
+        Contact
+      </a>
+    </div>
+    <div
+      className="src-styles-careersNavButton-sC5v2hJNN4 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+    >
+      <a
+        className="src-styles-a-g07BlHX8bK src-styles-careersNavButton-sC5v2hJNN4 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+        href="https://careers.superformula.com"
+      >
+        Careers
+      </a>
+    </div>
+  </nav>
 </header>
 `;
 
@@ -105,16 +169,96 @@ exports[`HomeNavButton renders correctly 1`] = `
 `;
 
 exports[`NavBar renders correctly 1`] = `
-<div
-  className="src-styles-navbarContainer-DN8BHCiz-C"
->
+[
   <div
-    className="src-styles-container-8sTzKuoBNk src-styles-navbar-m-v7wwUaSW"
+    className="src-styles-navbarContainer-DN8BHCiz-C"
   >
-    <SvgrURL
-      className="src-styles-chilidog-pBCE7RY2-t"
-      onClick={[Function]}
-    />
+    <div
+      className="src-styles-container-8sTzKuoBNk src-styles-navbar-m-v7wwUaSW"
+    >
+      <SvgrURL
+        className="src-styles-chilidog-pBCE7RY2-t"
+        onClick={[Function]}
+      />
+      <div
+        className="src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"
+      >
+        <a
+          className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"
+          href="/"
+        >
+          Superformula.
+        </a>
+      </div>
+      <nav
+        className="src-styles-navItem-MrimwUo-Wg src-styles-pageItemList-zsb5979aQc"
+      >
+        <div
+          className="src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"
+        >
+          <a
+            className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"
+            href="/"
+          >
+            Superformula.
+          </a>
+        </div>
+        <div
+          className="src-styles-navButton-7LzWMSAco3 src-styles-navItem-MrimwUo-Wg"
+        >
+          <a
+            className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-navItem-MrimwUo-Wg"
+            href="/services"
+          >
+            Services
+          </a>
+        </div>
+        <div
+          className="src-styles-navButton-7LzWMSAco3 src-styles-navItem-MrimwUo-Wg"
+        >
+          <a
+            className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-navItem-MrimwUo-Wg"
+            href="/work"
+          >
+            Work
+          </a>
+        </div>
+        <div
+          className="src-styles-navButton-7LzWMSAco3 src-styles-navItem-MrimwUo-Wg"
+        >
+          <a
+            className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-navItem-MrimwUo-Wg"
+            href="/articles"
+          >
+            Articles
+          </a>
+        </div>
+        <div
+          className="src-styles-navButton-7LzWMSAco3 src-styles-navItem-MrimwUo-Wg"
+        >
+          <a
+            className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-navItem-MrimwUo-Wg"
+            href="/contact"
+          >
+            Contact
+          </a>
+        </div>
+        <div
+          className="src-styles-careersNavButton-sC5v2hJNN4 src-styles-navItem-MrimwUo-Wg"
+        >
+          <a
+            className="src-styles-a-g07BlHX8bK src-styles-careersNavButton-sC5v2hJNN4 src-styles-navItem-MrimwUo-Wg"
+            href="https://careers.superformula.com"
+          >
+            Careers
+          </a>
+        </div>
+      </nav>
+    </div>
+  </div>,
+  <nav
+    className="src-styles-navItem-MrimwUo-Wg src-styles-pageItemListMobile-OWSYDLp7Qb"
+  >
     <div
       className="src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"
     >
@@ -125,70 +269,56 @@ exports[`NavBar renders correctly 1`] = `
         Superformula.
       </a>
     </div>
-    <nav
-      className="src-styles-navItem-MrimwUo-Wg src-styles-pageItemList-zsb5979aQc"
+    <div
+      className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
     >
-      <div
-        className="src-styles-homeNavButton-FOVN2eOxu- src-styles-pageItem-LqEbulJmM- src-styles-mobileHomeItem-41KLrbOncI src-styles-navItem-MrimwUo-Wg"
+      <a
+        className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+        href="/services"
       >
-        <a
-          className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- src-styles-pageItem-LqEbulJmM- src-styles-mobileHomeItem-41KLrbOncI src-styles-navItem-MrimwUo-Wg"
-          href="/"
-        >
-          Superformula.
-        </a>
-      </div>
-      <div
-        className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+        Services
+      </a>
+    </div>
+    <div
+      className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+    >
+      <a
+        className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+        href="/work"
       >
-        <a
-          className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
-          href="/services"
-        >
-          Services
-        </a>
-      </div>
-      <div
-        className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+        Work
+      </a>
+    </div>
+    <div
+      className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+    >
+      <a
+        className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+        href="/articles"
       >
-        <a
-          className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
-          href="/work"
-        >
-          Work
-        </a>
-      </div>
-      <div
-        className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+        Articles
+      </a>
+    </div>
+    <div
+      className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+    >
+      <a
+        className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+        href="/contact"
       >
-        <a
-          className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
-          href="/articles"
-        >
-          Articles
-        </a>
-      </div>
-      <div
-        className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+        Contact
+      </a>
+    </div>
+    <div
+      className="src-styles-careersNavButton-sC5v2hJNN4 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+    >
+      <a
+        className="src-styles-a-g07BlHX8bK src-styles-careersNavButton-sC5v2hJNN4 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+        href="https://careers.superformula.com"
       >
-        <a
-          className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
-          href="/contact"
-        >
-          Contact
-        </a>
-      </div>
-      <div
-        className="src-styles-careersNavButton-sC5v2hJNN4 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
-      >
-        <a
-          className="src-styles-a-g07BlHX8bK src-styles-careersNavButton-sC5v2hJNN4 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
-          href="https://careers.superformula.com"
-        >
-          Careers
-        </a>
-      </div>
-    </nav>
-  </div>
-</div>
+        Careers
+      </a>
+    </div>
+  </nav>,
+]
 `;
