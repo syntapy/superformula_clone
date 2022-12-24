@@ -33,7 +33,7 @@ function NavBarItems(props: NavBarItemsProps) {
   )
 }
 
-export default function GobFush() {
+export default function NavBar() {
   const [isMobileMenuOpen, setIsMenuOpen] = React.useState(false)
   const navBarPadding: string = styles.navbarContainer
   const navBar: string = styles.container + " " + styles.navbar

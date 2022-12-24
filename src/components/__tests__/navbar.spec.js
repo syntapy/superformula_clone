@@ -3,11 +3,11 @@ import '@testing-library/jest-dom'
 import * as React from 'react'
 import {render, screen} from '@testing-library/react'
 
-import GobFush from '../navbar'
+import NavBar from '../navbar'
 
 describe('menu', () => {
 	beforeEach(() => {
-		const { container } = render(<GobFush />)
+		const { container } = render(<NavBar />)
 	})
 
 	it('should render the navbar', () => {
