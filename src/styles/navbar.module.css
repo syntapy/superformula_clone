@@ -74,7 +74,6 @@
 		display: block;
 		text-align: center;
 		padding: 1rem 0 4rem 0;
-		border: 1px solid red;
 		width: 100%;
 		margin: 0 auto;
 	}
@@ -95,7 +94,7 @@
 		bottom: 100%;
 		box-sizing: border-box;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: flex-start;
 		align-items: center;
 		height: 100%;
 		width: 100%;
