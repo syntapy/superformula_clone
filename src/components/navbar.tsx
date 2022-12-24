@@ -46,7 +46,7 @@ export default function NavBar() {
   function onChilidogClick(): void {
     if (isMobile()) {
       if (!isMobileMenuOpen) {
-        const menu: HTMLElement | null = document.getElementById("mobile-menu")
+        const menu: HTMLElement | null = document.getElementById("mobile-nav")
         menu.classList.add(styles.mobileMenuOpen)
         setIsMenuOpen(true)
       }
@@ -58,7 +58,7 @@ export default function NavBar() {
       console.log("is mobile")
       if (isMobileMenuOpen) {
         console.log("mobile menu is open")
-        const menu: HTMLElement | null = document.getElementById("mobile-menu")
+        const menu: HTMLElement | null = document.getElementById("mobile-nav")
         menu.classList.remove(styles.mobileMenuOpen)
         setIsMenuOpen(false)
       }
@@ -72,6 +72,7 @@ export default function NavBar() {
           <Chilidogmenu onClick={onChilidogClick} className={chilidogStyle} />
           <HomeNavButton className={homeItem} href="/" text="Superformula." />
           <NavBarItems
+            id={"desktop-nav"}
             listClassName={pageItemList}
             homeClassName={itemListHomeItem}
             itemClassName={styles.navItem}
@@ -79,7 +80,7 @@ export default function NavBar() {
         </div>
       </div>
       <NavBarItems 
-        id={"mobile-menu"}
+        id={"mobile-nav"}
         listClassName={pageItemListMobile}
         homeClassName={itemListHomeItem}
         itemClassName={pageItem}

@@ -24,6 +24,7 @@ exports[`Header renders correctly 1`] = `
       </div>
       <nav
         className="src-styles-navItem-MrimwUo-Wg src-styles-pageItemList-zsb5979aQc"
+        id="desktop-nav"
       >
         <div
           className="src-styles-itemListHomeItem-9NkznCL7LS"
@@ -97,13 +98,14 @@ exports[`Header renders correctly 1`] = `
   </div>
   <nav
     className="src-styles-navItem-MrimwUo-Wg src-styles-pageItemListMobile-OWSYDLp7Qb"
-    id="mobile-menu"
+    id="mobile-nav"
   >
     <div
       className="src-styles-itemListHomeItem-9NkznCL7LS"
     >
       <SvgrURL
         className="src-styles-menuClose-J96rIZBjBX"
+        onClick={[Function]}
       />
       <div
         className="src-styles-homeNavButton-FOVN2eOxu- src-styles-home-lovhuGmMZH"
@@ -207,6 +209,7 @@ exports[`NavBar renders correctly 1`] = `
       </div>
       <nav
         className="src-styles-navItem-MrimwUo-Wg src-styles-pageItemList-zsb5979aQc"
+        id="desktop-nav"
       >
         <div
           className="src-styles-itemListHomeItem-9NkznCL7LS"
@@ -280,13 +283,14 @@ exports[`NavBar renders correctly 1`] = `
   </div>,
   <nav
     className="src-styles-navItem-MrimwUo-Wg src-styles-pageItemListMobile-OWSYDLp7Qb"
-    id="mobile-menu"
+    id="mobile-nav"
   >
     <div
       className="src-styles-itemListHomeItem-9NkznCL7LS"
     >
       <SvgrURL
         className="src-styles-menuClose-J96rIZBjBX"
+        onClick={[Function]}
       />
       <div
         className="src-styles-homeNavButton-FOVN2eOxu- src-styles-home-lovhuGmMZH"
