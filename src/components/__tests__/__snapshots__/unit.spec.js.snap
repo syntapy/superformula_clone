@@ -26,14 +26,21 @@ exports[`Header renders correctly 1`] = `
         className="src-styles-navItem-MrimwUo-Wg src-styles-pageItemList-zsb5979aQc"
       >
         <div
-          className="src-styles-homeNavButton-FOVN2eOxu- src-styles-itemListHomeItem-9NkznCL7LS"
+          className="src-styles-itemListHomeItem-9NkznCL7LS"
         >
-          <a
-            className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- src-styles-itemListHomeItem-9NkznCL7LS"
-            href="/"
+          <SvgrURL
+            className="src-styles-menuClose-J96rIZBjBX"
+          />
+          <div
+            className="src-styles-homeNavButton-FOVN2eOxu- src-styles-home-lovhuGmMZH"
           >
-            Superformula.
-          </a>
+            <a
+              className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- src-styles-home-lovhuGmMZH"
+              href="/"
+            >
+              Superformula.
+            </a>
+          </div>
         </div>
         <div
           className="src-styles-navButton-7LzWMSAco3 src-styles-navItem-MrimwUo-Wg"
@@ -93,14 +100,21 @@ exports[`Header renders correctly 1`] = `
     id="mobile-menu"
   >
     <div
-      className="src-styles-homeNavButton-FOVN2eOxu- src-styles-itemListHomeItem-9NkznCL7LS"
+      className="src-styles-itemListHomeItem-9NkznCL7LS"
     >
-      <a
-        className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- src-styles-itemListHomeItem-9NkznCL7LS"
-        href="/"
+      <SvgrURL
+        className="src-styles-menuClose-J96rIZBjBX"
+      />
+      <div
+        className="src-styles-homeNavButton-FOVN2eOxu- src-styles-home-lovhuGmMZH"
       >
-        Superformula.
-      </a>
+        <a
+          className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- src-styles-home-lovhuGmMZH"
+          href="/"
+        >
+          Superformula.
+        </a>
+      </div>
     </div>
     <div
       className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
@@ -195,14 +209,21 @@ exports[`NavBar renders correctly 1`] = `
         className="src-styles-navItem-MrimwUo-Wg src-styles-pageItemList-zsb5979aQc"
       >
         <div
-          className="src-styles-homeNavButton-FOVN2eOxu- src-styles-itemListHomeItem-9NkznCL7LS"
+          className="src-styles-itemListHomeItem-9NkznCL7LS"
         >
-          <a
-            className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- src-styles-itemListHomeItem-9NkznCL7LS"
-            href="/"
+          <SvgrURL
+            className="src-styles-menuClose-J96rIZBjBX"
+          />
+          <div
+            className="src-styles-homeNavButton-FOVN2eOxu- src-styles-home-lovhuGmMZH"
           >
-            Superformula.
-          </a>
+            <a
+              className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- src-styles-home-lovhuGmMZH"
+              href="/"
+            >
+              Superformula.
+            </a>
+          </div>
         </div>
         <div
           className="src-styles-navButton-7LzWMSAco3 src-styles-navItem-MrimwUo-Wg"
@@ -262,14 +283,21 @@ exports[`NavBar renders correctly 1`] = `
     id="mobile-menu"
   >
     <div
-      className="src-styles-homeNavButton-FOVN2eOxu- src-styles-itemListHomeItem-9NkznCL7LS"
+      className="src-styles-itemListHomeItem-9NkznCL7LS"
     >
-      <a
-        className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- src-styles-itemListHomeItem-9NkznCL7LS"
-        href="/"
+      <SvgrURL
+        className="src-styles-menuClose-J96rIZBjBX"
+      />
+      <div
+        className="src-styles-homeNavButton-FOVN2eOxu- src-styles-home-lovhuGmMZH"
       >
-        Superformula.
-      </a>
+        <a
+          className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- src-styles-home-lovhuGmMZH"
+          href="/"
+        >
+          Superformula.
+        </a>
+      </div>
     </div>
     <div
       className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
