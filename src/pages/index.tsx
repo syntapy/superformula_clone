@@ -20,6 +20,7 @@ import dribble from "../images/svg/dribble.svg"
 import linkedin from "../images/svg/linkedin.svg"
 
 import * as styles from "../styles/index.module.css"
+import * as sectionStyles from "../styles/section.module.css"
 import * as globalStyles from "../styles/global.module.css"
 import "../styles/global.css"
 
@@ -36,7 +37,8 @@ const IndexPage = () => {
     <div className={styles.root}>
       <Header />
       <main>
-        <SectionBlack>
+        <SectionBlack className={sectionStyles.firstSection}
+          >
           <HeaderSection
             title="We can go faster and further together"
             description="We are digital experts driven by the passion needed to accelerate and transform your business."

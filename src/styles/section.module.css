@@ -12,6 +12,10 @@
 	clear: both;
 }
 
+.firstSection {
+	padding-top: 3rem;
+}
+
 .sectionBlack {
 	background-color: #000;
 	color: #dcded6;
