@@ -9,7 +9,7 @@ import * as utilStyles from "../styles/utils.module.css"
 import Chilidogmenu from "../images/svg/chilidogmenu.svg"
 import Menuclose from "../images/svg/menuclose.svg"
 
-interface NavbarItemsProps {
+interface NavBarItemsProps {
   id: string
   listClassName: string
   homeClassName: string
@@ -17,7 +17,7 @@ interface NavbarItemsProps {
   onClose: () => void
 }
 
-function NavBarItems(props: NavbarItemsProps) {
+function NavBarItems(props: NavBarItemsProps) {
   return (
     <nav id={props.id} className={props.listClassName}>
       <div className={props.homeClassName} >
@@ -46,7 +46,7 @@ export default function NavBar() {
   function onChilidogClick(): void {
     if (isMobile()) {
       if (!isMobileMenuOpen) {
-        const menu: HTMLElement | null = document.getElementById("mobile-nav")
+        const menu: HTMLElement | null = document.getElementByRole("mobile-nav")
         menu.classList.add(styles.mobileMenuOpen)
         setIsMenuOpen(true)
       }
