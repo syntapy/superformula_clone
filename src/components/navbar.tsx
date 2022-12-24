@@ -33,7 +33,7 @@ function NavBarItems(props: NavBarItemsProps) {
   )
 }
 
-export default function NavBar() {
+export default function GobFush() {
   const [isMobileMenuOpen, setIsMenuOpen] = React.useState(false)
   const navBarPadding: string = styles.navbarContainer
   const navBar: string = styles.container + " " + styles.navbar
@@ -46,7 +46,7 @@ export default function NavBar() {
   function onChilidogClick(): void {
     if (isMobile()) {
       if (!isMobileMenuOpen) {
-        const menu: HTMLElement | null = document.getElementByRole("mobile-nav")
+        const menu: HTMLElement | null = document.getElementById("mobile-nav")
         menu.classList.add(styles.mobileMenuOpen)
         setIsMenuOpen(true)
       }
