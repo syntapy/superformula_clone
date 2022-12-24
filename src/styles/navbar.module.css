@@ -66,9 +66,23 @@
 		margin: auto;
 	}
 
+	.home {
+	}
+
 	.itemListHomeItem {
+		position: relative;
 		display: block;
-		padding: 0 0 4rem 0;
+		text-align: center;
+		padding: 1rem 0 4rem 0;
+		border: 1px solid red;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.menuClose {
+		position: absolute;
+		left: 0;
+		padding: 0 0 0 1rem;
 	}
 
 	.pageItemList {

@@ -7,6 +7,7 @@ import * as styles from "../styles/navbar.module.css"
 import * as utilStyles from "../styles/utils.module.css"
 
 import Chilidogmenu from "../images/svg/chilidogmenu.svg"
+import Menuclose from "../images/svg/menuclose.svg"
 
 interface NavbarItemsProps {
   id: string
@@ -18,7 +19,10 @@ interface NavbarItemsProps {
 function NavBarItems(props: NavbarItemsProps) {
   return (
     <nav id={props.id} className={props.listClassName}>
-      <HomeNavButton className={props.homeClassName} href="/" text="Superformula." />
+      <div className={props.homeClassName} >
+        <Menuclose className={styles.menuClose}/>
+        <HomeNavButton className={styles.home} href="/" text="Superformula." />
+      </div>
       <NavButton className={props.itemClassName} href="/services" text="Services" />
       <NavButton className={props.itemClassName} href="/work" text="Work" />
       <NavButton className={props.itemClassName} href="/articles" text="Articles" />
