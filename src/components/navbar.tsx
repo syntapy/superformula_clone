@@ -14,13 +14,14 @@ interface NavbarItemsProps {
   listClassName: string
   homeClassName: string
   itemClassName: string
+  onClose: () => void
 }
 
 function NavBarItems(props: NavbarItemsProps) {
   return (
     <nav id={props.id} className={props.listClassName}>
       <div className={props.homeClassName} >
-        <Menuclose className={styles.menuClose}/>
+        <Menuclose onClick={props.onClose} className={styles.menuClose}/>
         <HomeNavButton className={styles.home} href="/" text="Superformula." />
       </div>
       <NavButton className={props.itemClassName} href="/services" text="Services" />
@@ -42,12 +43,24 @@ export default function NavBar() {
   const pageItemListMobile: string = styles.navItem + " " + styles.pageItemListMobile
   const pageItem: string = styles.pageItem + " " + styles.navItem
   const chilidogStyle: string = styles.chilidog
-  function onChilidogClick() {
+  function onChilidogClick(): void {
     if (isMobile()) {
       if (!isMobileMenuOpen) {
         const menu: HTMLElement | null = document.getElementById("mobile-menu")
         menu.classList.add(styles.mobileMenuOpen)
         setIsMenuOpen(true)
+      }
+    }
+  }
+
+  function onMenuCloseClick(): void {
+    if (isMobile()) {
+      console.log("is mobile")
+      if (isMobileMenuOpen) {
+        console.log("mobile menu is open")
+        const menu: HTMLElement | null = document.getElementById("mobile-menu")
+        menu.classList.remove(styles.mobileMenuOpen)
+        setIsMenuOpen(false)
       }
     }
   }
@@ -58,10 +71,20 @@ export default function NavBar() {
         <div className={navBar}>
           <Chilidogmenu onClick={onChilidogClick} className={chilidogStyle} />
           <HomeNavButton className={homeItem} href="/" text="Superformula." />
-          <NavBarItems listClassName={pageItemList} homeClassName={itemListHomeItem} itemClassName={styles.navItem} />
+          <NavBarItems
+            listClassName={pageItemList}
+            homeClassName={itemListHomeItem}
+            itemClassName={styles.navItem}
+          />
         </div>
       </div>
-      <NavBarItems id={"mobile-menu"} listClassName={pageItemListMobile} homeClassName={itemListHomeItem} itemClassName={pageItem} />
+      <NavBarItems 
+        id={"mobile-menu"}
+        listClassName={pageItemListMobile}
+        homeClassName={itemListHomeItem}
+        itemClassName={pageItem}
+        onClose={onMenuCloseClick}
+      />
     </>
   )
 }
