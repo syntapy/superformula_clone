@@ -16,6 +16,7 @@ export default function NavBar() {
       <SvgButton
         // Need to pass width and height as props
         // to make jest tests work, sigh...
+        // TODO find a better way to do this
         icon={<Chilidogmenu width={32} height={45}/>}
         alt={"Menu"}
         className={styles.chilidog}
