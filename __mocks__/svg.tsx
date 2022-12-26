@@ -1,2 +1,10 @@
-export default 'SvgrURL'
-export const ReactComponent = 'div'
+//export default 'SvgrURL'
+
+export default function SvgrURL() {
+  return <svg viewBox="0 0 80 50" width="32" height="45" fill="#ffffff">
+    <rect width="44" height="5"></rect>
+    <rect y="20" width="80" height="5"></rect>
+    <rect y="40" width="50" height="5"></rect>
+  </svg>
+}
+export const ReactComponent = 'svg'
