@@ -1,5 +1,5 @@
 import * as React from "react"
-import { HomeNavButton, NavButton, CareersNavButton } from "./buttons"
+import { HomeNavButton, NavButton, CareersNavButton, SvgButton } from "./buttons"
 
 import * as styles from "../styles/navbar.module.css"
 import * as utilStyles from "../styles/utils.module.css"
@@ -13,7 +13,11 @@ export default function NavBar() {
   const pageItem: string = styles.pageItem + " " + styles.navItem
   return (
     <div className={navBar}>
-      <Chilidogmenu className={styles.chilidog} />
+      <SvgButton
+        icon={<Chilidogmenu />}
+        alt={"Menu"}
+        className={styles.chilidog}
+      />
       <HomeNavButton className={homeItem} href="/" text="Superformula." />
       <nav className={pageItemList}>
         <NavButton className={pageItem} href="/services" text="Services" />
