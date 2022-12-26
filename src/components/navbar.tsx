@@ -14,7 +14,7 @@ export default function NavBar() {
   return (
     <div className={navBar}>
       <SvgButton
-        icon={<Chilidogmenu />}
+        icon={<Chilidogmenu width={32} height={45}/>}
         alt={"Menu"}
         className={styles.chilidog}
       />

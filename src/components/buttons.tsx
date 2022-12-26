@@ -90,14 +90,8 @@ interface SvgProps {
 
 export function SvgButton(props: StyleProps & SvgProps) {
   const className: string = styles.svgButton + " " + props.className
-  let w: string = "32px"
-  let h: string = "45px"
-  if (props.icon.props.width) {
-    w = props.icon.props.width.toString() + "px"
-  }
-  if (props.icon.props.height) {
-    h = props.icon.props.height.toString() + "px"
-  }
+  const w: string = props.icon.props.width.toString() + "px"
+  const h: string = props.icon.props.height.toString() + "px"
   const dimensionStyle: React.CSSProperties = {
     width: w,
     minWidth: w,
