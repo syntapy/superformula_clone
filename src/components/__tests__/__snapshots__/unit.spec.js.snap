@@ -8,10 +8,40 @@ exports[`Header renders correctly 1`] = `
     <div
       className="src-styles-container-8sTzKuoBNk src-styles-navbar-m-v7wwUaSW"
     >
-      <SvgrURL
-        className="src-styles-chilidog-pBCE7RY2-t"
+      <button
+        className="src-styles-svgButton-P5syo6dygz src-styles-chilidog-pBCE7RY2-t"
         onClick={[Function]}
-      />
+        style={
+          {
+            "height": "45px",
+            "minHeight": "45px",
+            "minWidth": "32px",
+            "width": "32px",
+          }
+        }
+      >
+        <svg
+          fill="#ffffff"
+          height="45"
+          viewBox="0 0 80 50"
+          width="32"
+        >
+          <rect
+            height="5"
+            width="44"
+          />
+          <rect
+            height="5"
+            width="80"
+            y="20"
+          />
+          <rect
+            height="5"
+            width="50"
+            y="40"
+          />
+        </svg>
+      </button>
       <div
         className="src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"
       >
@@ -29,9 +59,39 @@ exports[`Header renders correctly 1`] = `
         <div
           className="src-styles-itemListHomeItem-9NkznCL7LS"
         >
-          <SvgrURL
-            className="src-styles-menuClose-J96rIZBjBX"
-          />
+          <button
+            className="src-styles-svgButton-P5syo6dygz src-styles-menuClose-J96rIZBjBX"
+            style={
+              {
+                "height": "40px",
+                "minHeight": "40px",
+                "minWidth": "40px",
+                "width": "40px",
+              }
+            }
+          >
+            <svg
+              fill="#ffffff"
+              height="40"
+              viewBox="0 0 80 50"
+              width="40"
+            >
+              <rect
+                height="5"
+                width="44"
+              />
+              <rect
+                height="5"
+                width="80"
+                y="20"
+              />
+              <rect
+                height="5"
+                width="50"
+                y="40"
+              />
+            </svg>
+          </button>
           <div
             className="src-styles-homeNavButton-FOVN2eOxu- src-styles-home-lovhuGmMZH"
           >
@@ -103,10 +163,40 @@ exports[`Header renders correctly 1`] = `
     <div
       className="src-styles-itemListHomeItem-9NkznCL7LS"
     >
-      <SvgrURL
-        className="src-styles-menuClose-J96rIZBjBX"
+      <button
+        className="src-styles-svgButton-P5syo6dygz src-styles-menuClose-J96rIZBjBX"
         onClick={[Function]}
-      />
+        style={
+          {
+            "height": "40px",
+            "minHeight": "40px",
+            "minWidth": "40px",
+            "width": "40px",
+          }
+        }
+      >
+        <svg
+          fill="#ffffff"
+          height="40"
+          viewBox="0 0 80 50"
+          width="40"
+        >
+          <rect
+            height="5"
+            width="44"
+          />
+          <rect
+            height="5"
+            width="80"
+            y="20"
+          />
+          <rect
+            height="5"
+            width="50"
+            y="40"
+          />
+        </svg>
+      </button>
       <div
         className="src-styles-homeNavButton-FOVN2eOxu- src-styles-home-lovhuGmMZH"
       >
@@ -193,10 +283,40 @@ exports[`NavBar renders correctly 1`] = `
     <div
       className="src-styles-container-8sTzKuoBNk src-styles-navbar-m-v7wwUaSW"
     >
-      <SvgrURL
-        className="src-styles-chilidog-pBCE7RY2-t"
+      <button
+        className="src-styles-svgButton-P5syo6dygz src-styles-chilidog-pBCE7RY2-t"
         onClick={[Function]}
-      />
+        style={
+          {
+            "height": "45px",
+            "minHeight": "45px",
+            "minWidth": "32px",
+            "width": "32px",
+          }
+        }
+      >
+        <svg
+          fill="#ffffff"
+          height="45"
+          viewBox="0 0 80 50"
+          width="32"
+        >
+          <rect
+            height="5"
+            width="44"
+          />
+          <rect
+            height="5"
+            width="80"
+            y="20"
+          />
+          <rect
+            height="5"
+            width="50"
+            y="40"
+          />
+        </svg>
+      </button>
       <div
         className="src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"
       >
@@ -214,9 +334,39 @@ exports[`NavBar renders correctly 1`] = `
         <div
           className="src-styles-itemListHomeItem-9NkznCL7LS"
         >
-          <SvgrURL
-            className="src-styles-menuClose-J96rIZBjBX"
-          />
+          <button
+            className="src-styles-svgButton-P5syo6dygz src-styles-menuClose-J96rIZBjBX"
+            style={
+              {
+                "height": "40px",
+                "minHeight": "40px",
+                "minWidth": "40px",
+                "width": "40px",
+              }
+            }
+          >
+            <svg
+              fill="#ffffff"
+              height="40"
+              viewBox="0 0 80 50"
+              width="40"
+            >
+              <rect
+                height="5"
+                width="44"
+              />
+              <rect
+                height="5"
+                width="80"
+                y="20"
+              />
+              <rect
+                height="5"
+                width="50"
+                y="40"
+              />
+            </svg>
+          </button>
           <div
             className="src-styles-homeNavButton-FOVN2eOxu- src-styles-home-lovhuGmMZH"
           >
@@ -288,10 +438,40 @@ exports[`NavBar renders correctly 1`] = `
     <div
       className="src-styles-itemListHomeItem-9NkznCL7LS"
     >
-      <SvgrURL
-        className="src-styles-menuClose-J96rIZBjBX"
+      <button
+        className="src-styles-svgButton-P5syo6dygz src-styles-menuClose-J96rIZBjBX"
         onClick={[Function]}
-      />
+        style={
+          {
+            "height": "40px",
+            "minHeight": "40px",
+            "minWidth": "40px",
+            "width": "40px",
+          }
+        }
+      >
+        <svg
+          fill="#ffffff"
+          height="40"
+          viewBox="0 0 80 50"
+          width="40"
+        >
+          <rect
+            height="5"
+            width="44"
+          />
+          <rect
+            height="5"
+            width="80"
+            y="20"
+          />
+          <rect
+            height="5"
+            width="50"
+            y="40"
+          />
+        </svg>
+      </button>
       <div
         className="src-styles-homeNavButton-FOVN2eOxu- src-styles-home-lovhuGmMZH"
       >

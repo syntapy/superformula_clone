@@ -1,5 +1,5 @@
 import * as React from "react"
-import { HomeNavButton, NavButton, CareersNavButton } from "./buttons"
+import { HomeNavButton, NavButton, CareersNavButton, SvgButton } from "./buttons"
 
 import { isMobile } from "../utils"
 
@@ -21,7 +21,11 @@ function NavBarItems(props: NavBarItemsProps) {
   return (
     <nav id={props.id} className={props.listClassName}>
       <div className={props.homeClassName} >
-        <Menuclose onClick={props.onClose} className={styles.menuClose}/>
+        <SvgButton
+          className={styles.menuClose}
+          onClick={props.onClose}
+          icon={<Menuclose width={40} height={40} />}
+        />
         <HomeNavButton className={styles.home} href="/" text="Superformula." />
       </div>
       <NavButton className={props.itemClassName} href="/services" text="Services" />
@@ -55,9 +59,7 @@ export default function NavBar() {
 
   function onMenuCloseClick(): void {
     if (isMobile()) {
-      console.log("is mobile")
       if (isMobileMenuOpen) {
-        console.log("mobile menu is open")
         const menu: HTMLElement | null = document.getElementById("mobile-nav")
         menu.classList.remove(styles.mobileMenuOpen)
         setIsMenuOpen(false)
@@ -69,7 +71,11 @@ export default function NavBar() {
     <>
       <div className={navBarPadding}>
         <div className={navBar}>
-          <Chilidogmenu onClick={onChilidogClick} className={chilidogStyle} />
+          <SvgButton
+            className={chilidogStyle}
+            onClick={onChilidogClick}
+            icon={<Chilidogmenu width={32} height={45} />}
+          />
           <HomeNavButton className={homeItem} href="/" text="Superformula." />
           <NavBarItems
             id={"desktop-nav"}
