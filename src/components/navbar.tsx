@@ -17,6 +17,7 @@ export default function NavBar() {
         // Need to pass width and height as props
         // to make jest tests work, sigh...
         // TODO find a better way to do this
+        // see https://github.com/syntapy/superformula_clone/issues/31
         icon={<Chilidogmenu width={32} height={45}/>}
         alt={"Menu"}
         className={styles.chilidog}
