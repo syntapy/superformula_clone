@@ -52,7 +52,6 @@
 }
 
 .pageItemListMobile {
-	display: none;
 }
 
 @media (max-width: $max-mobile-width) {
@@ -114,6 +113,7 @@
 
 .mobileMenuOpen {
 	bottom: 0;
+	visibility: visible;
 }
 
 .pageItem {
