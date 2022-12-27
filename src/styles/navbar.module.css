@@ -1,17 +1,18 @@
 :import('./vars.module.css') {
 	$max-mobile-width: max-mobile-width;
+	$nav-height: nav-height;
 }
 
 .navbarContainer {
 	position: fixed;
 	box-sizing: border-box;
 	padding: 0 1rem;
-	height: 3rem;
+	height: $nav-height;
 	width: 100%;
 }
 
 .navbar {
-	height: 3rem;
+	height: $nav-height;
 	width: 100%;
 	border: 0px solid #dcded6;
 	border-width: 0 0 0.5px 0;

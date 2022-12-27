@@ -1,5 +1,6 @@
 :import('./vars.module.css') {
 	$max-mobile-width: max-mobile-width;
+	$nav-height: nav-height;
 }
 
 .section {
@@ -13,7 +14,7 @@
 }
 
 .firstSection {
-	padding-top: 3rem;
+	padding-top: $nav-height;
 }
 
 .sectionBlack {
