@@ -3,7 +3,7 @@
 exports[`Header renders correctly 1`] = `
 <header>
   <div
-    className="src-styles-navbarContainer-DN8BHCiz-C"
+    className="src-styles-fixed-CDvAcKBA-T src-styles-navbarContainer-DN8BHCiz-C"
   >
     <div
       className="src-styles-container-8sTzKuoBNk src-styles-navbar-m-v7wwUaSW"
@@ -57,7 +57,7 @@ exports[`Header renders correctly 1`] = `
         id="desktop-nav"
       >
         <div
-          className="src-styles-itemListHomeItem-9NkznCL7LS"
+          className="src-styles-navbarContainer-DN8BHCiz-C src-styles-itemListHomeItem-9NkznCL7LS"
         >
           <button
             className="src-styles-svgButton-P5syo6dygz src-styles-menuClose-J96rIZBjBX"
@@ -161,7 +161,7 @@ exports[`Header renders correctly 1`] = `
     id="mobile-nav"
   >
     <div
-      className="src-styles-itemListHomeItem-9NkznCL7LS"
+      className="src-styles-navbarContainer-DN8BHCiz-C src-styles-itemListHomeItem-9NkznCL7LS"
     >
       <button
         className="src-styles-svgButton-P5syo6dygz src-styles-menuClose-J96rIZBjBX"
@@ -278,7 +278,7 @@ exports[`HomeNavButton renders correctly 1`] = `
 exports[`NavBar renders correctly 1`] = `
 [
   <div
-    className="src-styles-navbarContainer-DN8BHCiz-C"
+    className="src-styles-fixed-CDvAcKBA-T src-styles-navbarContainer-DN8BHCiz-C"
   >
     <div
       className="src-styles-container-8sTzKuoBNk src-styles-navbar-m-v7wwUaSW"
@@ -332,7 +332,7 @@ exports[`NavBar renders correctly 1`] = `
         id="desktop-nav"
       >
         <div
-          className="src-styles-itemListHomeItem-9NkznCL7LS"
+          className="src-styles-navbarContainer-DN8BHCiz-C src-styles-itemListHomeItem-9NkznCL7LS"
         >
           <button
             className="src-styles-svgButton-P5syo6dygz src-styles-menuClose-J96rIZBjBX"
@@ -436,7 +436,7 @@ exports[`NavBar renders correctly 1`] = `
     id="mobile-nav"
   >
     <div
-      className="src-styles-itemListHomeItem-9NkznCL7LS"
+      className="src-styles-navbarContainer-DN8BHCiz-C src-styles-itemListHomeItem-9NkznCL7LS"
     >
       <button
         className="src-styles-svgButton-P5syo6dygz src-styles-menuClose-J96rIZBjBX"
