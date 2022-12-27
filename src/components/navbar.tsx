@@ -1,7 +1,7 @@
 import * as React from "react"
 import { HomeNavButton, NavButton, CareersNavButton, SvgButton } from "./buttons"
 
-import { isMobile } from "../utils"
+import { isMobile, ResponsiveProps } from "../utils"
 
 import * as styles from "../styles/navbar.module.css"
 import * as utilStyles from "../styles/utils.module.css"
@@ -38,7 +38,9 @@ function NavBarItems(props: NavBarItemsProps) {
   )
 }
 
-export default function NavBar() {
+export default function NavBar(props: ResponsiveProps) {
+  const initialIsMobile: boolean = props.isMobile()
+  const [isMobile, setIsMobile] = React.useState(initialIsMobile)
   const [isMobileMenuOpen, setIsMenuOpen] = React.useState(false)
   const navBarPadding: string = styles.fixed + " " + styles.navbarContainer
   const navBar: string = styles.container + " " + styles.navbar
@@ -49,7 +51,7 @@ export default function NavBar() {
   const pageItem: string = styles.pageItem + " " + styles.navItem
   const chilidogStyle: string = styles.chilidog
   function onChilidogClick(): void {
-    if (isMobile()) {
+    if (isMobile) {
       if (!isMobileMenuOpen) {
         const menu: HTMLElement | null = document.getElementById("mobile-nav")
         menu.classList.add(styles.mobileMenuOpen)
@@ -59,7 +61,7 @@ export default function NavBar() {
   }
 
   function onMenuCloseClick(): void {
-    if (isMobile()) {
+    if (isMobile) {
       if (isMobileMenuOpen) {
         const menu: HTMLElement | null = document.getElementById("mobile-nav")
         menu.classList.remove(styles.mobileMenuOpen)

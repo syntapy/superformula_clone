@@ -35,7 +35,7 @@ import * as utils from "../utils"
 const IndexPage = () => {
   return (
     <div className={styles.root}>
-      <Header />
+      <Header isMobile={utils.isMobile} />
       <main>
         <SectionBlack className={sectionStyles.firstSection}
           >
