@@ -3,8 +3,11 @@
 	$nav-height: nav-height;
 }
 
-.navbarContainer {
+.fixed {
 	position: fixed;
+}
+
+.navbarContainer {
 	box-sizing: border-box;
 	padding: 0 1rem;
 	height: $nav-height;
@@ -69,10 +72,12 @@
 	}
 
 	.home {
+		margin: auto 0;
 	}
 
 	.itemListHomeItem {
 		position: relative;
+		box-sizing: border-box;
 		display: block;
 		text-align: center;
 		padding: 1rem 0 4rem 0;
@@ -82,8 +87,9 @@
 
 	.menuClose {
 		position: absolute;
-		left: 0;
-		padding: 0 0 0 1rem;
+		left: 2rem;
+		padding: auto;
+		margin: auto;
 	}
 
 	.pageItemList {

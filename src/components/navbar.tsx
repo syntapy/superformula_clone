@@ -18,9 +18,10 @@ interface NavBarItemsProps {
 }
 
 function NavBarItems(props: NavBarItemsProps) {
+  const firstItem: string = styles.navbarContainer + " " + props.homeClassName
   return (
     <nav id={props.id} className={props.listClassName}>
-      <div className={props.homeClassName} >
+      <div className={firstItem} >
         <SvgButton
           className={styles.menuClose}
           onClick={props.onClose}
@@ -39,7 +40,7 @@ function NavBarItems(props: NavBarItemsProps) {
 
 export default function NavBar() {
   const [isMobileMenuOpen, setIsMenuOpen] = React.useState(false)
-  const navBarPadding: string = styles.navbarContainer
+  const navBarPadding: string = styles.fixed + " " + styles.navbarContainer
   const navBar: string = styles.container + " " + styles.navbar
   const homeItem: string = styles.homeItem
   const itemListHomeItem: string = styles.itemListHomeItem
