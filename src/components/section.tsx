@@ -11,8 +11,15 @@ interface SectionProps {
   children: JSX.Element
 }
 
-export function SectionBlack(props: SectionProps) {
-  const className: string = styles.section + " " + styles.sectionBlack + " " + props.className
+interface StyleProps {
+  className?: string
+}
+
+export function SectionBlack(props: SectionProps & StyleProps) {
+  let className: string = styles.section + " " + styles.sectionBlack + " " + props.className
+  if (props.className) {
+    className = props.className + " " + className
+  }
   return (
     <section className={className}>
       {props.children}
@@ -136,9 +143,7 @@ export function CultureImgDesktop(props: {imgs: img[]}) {
   const stylesList = [styles.img0, styles.img1, styles.img2, styles.img3]
   return <div className={className}>
         {props.imgs.map((img, index) => {
-          //let imgClassName: string = styles['img' + index.toString()]
           let imgClassName = stylesList[index] + ' ' + styles.cultureImgDesktop
-          //console.log(styles)
           return <div className={utilStyles.auxItemWrapper} key={index.toString()}>
                   <img className={imgClassName} 
                     src={img.src} 

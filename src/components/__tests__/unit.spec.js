@@ -5,10 +5,12 @@ import Header from "../header"
 import { HomeNavButton } from "../buttons"
 import NavBar from "../navbar"
 
+const isMobileTrue = jest.fn(() => true)
+
 describe("Header", () => {
 	it("renders correctly", () => {
 		const tree = renderer
-			.create(<Header siteTitle="Default Starter" />)
+			.create(<Header siteTitle="Default Starter" isMobile={isMobileTrue} />)
 			.toJSON()
 		expect(tree).toMatchSnapshot()
 	})
@@ -26,7 +28,7 @@ describe("HomeNavButton", () => {
 describe("NavBar", () => {
 	it("renders correctly", () => {
 		const tree = renderer
-			.create(<NavBar />)
+			.create(<NavBar isMobile={isMobileTrue} />)
 			.toJSON()
 		expect(tree).toMatchSnapshot()
 	})

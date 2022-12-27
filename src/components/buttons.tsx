@@ -103,6 +103,7 @@ export function SvgButton(props: StyleProps & SvgProps) {
       style={dimensionStyle}
       className={className}
       alt={props.alt}
+      onClick={props.onClick}
     >
       {props.icon}
     </button>

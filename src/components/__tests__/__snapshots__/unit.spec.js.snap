@@ -3,174 +3,212 @@
 exports[`Header renders correctly 1`] = `
 <header>
   <div
-    className="src-styles-container-8sTzKuoBNk src-styles-navbar-m-v7wwUaSW"
+    className="src-styles-fixed-CDvAcKBA-T src-styles-navbarContainer-DN8BHCiz-C"
+    id="desktop-nav-wrapper"
   >
-    <button
-      alt="Menu"
-      className="src-styles-svgButton-P5syo6dygz src-styles-chilidog-pBCE7RY2-t"
-      style={
-        {
-          "height": "45px",
-          "minHeight": "45px",
-          "minWidth": "32px",
-          "width": "32px",
-        }
-      }
-    >
-      <svg
-        fill="#ffffff"
-        height="45"
-        viewBox="0 0 80 50"
-        width="32"
-      >
-        <rect
-          height="5"
-          width="44"
-        />
-        <rect
-          height="5"
-          width="80"
-          y="20"
-        />
-        <rect
-          height="5"
-          width="50"
-          y="40"
-        />
-      </svg>
-    </button>
     <div
-      className="src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"
+      className="src-styles-container-8sTzKuoBNk src-styles-navbar-m-v7wwUaSW"
     >
-      <a
-        className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"
-        href="/"
+      <button
+        className="src-styles-svgButton-P5syo6dygz src-styles-chilidog-pBCE7RY2-t"
+        onClick={[Function]}
+        style={
+          {
+            "height": "45px",
+            "minHeight": "45px",
+            "minWidth": "32px",
+            "width": "32px",
+          }
+        }
       >
-        Superformula.
-      </a>
+        <svg
+          fill="#ffffff"
+          height="45"
+          viewBox="0 0 80 50"
+          width="32"
+        >
+          <rect
+            height="5"
+            width="44"
+          />
+          <rect
+            height="5"
+            width="80"
+            y="20"
+          />
+          <rect
+            height="5"
+            width="50"
+            y="40"
+          />
+        </svg>
+      </button>
+      <div
+        className="src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"
+      >
+        <a
+          className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"
+          href="/"
+        >
+          Superformula.
+        </a>
+      </div>
+      <nav
+        className="src-styles-navItem-MrimwUo-Wg src-styles-pageItemList-zsb5979aQc"
+        id="desktop-nav"
+      >
+        <div
+          className="src-styles-navbarContainer-DN8BHCiz-C src-styles-itemListHomeItem-9NkznCL7LS"
+        >
+          <button
+            className="src-styles-svgButton-P5syo6dygz src-styles-menuClose-J96rIZBjBX"
+            style={
+              {
+                "height": "40px",
+                "minHeight": "40px",
+                "minWidth": "40px",
+                "width": "40px",
+              }
+            }
+          >
+            <svg
+              fill="#ffffff"
+              height="40"
+              viewBox="0 0 80 50"
+              width="40"
+            >
+              <rect
+                height="5"
+                width="44"
+              />
+              <rect
+                height="5"
+                width="80"
+                y="20"
+              />
+              <rect
+                height="5"
+                width="50"
+                y="40"
+              />
+            </svg>
+          </button>
+          <div
+            className="src-styles-homeNavButton-FOVN2eOxu- src-styles-home-lovhuGmMZH"
+          >
+            <a
+              className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- src-styles-home-lovhuGmMZH"
+              href="/"
+            >
+              Superformula.
+            </a>
+          </div>
+        </div>
+        <div
+          className="src-styles-navButton-7LzWMSAco3 src-styles-navItem-MrimwUo-Wg"
+        >
+          <a
+            className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-navItem-MrimwUo-Wg"
+            href="/services"
+          >
+            Services
+          </a>
+        </div>
+        <div
+          className="src-styles-navButton-7LzWMSAco3 src-styles-navItem-MrimwUo-Wg"
+        >
+          <a
+            className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-navItem-MrimwUo-Wg"
+            href="/work"
+          >
+            Work
+          </a>
+        </div>
+        <div
+          className="src-styles-navButton-7LzWMSAco3 src-styles-navItem-MrimwUo-Wg"
+        >
+          <a
+            className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-navItem-MrimwUo-Wg"
+            href="/articles"
+          >
+            Articles
+          </a>
+        </div>
+        <div
+          className="src-styles-navButton-7LzWMSAco3 src-styles-navItem-MrimwUo-Wg"
+        >
+          <a
+            className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-navItem-MrimwUo-Wg"
+            href="/contact"
+          >
+            Contact
+          </a>
+        </div>
+        <div
+          className="src-styles-careersNavButton-sC5v2hJNN4 src-styles-navItem-MrimwUo-Wg"
+        >
+          <a
+            className="src-styles-a-g07BlHX8bK src-styles-careersNavButton-sC5v2hJNN4 src-styles-navItem-MrimwUo-Wg"
+            href="https://careers.superformula.com"
+          >
+            Careers
+          </a>
+        </div>
+      </nav>
     </div>
-    <nav
-      className="src-styles-navItem-MrimwUo-Wg src-styles-container-8sTzKuoBNk"
-    >
-      <div
-        className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
-      >
-        <a
-          className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
-          href="/services"
-        >
-          Services
-        </a>
-      </div>
-      <div
-        className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
-      >
-        <a
-          className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
-          href="/work"
-        >
-          Work
-        </a>
-      </div>
-      <div
-        className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
-      >
-        <a
-          className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
-          href="/articles"
-        >
-          Articles
-        </a>
-      </div>
-      <div
-        className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
-      >
-        <a
-          className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
-          href="/contact"
-        >
-          Contact
-        </a>
-      </div>
-      <div
-        className="src-styles-careersNavButton-sC5v2hJNN4 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
-      >
-        <a
-          className="src-styles-a-g07BlHX8bK src-styles-careersNavButton-sC5v2hJNN4 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
-          href="https://careers.superformula.com"
-        >
-          Careers
-        </a>
-      </div>
-    </nav>
-  </div>
-</header>
-`;
-
-exports[`HomeNavButton renders correctly 1`] = `
-<div
-  className="src-styles-homeNavButton-FOVN2eOxu- undefined"
->
-  <a
-    className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- undefined"
-    href="test"
-  >
-    test url
-  </a>
-</div>
-`;
-
-exports[`NavBar renders correctly 1`] = `
-<div
-  className="src-styles-container-8sTzKuoBNk src-styles-navbar-m-v7wwUaSW"
->
-  <button
-    alt="Menu"
-    className="src-styles-svgButton-P5syo6dygz src-styles-chilidog-pBCE7RY2-t"
-    style={
-      {
-        "height": "45px",
-        "minHeight": "45px",
-        "minWidth": "32px",
-        "width": "32px",
-      }
-    }
-  >
-    <svg
-      fill="#ffffff"
-      height="45"
-      viewBox="0 0 80 50"
-      width="32"
-    >
-      <rect
-        height="5"
-        width="44"
-      />
-      <rect
-        height="5"
-        width="80"
-        y="20"
-      />
-      <rect
-        height="5"
-        width="50"
-        y="40"
-      />
-    </svg>
-  </button>
-  <div
-    className="src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"
-  >
-    <a
-      className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"
-      href="/"
-    >
-      Superformula.
-    </a>
   </div>
   <nav
-    className="src-styles-navItem-MrimwUo-Wg src-styles-container-8sTzKuoBNk"
+    className="src-styles-navItem-MrimwUo-Wg src-styles-pageItemListMobile-OWSYDLp7Qb"
+    id="mobile-nav"
   >
+    <div
+      className="src-styles-navbarContainer-DN8BHCiz-C src-styles-itemListHomeItem-9NkznCL7LS"
+    >
+      <button
+        className="src-styles-svgButton-P5syo6dygz src-styles-menuClose-J96rIZBjBX"
+        onClick={[Function]}
+        style={
+          {
+            "height": "40px",
+            "minHeight": "40px",
+            "minWidth": "40px",
+            "width": "40px",
+          }
+        }
+      >
+        <svg
+          fill="#ffffff"
+          height="40"
+          viewBox="0 0 80 50"
+          width="40"
+        >
+          <rect
+            height="5"
+            width="44"
+          />
+          <rect
+            height="5"
+            width="80"
+            y="20"
+          />
+          <rect
+            height="5"
+            width="50"
+            y="40"
+          />
+        </svg>
+      </button>
+      <div
+        className="src-styles-homeNavButton-FOVN2eOxu- src-styles-home-lovhuGmMZH"
+      >
+        <a
+          className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- src-styles-home-lovhuGmMZH"
+          href="/"
+        >
+          Superformula.
+        </a>
+      </div>
+    </div>
     <div
       className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
     >
@@ -222,5 +260,281 @@ exports[`NavBar renders correctly 1`] = `
       </a>
     </div>
   </nav>
+</header>
+`;
+
+exports[`HomeNavButton renders correctly 1`] = `
+<div
+  className="src-styles-homeNavButton-FOVN2eOxu- undefined"
+>
+  <a
+    className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- undefined"
+    href="test"
+  >
+    test url
+  </a>
 </div>
+`;
+
+exports[`NavBar renders correctly 1`] = `
+[
+  <div
+    className="src-styles-fixed-CDvAcKBA-T src-styles-navbarContainer-DN8BHCiz-C"
+    id="desktop-nav-wrapper"
+  >
+    <div
+      className="src-styles-container-8sTzKuoBNk src-styles-navbar-m-v7wwUaSW"
+    >
+      <button
+        className="src-styles-svgButton-P5syo6dygz src-styles-chilidog-pBCE7RY2-t"
+        onClick={[Function]}
+        style={
+          {
+            "height": "45px",
+            "minHeight": "45px",
+            "minWidth": "32px",
+            "width": "32px",
+          }
+        }
+      >
+        <svg
+          fill="#ffffff"
+          height="45"
+          viewBox="0 0 80 50"
+          width="32"
+        >
+          <rect
+            height="5"
+            width="44"
+          />
+          <rect
+            height="5"
+            width="80"
+            y="20"
+          />
+          <rect
+            height="5"
+            width="50"
+            y="40"
+          />
+        </svg>
+      </button>
+      <div
+        className="src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"
+      >
+        <a
+          className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"
+          href="/"
+        >
+          Superformula.
+        </a>
+      </div>
+      <nav
+        className="src-styles-navItem-MrimwUo-Wg src-styles-pageItemList-zsb5979aQc"
+        id="desktop-nav"
+      >
+        <div
+          className="src-styles-navbarContainer-DN8BHCiz-C src-styles-itemListHomeItem-9NkznCL7LS"
+        >
+          <button
+            className="src-styles-svgButton-P5syo6dygz src-styles-menuClose-J96rIZBjBX"
+            style={
+              {
+                "height": "40px",
+                "minHeight": "40px",
+                "minWidth": "40px",
+                "width": "40px",
+              }
+            }
+          >
+            <svg
+              fill="#ffffff"
+              height="40"
+              viewBox="0 0 80 50"
+              width="40"
+            >
+              <rect
+                height="5"
+                width="44"
+              />
+              <rect
+                height="5"
+                width="80"
+                y="20"
+              />
+              <rect
+                height="5"
+                width="50"
+                y="40"
+              />
+            </svg>
+          </button>
+          <div
+            className="src-styles-homeNavButton-FOVN2eOxu- src-styles-home-lovhuGmMZH"
+          >
+            <a
+              className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- src-styles-home-lovhuGmMZH"
+              href="/"
+            >
+              Superformula.
+            </a>
+          </div>
+        </div>
+        <div
+          className="src-styles-navButton-7LzWMSAco3 src-styles-navItem-MrimwUo-Wg"
+        >
+          <a
+            className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-navItem-MrimwUo-Wg"
+            href="/services"
+          >
+            Services
+          </a>
+        </div>
+        <div
+          className="src-styles-navButton-7LzWMSAco3 src-styles-navItem-MrimwUo-Wg"
+        >
+          <a
+            className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-navItem-MrimwUo-Wg"
+            href="/work"
+          >
+            Work
+          </a>
+        </div>
+        <div
+          className="src-styles-navButton-7LzWMSAco3 src-styles-navItem-MrimwUo-Wg"
+        >
+          <a
+            className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-navItem-MrimwUo-Wg"
+            href="/articles"
+          >
+            Articles
+          </a>
+        </div>
+        <div
+          className="src-styles-navButton-7LzWMSAco3 src-styles-navItem-MrimwUo-Wg"
+        >
+          <a
+            className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-navItem-MrimwUo-Wg"
+            href="/contact"
+          >
+            Contact
+          </a>
+        </div>
+        <div
+          className="src-styles-careersNavButton-sC5v2hJNN4 src-styles-navItem-MrimwUo-Wg"
+        >
+          <a
+            className="src-styles-a-g07BlHX8bK src-styles-careersNavButton-sC5v2hJNN4 src-styles-navItem-MrimwUo-Wg"
+            href="https://careers.superformula.com"
+          >
+            Careers
+          </a>
+        </div>
+      </nav>
+    </div>
+  </div>,
+  <nav
+    className="src-styles-navItem-MrimwUo-Wg src-styles-pageItemListMobile-OWSYDLp7Qb"
+    id="mobile-nav"
+  >
+    <div
+      className="src-styles-navbarContainer-DN8BHCiz-C src-styles-itemListHomeItem-9NkznCL7LS"
+    >
+      <button
+        className="src-styles-svgButton-P5syo6dygz src-styles-menuClose-J96rIZBjBX"
+        onClick={[Function]}
+        style={
+          {
+            "height": "40px",
+            "minHeight": "40px",
+            "minWidth": "40px",
+            "width": "40px",
+          }
+        }
+      >
+        <svg
+          fill="#ffffff"
+          height="40"
+          viewBox="0 0 80 50"
+          width="40"
+        >
+          <rect
+            height="5"
+            width="44"
+          />
+          <rect
+            height="5"
+            width="80"
+            y="20"
+          />
+          <rect
+            height="5"
+            width="50"
+            y="40"
+          />
+        </svg>
+      </button>
+      <div
+        className="src-styles-homeNavButton-FOVN2eOxu- src-styles-home-lovhuGmMZH"
+      >
+        <a
+          className="src-styles-a-g07BlHX8bK src-styles-homeNavButton-FOVN2eOxu- src-styles-home-lovhuGmMZH"
+          href="/"
+        >
+          Superformula.
+        </a>
+      </div>
+    </div>
+    <div
+      className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+    >
+      <a
+        className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+        href="/services"
+      >
+        Services
+      </a>
+    </div>
+    <div
+      className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+    >
+      <a
+        className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+        href="/work"
+      >
+        Work
+      </a>
+    </div>
+    <div
+      className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+    >
+      <a
+        className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+        href="/articles"
+      >
+        Articles
+      </a>
+    </div>
+    <div
+      className="src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+    >
+      <a
+        className="src-styles-a-g07BlHX8bK src-styles-navButton-7LzWMSAco3 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+        href="/contact"
+      >
+        Contact
+      </a>
+    </div>
+    <div
+      className="src-styles-careersNavButton-sC5v2hJNN4 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+    >
+      <a
+        className="src-styles-a-g07BlHX8bK src-styles-careersNavButton-sC5v2hJNN4 src-styles-pageItem-LqEbulJmM- src-styles-navItem-MrimwUo-Wg"
+        href="https://careers.superformula.com"
+      >
+        Careers
+      </a>
+    </div>
+  </nav>,
+]
 `;

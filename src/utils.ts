@@ -1,5 +1,9 @@
 import * as styleVars from "./styles/vars.module.css"
 
+export interface ResponsiveProps {
+  isMobile: () => boolean
+}
+
 export function getWindowDimensions() {
   if (typeof window !== "undefined") {
     const { innerWidth: width, innerHeight: height } = window
