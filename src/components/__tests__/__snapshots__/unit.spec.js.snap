@@ -4,6 +4,7 @@ exports[`Header renders correctly 1`] = `
 <header>
   <div
     className="src-styles-fixed-CDvAcKBA-T src-styles-navbarContainer-DN8BHCiz-C"
+    id="desktop-nav-wrapper"
   >
     <div
       className="src-styles-container-8sTzKuoBNk src-styles-navbar-m-v7wwUaSW"
@@ -279,6 +280,7 @@ exports[`NavBar renders correctly 1`] = `
 [
   <div
     className="src-styles-fixed-CDvAcKBA-T src-styles-navbarContainer-DN8BHCiz-C"
+    id="desktop-nav-wrapper"
   >
     <div
       className="src-styles-container-8sTzKuoBNk src-styles-navbar-m-v7wwUaSW"
