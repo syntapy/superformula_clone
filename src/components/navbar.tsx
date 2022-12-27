@@ -33,7 +33,11 @@ function NavBarItems(props: NavBarItemsProps) {
       <NavButton className={props.itemClassName} href="/work" text="Work" />
       <NavButton className={props.itemClassName} href="/articles" text="Articles" />
       <NavButton className={props.itemClassName} href="/contact" text="Contact" />
-      <CareersNavButton className={props.itemClassName} href="https://careers.superformula.com" text="Careers" />
+      <CareersNavButton 
+        className={props.itemClassName}
+        href="https://careers.superformula.com"
+        text="Careers"
+      />
     </nav>
   )
 }
@@ -72,7 +76,7 @@ export default function NavBar(props: ResponsiveProps) {
 
   return (
     <>
-      <div className={navBarPadding}>
+      <div id={"desktop-nav-wrapper"} className={navBarPadding}>
         <div className={navBar}>
           <SvgButton
             className={chilidogStyle}
