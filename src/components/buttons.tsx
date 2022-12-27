@@ -84,13 +84,27 @@ export function ArticleButton(props: ButtonProps) {
 }
 
 interface SvgProps {
-  icon: string
+  icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>
   alt: string
 }
 
-export function ButtonSvg(props: SvgProps & HRefProps) {
+export function SvgButton(props: StyleProps & SvgProps) {
+  const className: string = styles.svgButton + " " + props.className
+  const w: string = props.icon.props.width.toString() + "px"
+  const h: string = props.icon.props.height.toString() + "px"
+  const dimensionStyle: React.CSSProperties = {
+    width: w,
+    minWidth: w,
+    height: h,
+    minHeight: h
+  }
   return (
-    <button href={props.href}>
+    <button 
+      style={dimensionStyle}
+      className={className}
+      alt={props.alt}
+    >
+      {props.icon}
     </button>
   )
 }

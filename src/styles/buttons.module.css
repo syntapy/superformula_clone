@@ -11,3 +11,8 @@
 .careersNavButton {
 	padding: 0 0.5rem;
 }
+
+.svgButton {
+	background: none;
+	border: none;
+}

@@ -5,9 +5,40 @@ exports[`Header renders correctly 1`] = `
   <div
     className="src-styles-container-8sTzKuoBNk src-styles-navbar-m-v7wwUaSW"
   >
-    <SvgrURL
-      className="src-styles-chilidog-pBCE7RY2-t"
-    />
+    <button
+      alt="Menu"
+      className="src-styles-svgButton-P5syo6dygz src-styles-chilidog-pBCE7RY2-t"
+      style={
+        {
+          "height": "45px",
+          "minHeight": "45px",
+          "minWidth": "32px",
+          "width": "32px",
+        }
+      }
+    >
+      <svg
+        fill="#ffffff"
+        height="45"
+        viewBox="0 0 80 50"
+        width="32"
+      >
+        <rect
+          height="5"
+          width="44"
+        />
+        <rect
+          height="5"
+          width="80"
+          y="20"
+        />
+        <rect
+          height="5"
+          width="50"
+          y="40"
+        />
+      </svg>
+    </button>
     <div
       className="src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"
     >
@@ -93,9 +124,40 @@ exports[`NavBar renders correctly 1`] = `
 <div
   className="src-styles-container-8sTzKuoBNk src-styles-navbar-m-v7wwUaSW"
 >
-  <SvgrURL
-    className="src-styles-chilidog-pBCE7RY2-t"
-  />
+  <button
+    alt="Menu"
+    className="src-styles-svgButton-P5syo6dygz src-styles-chilidog-pBCE7RY2-t"
+    style={
+      {
+        "height": "45px",
+        "minHeight": "45px",
+        "minWidth": "32px",
+        "width": "32px",
+      }
+    }
+  >
+    <svg
+      fill="#ffffff"
+      height="45"
+      viewBox="0 0 80 50"
+      width="32"
+    >
+      <rect
+        height="5"
+        width="44"
+      />
+      <rect
+        height="5"
+        width="80"
+        y="20"
+      />
+      <rect
+        height="5"
+        width="50"
+        y="40"
+      />
+    </svg>
+  </button>
   <div
     className="src-styles-homeNavButton-FOVN2eOxu- src-styles-homeItem-bdSEHrdf-I"
   >
