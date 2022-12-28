@@ -6,6 +6,7 @@ import {render, screen} from '@testing-library/react'
 import NavBar from '../navbar'
 
 import {setMediaQueryMobile, setMediaQueryDesktop} from './utils'
+import {setMobile} from './utils'
 
 const isMobileFalse = jest.fn(() => false)
 const isMobileTrue = jest.fn(() => true)
@@ -16,7 +17,9 @@ describe('desktop navbar', () => {
 
 	beforeEach(() => {
 		setMediaQueryDesktop(window)
-		console.log(window.matchMedia('(max-width: 678px)').matches)
+		//console.log(window)
+		//console.log(getMediaQueryIsDesktop(window))
+		//console.log(window.matchMedia('(max-width: 678px)').matches)
 		const rendered = render(<NavBar isMobile={isMobileFalse} />)
 		const container = rendered.container
 		desktopNavBar = container.querySelector('#desktop-nav-wrapper')
@@ -48,8 +51,13 @@ describe('mobile navbar', () => {
 	let desktopNavBar
 	let mobileNavBar
 
-	beforeEach(() => {
+	beforeAll(() => {
+		setMobile(window)
 		setMediaQueryMobile(window)
+	})
+
+	beforeEach(() => {
+		//setMediaQueryMobile(window)
 		const rendered = render(<NavBar isMobile={isMobileTrue} />)
 		const container = rendered.container
 		desktopNavBar = container.querySelector('#desktop-nav-wrapper')
@@ -57,6 +65,7 @@ describe('mobile navbar', () => {
 	})
 
 	it('desktop navbar exists', () => {
+		console.log(window.innerWidth)
 		expect(desktopNavBar).toBeInTheDocument()
 	})
 
