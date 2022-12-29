@@ -8,6 +8,6 @@ module.exports = defineConfig({
         close: () => {},
       }
     },
-    specPattern: 'src/components/__tests__/**/*.cy.ts',
+    specPattern: 'src/components/__tests__/**/*.cy.js',
   }
 })

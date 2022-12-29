@@ -15,7 +15,9 @@
     "clean": "gatsby clean",
     "test": "jest",
     "test help": "jest --help",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --component"
   },
   "dependencies": {
     "gatsby": "^5.3.2",
