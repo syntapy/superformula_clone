@@ -17,7 +17,9 @@
     "test help": "jest --help",
     "typecheck": "tsc --noEmit",
     "cy:open": "cypress open",
-    "cy:run": "cypress run --component"
+    "cy:help": "cypress --help",
+    "cy:arg": "cypress",
+    "cy:run": "cypress run --component --browser chromium"
   },
   "dependencies": {
     "gatsby": "^5.3.2",
