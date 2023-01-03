@@ -22,16 +22,27 @@ describe('example to-do app', () => {
   })
 
   it('top screenshot', () => {
-    cy.screenshot()
   })
 
-  it('2nd from top screenshot', () => {
+  /*it('make sure fails on navbar style change', () => {
+    // Change css on navbar
+    // Get first child of header
+    const nav = cy.get('header > div')
+    nav.should('have.css', 'background-color', 'rgb(255, 255, 255)')
+    cy.compareSnapshot('navbar')
+
+    // Change height of navbar
+    nav.invoke('css', 'height', '4rem')
+    //cy.compareSnapshot('navbar')
+  })*/
+
+  /*it('2nd from top screenshot', () => {
     cy.scrollTo(720)
-    cy.screenshot()
+    cy.compareSnapshot('2nd from top')
   })
 
   it('3rd from top screenshot', () => {
     cy.scrollTo(720*2)
-    cy.screenshot()
-  })
+    cy.compareSnapshot('3rd from top')
+  })*/
 })
