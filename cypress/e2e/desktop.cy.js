@@ -22,16 +22,6 @@ describe('example to-do app', () => {
   })
 
   it('top screenshot', () => {
-    cy.screenshot()
-  })
-
-  it('2nd from top screenshot', () => {
-    cy.scrollTo(720)
-    cy.screenshot()
-  })
-
-  it('3rd from top screenshot', () => {
-    cy.scrollTo(720*2)
-    cy.screenshot()
+    cy.compareSnapshot('top', 0.1)
   })
 })
