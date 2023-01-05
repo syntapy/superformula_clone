@@ -16,7 +16,7 @@
     "test": "jest",
     "test help": "jest --help",
     "cy:open": "cypress open",
-    "test:e2e": "cypress run --e2e",
+    "e2e": "cypress run --e2e",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
