@@ -8,6 +8,7 @@ export default defineConfig({
     video: false,
   },
   e2e: {
+    baseUrl: "http://localhost:8000",
     setupNodeEvents(on, config) {
       getCompareSnapshotsPlugin(on, config);
     },
