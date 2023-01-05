@@ -17,21 +17,22 @@ describe('example to-do app', () => {
     // so we must tell it to visit our website with the `cy.visit()` command.
     // Since we want to visit the same URL at the start of all our tests,
     // we include it in our beforeEach function so that it runs before each test
-    cy.viewport(1280, 720)
     cy.visit('/')
+    cy.eyesOpen({
+      appName: 'Superformula Clone',
+      testName: Cypress.currentTest.title
+    })
   })
 
   it('top screenshot', () => {
-    cy.screenshot()
+    cy.eyesCheckWindow({
+      tag: 'Top',
+      target: 'window',
+      fully: true,
+    })
   })
 
-  it('2nd from top screenshot', () => {
-    cy.scrollTo(720)
-    cy.screenshot()
-  })
-
-  it('3rd from top screenshot', () => {
-    cy.scrollTo(720*2)
-    cy.screenshot()
+  afterEach(() => {
+    cy.eyesClose()
   })
 })
