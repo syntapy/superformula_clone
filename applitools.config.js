@@ -1,5 +1,7 @@
 module.exports = {
   apiKey: 'APPLITOOLS_API_KEY',
+  testConcurrency: 1,
+  showLogs: true,
   batchName: 'Superformula Clone',
   browser: [
 
