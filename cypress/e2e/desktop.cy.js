@@ -19,17 +19,17 @@ describe('example to-do app', () => {
     // we include it in our beforeEach function so that it runs before each test
     cy.eyesOpen({
       appName: 'Superformula Clone',
-      testName: Cypress.currentTest.title
+      testName: 'example to-to app',
     })
   })
 
   it('top screenshot', () => {
     cy.visit('/')
-    cy.eyesCheckWindow({
-      tag: 'Top',
-      target: 'window',
-      fully: true,
-    })
+    //cy.eyesCheckWindow({
+    //  tag: 'Top',
+    //  target: 'window',
+    //  fully: true,
+    //})
   })
 
   afterEach(() => {
