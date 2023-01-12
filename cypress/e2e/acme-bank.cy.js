@@ -26,7 +26,7 @@ describe('ACME Bank', () => {
     it('should log into a bank account', () => {
 
         // Load the login page.
-        cy.visit("https://demo.applitools.com")
+        cy.visit("/")
 
         // Verify the full login page loaded correctly.
         cy.eyesCheckWindow({
