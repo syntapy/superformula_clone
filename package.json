@@ -15,8 +15,7 @@
     "test": "jest",
     "test help": "jest --help",
     "cy:open": "cypress open",
-    "e2e:run": "cypress run --browser chrome",
-    "e2e": "start-server-and-test serve http://localhost:9000 e2e:run",
+    "e2e": "cypress run --browser chrome",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
