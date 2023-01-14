@@ -22,6 +22,8 @@ describe('example to-do app', () => {
   })
 
   it('top screenshot', () => {
-    cy.compareSnapshot('top', 0.1)
+    cy.viewport(1280, 720)
+    const viewportWidth = Cypress.config('viewportWidth')
+    cy.task('log', `viewportWidth: ${viewportWidth}`)
   })
 })

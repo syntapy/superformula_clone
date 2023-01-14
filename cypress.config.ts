@@ -15,6 +15,12 @@ export default defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
       getCompareSnapshotsPlugin(on, config)
+      on('task', {
+        log(message) {
+          console.log(message)
+          return null
+        }
+      })
     },
   },
 });
