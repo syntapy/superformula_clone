@@ -1,3 +1,8 @@
+Cypress.on('viewport:changed', (newViewport) => {
+    Cypress.config('viewportWidth', newViewport.viewportWidth)
+    Cypress.config('viewportHeight', newViewport.viewportHeight)
+})
+
 const devices = ['iphone-6', 'ipad-2', 'iphone-x', 'samsung-s10', 'desktop']
 const sizes = devices.map(device => {
     if (device === 'desktop') {
@@ -13,6 +18,31 @@ function setSize(size) {
         cy.viewport(size)
     }
 }
+
+describe("ViewportChanges", () => {
+    beforeEach(() => {
+        cy.visit("/")
+    })
+
+    it("viewport_changes", () => {
+        const oldViewportWidth = Cypress.config('viewportWidth')
+        const oldViewportHeight = Cypress.config('viewportHeight')
+        cy.viewport(1920, 1080)
+        Cypress.config('viewportWidth', 1920)
+        Cypress.config('viewportHeight', 1080)
+        let viewportWidth = Cypress.config('viewportWidth')
+        let viewportHeight = Cypress.config('viewportHeight')
+        cy.wrap(viewportWidth).should('eq', 1920)
+        cy.wrap(viewportHeight).should('eq', 1080)
+        cy.viewport(oldViewportWidth, oldViewportHeight)
+        Cypress.config('viewportWidth', oldViewportWidth)
+        Cypress.config('viewportHeight', oldViewportHeight)
+        viewportWidth = Cypress.config('viewportWidth')
+        viewportHeight = Cypress.config('viewportHeight')
+        cy.wrap(viewportWidth).should('eq', oldViewportWidth)
+        cy.wrap(viewportHeight).should('eq', oldViewportHeight)
+    })
+})
 
 describe("navbar", () => {
     beforeEach(() => {
