@@ -16,5 +16,17 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 
+export const count = [0]
+
+export const increment = () => {
+  count[0]++
+}
+
+Cypress.on('viewport:changed', (newValue) => {
+  Cypress.config('viewportWidth', newValue.viewportWidth)
+  Cypress.config('viewportHeight', newValue.viewportHeight)
+  increment()
+})
+
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
