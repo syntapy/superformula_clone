@@ -16,11 +16,28 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 
-export const count = [0]
+const count = [0]
 
-export const increment = () => {
+const increment = () => {
   count[0]++
 }
+
+Cypress.Commands.add('incrementViewportChanged', increment)
+
+
+const getCount = () => {
+  cy.task('log', 'count: ' + count[0])
+}
+
+function setViewport (width, height) {
+  //cy.viewport(width, height)
+  Cypress.config('viewportWidth', width)
+  Cypress.config('viewportHeight', height)
+}
+
+Cypress.Commands.add('setViewport', setViewport)
+
+Cypress.Commands.add('getViewportChangedCount', getCount)
 
 Cypress.on('viewport:changed', (newValue) => {
   Cypress.config('viewportWidth', newValue.viewportWidth)
