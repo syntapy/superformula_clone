@@ -38,3 +38,9 @@
 import compareSnapshotCommand from 'cypress-visual-regression/dist/command';
 
 compareSnapshotCommand();
+
+Cypress.Commands.add('getViewport', () => {
+  return cy.window().then(win => {
+    return {width: win.innerWidth, height: win.innerHeight};
+  })
+})
