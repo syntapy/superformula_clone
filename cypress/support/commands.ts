@@ -44,14 +44,3 @@ Cypress.Commands.add('getViewport', () => {
     return {width: win.innerWidth, height: win.innerHeight};
   })
 })
-
-Cypress.Commands.add('getDeviceArray', () => {
-
-  return deviceArray
-})
-
-
-Cypress.on('viewport:changed', (viewport) => {
-  Cypress.config('viewportWidth', viewport.width)
-  Cypress.config('viewportHeight', viewport.height)
-})

@@ -1,17 +1,22 @@
-import deviceArray from '../support/viewport.js'
+import { desktop } from '../support/viewport.js'
 
-deviceArray.forEach((size) => {
-  describe('example to-do app', () => {
-    before(() => {
-      cy.viewport(size.width, size.height)
-    })
+desktop.devices.forEach((device) => {
+  desktop.orientationList.forEach((orientation) => {
+    describe('desktop tests: ' + device + ' (' + orientation + ')', () => {
+      before(() => {
+        cy.viewport(device, orientation)
+      })
 
-    beforeEach(() => {
-      cy.visit('/')
-    })
+      beforeEach(() => {
+        cy.visit('/')
+      })
 
-    it('top screenshot', () => {
-      //cy.screenshot()
+      it('top screenshot', () => {
+        cy.getViewport().then(viewport => {
+          cy.task('log', 'viewport: ' + viewport.width + 'x' + viewport.height)
+        })
+        cy.screenshot()
+      })
     })
   })
 })

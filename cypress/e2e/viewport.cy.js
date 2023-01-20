@@ -1,19 +1,23 @@
-import deviceArray from '../support/viewport.js'
+import { mobile } from '../support/viewport.js'
 
-deviceArray.forEach((size) => {
-  describe('viewport: ' + size.model, () => {
-    before(() => {
-      cy.viewport(size.width, size.height)
-    })
+if (false) {
+mobile.devices.forEach((device) => {
+  mobile.orientationList.forEach((orientation) => {
+    describe('viewport: ' + device + ' (' + orientation + ')', () => {
+      before(() => {
+        cy.viewport(device, orientation)
+      })
 
-    beforeEach(() => {
-      cy.visit('/')
-    })
+      beforeEach(() => {
+        cy.visit('/')
+      })
 
-    it('getter', () => {
-      cy.getViewport().then(viewport => {
-        cy.task('log', 'viewportWidth: ' + viewport.width)
+      it('getter', () => {
+        cy.getViewport().then(viewport => {
+          cy.task('log', 'viewport: ' + viewport.width + 'x' + viewport.height)
+        })
       })
     })
   })
 })
+}
