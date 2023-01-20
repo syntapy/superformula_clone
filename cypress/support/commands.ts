@@ -45,6 +45,12 @@ Cypress.Commands.add('getViewport', () => {
   })
 })
 
+Cypress.Commands.add('getDeviceArray', () => {
+
+  return deviceArray
+})
+
+
 Cypress.on('viewport:changed', (viewport) => {
   Cypress.config('viewportWidth', viewport.width)
   Cypress.config('viewportHeight', viewport.height)

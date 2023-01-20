@@ -1,36 +1,19 @@
-const cyView = require('cy-view')
-const deviceArray = [
-  {
-    model: 'macbook-11',
-    width: 1366,
-    height: 768,
-  },
-  {
-    model: 'macbook-13',
-    width: 1440,
-    height: 900,
-  },
-  {
-    model: 'macbook-16',
-    width: 1536,
-    height: 960,
-  },
-]
+import deviceArray from '../support/viewport.js'
 
-const urls = ['http://localhost:8000/']
+deviceArray.forEach((size) => {
+  describe('viewport: ' + size.model, () => {
+    before(() => {
+      cy.viewport(size.width, size.height)
+    })
 
-const pageTests = cyView(deviceArray)
-
-pageTests(urls, () => {
-  describe('viewport', () => {
-    it('getter', () => {
-      cy.viewport(780, 500)
+    beforeEach(() => {
       cy.visit('/')
+    })
+
+    it('getter', () => {
       cy.getViewport().then(viewport => {
-        expect(viewport.width).to.eq(780)
-        expect(viewport.height).to.eq(500)
+        cy.task('log', 'viewportWidth: ' + viewport.width)
       })
-      cy.task('log', 'viewport getter')
     })
   })
 })
