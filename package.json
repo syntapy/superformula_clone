@@ -16,7 +16,7 @@
     "test": "jest",
     "test help": "jest --help",
     "cy:open": "cypress open",
-    "e2e": "cypress run --e2e",
+    "e2e": "cypress run --e2e --browser chrome",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
