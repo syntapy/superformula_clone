@@ -11,7 +11,8 @@ desktop.devices.forEach((device) => {
         cy.visit('/')
       })
 
-      it('top screenshot', () => {
+      it('header', () => {
+        cy.compareSnapshot('a_desktop_' + device + '_' + orientation)
       })
     })
   })

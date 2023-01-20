@@ -35,9 +35,9 @@
 //     }
 //   }
 // }
-import compareSnapshotCommand from 'cypress-visual-regression/dist/command';
+import compareSnapshotCommand from 'cypress-visual-regression/dist/command'
 
-compareSnapshotCommand();
+compareSnapshotCommand()
 
 Cypress.Commands.add('getViewport', () => {
   return cy.window().then(win => {
