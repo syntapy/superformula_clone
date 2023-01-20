@@ -12,10 +12,6 @@ desktop.devices.forEach((device) => {
       })
 
       it('top screenshot', () => {
-        cy.getViewport().then(viewport => {
-          cy.task('log', 'viewport: ' + viewport.width + 'x' + viewport.height)
-        })
-        cy.screenshot()
       })
     })
   })

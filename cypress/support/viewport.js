@@ -1,5 +1,5 @@
 export const desktop = {
-  orientationList: ['portrait'],
+  orientationList: ['landscape'],
   devices: [
     "macbook-11",
     "macbook-13",
