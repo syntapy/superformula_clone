@@ -44,3 +44,8 @@ Cypress.Commands.add('getViewport', () => {
     return {width: win.innerWidth, height: win.innerHeight};
   })
 })
+
+Cypress.on('viewport:changed', (viewport) => {
+  Cypress.config('viewportWidth', viewport.width)
+  Cypress.config('viewportHeight', viewport.height)
+})

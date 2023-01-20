@@ -1,29 +1,36 @@
-/// <reference types="cypress" />
+const cyView = require('cy-view')
+const deviceArray = [
+  {
+    model: 'macbook-11',
+    width: 1366,
+    height: 768,
+  },
+  {
+    model: 'macbook-13',
+    width: 1440,
+    height: 900,
+  },
+  {
+    model: 'macbook-16',
+    width: 1536,
+    height: 960,
+  },
+]
 
-// Welcome to Cypress!
-//
-// This spec file contains a variety of sample tests
-// for a todo list app that are designed to demonstrate
-// the power of writing tests in Cypress.
-//
-// To learn more about how Cypress works and
-// what makes it such an awesome testing tool,
-// please read our getting started guide:
-// https://on.cypress.io/introduction-to-cypress
+const urls = ['http://localhost:8000/']
 
-describe('example to-do app', () => {
-  beforeEach(() => {
-    // Cypress starts out with a blank slate for each test
-    // so we must tell it to visit our website with the `cy.visit()` command.
-    // Since we want to visit the same URL at the start of all our tests,
-    // we include it in our beforeEach function so that it runs before each test
-    cy.viewport(1280, 720)
-    cy.visit('/')
-  })
+const pageTests = cyView(deviceArray)
 
-  it('top screenshot', () => {
-    cy.viewport(1280, 720)
-    const viewportWidth = Cypress.config('viewportWidth')
-    cy.task('log', `viewportWidth: ${viewportWidth}`)
+pageTests(urls, () => {
+  describe('example to-do app', () => {
+    it('top screenshot', () => {
+      //cy.viewport(780, 500)
+      //cy.visit('/')
+      let viewportWidth
+      cy.then(() => {
+        viewportWidth = Cypress.config('viewportWidth')
+      })
+      cy.task('log', 'viewportWidth: ' + viewportWidth)
+    })
   })
 })
