@@ -1,5 +1,6 @@
 import { defineConfig } from "cypress";
 import getCompareSnapshotsPlugin from 'cypress-visual-regression/dist/plugin';
+import cypressTerminalReport from 'cypress-terminal-report/src/installLogsPrinter'
 
 export default defineConfig({
   env: {
@@ -15,6 +16,7 @@ export default defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
       getCompareSnapshotsPlugin(on, config)
+      cypressTerminalReport(on)
       on('task', {
         log(message) {
           console.log(message)
