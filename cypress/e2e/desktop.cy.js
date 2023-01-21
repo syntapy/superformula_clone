@@ -11,8 +11,20 @@ desktop.devices.forEach((device) => {
         cy.visit('/')
       })
 
-      it('header', () => {
-        cy.compareSnapshot('a_desktop_' + device + '_' + orientation)
+      it('page', () => {
+        const sections = cy.get('section')
+        sections.should('have.length', 6)
+
+        // get 2nd section
+        const div = sections.eq(1).get('div')
+        const img_left = div.eq(0).get('img').eq(0)
+        const img_right = div.eq(0).get('img').eq(1)
+
+        // without this sometimes they don't show up in the screenshot
+        img_left.should('be.visible')
+        img_right.should('be.visible')
+
+        cy.compareSnapshot('page_desktop_' + device + '_' + orientation)
       })
     })
   })
