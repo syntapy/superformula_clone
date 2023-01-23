@@ -12,7 +12,7 @@ export default function NavBar() {
   const pageItemList: string = styles.navItem + " " + styles.container
   const pageItem: string = styles.pageItem + " " + styles.navItem
   return (
-    <div className={navBar}>
+    <nav className={navBar}>
       <SvgButton
         // Need to pass width and height as props
         // to make jest tests work, sigh...
@@ -23,13 +23,13 @@ export default function NavBar() {
         className={styles.chilidog}
       />
       <HomeNavButton className={homeItem} href="/" text="Superformula." />
-      <nav className={pageItemList}>
+      <div className={pageItemList}>
         <NavButton className={pageItem} href="/services" text="Services" />
         <NavButton className={pageItem} href="/work" text="Work" />
         <NavButton className={pageItem} href="/articles" text="Articles" />
         <NavButton className={pageItem} href="/contact" text="Contact" />
         <CareersNavButton className={pageItem} href="https://careers.superformula.com" text="Careers" />
-      </nav>
-    </div>
+      </div>
+    </nav>
   )
 }
