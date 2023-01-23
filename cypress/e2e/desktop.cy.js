@@ -23,6 +23,7 @@ desktop.devices.forEach((device) => {
         // without this sometimes they don't show up in the screenshot
         img_left.should('be.visible')
         img_right.should('be.visible')
+        cy.wait(300)
 
         cy.compareSnapshot('page_desktop_' + device + '_' + orientation)
       })
