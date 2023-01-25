@@ -69,12 +69,13 @@ interface OlSectionProps {
 }
 
 export function OlSection(props: BulletsSectionProps) {
+  const title_u = utils.underscores(props.title)
   return (
     <React.Fragment>
       <h3>{props.title}</h3>
       <Ol>
-        {props.items.map((item) => (
-          <Li>{item}</Li>
+        {props.items.map((item, index) => (
+          <Li key={index+'-'+title_u}>{item}</Li>
         ))}
       </Ol>
     </React.Fragment>
