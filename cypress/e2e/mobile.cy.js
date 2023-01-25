@@ -5,17 +5,13 @@ const device = 'iphone-3';
 const orientationList = ['portrait']
   orientationList.forEach((orientation) => {
     describe('mobile tests: ' + device + ' (' + orientation + ')', () => {
-      before(() => {
-        cy.viewport(device, orientation)
-        //cy.task('log', 'viewport: ' + device + ' (' + orientation + ')')
-      })
-
       beforeEach(() => {
+        cy.viewport(device, orientation)
         cy.visit('/')
         cy.wait(300)
       })
 
-      xit('page', () => {
+      it('page', () => {
         const sections = cy.get('section')
         sections.should('have.length', 6)
 
