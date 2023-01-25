@@ -16,6 +16,7 @@
     "test": "jest",
     "test help": "jest --help",
     "cy:open": "cypress open",
+    "cy:help": "cypress run --help",
     "e2e": "cypress run --e2e --browser chrome",
     "typecheck": "tsc --noEmit"
   },
