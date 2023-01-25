@@ -10,8 +10,8 @@ interface HashTagsProps {
 function HashTags(props: HashTagsProps) {
   return (
     <div>
-      {props.tags.map((tag) => (
-        <span>#{tag} </span>
+      {props.tags.map((tag, index) => (
+        <span key={tag + '-' + index}>#{tag} </span>
       ))}
     </div>
   )
@@ -27,7 +27,7 @@ export function Insight(props: InsightProps) {
   const className: string = utilStyles.flexContainer + " " + styles.insight
   const imgClassName: string = styles.insightImg
   return (
-    <div className={className}>
+    <div key={"insight-section"} className={className}>
       <A href={props.href}>
         <img
           className={imgClassName}
@@ -44,11 +44,12 @@ export function Insight(props: InsightProps) {
 
 interface LiProps {
   text: string
+  id: string
 }
 
 export function Li(props: LiProps) {
   return (
-    <li>{props.children}</li>
+    <li id={props.id}>{props.children}</li>
   )
 }
 
