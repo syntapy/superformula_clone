@@ -27,7 +27,8 @@ desktop.devices.forEach((device) => {
         // wait for rendering to finish
         cy.wait(300)
 
-        cy.compareSnapshot('page_desktop_' + device + '_' + orientation)
+        const fname = 'page_desktop_' + device + '_' + orientation
+        cy.compareSnapshot(fname)
       })
     })
   })
