@@ -1,4 +1,4 @@
-import { mobile } from '../support/viewport.js'
+import { mobile, waitTime } from '../support/utils.js'
 
 mobile.devices.forEach((device) => {
   mobile.orientationList.forEach((orientation) => {
@@ -6,7 +6,7 @@ mobile.devices.forEach((device) => {
       beforeEach(() => {
         cy.viewport(device, orientation)
         cy.visit('/')
-        cy.wait(300)
+        cy.wait(waitTime)
       })
 
       it('page', () => {
@@ -23,7 +23,7 @@ mobile.devices.forEach((device) => {
         img_bottom.should('be.visible')
 
         // wait for rendering to finish
-        cy.wait(300)
+        cy.wait(waitTime)
 
         cy.compareSnapshot('page_mobile_' + device + '_' + orientation)
       })

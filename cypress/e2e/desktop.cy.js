@@ -1,4 +1,4 @@
-import { desktop } from '../support/viewport.js'
+import { desktop, waitTime } from '../support/utils.js'
 
 desktop.devices.forEach((device) => {
   desktop.orientationList.forEach((orientation) => {
@@ -25,7 +25,7 @@ desktop.devices.forEach((device) => {
         img_right.should('be.visible')
         
         // wait for rendering to finish
-        cy.wait(300)
+        cy.wait(waitTime)
 
         const fname = 'page_desktop_' + device + '_' + orientation
         cy.compareSnapshot(fname)
