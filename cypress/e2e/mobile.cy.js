@@ -9,7 +9,7 @@ mobile.devices.forEach((device) => {
         cy.wait(waitTime)
       })
 
-      xit('page', () => {
+      it('page', () => {
         const sections = cy.get('section')
         sections.should('have.length', 6)
 
@@ -25,10 +25,10 @@ mobile.devices.forEach((device) => {
         // wait for rendering to finish
         cy.wait(waitTime)
 
-        //cy.compareSnapshot('page_mobile_' + device + '_' + orientation)
+        cy.compareSnapshot('page_mobile_' + device + '_' + orientation)
       })
 
-      xit('navbar non-expanded', () => {
+      it('navbar non-expanded', () => {
         const header = cy.get('header')
         const nav = cy.get('header nav')
         nav.should('be.visible')
