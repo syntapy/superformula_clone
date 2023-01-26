@@ -34,4 +34,4 @@ export const mobile = {
   ]
 }
 
-export const waitTime = 150
+export const waitTime = 300
