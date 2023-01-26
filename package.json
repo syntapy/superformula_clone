@@ -12,12 +12,14 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
+    "serve:help": "gatsby serve --help",
     "clean": "gatsby clean",
     "test": "jest",
     "test help": "jest --help",
     "cy:open": "cypress open",
     "cy:help": "cypress run --help",
     "e2e": "cypress run --e2e --browser chrome",
+    "e2e:ci": "start-server-and-test serve http://localhost:8000 e2e",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

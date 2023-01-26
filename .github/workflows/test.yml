@@ -11,5 +11,4 @@ jobs:
           node-version: 18
       - run: npm install
       - run: npm run build
-      - run: npm run serve
-      - run: npm run e2e
+      - run: npm run e2e:ci
