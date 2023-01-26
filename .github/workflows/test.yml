@@ -1,0 +1,8 @@
+name: Superformula Tests
+run-name: ${{ github.actor }} is running tests on Github Actions
+on: [push]
+jobs:
+  CypressTests:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello"
