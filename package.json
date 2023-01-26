@@ -9,9 +9,8 @@
   ],
   "scripts": {
     "develop": "gatsby develop",
-    "start": "gatsby develop",
     "build": "gatsby build",
-    "serve": "gatsby serve",
+    "serve": "gatsby serve --port 8000",
     "serve:help": "gatsby serve --help",
     "clean": "gatsby clean",
     "test": "jest",
@@ -20,6 +19,7 @@
     "cy:help": "cypress run --help",
     "e2e": "cypress run --e2e --browser chrome",
     "e2e:ci": "start-server-and-test serve http://localhost:8000 e2e",
+    "start:help": "start-server-and-test --help",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
