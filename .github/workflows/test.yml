@@ -5,5 +5,7 @@ jobs:
   CypressTests:
     runs-on: ubuntu-latest
     steps:
+      - name: check out ${{ env.GITHUB_REF }}
+      - uses: actions/checkout@v3
       - name: check source
         run: ls -a
