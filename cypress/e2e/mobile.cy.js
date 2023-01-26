@@ -1,9 +1,7 @@
 import { mobile } from '../support/viewport.js'
 
-//mobile.devices.forEach((device) => {
-const device = 'iphone-3';
-const orientationList = ['portrait']
-  orientationList.forEach((orientation) => {
+mobile.devices.forEach((device) => {
+  mobile.orientationList.forEach((orientation) => {
     describe('mobile tests: ' + device + ' (' + orientation + ')', () => {
       beforeEach(() => {
         cy.viewport(device, orientation)
@@ -31,27 +29,16 @@ const orientationList = ['portrait']
       })
 
       it('navbar non-expanded', () => {
-        cy.get('nav').should('be.visible')
-        cy.screenshot()
-        //const nav = cy.get('header nav')
-        //nav.should('be.visible')
-        //const svg = nav.get('svg')
-        //cy.screenshot()
-        //const height = nav.invoke('height')
-        //cy.then(() => {
-        //  cy.log(height)
-        //})
-        //cy.task('log', nav.invoke('width'))
-        //if (orientation === 'portrait') {
-        //  //svg.should('be.visible')
-        //  //cy.screenshot('test_navbar_non-expanded_' + device + '_' + orientation)
-        //  //nav.compareSnapshot('navbar_mobile_nonexpanded_' + device + '_' + orientation)
-        //} else {
-        //  //cy.screenshot('test_navbar_non-expanded_' + device + '_' + orientation)
-        //  //svg.should('not.be.visible')
-        //  //nav.compareSnapshot('navbar_mobile_' + device + '_' + orientation)
-        //}
+        const header = cy.get('header')
+        const nav = cy.get('header nav')
+        nav.should('be.visible')
+        const svg = header.get('svg')
+        if (orientation === 'landscape' && ['iphone-x', 'iphone-xr', 'samsung-note9', 'samsung-s10'].includes(device)) {
+          svg.should('not.be.visible')
+        } else {
+          svg.should('be.visible')
+        }
       })
     })
   })
-//})
+})
