@@ -24,7 +24,7 @@ desktop.devices.forEach((device) => {
         img_left.should('be.visible')
         img_right.should('be.visible')
         
-         wait for rendering to finish
+        // wait for rendering to finish
         cy.wait(waitTime)
 
         const fname = 'page_desktop_' + device + '_' + orientation
