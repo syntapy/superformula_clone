@@ -1,0 +1,12 @@
+services:
+  page:
+    image: superformula/clone
+    volumes:
+      - type: bind
+        source: ./gatsby
+        target: /page
+    entrypoint:
+      - npm
+      - run
+      - develop
+    network_mode: "host"
