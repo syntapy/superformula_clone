@@ -3,8 +3,8 @@ name: docker
 permissions: read-all
 on: [push]
 jobs:
-  build_and_run:
-    runs_on: ubuntu-latest
+  TestRunDocker:
+    runs-on: ubuntu-latest
     steps:
       - name: checkout out ${{ env.GITHUB_REF }}
         uses: actions/checkout@v3
