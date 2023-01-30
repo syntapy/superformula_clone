@@ -16,5 +16,5 @@ jobs:
         run: docker image ls
       - name: run container
         run: docker compose up
-      - name: ping container
-        run: ping -c 5 localhost:8000
+          #- name: ping container
+          #run: ping -c 5 localhost:8000

@@ -6,5 +6,6 @@ services:
         source: ./gatsby
         target: /page
     entrypoint:
-      - sh
+      - which
+      - gatsby
     network_mode: "host"
