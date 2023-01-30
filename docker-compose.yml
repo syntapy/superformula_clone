@@ -5,5 +5,5 @@ services:
       - type: bind
         source: ./gatsby
         target: /page
-    entrypoint: "entrypoint.sh"
+    entrypoint: "ls -lht"
     network_mode: "host"
