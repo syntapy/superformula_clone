@@ -10,3 +10,5 @@ run npm install -g npm@latest && \
 	npm install -g gatsby-cli && \
 	npm ci && \
 	npm run build
+
+run which gatsby
