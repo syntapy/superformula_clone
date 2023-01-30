@@ -8,5 +8,5 @@ services:
     entrypoint:
       - npm
       - run
-      - develop
+      - help
     network_mode: "host"
