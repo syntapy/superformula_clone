@@ -13,6 +13,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "which": "which gatsby",
     "test": "jest",
     "test help": "jest --help",
     "typecheck": "tsc --noEmit"

@@ -6,6 +6,7 @@ services:
         source: ./gatsby
         target: /page
     entrypoint:
+      - npm
+      - run
       - which
-      - gatsby
     network_mode: "host"
