@@ -1,5 +1,7 @@
 from node:18-alpine
 
+expose 8000
+
 run mkdir /page
 workdir /page
 
