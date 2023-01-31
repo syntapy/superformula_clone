@@ -14,12 +14,14 @@ jobs:
         run: ./bin/build-ci
       - name: npm run serve
         run: ./bin/run-ci
-      - name: ifconfig
-        run: ifconfig
-      - name: ping localhost
-        run: ping -c 5 -4 localhost
-      - name: ping server
-        run: ping -c 5 -4 localhost:9000
+      - name: debug terminal
+        uses: mxschmitt/action-tmate@v3
+          #- name: ifconfig
+          #run: ifconfig
+          #- name: ping localhost
+          #run: ping -c 5 -4 localhost
+          #- name: ping server
+          #run: ping -c 5 -4 localhost:9000
           #      - name: ping server
           #        uses: BerniWittmann/background-server-action@v1
           #        with:
