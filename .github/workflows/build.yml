@@ -19,7 +19,7 @@ jobs:
       - name: ping localhost
         run: ping -c 5 localhost
       - name: ping server
-        run: ping -c 5 localhost:8000
+        run: ping -c 5 localhost:9000
           #      - name: ping server
           #        uses: BerniWittmann/background-server-action@v1
           #        with:
