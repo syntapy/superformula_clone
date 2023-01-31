@@ -4,5 +4,5 @@ services:
     entrypoint:
       - npm
       - run
-      - develop
+      - serve
     network_mode: "host"

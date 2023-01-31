@@ -7,4 +7,4 @@ copy gatsby .
 run apk update && apk upgrade && \
 		npm install -g npm@latest && \
 		npm install -g gatsby-cli
-run npm ci
+run npm ci && npm build
