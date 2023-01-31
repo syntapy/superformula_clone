@@ -15,7 +15,8 @@ jobs:
       - name: ping server
         uses: BerniWittmann/background-server-action@v1
         with:
-          command: ping -c 10 http://localhost:8000
+          #command: ping -c 10 http://localhost:8000
+          command: ifconfig
           start: ./bin/run-ci
           wait-on: 'http://localhost:8000'
             #      - name: run container
