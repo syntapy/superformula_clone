@@ -17,9 +17,9 @@ jobs:
       - name: ifconfig
         run: ifconfig
       - name: ping localhost
-        run: ping -c 5 http://127.0.0.1
+        run: ping -c 5 -4 localhost
       - name: ping server
-        run: ping -c 5 http://127.0.0.1:9000
+        run: ping -c 5 -4 localhost:9000
           #      - name: ping server
           #        uses: BerniWittmann/background-server-action@v1
           #        with:
