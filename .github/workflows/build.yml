@@ -12,7 +12,13 @@ jobs:
         uses: docker/setup-buildx-action@v2
       - name: Build container image
         run: ./bin/build-ci
-      - name: run container
-        run: ./bin/run-ci
-          #- name: ping container
-          #run: ping -c 5 localhost:8000
+      - name: ping server
+        uses: BerniWittmann/background-server-action@v1
+        with:
+          command: ping -c 10 http://localhost:8000
+          start: ./bin/run-ci
+          wait-on: 'http://localhost:8000'
+            #      - name: run container
+            #        run: ./bin/run-ci
+            #      - name: ping container
+            #        run: ping -c 5 localhost:8000
