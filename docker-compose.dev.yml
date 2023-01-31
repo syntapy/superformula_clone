@@ -1,0 +1,7 @@
+services:
+  page:
+    image: superformula_clone/dev
+    volumes:
+      - type: bind
+        source: ./gatsby
+        target: /site
