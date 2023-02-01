@@ -18,8 +18,8 @@ jobs:
         uses: cygnetdigital/wait_for_response@v2.0.0
         with:
           url: 'http://localhost:9000'
-          responseCode: '200,500'
-          timeout: 30000
+          responseCode: 200
+          timeout: 60000
           interval: 1000
       - name: wget server
         run: wget --output-file=index_port_9000.html http://localhost:9000
@@ -66,7 +66,7 @@ jobs:
         uses: cygnetdigital/wait_for_response@v2.0.0
         with:
           url: 'http://localhost:8000'
-          responseCode: '200,500'
+          responseCode: 200
           timeout: 180000
           interval: 2000
       - name: wget
