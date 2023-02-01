@@ -14,16 +14,27 @@ jobs:
         run: ./bin/build-ci
       - name: npm run serve
         run: ./bin/run-ci
+      - name: wait for server
+        uses: cygnetdigital/wait_for_response@v2.0.0
+        with:
+          url: 'http://localhost:9000'
+          responseCode: '200,500'
+          timeout: 30000
+          interval: 1000
       - name: wget server
         run: wget --output-file=index_port_9000.html http://localhost:9000
           #- name: debug terminal
           #uses: mxschmitt/action-tmate@v3
       - name: check wget result
         run: |
-          if [ ! -s index_port_9000.html ]; then
+          if [ ! -s index_port_9000.html ]
+          then
             echo "port 9000 wget file should NOT be empty"
             exit 1
           fi
+      - name: rm wget result
+        run: rm -f index_port_9000.html index.html
+
   TestRunDev:
     runs-on: ubuntu-latest
     steps:
@@ -33,6 +44,42 @@ jobs:
         uses: docker/setup-buildx-action@v2
       - name: Build dev container image
         run: ./bin/build-dev
+      - name: check no node_modules
+        run: |
+          if [ -d "./node_modules" ]
+          then
+            echo "node_modules exists when it shouldn't"
+            exit 1
+          fi
+      - name: install packages
+        run: npm install
+      - name: check node_modules exists
+        run: |
+          if [ ! -d "./node_modules" ]
+          then
+            echo "node_modules *should* exist!"
+            exit 1
+          fi
+      - name: run dev server
+        run: ./bin/run-dev
+      - name: wait
+        uses: cygnetdigital/wait_for_response@v2.0.0
+        with:
+          url: 'http://localhost:8000'
+          responseCode: '200,500'
+          timeout: 180000
+          interval: 2000
+      - name: wget
+        run: wget --output-file=index_port_8000.html http://localhost:8000
+      - name: check wget result
+        run: |
+          if [ ! -s index_port_8000.html ]
+          then
+            echo "port 8000 wget file should NOT be empty"
+            exit 1
+          fi
+      - name: rm wget result
+        run: rm -f index_port_8000.html index.html
           #- name: ifconfig
           #run: ifconfig
           #- name: ping localhost
