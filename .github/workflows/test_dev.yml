@@ -30,6 +30,8 @@ jobs:
           fi
       - name: run dev server
         run: ./bin/run-dev
+      - name: sleep + curl -I
+        run: sleep 120; curl -I http://lcalhost:8000
       - name: wait
         uses: nev7n/wait_for_response@v1
         with:

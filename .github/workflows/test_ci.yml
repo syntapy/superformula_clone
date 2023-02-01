@@ -14,6 +14,8 @@ jobs:
         run: ./bin/build-ci
       - name: npm run serve
         run: ./bin/run-ci
+      - name: sleep + curl -I
+        run: sleep 60; curl -I http://lcalhost:9000
       - name: wait for server
         uses: nev7n/wait_for_response@v1
         with:
