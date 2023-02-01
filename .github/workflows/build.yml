@@ -3,14 +3,14 @@ name: docker
 permissions: read-all
 on: [push]
 jobs:
-  TestRunDocker:
+  TestRunCi:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout out ${{ env.GITHUB_REF }}
+      - name: checkout ${{ env.GITHUB_REF }}
         uses: actions/checkout@v3
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
-      - name: Build container image
+      - name: Build CI container image
         run: ./bin/build-ci
       - name: npm run serve
         run: ./bin/run-ci
@@ -24,6 +24,15 @@ jobs:
             echo "port 9000 wget file should NOT be empty"
             exit 1
           fi
+  TestRunDev:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout ${{ env.GITHUB_REF }}
+        uses: actions/checkout@v3
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      - name: Build dev container image
+        run: ./bin/build-dev
           #- name: ifconfig
           #run: ifconfig
           #- name: ping localhost
