@@ -16,14 +16,14 @@ jobs:
         run: ./bin/run-ci
       - name: wget server
         run: wget --output-file=index_port_9000.htlm http://localhost:9000
+      - name: debug terminal
+        uses: mxschmitt/action-tmate@v3
       - name: check wget result
         run: |
           if [ ! -s index_port_9000.html ]; then
             echo "port 9000 wget file should NOT be empty"
             exit 1
           fi
-          #- name: debug terminal
-          #uses: mxschmitt/action-tmate@v3
           #- name: ifconfig
           #run: ifconfig
           #- name: ping localhost
