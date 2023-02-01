@@ -14,8 +14,22 @@ jobs:
         run: ./bin/build-ci
       - name: npm run serve
         run: ./bin/run-ci
-      - name: debug terminal
-        uses: mxschmitt/action-tmate@v3
+      - name: check non-existent server 8000
+        run: wget --output-file=index_port_8000.html http://localhost:8000
+        run: |
+          if [ -s index_port_8000.html ]; then 
+            echo "port 8000 wget file is not empty!"
+            exit 1
+          fi
+      - name: check real server 9000
+        run: wget --output-file=index_port_9000.htlm http://localhost:9000
+        run: |
+          if [ ! -s index_port_9000.html ]; then
+            echo "port 9000 wget file should NOT be empty"
+            exit 1
+          fi
+          #- name: debug terminal
+          #uses: mxschmitt/action-tmate@v3
           #- name: ifconfig
           #run: ifconfig
           #- name: ping localhost
