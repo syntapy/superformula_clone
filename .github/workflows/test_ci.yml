@@ -2,10 +2,20 @@ name: docker
 
 permissions: read-all
 on: [push]
+inputs:
+  varFilePath:
+    description: 'variables'
+    required: true
+    default: ./.github/variables.env
 jobs:
   TestRunCi:
     runs-on: ubuntu-latest
     steps:
+      - name: load environment variables
+        uses: srini-hv/load-env-vars
+        with:
+          file-path: "./.github/variables.env"
+          delimiter: "="
       - name: checkout ${{ env.GITHUB_REF }}
         uses: actions/checkout@v3
       - name: Set up Docker Buildx
@@ -15,16 +25,16 @@ jobs:
       - name: npm run serve
         run: ./bin/run-ci
       - name: sleep + curl -I
-        run: sleep 60; curl -I http://lcalhost:9000
+        run: sleep 60; curl -I http://localhost:9000
       - name: wait for server
         uses: nev7n/wait_for_response@v1
         with:
-          url: 'http://localhost:9000'
+          url: $SERVER_CI
           responseCode: 200
           timeout: 60000
           interval: 1000
       - name: wget server
-        run: wget --output-file=index_port_9000.html http://localhost:9000
+        run: wget --output-file=$WGET_FILE_CI http://localhost:9000
           #- name: debug terminal
           #uses: mxschmitt/action-tmate@v3
       - name: check wget result
