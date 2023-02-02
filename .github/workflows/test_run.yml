@@ -19,7 +19,7 @@ jobs:
       - name: npm run serve
         run: ./bin/run-ci
       - name: sleep + curl -I
-        run: sleep 40; curl -I 
+        run: sleep 40; curl -I $SERVER
       - name: wait for server
         uses: nev7n/wait_for_response@v1
         with:
