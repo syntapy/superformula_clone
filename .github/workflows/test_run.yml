@@ -60,6 +60,8 @@ jobs:
             echo "node_modules exists when it shouldn't"
             exit 1
           fi
+      - name: debug terminal
+        uses: mxschmitt/action-tmate@v3
       - name: install packages
         run: npm install
       - name: check node_modules exists
@@ -104,7 +106,7 @@ jobs:
           #          command: ifconfig
           #          start: ./bin/run-ci
           #          wait-on: 'http://localhost:8000'
-            #      - name: run container
-            #        run: ./bin/run-ci
-            #      - name: ping container
-            #        run: ping -c 5 localhost:8000
+          #      - name: run container
+          #        run: ./bin/run-ci
+          #      - name: ping container
+          #        run: ping -c 5 localhost:8000
