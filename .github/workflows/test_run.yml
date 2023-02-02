@@ -7,7 +7,7 @@ jobs:
   TestRunCi:
     runs-on: ubuntu-latest
     env:
-      SERVER: http://localhost:9000
+      SERVER: 'http://localhost:9000'
       WGET_FILE: index_port_9000.html
     steps:
       - name: checkout ${{ env.GITHUB_REF }}
@@ -42,7 +42,7 @@ jobs:
   TestRunDev:
     runs-on: ubuntu-latest
     env:
-      SERVER: http://localhost:8000
+      SERVER: 'http://localhost:8000'
       WGET_FILE: index_port_8000.html
     steps:
       - name: checkout ${{ env.GITHUB_REF }}
