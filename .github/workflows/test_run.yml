@@ -2,9 +2,55 @@ name: docker
 
 permissions: read-all
 on: [push]
+inputs:
+  varFilePath:
+    description: 'variables'
+    required: true
+    default: ./.github/variables.env
+
 jobs:
+  TestRunCi:
+    runs-on: ubuntu-latest
+    env:
+      SERVER: http://localhost:9000
+      WGET_FILE: index_port_9000.html
+    steps:
+      - name: checkout ${{ env.GITHUB_REF }}
+        uses: actions/checkout@v3
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      - name: Build CI container image
+        run: ./bin/build-ci
+      - name: npm run serve
+        run: ./bin/run-ci
+      - name: sleep + curl -I
+        run: sleep 60; curl -I 
+      - name: wait for server
+        uses: nev7n/wait_for_response@v1
+        with:
+          url: $SERVER_CI
+          responseCode: 200
+          timeout: 60000
+          interval: 1000
+      - name: wget server
+        run: wget --output-file=$WGET_FILE $SERVER
+          #- name: debug terminal
+          #uses: mxschmitt/action-tmate@v3
+      - name: check wget result
+        run: |
+          if [ ! -s $SERVER ]
+          then
+            echo "port 9000 wget file should NOT be empty"
+            exit 1
+          fi
+      - name: rm wget result
+        run: rm -f $WGET_FILE index.html
+
   TestRunDev:
     runs-on: ubuntu-latest
+    env:
+      SERVER: http://localhost:8000
+      WGET_FILE: index_port_8000.html
     steps:
       - name: checkout ${{ env.GITHUB_REF }}
         uses: actions/checkout@v3
@@ -31,25 +77,25 @@ jobs:
       - name: run dev server
         run: ./bin/run-dev
       - name: sleep + curl -I
-        run: sleep 120; curl -I http://lcalhost:8000
+        run: sleep 120; curl -I $SERVER
       - name: wait
         uses: nev7n/wait_for_response@v1
         with:
-          url: 'http://localhost:8000'
+          url: $SERVER
           responseCode: 200
           timeout: 180000
           interval: 2000
       - name: wget
-        run: wget --output-file=index_port_8000.html http://localhost:8000
+        run: wget --output-file=$WGET_FILE $SERVER
       - name: check wget result
         run: |
-          if [ ! -s index_port_8000.html ]
+          if [ ! -s $WGET_FILE ]
           then
             echo "port 8000 wget file should NOT be empty"
             exit 1
           fi
       - name: rm wget result
-        run: rm -f index_port_8000.html index.html
+        run: rm -f $WGET_FILE index.html
           #- name: ifconfig
           #run: ifconfig
           #- name: ping localhost
