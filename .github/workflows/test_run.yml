@@ -7,11 +7,9 @@ env:
   NODE_MODULES: "./gatsby/node_modules/"
 
 jobs:
-  TestRunCi:
+  ### CI TEST ###
+  CI_Smoke_Test:
     runs-on: ubuntu-latest
-    env:
-      SERVER: http://localhost:9000
-      WGET_FILE: index_port_9000.html
     steps:
       - name: checkout ${{ env.GITHUB_REF }}
         uses: actions/checkout@v3
@@ -26,12 +24,8 @@ jobs:
 
 
   ### DEV TEST ###
-
-  TestRunDev:
+  Dev_Smoke_Test:
     runs-on: ubuntu-latest
-    env:
-      SERVER: http://localhost:8000
-      WGET_FILE: index_port_8000.html
     steps:
       - name: checkout ${{ env.GITHUB_REF }}
         uses: actions/checkout@v3
