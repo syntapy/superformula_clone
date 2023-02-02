@@ -21,6 +21,8 @@ jobs:
         run: ./bin/build-ci
       - name: npm run serve
         run: ./bin/run-ci
+      - name: wait for server
+        run: ./bin/wait-for-server.sh 9000
           #- name: debug terminal
           #uses: mxschmitt/action-tmate@v3
       - name: wget server
@@ -70,8 +72,8 @@ jobs:
           fi
       - name: run dev server
         run: ./bin/run-dev
-      - name: wget
-        run: wget --output-file=$WGET_FILE $SERVER
+      - name: wait for server
+        run: ./bin/wait-for-server.sh 8000
       - name: check wget result
         run: |
           if [ ! -s $WGET_FILE ]

@@ -1,6 +1,10 @@
 services:
   page:
     image: superformula_clone/dev
+    entrypoint:
+      - npm
+      - run
+      - develop
     volumes:
       - type: bind
         source: ./gatsby
