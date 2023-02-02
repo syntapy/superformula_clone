@@ -23,7 +23,7 @@ jobs:
         with:
           url: $SERVER_CI
           responseCode: 200
-          timeout: 120000
+          timeout: 60000
           interval: 1000
       - name: wget server
         run: wget --output-file=$WGET_FILE $SERVER
@@ -76,7 +76,7 @@ jobs:
         with:
           url: $SERVER
           responseCode: 200
-          timeout: 360000
+          timeout: 180000
           interval: 2000
       - name: wget
         run: wget --output-file=$WGET_FILE $SERVER
