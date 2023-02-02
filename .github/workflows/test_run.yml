@@ -18,10 +18,10 @@ jobs:
         run: ./bin/build-ci
       - name: npm run serve
         run: ./bin/run-ci
+      - name: debug terminal
+        uses: mxschmitt/action-tmate@v3
       - name: wget server
         run: wget --output-file=$WGET_FILE $SERVER
-          #- name: debug terminal
-          #uses: mxschmitt/action-tmate@v3
       - name: check wget result
         run: |
           if [ ! -s $SERVER ]
