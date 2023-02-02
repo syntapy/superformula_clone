@@ -3,6 +3,9 @@ name: docker
 permissions: read-all
 on: [push]
 
+env:
+  NODE_MODULES="./gatsby/node_modules/"
+
 jobs:
   TestRunCi:
     runs-on: ubuntu-latest
@@ -49,7 +52,7 @@ jobs:
         run: ./bin/build-dev
       - name: check no node_modules
         run: |
-          if [ -d "./node_modules" ]
+          if [ -d $NODE_MODULES ]
           then
             echo "node_modules exists when it shouldn't"
             exit 1
@@ -60,7 +63,7 @@ jobs:
         run: cd gatsby; npm install
       - name: check node_modules exists
         run: |
-          if [ ! -d "./node_modules" ]
+          if [ ! -d $NODE_MODULES ]
           then
             echo "node_modules *should* exist!"
             exit 1
