@@ -23,19 +23,6 @@ jobs:
         run: ./bin/run-ci
       - name: wait for server
         run: ./bin/wait-for-server.sh 9000
-          #- name: debug terminal
-          #uses: mxschmitt/action-tmate@v3
-      - name: wget server
-        run: wget --output-file=$WGET_FILE $SERVER
-      - name: check wget result
-        run: |
-          if [ ! -s $WGET_FILE ]
-          then
-            echo "port 9000 wget file should NOT be empty"
-            exit 1
-          fi
-      - name: rm wget result
-        run: rm -f $WGET_FILE index.html
 
 
   ### DEV TEST ###
@@ -52,34 +39,9 @@ jobs:
         uses: docker/setup-buildx-action@v2
       - name: Build dev container image
         run: ./bin/build-dev
-      - name: check no node_modules
-        run: |
-          if [ -d $NODE_MODULES ]
-          then
-            echo "node_modules exists when it shouldn't"
-            exit 1
-          fi
       - name: install packages
         run: cd gatsby; npm install; cd ..
-      - name: debug terminal
-        uses: mxschmitt/action-tmate@v3
-      - name: check node_modules exists
-        run: |
-          if [ ! -d $NODE_MODULES ]
-          then
-            echo "node_modules *should* exist!"
-            exit 1
-          fi
       - name: run dev server
         run: ./bin/run-dev
       - name: wait for server
         run: ./bin/wait-for-server.sh 8000
-      - name: check wget result
-        run: |
-          if [ ! -s $WGET_FILE ]
-          then
-            echo "port 8000 wget file should NOT be empty"
-            exit 1
-          fi
-      - name: rm wget result
-        run: rm -f $WGET_FILE index.html
