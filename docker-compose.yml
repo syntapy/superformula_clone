@@ -1,0 +1,8 @@
+services:
+  page:
+    image: superformula_clone/ci
+    entrypoint:
+      - npm
+      - run
+      - serve
+    network_mode: "host"
