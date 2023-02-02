@@ -4,7 +4,7 @@ permissions: read-all
 on: [push]
 
 env:
-  NODE_MODULES="./gatsby/node_modules/"
+  NODE_MODULES: "./gatsby/node_modules/"
 
 jobs:
   TestRunCi:
