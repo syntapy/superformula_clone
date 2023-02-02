@@ -7,5 +7,5 @@ services:
       - develop
     volumes:
       - type: bind
-        source: ./gatsby
-        target: /site
+        source: "./gatsby"
+        target: "/site"
