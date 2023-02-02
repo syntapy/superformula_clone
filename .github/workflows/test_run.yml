@@ -89,20 +89,3 @@ jobs:
           fi
       - name: rm wget result
         run: rm -f $WGET_FILE index.html
-          #- name: ifconfig
-          #run: ifconfig
-          #- name: ping localhost
-          #run: ping -c 5 -4 localhost
-          #- name: ping server
-          #run: ping -c 5 -4 localhost:9000
-          #      - name: ping server
-          #        uses: BerniWittmann/background-server-action@v1
-          #        with:
-          #command: ping -c 10 http://localhost:8000
-          #          command: ifconfig
-          #          start: ./bin/run-ci
-          #          wait-on: 'http://localhost:8000'
-          #      - name: run container
-          #        run: ./bin/run-ci
-          #      - name: ping container
-          #        run: ping -c 5 localhost:8000
