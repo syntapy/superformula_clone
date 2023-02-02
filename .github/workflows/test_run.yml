@@ -2,11 +2,6 @@ name: docker
 
 permissions: read-all
 on: [push]
-inputs:
-  varFilePath:
-    description: 'variables'
-    required: true
-    default: ./.github/variables.env
 
 jobs:
   TestRunCi:
