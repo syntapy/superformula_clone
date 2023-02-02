@@ -24,7 +24,7 @@ jobs:
         run: wget --output-file=$WGET_FILE $SERVER
       - name: check wget result
         run: |
-          if [ ! -s $SERVER ]
+          if [ ! -s $WGET_FILE ]
           then
             echo "port 9000 wget file should NOT be empty"
             exit 1
