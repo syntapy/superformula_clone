@@ -54,8 +54,8 @@ jobs:
             echo "node_modules exists when it shouldn't"
             exit 1
           fi
-          #- name: debug terminal
-          #uses: mxschmitt/action-tmate@v3
+      - name: debug terminal
+        uses: mxschmitt/action-tmate@v3
       - name: install packages
         run: cd gatsby; npm install
       - name: check node_modules exists
