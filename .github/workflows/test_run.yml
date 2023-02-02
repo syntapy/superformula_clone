@@ -32,6 +32,9 @@ jobs:
       - name: rm wget result
         run: rm -f $WGET_FILE index.html
 
+
+  ### DEV TEST ###
+
   TestRunDev:
     runs-on: ubuntu-latest
     env:
