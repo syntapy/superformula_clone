@@ -15,9 +15,7 @@ jobs:
       - uses: docker/setup-buildx-action@v2
       - run: ./bin/build
       - run: ./bin/run-ci
-      - run: ./bin/cmd-ci npm ci
-      - run: ./bin/cmd-ci npm run build
-      - run: ./bin/cmd-ci npm run e2e:ci
+      - run: ./bin/cmd-ci npm run e2e
       - name: Upload image diff outputs
         uses: actions/upload-artifact@v3
         with:

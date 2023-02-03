@@ -1,7 +1,10 @@
 services:
   page:
     image: superformula/clone
-    entrypoint: ["npm", "run", "build", ";", "npm", "run", "serve"]
+    entrypoint: [
+      "sh", "-c",
+      "npm ci && npm run build && npm run serve"
+    ]
     network_mode: "host"
     volumes:
       - type: bind
