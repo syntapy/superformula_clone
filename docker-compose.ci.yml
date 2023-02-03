@@ -2,9 +2,8 @@ services:
   page:
     image: superformula/clone
     entrypoint:
-      - npm
-      - run
-      - serve
+      - npm run build
+      - npm run serve
     network_mode: "host"
     volumes:
       - type: bind
