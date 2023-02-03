@@ -1,4 +1,0 @@
-#! /bin/sh
-
-./bin/build-ci
-docker build -t superformula_clone/dev -f dev.Dockerfile .

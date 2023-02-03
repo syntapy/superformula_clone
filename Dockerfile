@@ -13,4 +13,5 @@ copy gatsby .
 run apt-get update && apt-get upgrade -y && \
 		npm install -g npm@latest && \
 		npm install -g gatsby-cli
-run npm ci && npm run build
+
+volume ["./gatsby"]
