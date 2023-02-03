@@ -21,8 +21,6 @@
     "cy:open": "cypress open",
     "cy:help": "cypress run --help",
     "e2e": "cypress run --e2e --browser chrome",
-    "e2e:ci": "start-server-and-test develop http://localhost:8000 e2e",
-    "start:help": "start-server-and-test --help",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -54,7 +52,6 @@
     "jest-environment-jsdom": "^29.3.1",
     "jest-transform-css": "^6.0.0",
     "react-test-renderer": "^18.2.0",
-    "start-server-and-test": "^1.15.2",
     "ts-jest": "^29.0.3",
     "typescript": "^4.9.3"
   }
