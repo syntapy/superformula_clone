@@ -1,3 +1,3 @@
 #! /bin/sh
 
-docker build -t superformula/clone -f dev.Dockerfile .
+docker build -t superformula/clone .
