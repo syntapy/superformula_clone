@@ -19,9 +19,6 @@ jobs:
         run: ./bin/build-ci
       - name: npm run serve
         run: ./bin/run-ci
-      - name: wait for server
-        run: ./bin/wait-for-server.sh 9000
-
 
   ### DEV TEST ###
   Dev_Smoke_Test:
@@ -37,5 +34,3 @@ jobs:
         run: cd gatsby; npm install; cd ..
       - name: run dev server
         run: ./bin/run-dev
-      - name: wait for server
-        run: ./bin/wait-for-server.sh 8000
