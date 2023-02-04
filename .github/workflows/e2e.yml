@@ -1,4 +1,4 @@
-name: docker
+name: cypress
 
 permissions: read-all
 on: [push]
