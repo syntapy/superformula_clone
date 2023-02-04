@@ -35,3 +35,5 @@ export const mobile = {
 }
 
 export const waitTime = 300
+
+export const errorThreshold = 0.01

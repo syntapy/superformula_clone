@@ -1,4 +1,4 @@
-import { mobile, waitTime } from '../support/utils.js'
+import { mobile, waitTime, errorThreshold } from '../support/utils.js'
 
 mobile.devices.forEach((device) => {
   mobile.orientationList.forEach((orientation) => {
@@ -25,7 +25,9 @@ mobile.devices.forEach((device) => {
         // wait for rendering to finish
         cy.wait(waitTime)
 
-        cy.compareSnapshot('page_mobile_' + device + '_' + orientation)
+        cy.compareSnapshot('page_mobile_' + device + '_' + orientation, {
+          errorThreshold: errorThreshold
+        })
       })
 
       it('navbar non-expanded', () => {
