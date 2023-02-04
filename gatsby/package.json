@@ -22,6 +22,7 @@
     "cy:open": "cypress open",
     "cy:help": "cypress run --help",
     "e2e": "cypress run --e2e --browser chrome",
+    "e2e:ci": "cypress run --config baseUrl=http://localhost:9000 --e2e --browser chrome",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
