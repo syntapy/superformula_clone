@@ -3,9 +3,6 @@ name: docker
 permissions: read-all
 on: [push]
 
-env:
-  NODE_MODULES: "./gatsby/node_modules/"
-
 jobs:
   e2eDocker:
     runs-on: ubuntu-latest
