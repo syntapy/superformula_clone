@@ -13,6 +13,10 @@ export function getWindowDimensions() {
   }
 }
 
+export function underscores(str: string) {
+  return str.replace(/ /g, "-").toLowerCase()
+}
+
 export function getMobileWidth(offset: number = 0) {
   const mobileWidth: number = styleVars.maxMobileWidth 
   return parseInt(mobileWidth) + offset
