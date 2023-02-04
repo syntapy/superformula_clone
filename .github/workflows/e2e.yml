@@ -12,7 +12,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - run: cd gatsby && npm ci && npm run cy:install && npm run e2e:ci
+      - run: npm ci && npm run cy:install && npm run e2e:ci
       - name: Upload image diff outputs
         uses: actions/upload-artifact@v3
         with:
