@@ -7,7 +7,7 @@ env:
   NODE_MODULES: "./gatsby/node_modules/"
 
 jobs:
-  E2eDocker:
+  e2eDocker:
     runs-on: ubuntu-latest
     steps:
       - name: checkout ${{ env.GITHUB_REF }}
@@ -22,7 +22,7 @@ jobs:
           name: image diff output directory
           path: gatsby/cypress/snapshots/diff
         if: failure()
-  E2eNoDocker:
+  e2eNoDocker:
     runs-on: ubuntu-latest
     steps:
       - name: checkout ${{ env.GITHUB_REF }}
