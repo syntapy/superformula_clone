@@ -18,6 +18,7 @@
     "which": "which gatsby",
     "test": "jest",
     "test help": "jest --help",
+    "cy:install": "cypress install",
     "cy:open": "cypress open",
     "cy:help": "cypress run --help",
     "e2e": "cypress run --e2e --browser chrome",
