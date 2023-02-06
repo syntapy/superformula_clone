@@ -5,7 +5,7 @@ import cypressTerminalReport from 'cypress-terminal-report/src/installLogsPrinte
 export default defineConfig({
   env: {
     screenshotsFolder: './cypress/snapshots/actual',
-    type: 'base',
+    type: 'actual',
     trashAssetsBeforeRuns: true,
     failSilently: false,
     video: false
