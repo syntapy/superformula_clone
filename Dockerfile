@@ -15,12 +15,12 @@ from cypress/factory
 run mkdir /site
 workdir /site
 
+copy gatsby .
+
 run apt-get update && apt-get upgrade -y && \
 		npm install -g npm@latest && \
 		npm install -g gatsby-cli
 
 #user $UNAME
-
-copy gatsby .
 
 volume ["./gatsby"]
