@@ -1,6 +1,6 @@
 #! /bin/sh
 
-docker compose -f docker-compose.dev.yml up -x
+docker compose -f docker-compose.dev.yml up -d
 #docker compose -f docker-compose.dev.yml run -i page whoami
 ./bin/wait-for-server.sh 8000
 
