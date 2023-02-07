@@ -6,11 +6,11 @@ arg CYPRESS_VERSION='12.5.1'
 
 from cypress/factory
 
-arg UNAME=user
-arg UID=1000
-arg GID=1000
-run groupadd -g $GID -o $UNAME
-run useradd -m -u $UID -g $GID -o -s /bin/bash $UNAME
+#arg UNAME=user
+#arg UID=1000
+#arg GID=1000
+#run groupadd -g $GID -o $UNAME
+#run useradd -m -u $UID -g $GID -o -s /bin/bash $UNAME
 
 run mkdir /site
 workdir /site
@@ -19,7 +19,7 @@ run apt-get update && apt-get upgrade -y && \
 		npm install -g npm@latest && \
 		npm install -g gatsby-cli
 
-user $UNAME
+#user $UNAME
 
 copy gatsby .
 
