@@ -2,7 +2,7 @@ import { mobile, waitTime, errorThreshold } from '../support/utils.js'
 
 mobile.devices.forEach((device) => {
   mobile.orientationList.forEach((orientation) => {
-    const tag = `${device.deviceName} ${orientation}`
+    const tag = `${device} ${orientation}`
     describe('mobile tests: ' + tag, () => {
       beforeEach(() => {
         cy.viewport(device, orientation)
