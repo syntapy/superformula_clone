@@ -26,12 +26,12 @@ desktop.devices.forEach((device) => {
         img_right.should('be.visible')
         
         // wait for rendering to finish
-        cy.wait(waitTime, {
-          errorThreshold: errorThreshold
-        })
+        cy.wait(waitTime)
 
         const fname = 'page_desktop_' + device + '_' + orientation
-        cy.compareSnapshot(fname)
+        cy.compareSnapshot(fname, {
+          errorThreshold: errorThreshold 
+        })
       })
     })
   })
