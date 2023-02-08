@@ -1,7 +1,0 @@
-#! /bin/sh
-
-echo "Initiatin server startup"
-docker compose -f docker-compose.ci.yml up -d
-echo "Startup begun"
-./bin/wait-for-server.sh 9000
-echo "Startup complete"
