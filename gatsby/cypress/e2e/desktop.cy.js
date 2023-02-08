@@ -2,7 +2,8 @@ import { desktop, waitTime, errorThreshold } from '../support/utils.js'
 
 desktop.devices.forEach((device) => {
   desktop.orientationList.forEach((orientation) => {
-    describe('desktop tests: ' + device + ' (' + orientation + ')', () => {
+    const tag = `${device.deviceName} ${orientation}`
+    describe('desktop tests: ' + tag, () => {
       before(() => {
         cy.viewport(device, orientation)
       })
@@ -11,7 +12,7 @@ desktop.devices.forEach((device) => {
         cy.visit('/')
       })
 
-      it('page', () => {
+      it('page: ' + tag, () => {
         const sections = cy.get('section')
         sections.should('have.length', 6)
 
