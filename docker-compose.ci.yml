@@ -3,7 +3,7 @@ services:
     image: superformula/clone
     entrypoint: [
       "sh", "-c",
-      "npm ci && npm run cy:install && npm run build && npm run serve"
+      "npm ci && npm run cy:install && npm run develop"
     ]
     network_mode: "host"
     volumes:

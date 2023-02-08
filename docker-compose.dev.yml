@@ -1,9 +1,10 @@
 services:
   page:
     image: superformula/clone
+    tty: true
+    stdin_open: true
     entrypoint: [ 
-      "sh", "-c", 
-      "npm ci && npm run cy:install && npm run develop"
+      "bash"
     ]
     network_mode: "host"
     volumes:
