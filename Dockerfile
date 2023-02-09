@@ -6,10 +6,11 @@ arg CYPRESS_VERSION='12.5.1'
 
 from cypress/factory
 
-#arg UNAME=user
-#arg UID=1000
-#arg GID=1000
-#run groupadd -g $GID -o $UNAME
+env UID=1000
+env GID=1000
+env UNAME=node
+
+run groupadd -g $GID -o user
 #run useradd -m -u $UID -g $GID -o -s /bin/bash $UNAME
 
 run mkdir /site
@@ -21,6 +22,9 @@ run apt-get update && apt-get upgrade -y && \
 		npm install -g npm@latest && \
 		npm install -g gatsby-cli
 
-#user $UNAME
+# Sigh...yes, I needed to do this =/
+run chown -R node:node /root
+
+user $UNAME
 
 volume ["./gatsby"]

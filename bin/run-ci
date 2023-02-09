@@ -1,4 +1,0 @@
-#! /bin/sh
-
-docker compose -f docker-compose.ci.yml up -d
-./bin/wait-for-server.sh 9000
