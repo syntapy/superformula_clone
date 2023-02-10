@@ -23,6 +23,7 @@
     "cy:help": "cypress run --help",
     "e2e": "cypress run --e2e --browser chrome",
     "e2e:ci": "start-server-and-test develop http://localhost:8000 e2e",
+    "e2e:reset": "cypress run --env type=base --e2e --browser chrome",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -47,7 +48,7 @@
     "babel-jest": "^29.3.1",
     "babel-preset-gatsby": "^3.2.0",
     "css-mediaquery": "^0.1.2",
-    "cypress": "^12.3.0",
+    "cypress": "^12.5.1",
     "cypress-terminal-report": "^5.0.0",
     "cypress-visual-regression": "^2.1.0",
     "identity-obj-proxy": "^3.0.0",
