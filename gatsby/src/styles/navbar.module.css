@@ -52,6 +52,7 @@
 }
 
 .pageItemListMobile {
+	display: none;
 }
 
 @media (max-width: $max-mobile-width) {
