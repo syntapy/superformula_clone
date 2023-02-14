@@ -1,5 +1,6 @@
 import * as React from "react"
 import * as styles from "../styles/section.module.css"
+import * as servicesStyles from "../styles/section/services.module.css"
 import * as utilStyles from "../styles/utils.module.css"
 import { mobileV_desktopH } from "../styles/utilities/common"
 import * as styleVars from "../styles/vars.module.css"
@@ -95,8 +96,8 @@ interface ServicesSectionProps {
 
 export function ServicesSection(props: ServicesSectionProps) {
   const className: string = mobileV_desktopH()
-  const imgClassName: string = styles.servicesImg
-  const flexItem: string = styles.servicesFlexItem
+  const imgClassName: string = servicesStyles.servicesImg
+  const flexItem: string = servicesStyles.servicesFlexItem
   return (
     <React.Fragment>
       <div className={className}>
