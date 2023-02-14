@@ -96,7 +96,7 @@ interface ServicesSectionProps {
 export function ServicesSection(props: ServicesSectionProps) {
   const className: string = mobileV_desktopH()
   const imgClassName: string = styles.servicesImg
-  const flexItem: string = utilStyles.flexItem
+  const flexItem: string = styles.servicesFlexItem
   return (
     <React.Fragment>
       <div className={className}>
