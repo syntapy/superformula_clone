@@ -1,6 +1,7 @@
 import * as React from "react"
 import * as styles from "../styles/section.module.css"
 import * as utilStyles from "../styles/utils.module.css"
+import * as newUtilStyles from "../styles/utilities/orientation.module.css"
 import * as styleVars from "../styles/vars.module.css"
 import { ButtonLight, ButtonDark } from "./buttons"
 import { Ol, Li } from "./info"
@@ -52,7 +53,9 @@ interface InsightsSectionProps {
 }
 
 export function InsightsSection(props: InsightsSectionProps) {
-  const className: string = utilStyles.flexContainer
+  const classNameMobile: string = newUtilStyles.mobileVerticalFlex
+  const classNameDesktop: string = newUtilStyles.desktopHorizontalFlex
+  const className: string = classNameMobile + " " + classNameDesktop
   return (
     <React.Fragment>
       <h2>{props.title}</h2>
