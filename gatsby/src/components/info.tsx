@@ -2,7 +2,7 @@ import * as React from "react"
 import { A, ButtonDark } from "./buttons"
 import * as styles from "../styles/info.module.css"
 import * as utilStyles from "../styles/utils.module.css"
-import * as newUtilStyles from "../styles/utilities/orientation.module.css"
+import { mobileV_desktopH } from "../styles/utilities/common"
 
 interface HashTagsProps {
   tags: string[]
@@ -25,9 +25,7 @@ interface InsightProps {
 }
 
 export function Insight(props: InsightProps) {
-  const classNameMobile: string = newUtilStyles.mobileVerticalFlex
-  const classNameDesktop: string = newUtilStyles.desktopHorizontalFlex
-  const className: string = classNameMobile + " " + classNameDesktop + " " + styles.insight
+  const className: string = mobileV_desktopH() + " " + styles.insight
   const imgClassName: string = styles.insightImg
   return (
     <div key={"insight-section"} className={className}>
