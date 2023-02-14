@@ -2,7 +2,6 @@ import * as React from "react"
 import { HomeNavButton, NavButton, CareersNavButton, SvgButton } from "./buttons"
 
 import * as styles from "../styles/navbar.module.css"
-import * as utilStyles from "../styles/utils.module.css"
 
 import Chilidogmenu from "../images/svg/chilidogmenu.svg"
 

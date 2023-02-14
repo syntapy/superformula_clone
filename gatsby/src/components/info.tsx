@@ -1,7 +1,6 @@
 import * as React from "react"
 import { A, ButtonDark } from "./buttons"
 import * as styles from "../styles/info.module.css"
-import * as utilStyles from "../styles/utils.module.css"
 import { mobileV_desktopH } from "../styles/utilities/common"
 
 interface HashTagsProps {
