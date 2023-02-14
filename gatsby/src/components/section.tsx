@@ -1,5 +1,5 @@
 import * as React from "react"
-import * as styles from "../styles/section.module.css"
+import * as styles from "../styles/section/index.module.css"
 import * as servicesStyles from "../styles/section/services.module.css"
 import * as utilStyles from "../styles/utils.module.css"
 import { mobileV_desktopH } from "../styles/utilities/common"
