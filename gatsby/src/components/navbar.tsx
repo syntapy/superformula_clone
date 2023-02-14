@@ -2,13 +2,14 @@ import * as React from "react"
 import { HomeNavButton, NavButton, CareersNavButton, SvgButton } from "./buttons"
 
 import * as styles from "../styles/navbar.module.css"
+import { horizontalFlex } from "../styles/utilities.module.css"
 
 import Chilidogmenu from "../images/svg/chilidogmenu.svg"
 
 export default function NavBar() {
-  const navBar: string = styles.container + " " + styles.navbar
+  const navBar: string = horizontalFlex + " " + styles.container + " " + styles.navbar
   const homeItem: string = styles.homeItem
-  const pageItemList: string = styles.navItem + " " + styles.container
+  const pageItemList: string = styles.navItem + " " + horizontalFlex + " " + styles.container
   const pageItem: string = styles.pageItem + " " + styles.navItem
   return (
     <nav className={navBar}>
