@@ -135,7 +135,7 @@ function CultureImgMobile(props: img) {
 }
 
 export function CultureImgDesktop(props: {imgs: img[]}) {
-  const className: string = cultureStyles.auxWrapper
+  const className: string = cultureStyles.auxWrapper + " " + orientationStyles.horizontalFlex
   const stylesList = [styles.img0, styles.img1, styles.img2, styles.img3]
   return <div className={className}>
         {props.imgs.map((img, index) => {
