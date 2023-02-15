@@ -1,6 +1,7 @@
 import * as React from "react"
-import * as styles from "../styles/section.module.css"
-import * as utilStyles from "../styles/utils.module.css"
+import * as styles from "../styles/section/index.module.css"
+import * as servicesStyles from "../styles/section/services.module.css"
+import * as orientationStyles from "../styles/utilities/orientation.module.css"
 import * as styleVars from "../styles/vars.module.css"
 import { ButtonLight, ButtonDark } from "./buttons"
 import { Ol, Li } from "./info"
@@ -52,7 +53,7 @@ interface InsightsSectionProps {
 }
 
 export function InsightsSection(props: InsightsSectionProps) {
-  const className: string = utilStyles.flexContainer
+  const className: string = orientationStyles.mobileV_desktopH
   return (
     <React.Fragment>
       <h2>{props.title}</h2>
@@ -93,9 +94,9 @@ interface ServicesSectionProps {
 }
 
 export function ServicesSection(props: ServicesSectionProps) {
-  const className: string = utilStyles.flexContainer
-  const imgClassName: string = styles.servicesImg
-  const flexItem: string = utilStyles.flexItem
+  const className: string = orientationStyles.mobileV_desktopH
+  const imgClassName: string = servicesStyles.servicesImg
+  const flexItem: string = servicesStyles.servicesFlexItem
   return (
     <React.Fragment>
       <div className={className}>
@@ -127,20 +128,19 @@ interface CultureSectionProps {
   isMobile: () => boolean
 }
 
+import * as cultureStyles from "../styles/section/culture.module.css"
 function CultureImgMobile(props: img) {
   const className: string = styles.img
   return <img className={className} src={props.img.src} alt={props.img.alt} />
 }
 
 export function CultureImgDesktop(props: {imgs: img[]}) {
-  const className: string = utilStyles.auxWrapper
+  const className: string = cultureStyles.auxWrapper + " " + orientationStyles.horizontalFlex
   const stylesList = [styles.img0, styles.img1, styles.img2, styles.img3]
   return <div className={className}>
         {props.imgs.map((img, index) => {
-          //let imgClassName: string = styles['img' + index.toString()]
           let imgClassName = stylesList[index] + ' ' + styles.cultureImgDesktop
-          //console.log(styles)
-          return <div className={utilStyles.auxItemWrapper} key={index.toString()}>
+          return <div className={cultureStyles.auxItemWrapper} key={index.toString()}>
                   <img className={imgClassName} 
                     src={img.src} 
                     alt={img.alt}

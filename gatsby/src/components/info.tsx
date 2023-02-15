@@ -1,7 +1,7 @@
 import * as React from "react"
 import { A, ButtonDark } from "./buttons"
 import * as styles from "../styles/info.module.css"
-import * as utilStyles from "../styles/utils.module.css"
+import * as orientationStyles from "../styles/utilities/orientation.module.css"
 
 interface HashTagsProps {
   tags: string[]
@@ -24,7 +24,7 @@ interface InsightProps {
 }
 
 export function Insight(props: InsightProps) {
-  const className: string = utilStyles.flexContainer + " " + styles.insight
+  const className: string = orientationStyles.mobileV_desktopH + " " + styles.insight
   const imgClassName: string = styles.insightImg
   return (
     <div key={"insight-section"} className={className}>

@@ -1,0 +1,8 @@
+.auxWrapper {
+	width: 100rem;
+}
+
+.auxItemWrapper {
+	margin: auto;
+	flex: 0 0 auto;
+}

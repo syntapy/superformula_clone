@@ -1,0 +1,24 @@
+:import('../vars.module.css') {
+	$max-mobile-width: max-mobile-width;
+}
+
+.mobileV_desktopH {
+	display: flex;
+}
+
+@media (min-width: calc($max-mobile-width + 1px)) {
+	.mobileV_desktopH {
+		flex-direction: row;
+	}
+}
+
+@media (max-width: $max-mobile-width) {
+	.mobileV_desktopH {
+		flex-direction: column;
+	}
+}
+
+.horizontalFlex {
+	display: flex;
+	flex-direction: row;
+}

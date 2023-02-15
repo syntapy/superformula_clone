@@ -1,4 +1,4 @@
-:import('./vars.module.css') {
+:import('../vars.module.css') {
 	$max-mobile-width: max-mobile-width;
 }
 
@@ -31,11 +31,6 @@
 
 .sectionWhite a {
 	color: #000;
-}
-
-.servicesImg {
-	width: 100%;
-	height: auto;
 }
 
 .cultureImgDesktop {
