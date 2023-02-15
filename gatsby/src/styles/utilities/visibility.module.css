@@ -2,18 +2,17 @@
 	$max-mobile-width: max-mobile-width;
 }
 
-.mobileV_desktopH {
-	display: flex;
-}
+.mobile { }
+.desktop { }
 
 @media (min-width: calc($max-mobile-width + 1px)) {
-	.mobileV_desktopH {
-		flex-direction: row;
+	.mobile {
+		display: none;
 	}
 }
 
 @media (max-width: $max-mobile-width) {
-	.mobileV_desktopH {
-		flex-direction: column;
+	.desktop {
+		display: none;
 	}
 }

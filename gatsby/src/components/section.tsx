@@ -1,7 +1,7 @@
 import * as React from "react"
 import * as styles from "../styles/section/index.module.css"
 import * as servicesStyles from "../styles/section/services.module.css"
-import { mobileV_desktopH } from "../styles/utilities/common"
+import * as orientationStyles from "../styles/utilities/orientation.module.css"
 import * as styleVars from "../styles/vars.module.css"
 import { ButtonLight, ButtonDark } from "./buttons"
 import { Ol, Li } from "./info"
@@ -53,7 +53,7 @@ interface InsightsSectionProps {
 }
 
 export function InsightsSection(props: InsightsSectionProps) {
-  const className: string = mobileV_desktopH()
+  const className: string = orientationStyles.mobileV_desktopH
   return (
     <React.Fragment>
       <h2>{props.title}</h2>
@@ -94,7 +94,7 @@ interface ServicesSectionProps {
 }
 
 export function ServicesSection(props: ServicesSectionProps) {
-  const className: string = mobileV_desktopH()
+  const className: string = orientationStyles.mobileV_desktopH
   const imgClassName: string = servicesStyles.servicesImg
   const flexItem: string = servicesStyles.servicesFlexItem
   return (
