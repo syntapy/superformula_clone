@@ -10,6 +10,10 @@
 	margin: 0 1rem;
 }
 
+.container {
+	display: flex;
+}
+
 .chilidog {
 	display: none;
 	transform: scale(0.80);

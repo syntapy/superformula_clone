@@ -17,8 +17,3 @@
 		flex-direction: row;
 	}
 }
-
-.horizontalFlex {
-	display: flex;
-	flex-direction: row;
-}
