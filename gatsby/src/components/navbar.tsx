@@ -2,14 +2,17 @@ import * as React from "react"
 import { HomeNavButton, NavButton, CareersNavButton, SvgButton } from "./buttons"
 
 import * as styles from "../styles/navbar.module.css"
+import * as orientationStyles from "../styles/utilities/orientation.module.css"
+import { desktop, mobile } from "../styles/utilities/visibility.module.css"
 
 import Chilidogmenu from "../images/svg/chilidogmenu.svg"
 
 export default function NavBar() {
-  const navBar: string = styles.container + " " + styles.navbar
+  const navBar: string = styles.container + " " + orientationStyles.horizontalFlex + " " + styles.navbar
   const homeItem: string = styles.homeItem
-  const pageItemList: string = styles.navItem + " " + styles.container
+  const pageItemList: string = desktop + " " + styles.navItem + " " + orientationStyles.horizontalFlex + " " + orientationStyles.mobileV_desktopH
   const pageItem: string = styles.pageItem + " " + styles.navItem
+  const chilidog: string = mobile + " " + styles.chilidog
   return (
     <nav className={navBar}>
       <SvgButton
@@ -19,7 +22,7 @@ export default function NavBar() {
         // see https://github.com/syntapy/superformula_clone/issues/31
         icon={<Chilidogmenu width={32} height={45}/>}
         alt={"Menu"}
-        className={styles.chilidog}
+        className={chilidog}
       />
       <HomeNavButton className={homeItem} href="/" text="Superformula." />
       <div className={pageItemList}>
