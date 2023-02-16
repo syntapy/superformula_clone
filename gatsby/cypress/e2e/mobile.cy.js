@@ -2,15 +2,14 @@ import { mobile, waitTime, errorThreshold } from '../support/utils.js'
 
 mobile.devices.forEach((device) => {
   mobile.orientationList.forEach((orientation) => {
-    const tag = `${device} ${orientation}`
-    describe('mobile tests: ' + tag, () => {
+    describe('mobile tests: ' + device + ' (' + orientation + ')', () => {
       beforeEach(() => {
         cy.viewport(device, orientation)
         cy.visit('/')
         cy.wait(waitTime)
       })
 
-      it('page: ' + tag, () => {
+      it('page', () => {
         const sections = cy.get('section')
         sections.should('have.length', 6)
 
@@ -31,7 +30,7 @@ mobile.devices.forEach((device) => {
         })
       })
 
-      it('navbar non-expanded: ' + tag, () => {
+      it('navbar non-expanded', () => {
         const header = cy.get('header')
         const nav = cy.get('header nav')
         nav.should('be.visible')

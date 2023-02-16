@@ -2,8 +2,7 @@ import { desktop, waitTime, errorThreshold } from '../support/utils.js'
 
 desktop.devices.forEach((device) => {
   desktop.orientationList.forEach((orientation) => {
-    const tag = `${device} ${orientation}`
-    describe('desktop tests: ' + tag, () => {
+    describe('desktop tests: ' + device + ' (' + orientation + ')', () => {
       before(() => {
         cy.viewport(device, orientation)
       })
@@ -12,7 +11,7 @@ desktop.devices.forEach((device) => {
         cy.visit('/')
       })
 
-      it('page: ' + tag, () => {
+      it('page', () => {
         const sections = cy.get('section')
         sections.should('have.length', 6)
 
@@ -26,12 +25,12 @@ desktop.devices.forEach((device) => {
         img_right.should('be.visible')
         
         // wait for rendering to finish
-        cy.wait(waitTime)
+        cy.wait(waitTime, {
+          errorThreshold: errorThreshold
+        })
 
         const fname = 'page_desktop_' + device + '_' + orientation
-        cy.compareSnapshot(fname, {
-          errorThreshold: errorThreshold 
-        })
+        cy.compareSnapshot(fname)
       })
     })
   })
