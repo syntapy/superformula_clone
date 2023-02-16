@@ -1,0 +1,18 @@
+:import('../vars.module.css') {
+	$max-mobile-width: max-mobile-width;
+}
+
+.mobile { }
+.desktop { }
+
+@media (min-width: calc($max-mobile-width + 1px)) {
+	.mobile {
+		display: none;
+	}
+}
+
+@media (max-width: $max-mobile-width) {
+	.desktop {
+		display: none;
+	}
+}

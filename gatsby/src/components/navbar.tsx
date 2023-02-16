@@ -4,7 +4,8 @@ import { HomeNavButton, NavButton, CareersNavButton, SvgButton } from "./buttons
 import { isMobile, ResponsiveProps } from "../utils"
 
 import * as styles from "../styles/navbar.module.css"
-import * as utilStyles from "../styles/utils.module.css"
+import * as orientationStyles from "../styles/utilities/orientation.module.css"
+import { desktop, mobile } from "../styles/utilities/visibility.module.css"
 
 import Chilidogmenu from "../images/svg/chilidogmenu.svg"
 import Menuclose from "../images/svg/menuclose.svg"
@@ -95,8 +96,8 @@ export default function NavBar(props: ResponsiveProps) {
       <NavBarItems 
         id={"mobile-nav"}
         listClassName={pageItemListMobile}
-        homeClassName={itemListHomeItem}
         itemClassName={pageItem}
+        homeClassName={itemListHomeItem}
         onClose={onMenuCloseClick}
       />
     </>

@@ -21,12 +21,7 @@
 	border-width: 0 0 0.5px 0;
 }
 
-.container {
-	display: flex;
-}
-
 .chilidog {
-	display: none;
 	transform: scale(0.80);
 	margin: auto 0;
 }
