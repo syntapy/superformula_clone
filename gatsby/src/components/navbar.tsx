@@ -8,13 +8,13 @@ import { desktop, mobile } from "../styles/utilities/visibility.module.css"
 import Chilidogmenu from "../images/svg/chilidogmenu.svg"
 
 export default function NavBar() {
-  const navBar: string = styles.container + " " + orientationStyles.horizontalFlex + " " + styles.navbar
+  const nav: string = styles.container + " " + orientationStyles.horizontalFlex + " " + styles.navbar
   const homeItem: string = styles.homeItem
   const pageItemList: string = desktop + " " + styles.navItem + " " + orientationStyles.horizontalFlex + " " + orientationStyles.mobileV_desktopH
   const pageItem: string = styles.pageItem + " " + styles.navItem
   const chilidog: string = mobile + " " + styles.chilidog
   return (
-    <nav className={navBar}>
+    <nav className={nav}>
       <SvgButton
         // Need to pass width and height as props
         // to make jest tests work, sigh...
