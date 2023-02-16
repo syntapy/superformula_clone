@@ -1,8 +1,11 @@
-.auxWrapper {
+.imgDesktopMargin {
+	margin: auto;
+}
+
+.imgDesktopWidth {
 	width: 100rem;
 }
 
-.auxItemWrapper {
-	margin: auto;
+.imgDesktopFlexItem {
 	flex: 0 0 auto;
 }

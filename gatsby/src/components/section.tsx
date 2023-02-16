@@ -135,12 +135,13 @@ function CultureImgMobile(props: img) {
 }
 
 export function CultureImgDesktop(props: {imgs: img[]}) {
-  const className: string = cultureStyles.auxWrapper + " " + orientationStyles.horizontalFlex
+  const listWrapperClass: string = cultureStyles.imgDesktopWidth + ' ' + orientationStyles.horizontalFlex
   const stylesList = [styles.img0, styles.img1, styles.img2, styles.img3]
-  return <div className={className}>
+  return <div className={listWrapperClass}>
         {props.imgs.map((img, index) => {
-          let imgClassName = stylesList[index] + ' ' + styles.cultureImgDesktop
-          return <div className={cultureStyles.auxItemWrapper} key={index.toString()}>
+          let imgClassName = stylesList[index] + ' ' + cultureStyles.imgDesktopMargin
+          let wrapperClassName = cultureStyles.imgDesktopMargin + ' ' + cultureStyles.imgDesktopFlexItem
+          return <div className={wrapperClassName} key={index.toString()}>
                   <img className={imgClassName} 
                     src={img.src} 
                     alt={img.alt}
