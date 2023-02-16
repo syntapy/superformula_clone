@@ -96,7 +96,7 @@ interface ServicesSectionProps {
 export function ServicesSection(props: ServicesSectionProps) {
   const className: string = orientationStyles.mobileV_desktopH
   const imgClassName: string = servicesStyles.servicesImg
-  const flexItem: string = servicesStyles.servicesFlexItem
+  const flexItem: string = servicesStyles.servicesItem
   return (
     <React.Fragment>
       <div className={className}>
