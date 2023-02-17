@@ -5,31 +5,20 @@ import { isMobile, ResponsiveProps } from "../utils"
 
 import * as styles from "../styles/navbar.module.css"
 import * as orientationStyles from "../styles/utilities/orientation.module.css"
-import { desktop, mobile } from "../styles/utilities/visibility.module.css"
+import { hidden, desktop, mobile } from "../styles/utilities/visibility.module.css"
 
 import Chilidogmenu from "../images/svg/chilidogmenu.svg"
 import Menuclose from "../images/svg/menuclose.svg"
 
-interface NavBarItemsProps {
+interface NavItemsProps {
   id: string
   rootClassName: string
-  homeItemClassName: string
   navItemClassName: string
-  onClose: () => void
 }
 
-function NavBarItems(props: NavBarItemsProps) {
-  const firstItem: string = styles.navbarContainer + " " + props.homeItemClassName + " " + orientationStyles.mobileB_desktopH
+function NavItems(props: NavItemsProps) {
   return (
-    <nav id={props.id} className={props.rootClassName}>
-      <div className={firstItem} >
-        <SvgButton
-          className={styles.menuClose}
-          onClick={props.onClose}
-          icon={<Menuclose width={40} height={40} />}
-        />
-        <HomeNavButton className={styles.home} href="/" text="Superformula." />
-      </div>
+    <div className={props.rootClassName}>
       <NavButton className={props.navItemClassName} href="/services" text="Services" />
       <NavButton className={props.navItemClassName} href="/work" text="Work" />
       <NavButton className={props.navItemClassName} href="/articles" text="Articles" />
@@ -39,73 +28,123 @@ function NavBarItems(props: NavBarItemsProps) {
         href="https://careers.superformula.com"
         text="Careers"
       />
+    </div>
+  )
+}
+
+function NavMenuDesktop() {
+  const homeBtnDesktop: string = desktop + " " + styles.homeBtn
+  const navDesktop: string = styles.container + " " + styles.navbar + " " + orientationStyles.horizontalFlex
+  const rootDesktop: string = styles.navItem + " " + orientationStyles.horizontalFlex
+  const homeItem: string = styles.homeItem
+  const navItemDesktop: string = styles.navItem
+
+  return (
+    <>
+      <HomeNavButton className={homeBtnDesktop} href="/" text="Superformula." />
+      <div className={navDesktop}>
+        <NavItems
+          id={"desktop-nav"}
+          rootClassName={rootDesktop}
+          homeItemClassName={homeItem}
+          navItemClassName={navItemDesktop}
+        />
+      </div>
+    </>
+  )
+}
+
+interface NavMenuMobileClosedProps {
+  onClick: () => void
+}
+
+function NavMenuMobileClosed(props: NavMenuMobileClosedProps) {
+  const wrapper: string = hidden
+  const chilidogStyle: string = mobile + " " + styles.chilidog
+  const homeBtnMobile: string = mobile + " " + styles.home
+  return (
+    <div className={wrapper}>
+      <SvgButton
+        className={chilidogStyle}
+        onClick={props.onClick}
+        icon={<Chilidogmenu width={32} height={45} />}
+      />
+      <HomeNavButton className={homeBtnMobile} href="/" text="Superformula." />
+    </div>
+  )
+}
+
+interface NavMenuMobileOpenedProps {
+  onClick: () => void
+}
+
+function NavMenuMobileOpened(props: NavMenuMobileOpenedProps) {
+  const rootMobile: string = mobile
+      + " " + styles.navItem
+      + " " + orientationStyles.verticalFlex
+      + " " + styles.rootItemMobile
+  const wrapper: string = styles.navbarContainer
+      + " " + styles.homeItem
+      + " " + orientationStyles.mobileB_desktopH
+  const menuClose: string = styles.menuClose
+  const navItemMobile: string = styles.pageItem + " " + styles.navItem
+  return (
+    <div className={rootMobile} >
+      <SvgButton
+        className={menuClose}
+        onClick={props.onClick}
+        icon={<Menuclose width={40} height={40} />}
+      />
+      <NavItems
+        rootClassName={wrapper}
+        navItemClassName={navItemMobile}
+      />
+    </div>
+  )
+}
+
+function NavMenuMobile() {
+  const [isMobileMenuOpen, setIsMenuOpen] = React.useState(false)
+
+  function onChilidogClick(): void {
+    if (!isMobileMenuOpen) {
+      const menu: HTMLElement | null = document.getElementById("mobile-nav")
+      menu.classList.remove(hidden)
+      setIsMenuOpen(true)
+    }
+  }
+
+  function onMenuCloseClick(): void {
+    if (isMobileMenuOpen) {
+      const menu: HTMLElement | null = document.getElementById("mobile-nav")
+      menu.classList.add(hidden)
+      setIsMenuOpen(false)
+    }
+  }
+
+  const rootMobile: string = mobile
+      + " " + styles.navItem
+      + " " + orientationStyles.verticalFlex
+      + " " + styles.rootItemMobile
+
+  return (
+    <nav id={"mobile-nav"} className={rootMobile}>
+      <NavMenuMobileClosed onClick={onChilidogClick} />
+      <NavMenuMobileOpened onClick={onMenuCloseClick} />
     </nav>
   )
 }
 
 export default function NavBar(props: ResponsiveProps) {
-  const initialIsMobile: boolean = props.isMobile()
-  const [isMobile, setIsMobile] = React.useState(initialIsMobile)
-  const [isMobileMenuOpen, setIsMenuOpen] = React.useState(false)
-  const navPadding: string = styles.fixed + " " + styles.navbarContainer
-  const nav: string = styles.container + " " + styles.navbar
-  const homeBtn: string = styles.homeBtn
-
-  const navItemsDesktop: string = styles.navItem + " " + styles.pageItemList
-  const navItemsMobile: string = styles.navItem + " " + styles.pageItemListMobile
-
-  const homeItem: string = styles.itemListHomeItem
-
-  const navItemDesktop: string = styles.navItem
-  const navItemMobile: string = styles.pageItem + " " + styles.navItem
-
-  const chilidogStyle: string = styles.chilidog
-
-  function onChilidogClick(): void {
-    if (isMobile) {
-      if (!isMobileMenuOpen) {
-        const menu: HTMLElement | null = document.getElementById("mobile-nav")
-        menu.classList.add(styles.mobileMenuOpen)
-        setIsMenuOpen(true)
-      }
-    }
-  }
-
-  function onMenuCloseClick(): void {
-    if (isMobile) {
-      if (isMobileMenuOpen) {
-        const menu: HTMLElement | null = document.getElementById("mobile-nav")
-        menu.classList.remove(styles.mobileMenuOpen)
-        setIsMenuOpen(false)
-      }
-    }
-  }
+  const navPadding: string = styles.fixed
+      + " " + styles.navbarContainer
+      + " " + orientationStyles.horizontalFlex
+  const navMobile: string = ""
 
   return (
-    <>
-      <div id={"desktop-nav-wrapper"} className={navPadding}>
-        <div className={nav}>
-          <SvgButton
-            className={chilidogStyle}
-            onClick={onChilidogClick}
-            icon={<Chilidogmenu width={32} height={45} />}
-          />
-          <HomeNavButton className={homeBtn} href="/" text="Superformula." />
-          <NavBarItems
-            id={"desktop-nav"}
-            rootClassName={navItemsDesktop}
-            homeItemClassName={homeItem}
-            navItemClassName={navItemDesktop}
-          />
-        </div>
-      </div>
-      <NavBarItems 
-        id={"mobile-nav"}
-        rootClassName={navItemsMobile}
-        homeItemClassName={homeItem}
-        navItemClassName={navItemMobile}
-        onClose={onMenuCloseClick}
-      />
-    </>
+    <div id={"desktop-nav-wrapper"} className={navPadding}>
+      <NavMenuDesktop />
+      <NavMenuMobile />
+    </div>
   )
 }

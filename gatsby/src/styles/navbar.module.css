@@ -38,16 +38,7 @@
 	margin: auto auto auto 0;
 }
 
-.itemListHomeItem {
-	display: none;
-}
-
-.pageItemList {
-	display: flex;
-}
-
-.pageItemListMobile {
-	display: none;
+.homeItem {
 }
 
 @media (max-width: $max-mobile-width) {
@@ -55,7 +46,6 @@
 	}
 
 	.chilidog {
-		display: block;
 	}
 
 	.navItem {
@@ -70,10 +60,9 @@
 		margin: auto 0;
 	}
 
-	.itemListHomeItem {
+	.homeItem {
 		position: relative;
 		box-sizing: border-box;
-		display: block;
 		text-align: center;
 		padding: 1rem 0 4rem 0;
 		width: 100%;
@@ -87,16 +76,10 @@
 		margin: auto;
 	}
 
-	.pageItemList {
-		display: none;
-	}
-
-	.pageItemListMobile {
-		display: flex;
+	.rootItemMobile {
 		position: fixed;
 		bottom: 100%;
 		box-sizing: border-box;
-		flex-direction: column;
 		justify-content: flex-start;
 		align-items: center;
 		height: 100%;
