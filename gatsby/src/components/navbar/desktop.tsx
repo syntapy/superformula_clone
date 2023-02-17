@@ -6,16 +6,16 @@ import { HomeNavButton, NavButton, CareersNavButton, SvgButton } from "../button
 import NavItems from "./common"
 
 export default function NavMenuDesktop() {
-  const homeBtnDesktop: string = desktop + " " + styles.homeBtn
-  const navDesktop: string = styles.container + " " + styles.navbar + " " + orientationStyles.horizontalFlex
+  const navDesktop: string = styles.container + " " + styles.navbar + " " + orientationStyles.horizontalFlex + " " + desktop
+  const homeBtnDesktop: string = styles.homeBtn
   const rootDesktop: string = styles.navItem + " " + orientationStyles.horizontalFlex
   const homeItem: string = styles.homeItem
   const navItemDesktop: string = styles.navItem
 
   return (
     <>
-      <HomeNavButton className={homeBtnDesktop} href="/" text="Superformula." />
       <div className={navDesktop}>
+        <HomeNavButton className={homeBtnDesktop} href="/" text="Superformula." />
         <NavItems
           id={"desktop-nav"}
           rootClassName={rootDesktop}
