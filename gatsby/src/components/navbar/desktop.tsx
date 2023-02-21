@@ -10,9 +10,9 @@ export default function NavMenuDesktop() {
         + " " + styles.navbar
         + " " + orientationStyles.horizontalFlex
         + " " + desktop
-  const homeItem: string = styles.homeBtn
-  const navItemList: string = styles.marginVerticalAuto + " " + orientationStyles.horizontalFlex
-  const homeItem: string = styles.homeItem
+  const homeItem: string = styles.homeItemDesktop
+  const navItemList: string = styles.marginVerticalAuto
+        + " " + orientationStyles.horizontalFlex
   const navItem: string = styles.marginVerticalAuto
 
   return (

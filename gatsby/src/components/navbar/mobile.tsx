@@ -17,7 +17,7 @@ function NavHeaderMobile(props: NavHeaderMobileProps) {
   const root: string = orientationStyles.horizontalFlex
       + " " + styles.navHeaderMobile
   const chilidogStyle: string = styles.chilidog
-  const homeItemMobile: string = styles.navHeaderHomeBtn
+  const homeItem: string = styles.navHeaderHomeItem
   return (
     <div className={root}>
       <SvgButton
@@ -25,7 +25,7 @@ function NavHeaderMobile(props: NavHeaderMobileProps) {
         onClick={props.onClick}
         icon={<Chilidogmenu width={32} height={45} />}
       />
-      <HomeNavButton className={homeItemMobile} href="/" text="Superformula." />
+      <HomeNavButton className={homeItem} href="/" text="Superformula." />
     </div>
   )
 }
@@ -37,11 +37,11 @@ interface NavMenuMobileOpenedProps {
 function NavMenuMobileOpened(props: NavMenuMobileOpenedProps) {
   const root: string = styles.marginVerticalFixed
       + " " + orientationStyles.verticalFlex
-      + " " + styles.rootItemMobile
+      + " " + styles.navMenuMobileOpened
   const navItemList: string = styles.navbarContainer
-      + " " + styles.homeItem
+      + " " + styles.homeItemMobile
       + " " + orientationStyles.mobileB_desktopH
-  const menuClose: string = styles.menuClose
+  const menuClose: string = styles.mobileMenuClose
   const navItem: string = styles.navItemMobile
       + " " + styles.marginVerticalFixed
 
