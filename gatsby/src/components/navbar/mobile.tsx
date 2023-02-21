@@ -35,14 +35,14 @@ interface NavMenuMobileOpenedProps {
 }
 
 function NavMenuMobileOpened(props: NavMenuMobileOpenedProps) {
-  const rootMobile: string = styles.navItem
+  const rootMobile: string = styles.marginVerticalFixed
       + " " + orientationStyles.verticalFlex
       + " " + styles.rootItemMobile
   const wrapper: string = styles.navbarContainer
       + " " + styles.homeItem
       + " " + orientationStyles.mobileB_desktopH
   const menuClose: string = styles.menuClose
-  const navItemMobile: string = styles.pageItem + " " + styles.navItem
+  const navItemMobile: string = styles.navItemMobile + " " + styles.marginVerticalFixed
   return (
     <div className={rootMobile} >
       <SvgButton
@@ -51,8 +51,8 @@ function NavMenuMobileOpened(props: NavMenuMobileOpenedProps) {
         icon={<Menuclose width={40} height={40} />}
       />
       <NavItems
-        rootClassName={wrapper}
-        navItemClassName={navItemMobile}
+        navItemListStyle={wrapper}
+        navItemStyle={navItemMobile}
       />
     </div>
   )

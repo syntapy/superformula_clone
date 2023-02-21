@@ -3,19 +3,19 @@ import { NavButton, CareersNavButton } from "../buttons"
 
 interface NavItemsProps {
   id: string
-  rootClassName: string
-  navItemClassName: string
+  navItemListStyle: string
+  navItemStyle: string
 }
 
 export default function NavItems(props: NavItemsProps) {
   return (
-    <div className={props.rootClassName}>
-      <NavButton className={props.navItemClassName} href="/services" text="Services" />
-      <NavButton className={props.navItemClassName} href="/work" text="Work" />
-      <NavButton className={props.navItemClassName} href="/articles" text="Articles" />
-      <NavButton className={props.navItemClassName} href="/contact" text="Contact" />
+    <div className={props.navItemListStyle}>
+      <NavButton className={props.navItemStyle} href="/services" text="Services" />
+      <NavButton className={props.navItemStyle} href="/work" text="Work" />
+      <NavButton className={props.navItemStyle} href="/articles" text="Articles" />
+      <NavButton className={props.navItemStyle} href="/contact" text="Contact" />
       <CareersNavButton 
-        className={props.navItemClassName}
+        className={props.navItemStyle}
         href="https://careers.superformula.com"
         text="Careers"
       />

@@ -13,17 +13,15 @@ import NavMenuDesktop from "./desktop"
 import NavMenuMobile from "./mobile"
 
 export default function NavBar(props: ResponsiveProps) {
-  const navPadding: string = styles.fixed
-      + " " + styles.navbarContainer
+  const navIndexRoot: string = styles.fixed
+      + " " + styles.navIndexRoot
       + " " + orientationStyles.horizontalFlex
   const navMobile: string = ""
 
   return (
-    <div>
-      <div id={"desktop-nav-wrapper"} className={navPadding}>
-        <NavMenuDesktop />
-        <NavMenuMobile />
-      </div>
+    <div id={"desktop-nav-wrapper"} className={navIndexRoot}>
+      <NavMenuDesktop />
+      <NavMenuMobile />
     </div>
   )
 }

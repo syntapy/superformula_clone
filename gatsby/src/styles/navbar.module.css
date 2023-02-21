@@ -3,6 +3,25 @@
 	$nav-height: nav-height;
 }
 
+/* Index */
+.navIndexRoot {
+	box-sizing: border-box;
+	padding: 0 1rem;
+	height: $nav-height;
+	width: 100%;
+}
+
+/* Mobile */
+.navItemMobile {
+	flex: 0 1 0;
+	padding: 0 0.4rem;
+}
+
+/* Desktop */
+.desktopRoot {
+	color: #dcded6;
+}
+
 .hr {
 	border: none;
 	height: 5px;
@@ -40,13 +59,6 @@
 	position: fixed;
 }
 
-.navbarContainer {
-	box-sizing: border-box;
-	padding: 0 1rem;
-	height: $nav-height;
-	width: 100%;
-}
-
 .navbar {
 	height: $nav-height;
 	width: 100%;
@@ -61,8 +73,12 @@
 	color: #dcded6;
 }
 
-.navItem {
+.marginVerticalAuto {
 	margin: auto 0;
+}
+
+.marginVerticalFixed {
+	margin: 0.5rem 0;
 }
 
 .homeBtn {
@@ -77,10 +93,6 @@
 	}
 
 	.chilidog {
-	}
-
-	.navItem {
-		margin: 0.5rem auto;
 	}
 
 	.homeBtn {
@@ -124,9 +136,4 @@
 .mobileMenuOpen {
 	bottom: 0;
 	visibility: visible;
-}
-
-.pageItem {
-	flex: 0 1 0;
-	padding: 0 0.4rem;
 }
