@@ -3,6 +3,39 @@
 	$nav-height: nav-height;
 }
 
+.hr {
+	border: none;
+	height: 5px;
+	background-color: #e00;
+	padding: 0;
+	margin: 0;
+}
+
+.mobileNavHeader {
+	padding: auto;
+	width: 100%;
+	height: $nav-height;
+}
+
+.borderBlue {
+	border: 1px solid blue;
+}
+
+.navHeaderMobile {
+	height: 100%;
+}
+
+.navHeaderHomeBtn {
+	margin: auto;
+}
+
+.chilidog {
+	position: absolute;
+	top: 0.6rem;
+	left: 2.0rem;
+	margin: auto 0;
+}
+
 .fixed {
 	position: fixed;
 }
@@ -17,13 +50,11 @@
 .navbar {
 	height: $nav-height;
 	width: 100%;
-	border: 0px solid #dcded6;
-	border-width: 0 0 0.5px 0;
 }
 
-.chilidog {
-	transform: scale(0.80);
-	margin: auto 0;
+.navbarUnderline {
+	border: 0px solid #dcded6;
+	border-width: 0 0 0.5px 0;
 }
 
 .container a {

@@ -19,9 +19,11 @@ export default function NavBar(props: ResponsiveProps) {
   const navMobile: string = ""
 
   return (
-    <div id={"desktop-nav-wrapper"} className={navPadding}>
-      <NavMenuDesktop />
-      <NavMenuMobile />
+    <div>
+      <div id={"desktop-nav-wrapper"} className={navPadding}>
+        <NavMenuDesktop />
+        <NavMenuMobile />
+      </div>
     </div>
   )
 }

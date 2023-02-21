@@ -13,17 +13,15 @@ export default function NavMenuDesktop() {
   const navItemDesktop: string = styles.navItem
 
   return (
-    <>
-      <div className={navDesktop}>
-        <HomeNavButton className={homeBtnDesktop} href="/" text="Superformula." />
-        <NavItems
-          id={"desktop-nav"}
-          rootClassName={rootDesktop}
-          homeItemClassName={homeItem}
-          navItemClassName={navItemDesktop}
-        />
-      </div>
-    </>
+    <div className={navDesktop}>
+      <HomeNavButton className={homeBtnDesktop} href="/" text="Superformula." />
+      <NavItems
+        id={"desktop-nav"}
+        rootClassName={rootDesktop}
+        homeItemClassName={homeItem}
+        navItemClassName={navItemDesktop}
+      />
+      <hr className={styles.hr} />
+    </div>
   )
 }
-

@@ -9,14 +9,15 @@ import NavItems from "./common"
 
 import { HomeNavButton, SvgButton } from "../buttons"
 
-interface NavMenuMobileClosedProps {
+interface NavHeaderMobileProps {
   onClick: () => void
 }
 
-function NavMenuMobileClosed(props: NavMenuMobileClosedProps) {
-  const wrapper: string = hidden
-  const chilidogStyle: string = mobile + " " + styles.chilidog
-  const homeBtnMobile: string = mobile + " " + styles.home
+function NavHeaderMobile(props: NavHeaderMobileProps) {
+  const wrapper: string = orientationStyles.horizontalFlex
+      + " " + styles.navHeaderMobile
+  const chilidogStyle: string = styles.chilidog
+  const homeBtnMobile: string = styles.navHeaderHomeBtn
   return (
     <div className={wrapper}>
       <SvgButton
@@ -34,8 +35,7 @@ interface NavMenuMobileOpenedProps {
 }
 
 function NavMenuMobileOpened(props: NavMenuMobileOpenedProps) {
-  const rootMobile: string = mobile
-      + " " + styles.navItem
+  const rootMobile: string = styles.navItem
       + " " + orientationStyles.verticalFlex
       + " " + styles.rootItemMobile
   const wrapper: string = styles.navbarContainer
@@ -64,7 +64,8 @@ export default function NavMenuMobile() {
   function onChilidogClick(): void {
     if (!isMobileMenuOpen) {
       const menu: HTMLElement | null = document.getElementById("mobile-nav")
-      menu.classList.remove(hidden)
+      //menu.classList.remove(hidden)
+      //menu.classList.add(styles.mobileMenuOpen)
       setIsMenuOpen(true)
     }
   }
@@ -72,19 +73,17 @@ export default function NavMenuMobile() {
   function onMenuCloseClick(): void {
     if (isMobileMenuOpen) {
       const menu: HTMLElement | null = document.getElementById("mobile-nav")
-      menu.classList.add(hidden)
+      //menu.classList.add(hidden)
+      //menu.classList.remove(styles.mobileMenuOpen)
       setIsMenuOpen(false)
     }
   }
 
-  const rootMobile: string = mobile
-      + " " + styles.navItem
-      + " " + orientationStyles.verticalFlex
-      + " " + styles.rootItemMobile
+  const rootMobile: string = styles.mobileNavHeader + " " + mobile
 
   return (
     <nav id={"mobile-nav"} className={rootMobile}>
-      <NavMenuMobileClosed onClick={onChilidogClick} />
+      <NavHeaderMobile onClick={onChilidogClick} />
       <NavMenuMobileOpened onClick={onMenuCloseClick} />
     </nav>
   )
