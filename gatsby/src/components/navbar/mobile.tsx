@@ -14,18 +14,18 @@ interface NavHeaderMobileProps {
 }
 
 function NavHeaderMobile(props: NavHeaderMobileProps) {
-  const wrapper: string = orientationStyles.horizontalFlex
+  const root: string = orientationStyles.horizontalFlex
       + " " + styles.navHeaderMobile
   const chilidogStyle: string = styles.chilidog
-  const homeBtnMobile: string = styles.navHeaderHomeBtn
+  const homeItemMobile: string = styles.navHeaderHomeBtn
   return (
-    <div className={wrapper}>
+    <div className={root}>
       <SvgButton
         className={chilidogStyle}
         onClick={props.onClick}
         icon={<Chilidogmenu width={32} height={45} />}
       />
-      <HomeNavButton className={homeBtnMobile} href="/" text="Superformula." />
+      <HomeNavButton className={homeItemMobile} href="/" text="Superformula." />
     </div>
   )
 }
@@ -35,24 +35,26 @@ interface NavMenuMobileOpenedProps {
 }
 
 function NavMenuMobileOpened(props: NavMenuMobileOpenedProps) {
-  const rootMobile: string = styles.marginVerticalFixed
+  const root: string = styles.marginVerticalFixed
       + " " + orientationStyles.verticalFlex
       + " " + styles.rootItemMobile
-  const wrapper: string = styles.navbarContainer
+  const navItemList: string = styles.navbarContainer
       + " " + styles.homeItem
       + " " + orientationStyles.mobileB_desktopH
   const menuClose: string = styles.menuClose
-  const navItemMobile: string = styles.navItemMobile + " " + styles.marginVerticalFixed
+  const navItem: string = styles.navItemMobile
+      + " " + styles.marginVerticalFixed
+
   return (
-    <div className={rootMobile} >
+    <div className={root} >
       <SvgButton
         className={menuClose}
         onClick={props.onClick}
         icon={<Menuclose width={40} height={40} />}
       />
       <NavItems
-        navItemListStyle={wrapper}
-        navItemStyle={navItemMobile}
+        navItemListStyle={navItemList}
+        navItemStyle={navItem}
       />
     </div>
   )
@@ -79,10 +81,10 @@ export default function NavMenuMobile() {
     }
   }
 
-  const rootMobile: string = styles.mobileNavHeader + " " + mobile
+  const root: string = styles.mobileNavRoot + " " + mobile
 
   return (
-    <nav id={"mobile-nav"} className={rootMobile}>
+    <nav id={"mobile-nav"} className={root}>
       <NavHeaderMobile onClick={onChilidogClick} />
       <NavMenuMobileOpened onClick={onMenuCloseClick} />
     </nav>

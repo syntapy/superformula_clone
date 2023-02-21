@@ -11,17 +11,35 @@
 	width: 100%;
 }
 
-/* Mobile */
+ /* Mobile */
+/**********/
+
+.mobileNavRoot {
+	padding: auto;
+	width: 100%;
+	height: $nav-height;
+}
+
+.chilidog {
+	position: absolute;
+	top: 0.6rem;
+	left: 2.0rem;
+	margin: auto 0;
+}
+
 .navItemMobile {
 	flex: 0 1 0;
 	padding: 0 0.4rem;
 }
 
-/* Desktop */
+ /* Desktop */
+/***********/
+
 .desktopRoot {
 	color: #dcded6;
 }
 
+/* HR! */
 .hr {
 	border: none;
 	height: 5px;
@@ -30,12 +48,7 @@
 	margin: 0;
 }
 
-.mobileNavHeader {
-	padding: auto;
-	width: 100%;
-	height: $nav-height;
-}
-
+/* Other */
 .borderBlue {
 	border: 1px solid blue;
 }
@@ -46,13 +59,6 @@
 
 .navHeaderHomeBtn {
 	margin: auto;
-}
-
-.chilidog {
-	position: absolute;
-	top: 0.6rem;
-	left: 2.0rem;
-	margin: auto 0;
 }
 
 .fixed {
