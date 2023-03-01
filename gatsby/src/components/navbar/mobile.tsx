@@ -23,7 +23,7 @@ function NavHeaderMobile(props: NavHeaderMobileProps) {
       <SvgButton
         className={chilidogStyle}
         onClick={props.onClick}
-        icon={<Chilidogmenu width={32} height={45} />}
+        icon={<Chilidogmenu width={32} height={45} data-cy="chilidog-svg" />}
       />
       <HomeNavButton className={homeItem} href="/" text="Superformula." />
     </div>

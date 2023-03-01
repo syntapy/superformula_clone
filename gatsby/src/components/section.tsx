@@ -56,6 +56,7 @@ export function HeaderSection(props: HeaderSectionProps) {
 
 interface InsightsSectionProps {
   title: string
+  dataCy: string
   children: JSX.Element
 }
 
@@ -64,7 +65,7 @@ export function InsightsSection(props: InsightsSectionProps) {
   return (
     <React.Fragment>
       <h2>{props.title}</h2>
-      <div className={className}>
+      <div className={className} >
         {props.children}
       </div>
     </React.Fragment>

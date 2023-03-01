@@ -20,6 +20,7 @@ function HashTags(props: HashTagsProps) {
 interface InsightProps {
   title: string
   src: string
+  dataCy: string
   tags: string[]
 }
 
@@ -33,6 +34,7 @@ export function Insight(props: InsightProps) {
           className={imgClassName}
           src={props.src} 
           alt={props.alt}
+          data-cy={props.dataCy}
         />
         <HashTags tags={props.tags} />
         <p>{props.title}</p>
