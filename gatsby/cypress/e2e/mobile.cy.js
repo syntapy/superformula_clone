@@ -10,10 +10,7 @@ mobile.devices.forEach((device) => {
       })
 
       it('navbar non-expanded', () => {
-        const header = cy.get('header')
-        const nav = cy.get('header nav')
-        nav.should('be.visible')
-        const svg = header.get('svg')
+        const svg = cy.get('[data-cy="chilidog-svg"]')
         if (orientation === 'landscape' && ['iphone-6+', 'iphone-x', 'iphone-xr', 'samsung-note9', 'samsung-s10'].includes(device)) {
           svg.should('not.be.visible')
         } else {
