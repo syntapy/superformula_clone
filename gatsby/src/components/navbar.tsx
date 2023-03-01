@@ -20,7 +20,7 @@ export default function NavBar() {
         // to make jest tests work, sigh...
         // TODO find a better way to do this
         // see https://github.com/syntapy/superformula_clone/issues/31
-        icon={<Chilidogmenu width={32} height={45}/>}
+        icon={<Chilidogmenu width={32} height={45} data-cy="chilidog-svg"/>}
         alt={"Menu"}
         className={chilidog}
       />

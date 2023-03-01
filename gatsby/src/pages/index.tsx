@@ -50,12 +50,14 @@ const IndexPage = () => {
               title="Opportunities: How Superformula team members step up" 
               href="/articles/unexpected-opportunities-how-superformula-team-members-step-up"
               src={img_a}
+              dataCy="insight-img-a"
               tags={["experience", "culture"]}
             />
             <Insight 
               title="Save time! Optimizing rebuilds With Flutter" 
               href="/articles/optimizing-rebuilds-with-flutter"
               src={img_b}
+              dataCy="insight-img-b"
               tags={["flutter", "dart", "tips"]}
             />
           </InsightsSection>
