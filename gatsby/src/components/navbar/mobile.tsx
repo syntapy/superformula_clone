@@ -38,8 +38,7 @@ function NavMenuMobileOpened(props: NavMenuMobileOpenedProps) {
   const root: string = styles.marginVerticalFixed
       + " " + orientationStyles.verticalFlex
       + " " + styles.navMenuMobileOpened
-  const navItemList: string = styles.navbarContainer
-      + " " + styles.homeItemMobile
+  const navItemList: string = styles.homeItemMobile
       + " " + orientationStyles.mobileB_desktopH
   const menuClose: string = styles.mobileMenuClose
   const navItem: string = styles.navItemMobile

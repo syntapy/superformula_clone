@@ -1,4 +1,5 @@
 import * as React from "react"
+import * as styles from "../../styles/navbar.module.css"
 import { NavButton, CareersNavButton } from "../buttons"
 
 interface NavItemsProps {
@@ -8,6 +9,7 @@ interface NavItemsProps {
 }
 
 export default function NavItems(props: NavItemsProps) {
+  const navItem: string = props.navItemStyle + " " + styles.navItem
   return (
     <div className={props.navItemListStyle}>
       <NavButton className={props.navItemStyle} href="/services" text="Services" />
@@ -22,4 +24,3 @@ export default function NavItems(props: NavItemsProps) {
     </div>
   )
 }
-

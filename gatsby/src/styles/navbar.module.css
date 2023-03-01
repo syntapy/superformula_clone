@@ -38,7 +38,6 @@
 
 .navItemMobile {
 	flex: 0 1 0;
-	padding: 0 0.4rem;
 }
 
 .mobileMenuOpen {
@@ -109,10 +108,6 @@
 	border-width: 0 0 0.5px 0;
 }
 
-.container a {
-	color: #dcded6;
-}
-
 .marginVerticalAuto {
 	margin: auto 0;
 }
@@ -124,3 +119,10 @@
 .homeItemDesktop {
 	margin: auto auto auto 0;
 }
+
+/* all */
+.navItem {
+	margin: auto 0;
+	padding: 0 0.4rem;
+}
+

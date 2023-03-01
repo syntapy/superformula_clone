@@ -33,7 +33,7 @@ export function NavButton(props: ButtonProps & StyleProps) {
   const className: string = styles.navButton + " " + props.className
   return (
     <div className={className}>
-      <A className={className} href={props.href}>{props.text}</A>
+      <A href={props.href}>{props.text}</A>
     </div>
   )
 }
