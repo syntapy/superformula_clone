@@ -22,8 +22,8 @@
 
 .chilidog {
 	position: absolute;
-	top: 0.6rem;
-	left: 2.0rem;
+	top: 6px;
+	right: 2.0rem;
 	margin: auto 0;
 }
 
@@ -91,7 +91,7 @@
 }
 
 .navHeaderHomeItem {
-	margin: auto;
+	margin: auto auto auto 0;
 }
 
 .fixed {

@@ -20,12 +20,12 @@ function NavHeaderMobile(props: NavHeaderMobileProps) {
   const homeItem: string = styles.navHeaderHomeItem
   return (
     <div className={root}>
+      <HomeNavButton className={homeItem} href="/" text="Superformula." />
       <SvgButton
         className={chilidogStyle}
         onClick={props.onClick}
         icon={<Chilidogmenu width={32} height={45} data-cy="chilidog-svg" />}
       />
-      <HomeNavButton className={homeItem} href="/" text="Superformula." />
     </div>
   )
 }
