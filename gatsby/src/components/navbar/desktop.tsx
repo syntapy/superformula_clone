@@ -15,13 +15,13 @@ export default function NavMenuDesktop() {
   const navItem: string = styles.marginVerticalAuto
 
   return (
-    <div className={root}>
+    <nav className={root}>
       <HomeNavButton className={homeItem} href="/" text="Superformula." />
       <NavItems
         id={"desktop-nav"}
         navItemListStyle={navItemList}
         navItemStyle={navItem}
       />
-    </div>
+    </nav>
   )
 }

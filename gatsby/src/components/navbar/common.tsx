@@ -12,12 +12,12 @@ export default function NavItems(props: NavItemsProps) {
   const navItem: string = props.navItemStyle + " " + styles.navItem
   return (
     <div className={props.navItemListStyle}>
-      <NavButton className={props.navItemStyle} href="/services" text="Services" />
-      <NavButton className={props.navItemStyle} href="/work" text="Work" />
-      <NavButton className={props.navItemStyle} href="/articles" text="Articles" />
-      <NavButton className={props.navItemStyle} href="/contact" text="Contact" />
+      <NavButton className={navItem} href="/services" text="Services" />
+      <NavButton className={navItem} href="/work" text="Work" />
+      <NavButton className={navItem} href="/articles" text="Articles" />
+      <NavButton className={navItem} href="/contact" text="Contact" />
       <CareersNavButton 
-        className={props.navItemStyle}
+        className={navItem}
         href="https://careers.superformula.com"
         text="Careers"
       />

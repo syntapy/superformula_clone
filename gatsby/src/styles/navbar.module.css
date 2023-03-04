@@ -6,12 +6,12 @@
 /* Index */
 .navIndexRoot {
 	box-sizing: border-box;
-	padding: 0 1rem;
-	height: $nav-height;
-	width: 100%;
+	padding: 0 10px 15px 10px;
+	border-bottom: 1px solid #dcded6;
+	margin: 0 1rem;
 }
 
- /* Mobile */
+ /* mobile */
 /**********/
 
 .mobileNavRoot {
@@ -99,6 +99,8 @@
 }
 
 .navbar {
+	position: relative;
+	box-sizing: border-box;
 	height: $nav-height;
 	width: 100%;
 }
@@ -122,6 +124,7 @@
 
 /* all */
 .navItem {
+	flex: 0 1 0;
 	margin: auto 0;
 	padding: 0 0.4rem;
 }

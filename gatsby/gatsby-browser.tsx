@@ -1,2 +1,2 @@
 import * as React from "react"
-import * globalStyles from "./src/styles/global"
+import * as globalStyles from "./src/styles/global"

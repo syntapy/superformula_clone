@@ -13,8 +13,7 @@ import NavMenuDesktop from "./desktop"
 import NavMenuMobile from "./mobile"
 
 export default function NavBar(props: ResponsiveProps) {
-  const navIndexRoot: string = styles.fixed
-      + " " + styles.navIndexRoot
+  const navIndexRoot: string = styles.navIndexRoot
       + " " + orientationStyles.horizontalFlex
   const navMobile: string = ""
 

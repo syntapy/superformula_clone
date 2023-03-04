@@ -24,7 +24,7 @@ export function HomeNavButton(props: ButtonProps & StyleProps) {
   let className: string = styles.homeNavButton + " " + props.className
   return (
     <div className={className}>
-      <A className={className} href={props.href}>{props.text}</A>
+      <A href={props.href}>{props.text}</A>
     </div>
   )
 }
@@ -39,7 +39,7 @@ export function NavButton(props: ButtonProps & StyleProps) {
 }
 
 export function CareersNavButton(props: ButtonProps & StyleProps) {
-  const className: string = styles.careersNavButton + " " + props.className
+  const className: string = props.className + " " + styles.careersNavButton
   return (
     <div className={className}>
       <A className={className} href={props.href}>{props.text}</A>
