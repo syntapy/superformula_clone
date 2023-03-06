@@ -18,6 +18,7 @@
 	padding: auto;
 	width: 100%;
 	height: $nav-height;
+	border: 1px solid red;
 }
 
 .chilidog {
@@ -25,6 +26,12 @@
 	top: 6px;
 	right: 2.0rem;
 	margin: auto 0;
+}
+
+.mobileMenuCloseBtn {
+	position: absolute;
+	left: 2rem;
+	top: 1rem;
 }
 
 .homeItemMobile {
@@ -36,36 +43,42 @@
 	margin: 0 auto;
 }
 
-.navItemMobile {
+.mobileMenuItem {
 	flex: 0 1 0;
 }
 
-.mobileMenuOpen {
+.mobileMenuHomeItem {
+	flex: 0 1 0;
+}
+
+.mobileMenuOpened {
 	bottom: 0;
 	visibility: visible;
 }
 
-.mobilMenuClose {
-	position: absolute;
-	left: 2rem;
-	padding: auto;
-	margin: auto;
-}
-
-.navMenuMobileOpened {
+.mobileMenu {
 	position: fixed;
-	bottom: 100%;
+	right: 0;
+	left: 0;
 	box-sizing: border-box;
 	justify-content: flex-start;
 	align-items: center;
 	height: 100%;
-	width: 100%;
 	padding: auto;
 	margin: 0;
 	background-color: #1a1a1a;
 }
 
- /* Desktop */
+.mobileMenuActive {
+	bottom: 0;
+}
+
+.mobileMenuHidden {
+	bottom: 100%;
+}
+
+/***********/
+/* Desktop */
 /***********/
 
 .desktopRoot {
@@ -129,3 +142,7 @@
 	padding: 0 0.4rem;
 }
 
+.homeNavItem {
+	flex: 0 1 0;
+	margin: auto;
+}

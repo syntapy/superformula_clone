@@ -5,9 +5,8 @@ import { hidden, mobile } from "../../styles/utilities/visibility.module.css"
 
 import Chilidogmenu from "../../images/svg/chilidogmenu.svg"
 import Menuclose from "../../images/svg/menuclose.svg"
-import NavItems from "./common"
 
-import { HomeNavButton, SvgButton } from "../buttons"
+import { HomeNavButton, NavButton, SvgButton, CareersNavButton } from "../buttons"
 
 interface NavHeaderMobileProps {
   onClick: () => void
@@ -30,52 +29,93 @@ function NavHeaderMobile(props: NavHeaderMobileProps) {
   )
 }
 
-interface NavMenuMobileOpenedProps {
-  onClick: () => void
+interface NavItemsProps {
+  id: string
+  navItemListStyle: string
+  navItemStyle: string
 }
 
-function NavMenuMobileOpened(props: NavMenuMobileOpenedProps) {
-  const root: string = styles.marginVerticalFixed
-      + " " + orientationStyles.verticalFlex
-      + " " + styles.navMenuMobileOpened
-  const navItemList: string = styles.homeItemMobile
-      + " " + orientationStyles.mobileB_desktopH
-  const menuClose: string = styles.mobileMenuClose
-  const navItem: string = styles.navItemMobile
-      + " " + styles.marginVerticalFixed
-
+function NavItems(props: NavItemsProps) {
+  const navItem: string = props.navItemStyle + " " + styles.navItem
   return (
-    <div className={root} >
-      <SvgButton
-        className={menuClose}
-        onClick={props.onClick}
-        icon={<Menuclose width={40} height={40} />}
-      />
-      <NavItems
-        navItemListStyle={navItemList}
-        navItemStyle={navItem}
+    <div className={props.navItemListStyle}>
+      <NavButton className={navItem} href="/services" text="Services" />
+      <NavButton className={navItem} href="/work" text="Work" />
+      <NavButton className={navItem} href="/articles" text="Articles" />
+      <NavButton className={navItem} href="/contact" text="Contact" />
+      <CareersNavButton 
+        className={navItem}
+        href="https://careers.superformula.com"
+        text="Careers"
       />
     </div>
   )
 }
 
-export default function NavMenuMobile() {
+interface NavMenuMobileProps {
+  id: string
+  onClick: () => void
+}
+
+function NavMenuMobile(props: NavMenuMobileProps) {
+  const root: string = styles.marginVerticalFixed
+      + " " + orientationStyles.verticalFlex
+      + " " + styles.mobileMenu
+      + " " + styles.mobileMenuHidden
+  const navItemList: string = styles.homeItemMobile
+      + " " + orientationStyles.mobileB_desktopH
+
+  const homeNavWrapper: string = orientationStyles.horizontalFlex
+  const closeMenu: string = styles.mobileMenuCloseBtn 
+      + " " + orientationStyles.horizontalFlex
+  const homeNavItem: string = styles.homeNavItem
+
+  const navItem: string = styles.mobileMenuItem
+      + " " + styles.marginVerticalFixed
+
+  return (
+    <div id={props.id} className={root} >
+      <div className={homeNavWrapper}>
+        <SvgButton
+          className={closeMenu}
+          onClick={props.onClick}
+          icon={<Menuclose width={40} height={40} />}
+        />
+        <HomeNavButton className={homeNavItem} href="/" text="Superformula." />
+      </div>
+      <NavButton className={navItem} href="/services" text="Services" />
+      <NavButton className={navItem} href="/work" text="Work" />
+      <NavButton className={navItem} href="/articles" text="Articles" />
+      <NavButton className={navItem} href="/contact" text="Contact" />
+      <CareersNavButton 
+        className={navItem}
+        href="https://careers.superformula.com"
+        text="Careers"
+      />
+    </div>
+  )
+}
+
+export default function NavMobile() {
   const [isMobileMenuOpen, setIsMenuOpen] = React.useState(false)
+  const mobileMenuId: string = "mobile-menu"
 
   function onChilidogClick(): void {
     if (!isMobileMenuOpen) {
-      const menu: HTMLElement | null = document.getElementById("mobile-nav")
-      //menu.classList.remove(hidden)
-      //menu.classList.add(styles.mobileMenuOpen)
+      const menu: HTMLElement | null = document.getElementById(mobileMenuId)
+      menu.classList.remove(styles.mobileMenuHidden)
+      menu.classList.add(styles.mobileMenuActive)
       setIsMenuOpen(true)
     }
   }
 
   function onMenuCloseClick(): void {
+    console.log("onMenuCloseClick")
     if (isMobileMenuOpen) {
-      const menu: HTMLElement | null = document.getElementById("mobile-nav")
-      //menu.classList.add(hidden)
-      //menu.classList.remove(styles.mobileMenuOpen)
+      console.log("isMobileMenuOpen")
+      const menu: HTMLElement | null = document.getElementById(mobileMenuId)
+      menu.classList.remove(styles.mobileMenuActive)
+      menu.classList.add(styles.mobileMenuHidden)
       setIsMenuOpen(false)
     }
   }
@@ -83,9 +123,9 @@ export default function NavMenuMobile() {
   const root: string = styles.mobileNavRoot + " " + mobile
 
   return (
-    <nav id={"mobile-nav"} className={root}>
+    <nav className={root}>
       <NavHeaderMobile onClick={onChilidogClick} />
-      <NavMenuMobileOpened onClick={onMenuCloseClick} />
+      <NavMenuMobile id={mobileMenuId} onClick={onMenuCloseClick} />
     </nav>
   )
 }

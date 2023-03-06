@@ -9,8 +9,8 @@ import { hidden, desktop, mobile } from "../../styles/utilities/visibility.modul
 
 import NavItems from "./common"
 
-import NavMenuDesktop from "./desktop"
-import NavMenuMobile from "./mobile"
+import NavDesktop from "./desktop"
+import NavMobile from "./mobile"
 
 export default function NavBar(props: ResponsiveProps) {
   const navIndexRoot: string = styles.navIndexRoot
@@ -19,8 +19,8 @@ export default function NavBar(props: ResponsiveProps) {
 
   return (
     <div id={"desktop-nav-wrapper"} className={navIndexRoot}>
-      <NavMenuDesktop />
-      <NavMenuMobile />
+      <NavDesktop />
+      <NavMobile />
     </div>
   )
 }
