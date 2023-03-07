@@ -23,4 +23,8 @@ export const mobile = {
 
 export const waitTime = 300
 
+export function isDesktopMenu(device, orientation) {
+  return orientation !== 'landscape' || ['iphone-6+', 'iphone-x', 'iphone-xr', 'samsung-note9', 'samsung-s10'].includes(device)
+}
+
 export const errorThreshold = 0.01
