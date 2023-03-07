@@ -60,6 +60,7 @@
 	margin: 0;
 	padding: 1rem;
 	background-color: #1a1a1a;
+	transition: bottom 0.5s ease-in-out;
 }
 
 .mobileMenuActive {
