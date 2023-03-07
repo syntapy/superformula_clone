@@ -67,21 +67,18 @@ function NavMenuMobile(props: NavMenuMobileProps) {
   const homeNavWrapper: string = orientationStyles.horizontalFlex
   const closeMenu: string = styles.mobileMenuCloseBtn 
       + " " + orientationStyles.horizontalFlex
-  const homeNavItem: string = styles.homeNavItem
+  const homeNavItem: string = styles.mobileMenuHomeItem
 
   const navItem: string = styles.mobileMenuItem
-      + " " + styles.marginVerticalFixed
 
   return (
     <div id={props.id} className={root} >
-      <div className={homeNavWrapper}>
-        <SvgButton
-          className={closeMenu}
-          onClick={props.onClick}
-          icon={<Menuclose width={40} height={40} />}
-        />
-        <HomeNavButton className={homeNavItem} href="/" text="Superformula." />
-      </div>
+      <SvgButton
+        className={closeMenu}
+        onClick={props.onClick}
+        icon={<Menuclose width={40} height={40} />}
+      />
+      <HomeNavButton className={homeNavItem} href="/"   text="Superformula." />
       <NavButton className={navItem} href="/services"   text="Services" />
       <NavButton className={navItem} href="/work"       text="Work" />
       <NavButton className={navItem} href="/articles"   text="Articles" />
@@ -111,7 +108,6 @@ export default function NavMobile() {
   function onMenuCloseClick(): void {
     console.log("onMenuCloseClick")
     if (isMobileMenuOpen) {
-      console.log("isMobileMenuOpen")
       const menu: HTMLElement | null = document.getElementById(mobileMenuId)
       menu.classList.remove(styles.mobileMenuActive)
       menu.classList.add(styles.mobileMenuHidden)

@@ -29,8 +29,8 @@
 
 .mobileMenuCloseBtn {
 	position: absolute;
-	left: 2rem;
-	top: 1rem;
+	left: 3rem;
+	top: 1.45rem;
 }
 
 .homeItemMobile {
@@ -43,11 +43,22 @@
 }
 
 .mobileMenuItem {
-	flex: 0 1 0;
+	flex: 0.1 1 0;
+	text-align: center;
+	width: 100%;
+	padding: 2rem auto;
 }
 
 .mobileMenuHomeItem {
-	flex: 0 1 0;
+	flex: 0.1 1 0;
+	margin-top: 1rem;
+	width: 100%;
+	padding: 2rem auto;
+	text-align: center;
+}
+
+.mobileMenuLinkItem {
+	width: 100%;
 }
 
 .mobileMenuOpened {
@@ -59,11 +70,13 @@
 	position: fixed;
 	right: 0;
 	left: 0;
+	box-sizing: border-box;
 	justify-content: flex-start;
 	align-items: center;
 	height: 100%;
 	width: 100%;
 	margin: 0;
+	padding: 1rem;
 	background-color: #1a1a1a;
 }
 
@@ -141,6 +154,5 @@
 }
 
 .homeNavItem {
-	flex: 0 1 0;
-	margin: auto;
+	margin-top: 1rem;
 }
