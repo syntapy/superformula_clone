@@ -61,15 +61,13 @@ function NavMenuMobile(props: NavMenuMobileProps) {
   const root: string = orientationStyles.verticalFlex
       + " " + styles.mobileMenu
       + " " + styles.mobileMenuHidden
-  const navItemList: string = styles.homeItemMobile
-      + " " + orientationStyles.mobileB_desktopH
 
   const homeNavWrapper: string = orientationStyles.horizontalFlex
   const closeMenu: string = styles.mobileMenuCloseBtn 
       + " " + orientationStyles.horizontalFlex
-  const homeNavItem: string = styles.mobileMenuHomeItem
+  const homeNavItem: string = styles.mobileNavHomeItem
 
-  const navItem: string = styles.mobileMenuItem
+  const navItem: string = styles.mobileNavItem
 
   return (
     <div id={props.id} className={root} >
@@ -96,6 +94,8 @@ export default function NavMobile() {
   const [isMobileMenuOpen, setIsMenuOpen] = React.useState(false)
   const mobileMenuId: string = "mobile-menu"
 
+  const root: string = styles.mobileMenuRoot + " " + mobile
+
   function onChilidogClick(): void {
     if (!isMobileMenuOpen) {
       const menu: HTMLElement | null = document.getElementById(mobileMenuId)
@@ -114,8 +114,6 @@ export default function NavMobile() {
       setIsMenuOpen(false)
     }
   }
-
-  const root: string = styles.mobileNavRoot + " " + mobile
 
   return (
     <nav className={root}>
