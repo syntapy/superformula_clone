@@ -1,4 +1,4 @@
-import { mobile } from '../support/viewport.js'
+import { mobile } from '../support/utils.js'
 
 if (false) {
 mobile.devices.forEach((device) => {
