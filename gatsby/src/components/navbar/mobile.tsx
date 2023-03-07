@@ -58,8 +58,7 @@ interface NavMenuMobileProps {
 }
 
 function NavMenuMobile(props: NavMenuMobileProps) {
-  const root: string = styles.marginVerticalFixed
-      + " " + orientationStyles.verticalFlex
+  const root: string = orientationStyles.verticalFlex
       + " " + styles.mobileMenu
       + " " + styles.mobileMenuHidden
   const navItemList: string = styles.homeItemMobile
@@ -83,10 +82,10 @@ function NavMenuMobile(props: NavMenuMobileProps) {
         />
         <HomeNavButton className={homeNavItem} href="/" text="Superformula." />
       </div>
-      <NavButton className={navItem} href="/services" text="Services" />
-      <NavButton className={navItem} href="/work" text="Work" />
-      <NavButton className={navItem} href="/articles" text="Articles" />
-      <NavButton className={navItem} href="/contact" text="Contact" />
+      <NavButton className={navItem} href="/services"   text="Services" />
+      <NavButton className={navItem} href="/work"       text="Work" />
+      <NavButton className={navItem} href="/articles"   text="Articles" />
+      <NavButton className={navItem} href="/contact"    text="Contact" />
       <CareersNavButton 
         className={navItem}
         href="https://careers.superformula.com"

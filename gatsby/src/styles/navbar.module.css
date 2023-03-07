@@ -18,7 +18,6 @@
 	padding: auto;
 	width: 100%;
 	height: $nav-height;
-	border: 1px solid red;
 }
 
 .chilidog {
@@ -60,11 +59,10 @@
 	position: fixed;
 	right: 0;
 	left: 0;
-	box-sizing: border-box;
 	justify-content: flex-start;
 	align-items: center;
 	height: 100%;
-	padding: auto;
+	width: 100%;
 	margin: 0;
 	background-color: #1a1a1a;
 }
