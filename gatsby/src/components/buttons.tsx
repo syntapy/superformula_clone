@@ -10,6 +10,10 @@ interface ButtonProps {
   text: string
 }
 
+interface DataCyProps {
+  dataCy: string
+}
+
 export function A(props: ButtonProps & StyleProps) {
   const className: string = styles.a + " " + props.className
   return (
@@ -20,28 +24,28 @@ export function A(props: ButtonProps & StyleProps) {
   )
 }
 
-export function HomeNavButton(props: ButtonProps & StyleProps) {
+export function HomeNavButton(props: ButtonProps & StyleProps & DataCyProps) {
   let className: string = styles.homeNavButton + " " + props.className
   return (
-    <div className={className}>
+    <div data-cy={props.dataCy} className={className}>
       <A href={props.href}>{props.text}</A>
     </div>
   )
 }
 
-export function NavButton(props: ButtonProps & StyleProps) {
+export function NavButton(props: ButtonProps & StyleProps & DataCyProps) {
   const className: string = styles.navButton + " " + props.className
   return (
-    <div className={className}>
+    <div data-cy={props.dataCy} className={className}>
       <A href={props.href}>{props.text}</A>
     </div>
   )
 }
 
-export function CareersNavButton(props: ButtonProps & StyleProps) {
+export function CareersNavButton(props: ButtonProps & StyleProps & DataCyProps) {
   const className: string = props.className + " " + styles.careersNavButton
   return (
-    <div className={className}>
+    <div data-cy={props.dataCy} className={className}>
       <A className={className} href={props.href}>{props.text}</A>
     </div>
   )

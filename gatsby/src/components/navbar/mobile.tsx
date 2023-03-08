@@ -77,36 +77,37 @@ function NavMenuMobile(props: NavMenuMobileProps) {
         icon={<Menuclose width={40} height={40} />}
       />
       <HomeNavButton 
-        data-cy="home-nav-mobile"
+        dataCy="home-nav-mobile"
         className={homeNavItem}
         href="/"
         text="Superformula."
       />
       <NavButton
-        data-cy="services-nav-mobile"
+        dataCy="services-nav-mobile"
         className={navItem}
         href="/services"
         text="Services"
       />
       <NavButton
-        data-cy="work-nav-mobile"
+        dataCy="work-nav-mobile"
         className={navItem}
         href="/work"
         text="Work"
       />
       <NavButton 
-        data-cy="articles-nav-mobile"
+        dataCy="articles-nav-mobile"
         className={navItem}
         href="/articles"
         text="Articles"
       />
       <NavButton
-        data-cy="contact-nav-mobile"
+        dataCy="contact-nav-mobile"
         className={navItem}
         href="/contact"
         text="Contact"
       />
       <CareersNavButton 
+        dataCy="careers-nav-mobile"
         className={navItem}
         href="https://careers.superformula.com"
         text="Careers"
