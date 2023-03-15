@@ -12,8 +12,15 @@ interface SectionProps {
   children: JSX.Element
 }
 
-export function SectionBlack(props: SectionProps) {
-  const className: string = styles.section + " " + styles.sectionBlack + " " + props.className
+interface StyleProps {
+  className?: string
+}
+
+export function SectionBlack(props: SectionProps & StyleProps) {
+  let className: string = styles.section + " " + styles.sectionBlack + " " + props.className
+  if (props.className) {
+    className = props.className + " " + className
+  }
   return (
     <section className={className}>
       {props.children}

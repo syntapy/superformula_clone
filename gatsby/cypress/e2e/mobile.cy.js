@@ -1,4 +1,4 @@
-import { mobile, waitTime, errorThreshold } from '../support/utils.js'
+import { mobile, waitTime, animationWaitTime, errorThreshold, isDesktopMenuOnMobile } from '../support/utils.js'
 
 mobile.devices.forEach((device) => {
   mobile.orientationList.forEach((orientation) => {
@@ -11,10 +11,27 @@ mobile.devices.forEach((device) => {
 
       it('navbar non-expanded', () => {
         const svg = cy.get('[data-cy="chilidog-svg"]')
-        if (orientation === 'landscape' && ['iphone-6+', 'iphone-x', 'iphone-xr', 'samsung-note9', 'samsung-s10'].includes(device)) {
+        if (isDesktopMenuOnMobile(device, orientation)) {
           svg.should('not.be.visible')
         } else {
           svg.should('be.visible')
+        }
+      })
+
+      it('navbar expanded', () => {
+        if (!isDesktopMenuOnMobile(device, orientation)) {
+          cy.get('[data-cy="chilidog-svg"]').click().wait(animationWaitTime).then(() => {
+            cy.get('[data-cy="home-nav-mobile"]').should('be.visible')
+            cy.get('[data-cy="services-nav-mobile"]').should('be.visible')
+            cy.get('[data-cy="work-nav-mobile"]').should('be.visible')
+            cy.get('[data-cy="articles-nav-mobile"]').should('be.visible')
+            cy.get('[data-cy="contact-nav-mobile"]').should('be.visible')
+            cy.get('[data-cy="careers-nav-mobile"]').should('be.visible')
+
+            cy.compareSnapshot('navbar_expanded_' + device + '_' + orientation, {
+              errorThreshold: errorThreshold
+            })
+          })
         }
       })
 

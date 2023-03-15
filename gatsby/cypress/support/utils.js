@@ -21,6 +21,11 @@ export const mobile = {
   ]
 }
 
-export const waitTime = 300
+export const waitTime = 200
+export const animationWaitTime = 550
+
+export function isDesktopMenuOnMobile(device, orientation) {
+  return orientation === 'landscape' && ['iphone-xr'].includes(device)
+}
 
 export const errorThreshold = 0.01
