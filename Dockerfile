@@ -1,7 +1,11 @@
-arg NODE_VERSION='18.14.0'
-arg CHROME_VERSION='109.0.5414.119-1'
-arg EDGE_VERSION='109.0.1518.70-1'
-arg FIREFOX_VERSION='109.0.1'
+arg NODE_VERSION='18.15.0'
+
+### Get versions from:
+### 	https://hub.docker.com/r/cypress/factory/
+arg CHROME_VERSION='111.0.5563.64-1'
+arg EDGE_VERSION='111.0.1661.44-1'
+arg FIREFOX_VERSION='111.0'
+
 arg CYPRESS_VERSION='12.8.1'
 
 from cypress/factory
