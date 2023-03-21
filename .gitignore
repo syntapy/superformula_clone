@@ -1,6 +1,7 @@
 node_modules/
 .cache/
 public
-src/gatsby-types.d.ts
-cypress/snapshots/diff/
+gatsby/cypress/report.html
+gatsby/src/gatsby-types.d.ts
+reg.json
 .ssh/
