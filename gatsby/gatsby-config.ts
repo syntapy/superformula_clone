@@ -17,6 +17,7 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: ['gatsby-plugin-postcss',
     `gatsby-plugin-image`,
+    `gatsby-plugin-typescript`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
