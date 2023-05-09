@@ -11,7 +11,7 @@ export default createPages = async ({ graphql, actions, reporter }) => {
   const result = await graphql(
     `
       {
-        allWpPage {
+        allSitePage {
           nodes {
             title
             slug
