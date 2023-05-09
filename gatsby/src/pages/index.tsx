@@ -1,5 +1,5 @@
 import * as React from "react"
-import type { HeadFC } from "gatsby"
+import type { graphql, useStaticQuery, HeadFC } from "gatsby"
 
 import Header from "../components/header"
 import img_a from "../images/img_a.png"
@@ -33,16 +33,31 @@ import { SectionBlack, SectionWhite } from "../components/section"
 import * as utils from "../utils"
 
 const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+    query IndexContentQuery{
+      allServicesJson {
+        edges {
+          node {
+            title
+            description
+            href
+            buttonText
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <div className={styles.root}>
       <Header isMobile={utils.isMobile} />
       <main>
         <SectionBlack className={sectionStyles.firstSection}>
           <HeaderSection
-            title="We can go faster and further together"
-            description="We are digital experts driven by the passion needed to accelerate and transform your business."
-            href="/services" 
-            buttonText="Explore our services"
+            title={data.services.headline}
+            description={data.services.description}
+            href={data.services.href}
+            buttonText={data.services.buttonText}
           />
         </SectionBlack>
         <SectionBlack>
