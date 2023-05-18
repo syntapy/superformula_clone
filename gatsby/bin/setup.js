@@ -1,5 +1,5 @@
 const spaceImport = require("contentful-import");
-const exportFile = require("../contentful/home/services.json");
+const exportFile = require("../contentful/content.json");
 const inquirer = require("inquirer");
 const chalk = require("chalk");
 const path = require("path");
