@@ -1,1 +1,1148 @@
-{"sys":{"type":"Array"},"total":4,"skip":0,"limit":100,"items":[{"metadata":{"tags":[]},"sys":{"space":{"sys":{"type":"Link","linkType":"Space","id":"tosh0yt7steu"}},"id":"2LisABuyTf48yzNG0LBCin","type":"Entry","createdAt":"2023-05-18T17:53:00.030Z","updatedAt":"2023-05-18T17:58:20.666Z","environment":{"sys":{"id":"master","type":"Link","linkType":"Environment"}},"revision":2,"contentType":{"sys":{"type":"Link","linkType":"ContentType","id":"landingPage"}},"locale":"en-US"},"fields":{"title":"Superformula.","header":"We can go faster and further together","headerDescription":"We are digital experts driven by the passion needed to transform and accelerate your business.","headerLink":"Explore our services","insight":{"a":{"title":"Opportunities: How Superformula team members step up","hashtags":["experience","culture"]},"b":{"title":"Save Time! Optimizing rebuilds With Flutter","hashtags":["flutter","dart","tips"]}}}},{"metadata":{"tags":[]},"sys":{"space":{"sys":{"type":"Link","linkType":"Space","id":"tosh0yt7steu"}},"id":"3K9b0esdy0q0yGqgW2g6Ke","type":"Entry","createdAt":"2023-04-25T23:58:28.038Z","updatedAt":"2023-05-08T23:19:54.914Z","environment":{"sys":{"id":"master","type":"Link","linkType":"Environment"}},"revision":2,"contentType":{"sys":{"type":"Link","linkType":"ContentType","id":"blogPost"}},"locale":"en-US"},"fields":{"title":"Hello world","slug":"hello-world","heroImage":{"sys":{"type":"Link","linkType":"Asset","id":"6Od9v3wzLOysiMum0Wkmme"}},"description":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Your very first content with Contentful, pulled in JSON format using the Content Delivery API.","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"},"body":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"These is your very first content with Contentful, pulled in JSON format using the ","nodeType":"text"},{"data":{"uri":"https://www.contentful.com/developers/docs/references/content-delivery-api/"},"content":[{"data":{},"marks":[],"value":"Content Delivery API","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":". Content and presentation are now decoupled, allowing you to focus your efforts in building the perfect app.","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[],"value":"Your first steps","nodeType":"text"}],"nodeType":"heading-2"},{"data":{},"content":[{"data":{},"marks":[],"value":"Building with Contentful is easy. First take a moment to get ","nodeType":"text"},{"data":{"uri":"https://www.contentful.com/r/knowledgebase/content-modelling-basics"},"content":[{"data":{},"marks":[],"value":"the basics of content modelling","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":", which you can set up in the ","nodeType":"text"},{"data":{"uri":"https://app.contentful.com/"},"content":[{"data":{},"marks":[],"value":"Contentful Web app","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":". Once you get that, feel free to drop by the ","nodeType":"text"},{"data":{"uri":"https://www.contentful.com/developers/docs/"},"content":[{"data":{},"marks":[],"value":"Documentation","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":" to learn a bit more about how to build your app with Contentful, in particular the ","nodeType":"text"},{"data":{"uri":"https://www.contentful.com/developers/docs/concepts/apis/"},"content":[{"data":{},"marks":[],"value":"API basics","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":" and each one of our four APIs, as shown below.","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[],"value":"Content Delivery API","nodeType":"text"}],"nodeType":"heading-3"},{"data":{},"content":[{"data":{},"marks":[],"value":"The ","nodeType":"text"},{"data":{"uri":"https://www.contentful.com/developers/docs/references/content-delivery-api/"},"content":[{"data":{},"marks":[],"value":"Content Delivery API","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":" (CDA), available at ","nodeType":"text"},{"data":{},"marks":[{"type":"code"}],"value":"cdn.contentful.com","nodeType":"text"},{"data":{},"marks":[],"value":", is a read-only API for delivering content from Contentful to apps, websites and other media. Content is delivered as JSON data, and images, videos and other media as files.","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[],"value":"The API is available via a globally distributed content delivery network. The server closest to the user serves all content, both JSON and binary. This minimizes latency, which especially benefits mobile apps. Hosting content in multiple global data centers also greatly improves the availability of content.","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[],"value":"Content Management API","nodeType":"text"}],"nodeType":"heading-3"},{"data":{},"content":[{"data":{},"marks":[],"value":"The ","nodeType":"text"},{"data":{"uri":"https://www.contentful.com/developers/docs/references/content-management-api/"},"content":[{"data":{},"marks":[],"value":"Content Management API","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":" (CMA), available at ","nodeType":"text"},{"data":{},"marks":[{"type":"code"}],"value":"api.contentful.com","nodeType":"text"},{"data":{},"marks":[],"value":", is a read-write API for managing content. Unlike the Content Delivery API, the management API requires you to authenticate as a Contentful user. You could use the CMA for several use cases, such as:","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Automatic imports from different CMSes like WordPress or Drupal.","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Integration with other backend systems, such as an e-commerce shop.","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Building custom editing experiences. We built the ","nodeType":"text"},{"data":{"uri":"https://app.contentful.com/"},"content":[{"data":{},"marks":[],"value":"Contentful Web app","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":" on top of this API.","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"unordered-list"},{"data":{},"content":[{"data":{},"marks":[],"value":"Preview API","nodeType":"text"}],"nodeType":"heading-3"},{"data":{},"content":[{"data":{},"marks":[],"value":"The ","nodeType":"text"},{"data":{"uri":"https://www.contentful.com/developers/docs/concepts/apis/#content-preview-api"},"content":[{"data":{},"marks":[],"value":"Content Preview API","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":", available at ","nodeType":"text"},{"data":{},"marks":[{"type":"code"}],"value":"preview.contentful.com","nodeType":"text"},{"data":{},"marks":[],"value":", is a variant of the CDA for previewing your content before delivering it to your customers. You use the Content Preview API in combination with a \"preview\" deployment of your website (or a \"preview\" build of your mobile app) that allows content managers and authors to view their work in-context, as if it were published, using a \"preview\" access token as though it were delivered by the CDA.","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[],"value":"Images API","nodeType":"text"}],"nodeType":"heading-3"},{"data":{},"content":[{"data":{},"marks":[],"value":"The ","nodeType":"text"},{"data":{"uri":"https://www.contentful.com/developers/docs/concepts/apis/#images-api"},"content":[{"data":{},"marks":[],"value":"Images API","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":", available at ","nodeType":"text"},{"data":{},"marks":[{"type":"code"}],"value":"images.contentful.com","nodeType":"text"},{"data":{},"marks":[],"value":", allows you to resize and crop images, change their background color and convert them to different formats. Using our API for these transformations lets you upload high-quality assets, deliver exactly what your app needs, and still get all the benefits of our caching CDN.","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"},"author":{"sys":{"type":"Link","linkType":"Entry","id":"15jwOBqpxqSAOy2eOO4S0m"}},"publishDate":"2017-05-15T00:00+02:00","tags":["general"]}},{"metadata":{"tags":[]},"sys":{"space":{"sys":{"type":"Link","linkType":"Space","id":"tosh0yt7steu"}},"id":"31TNnjHlfaGUoMOwU0M2og","type":"Entry","createdAt":"2023-04-25T23:58:27.351Z","updatedAt":"2023-05-08T23:19:54.266Z","environment":{"sys":{"id":"master","type":"Link","linkType":"Environment"}},"revision":2,"contentType":{"sys":{"type":"Link","linkType":"ContentType","id":"blogPost"}},"locale":"en-US"},"fields":{"title":"Automate with webhooks","slug":"automate-with-webhooks","heroImage":{"sys":{"type":"Link","linkType":"Asset","id":"4shwYI3POEGkw0Eg6kcyaQ"}},"description":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Webhooks notify you, another person or system when resources have changed by calling a given HTTP endpoint.","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"},"body":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"What are webhooks?","nodeType":"text"}],"nodeType":"heading-2"},{"data":{},"content":[{"data":{},"marks":[],"value":"The webhooks are used to notify you when content has been changed. Specify a URL, configure your webhook, and we will send an HTTP POST request whenever something happens to your content.","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[],"value":"How do I configure a webhook?","nodeType":"text"}],"nodeType":"heading-2"},{"data":{},"content":[{"data":{},"marks":[],"value":"Go to Settings → Webhooks from the navigation bar at the top. From there, hit Add webhook, and you will be directed to your new webhook. Then choose a name, put in the information of your HTTP endpoint (URL and authentication), specify any custom headers and select the types of events that should trigger the webhook.","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[],"value":"Why do I get an old version in the CDA?","nodeType":"text"}],"nodeType":"heading-2"},{"data":{},"content":[{"data":{},"marks":[],"value":"As the delivery API is powered by a CDN network consisting of hundreds of servers distributed across continents, it takes some time (up to a few minutes) to reflect the changes to the published content. This must be taken into consideration when reacting to webhooks. In normal conditions, there could be a reasonable delay of 2 to 5 minutes.","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[],"value":"Extracted from the ","nodeType":"text"},{"data":{"uri":"https://www.contentful.com/faq/webhooks/"},"content":[{"data":{},"marks":[],"value":"Webhooks FAQ","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":".","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"},"author":{"sys":{"type":"Link","linkType":"Entry","id":"15jwOBqpxqSAOy2eOO4S0m"}},"publishDate":"2017-05-12T00:00+02:00","tags":["javascript"]}},{"metadata":{"tags":[]},"sys":{"space":{"sys":{"type":"Link","linkType":"Space","id":"tosh0yt7steu"}},"id":"15jwOBqpxqSAOy2eOO4S0m","type":"Entry","createdAt":"2023-04-25T23:58:26.568Z","updatedAt":"2023-05-08T23:19:53.569Z","environment":{"sys":{"id":"master","type":"Link","linkType":"Environment"}},"revision":2,"contentType":{"sys":{"type":"Link","linkType":"ContentType","id":"person"}},"locale":"en-US"},"fields":{"name":"John Doe","title":"Web Developer","company":"ACME","shortBio":{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","data":{},"content":[{"nodeType":"text","value":"Research and recommendations for modern stack websites.","marks":[],"data":{}}]}]},"email":"john@doe.com","phone":"0176 / 1234567","facebook":"johndoe","twitter":"johndoe","github":"johndoe","image":{"sys":{"type":"Link","linkType":"Asset","id":"7orLdboQQowIUs22KAW4U"}}}}],"includes":{"Asset":[{"metadata":{"tags":[]},"sys":{"space":{"sys":{"type":"Link","linkType":"Space","id":"tosh0yt7steu"}},"id":"4shwYI3POEGkw0Eg6kcyaQ","type":"Asset","createdAt":"2023-04-25T23:58:25.043Z","updatedAt":"2023-05-08T23:19:50.101Z","environment":{"sys":{"id":"master","type":"Link","linkType":"Environment"}},"revision":2,"locale":"en-US"},"fields":{"title":"Man in the fields","description":"Tattooed man walking in a field","file":{"url":"//images.ctfassets.net/tosh0yt7steu/4shwYI3POEGkw0Eg6kcyaQ/54a015a139eb3169d363814f9d6588eb/felix-russell-saw-112140.jpg","details":{"size":4539181,"image":{"width":2500,"height":1667}},"fileName":"felix-russell-saw-112140.jpg","contentType":"image/jpeg"}}},{"metadata":{"tags":[]},"sys":{"space":{"sys":{"type":"Link","linkType":"Space","id":"tosh0yt7steu"}},"id":"6Od9v3wzLOysiMum0Wkmme","type":"Asset","createdAt":"2023-04-25T23:58:24.004Z","updatedAt":"2023-05-08T23:19:48.781Z","environment":{"sys":{"id":"master","type":"Link","linkType":"Environment"}},"revision":2,"locale":"en-US"},"fields":{"title":"Woman with black hat","description":"Woman wearing a black hat","file":{"url":"//images.ctfassets.net/tosh0yt7steu/6Od9v3wzLOysiMum0Wkmme/17f6be1042994bcb1103592a592b6d5d/cameron-kirby-88711.jpg","details":{"size":7316629,"image":{"width":3000,"height":2000}},"fileName":"cameron-kirby-88711.jpg","contentType":"image/jpeg"}}},{"metadata":{"tags":[]},"sys":{"space":{"sys":{"type":"Link","linkType":"Space","id":"tosh0yt7steu"}},"id":"7orLdboQQowIUs22KAW4U","type":"Asset","createdAt":"2023-04-25T23:58:23.478Z","updatedAt":"2023-05-08T23:19:48.065Z","environment":{"sys":{"id":"master","type":"Link","linkType":"Environment"}},"revision":2,"locale":"en-US"},"fields":{"title":"Sparkler","description":"John with Sparkler","file":{"url":"//images.ctfassets.net/tosh0yt7steu/7orLdboQQowIUs22KAW4U/4e2bc3895420dbb3daad709cad10336d/matt-palmer-254999.jpg","details":{"size":2293094,"image":{"width":3000,"height":2000}},"fileName":"matt-palmer-254999.jpg","contentType":"image/jpeg"}}}]}}
+{
+  "includes": {
+    "Asset": [
+      {
+        "fields": {
+          "description": "Tattooed man walking in a field",
+          "file": {
+            "contentType": "image/jpeg",
+            "details": {
+              "image": {
+                "height": 1667,
+                "width": 2500
+              },
+              "size": 4539181
+            },
+            "fileName": "felix-russell-saw-112140.jpg",
+            "url": "//images.ctfassets.net/tosh0yt7steu/4shwYI3POEGkw0Eg6kcyaQ/54a015a139eb3169d363814f9d6588eb/felix-russell-saw-112140.jpg"
+          },
+          "title": "Man in the fields"
+        },
+        "metadata": {
+          "tags": [
+          ]
+        },
+        "sys": {
+          "createdAt": "2023-04-25T23:58:25.043Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "linkType": "Environment",
+              "type": "Link"
+            }
+          },
+          "id": "4shwYI3POEGkw0Eg6kcyaQ",
+          "locale": "en-US",
+          "revision": 2,
+          "space": {
+            "sys": {
+              "id": "tosh0yt7steu",
+              "linkType": "Space",
+              "type": "Link"
+            }
+          },
+          "type": "Asset",
+          "updatedAt": "2023-05-08T23:19:50.101Z"
+        }
+      },
+      {
+        "fields": {
+          "description": "Woman wearing a black hat",
+          "file": {
+            "contentType": "image/jpeg",
+            "details": {
+              "image": {
+                "height": 2000,
+                "width": 3000
+              },
+              "size": 7316629
+            },
+            "fileName": "cameron-kirby-88711.jpg",
+            "url": "//images.ctfassets.net/tosh0yt7steu/6Od9v3wzLOysiMum0Wkmme/17f6be1042994bcb1103592a592b6d5d/cameron-kirby-88711.jpg"
+          },
+          "title": "Woman with black hat"
+        },
+        "metadata": {
+          "tags": [
+          ]
+        },
+        "sys": {
+          "createdAt": "2023-04-25T23:58:24.004Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "linkType": "Environment",
+              "type": "Link"
+            }
+          },
+          "id": "6Od9v3wzLOysiMum0Wkmme",
+          "locale": "en-US",
+          "revision": 2,
+          "space": {
+            "sys": {
+              "id": "tosh0yt7steu",
+              "linkType": "Space",
+              "type": "Link"
+            }
+          },
+          "type": "Asset",
+          "updatedAt": "2023-05-08T23:19:48.781Z"
+        }
+      },
+      {
+        "fields": {
+          "description": "John with Sparkler",
+          "file": {
+            "contentType": "image/jpeg",
+            "details": {
+              "image": {
+                "height": 2000,
+                "width": 3000
+              },
+              "size": 2293094
+            },
+            "fileName": "matt-palmer-254999.jpg",
+            "url": "//images.ctfassets.net/tosh0yt7steu/7orLdboQQowIUs22KAW4U/4e2bc3895420dbb3daad709cad10336d/matt-palmer-254999.jpg"
+          },
+          "title": "Sparkler"
+        },
+        "metadata": {
+          "tags": [
+          ]
+        },
+        "sys": {
+          "createdAt": "2023-04-25T23:58:23.478Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "linkType": "Environment",
+              "type": "Link"
+            }
+          },
+          "id": "7orLdboQQowIUs22KAW4U",
+          "locale": "en-US",
+          "revision": 2,
+          "space": {
+            "sys": {
+              "id": "tosh0yt7steu",
+              "linkType": "Space",
+              "type": "Link"
+            }
+          },
+          "type": "Asset",
+          "updatedAt": "2023-05-08T23:19:48.065Z"
+        }
+      }
+    ]
+  },
+  "items": [
+    {
+      "fields": {
+        "header": "We can go faster and further together",
+        "headerDescription": "We are digital experts driven by the passion needed to transform and accelerate your business.",
+        "headerLink": "Explore our services",
+        "insight": {
+          "a": {
+            "hashtags": [
+              "experience",
+              "culture"
+            ],
+            "title": "Opportunities: How Superformula team members step up"
+          },
+          "b": {
+            "hashtags": [
+              "flutter",
+              "dart",
+              "tips"
+            ],
+            "title": "Save Time! Optimizing rebuilds With Flutter"
+          }
+        },
+        "title": "Superformula."
+      },
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "contentType": {
+          "sys": {
+            "id": "landingPage",
+            "linkType": "ContentType",
+            "type": "Link"
+          }
+        },
+        "createdAt": "2023-05-18T17:53:00.030Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "linkType": "Environment",
+            "type": "Link"
+          }
+        },
+        "id": "2LisABuyTf48yzNG0LBCin",
+        "locale": "en-US",
+        "revision": 2,
+        "space": {
+          "sys": {
+            "id": "tosh0yt7steu",
+            "linkType": "Space",
+            "type": "Link"
+          }
+        },
+        "type": "Entry",
+        "updatedAt": "2023-05-18T17:58:20.666Z"
+      }
+    },
+    {
+      "fields": {
+        "author": {
+          "sys": {
+            "id": "15jwOBqpxqSAOy2eOO4S0m",
+            "linkType": "Entry",
+            "type": "Link"
+          }
+        },
+        "body": {
+          "content": [
+            {
+              "content": [
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": "These is your very first content with Contentful, pulled in JSON format using the "
+                },
+                {
+                  "content": [
+                    {
+                      "data": {
+                      },
+                      "marks": [
+                      ],
+                      "nodeType": "text",
+                      "value": "Content Delivery API"
+                    }
+                  ],
+                  "data": {
+                    "uri": "https://www.contentful.com/developers/docs/references/content-delivery-api/"
+                  },
+                  "nodeType": "hyperlink"
+                },
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": ". Content and presentation are now decoupled, allowing you to focus your efforts in building the perfect app."
+                }
+              ],
+              "data": {
+              },
+              "nodeType": "paragraph"
+            },
+            {
+              "content": [
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": "Your first steps"
+                }
+              ],
+              "data": {
+              },
+              "nodeType": "heading-2"
+            },
+            {
+              "content": [
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": "Building with Contentful is easy. First take a moment to get "
+                },
+                {
+                  "content": [
+                    {
+                      "data": {
+                      },
+                      "marks": [
+                      ],
+                      "nodeType": "text",
+                      "value": "the basics of content modelling"
+                    }
+                  ],
+                  "data": {
+                    "uri": "https://www.contentful.com/r/knowledgebase/content-modelling-basics"
+                  },
+                  "nodeType": "hyperlink"
+                },
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": ", which you can set up in the "
+                },
+                {
+                  "content": [
+                    {
+                      "data": {
+                      },
+                      "marks": [
+                      ],
+                      "nodeType": "text",
+                      "value": "Contentful Web app"
+                    }
+                  ],
+                  "data": {
+                    "uri": "https://app.contentful.com/"
+                  },
+                  "nodeType": "hyperlink"
+                },
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": ". Once you get that, feel free to drop by the "
+                },
+                {
+                  "content": [
+                    {
+                      "data": {
+                      },
+                      "marks": [
+                      ],
+                      "nodeType": "text",
+                      "value": "Documentation"
+                    }
+                  ],
+                  "data": {
+                    "uri": "https://www.contentful.com/developers/docs/"
+                  },
+                  "nodeType": "hyperlink"
+                },
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": " to learn a bit more about how to build your app with Contentful, in particular the "
+                },
+                {
+                  "content": [
+                    {
+                      "data": {
+                      },
+                      "marks": [
+                      ],
+                      "nodeType": "text",
+                      "value": "API basics"
+                    }
+                  ],
+                  "data": {
+                    "uri": "https://www.contentful.com/developers/docs/concepts/apis/"
+                  },
+                  "nodeType": "hyperlink"
+                },
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": " and each one of our four APIs, as shown below."
+                }
+              ],
+              "data": {
+              },
+              "nodeType": "paragraph"
+            },
+            {
+              "content": [
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": "Content Delivery API"
+                }
+              ],
+              "data": {
+              },
+              "nodeType": "heading-3"
+            },
+            {
+              "content": [
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": "The "
+                },
+                {
+                  "content": [
+                    {
+                      "data": {
+                      },
+                      "marks": [
+                      ],
+                      "nodeType": "text",
+                      "value": "Content Delivery API"
+                    }
+                  ],
+                  "data": {
+                    "uri": "https://www.contentful.com/developers/docs/references/content-delivery-api/"
+                  },
+                  "nodeType": "hyperlink"
+                },
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": " (CDA), available at "
+                },
+                {
+                  "data": {
+                  },
+                  "marks": [
+                    {
+                      "type": "code"
+                    }
+                  ],
+                  "nodeType": "text",
+                  "value": "cdn.contentful.com"
+                },
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": ", is a read-only API for delivering content from Contentful to apps, websites and other media. Content is delivered as JSON data, and images, videos and other media as files."
+                }
+              ],
+              "data": {
+              },
+              "nodeType": "paragraph"
+            },
+            {
+              "content": [
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": "The API is available via a globally distributed content delivery network. The server closest to the user serves all content, both JSON and binary. This minimizes latency, which especially benefits mobile apps. Hosting content in multiple global data centers also greatly improves the availability of content."
+                }
+              ],
+              "data": {
+              },
+              "nodeType": "paragraph"
+            },
+            {
+              "content": [
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": "Content Management API"
+                }
+              ],
+              "data": {
+              },
+              "nodeType": "heading-3"
+            },
+            {
+              "content": [
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": "The "
+                },
+                {
+                  "content": [
+                    {
+                      "data": {
+                      },
+                      "marks": [
+                      ],
+                      "nodeType": "text",
+                      "value": "Content Management API"
+                    }
+                  ],
+                  "data": {
+                    "uri": "https://www.contentful.com/developers/docs/references/content-management-api/"
+                  },
+                  "nodeType": "hyperlink"
+                },
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": " (CMA), available at "
+                },
+                {
+                  "data": {
+                  },
+                  "marks": [
+                    {
+                      "type": "code"
+                    }
+                  ],
+                  "nodeType": "text",
+                  "value": "api.contentful.com"
+                },
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": ", is a read-write API for managing content. Unlike the Content Delivery API, the management API requires you to authenticate as a Contentful user. You could use the CMA for several use cases, such as:"
+                }
+              ],
+              "data": {
+              },
+              "nodeType": "paragraph"
+            },
+            {
+              "content": [
+                {
+                  "content": [
+                    {
+                      "content": [
+                        {
+                          "data": {
+                          },
+                          "marks": [
+                          ],
+                          "nodeType": "text",
+                          "value": "Automatic imports from different CMSes like WordPress or Drupal."
+                        }
+                      ],
+                      "data": {
+                      },
+                      "nodeType": "paragraph"
+                    }
+                  ],
+                  "data": {
+                  },
+                  "nodeType": "list-item"
+                },
+                {
+                  "content": [
+                    {
+                      "content": [
+                        {
+                          "data": {
+                          },
+                          "marks": [
+                          ],
+                          "nodeType": "text",
+                          "value": "Integration with other backend systems, such as an e-commerce shop."
+                        }
+                      ],
+                      "data": {
+                      },
+                      "nodeType": "paragraph"
+                    }
+                  ],
+                  "data": {
+                  },
+                  "nodeType": "list-item"
+                },
+                {
+                  "content": [
+                    {
+                      "content": [
+                        {
+                          "data": {
+                          },
+                          "marks": [
+                          ],
+                          "nodeType": "text",
+                          "value": "Building custom editing experiences. We built the "
+                        },
+                        {
+                          "content": [
+                            {
+                              "data": {
+                              },
+                              "marks": [
+                              ],
+                              "nodeType": "text",
+                              "value": "Contentful Web app"
+                            }
+                          ],
+                          "data": {
+                            "uri": "https://app.contentful.com/"
+                          },
+                          "nodeType": "hyperlink"
+                        },
+                        {
+                          "data": {
+                          },
+                          "marks": [
+                          ],
+                          "nodeType": "text",
+                          "value": " on top of this API."
+                        }
+                      ],
+                      "data": {
+                      },
+                      "nodeType": "paragraph"
+                    }
+                  ],
+                  "data": {
+                  },
+                  "nodeType": "list-item"
+                }
+              ],
+              "data": {
+              },
+              "nodeType": "unordered-list"
+            },
+            {
+              "content": [
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": "Preview API"
+                }
+              ],
+              "data": {
+              },
+              "nodeType": "heading-3"
+            },
+            {
+              "content": [
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": "The "
+                },
+                {
+                  "content": [
+                    {
+                      "data": {
+                      },
+                      "marks": [
+                      ],
+                      "nodeType": "text",
+                      "value": "Content Preview API"
+                    }
+                  ],
+                  "data": {
+                    "uri": "https://www.contentful.com/developers/docs/concepts/apis/#content-preview-api"
+                  },
+                  "nodeType": "hyperlink"
+                },
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": ", available at "
+                },
+                {
+                  "data": {
+                  },
+                  "marks": [
+                    {
+                      "type": "code"
+                    }
+                  ],
+                  "nodeType": "text",
+                  "value": "preview.contentful.com"
+                },
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": ", is a variant of the CDA for previewing your content before delivering it to your customers. You use the Content Preview API in combination with a \"preview\" deployment of your website (or a \"preview\" build of your mobile app) that allows content managers and authors to view their work in-context, as if it were published, using a \"preview\" access token as though it were delivered by the CDA."
+                }
+              ],
+              "data": {
+              },
+              "nodeType": "paragraph"
+            },
+            {
+              "content": [
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": "Images API"
+                }
+              ],
+              "data": {
+              },
+              "nodeType": "heading-3"
+            },
+            {
+              "content": [
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": "The "
+                },
+                {
+                  "content": [
+                    {
+                      "data": {
+                      },
+                      "marks": [
+                      ],
+                      "nodeType": "text",
+                      "value": "Images API"
+                    }
+                  ],
+                  "data": {
+                    "uri": "https://www.contentful.com/developers/docs/concepts/apis/#images-api"
+                  },
+                  "nodeType": "hyperlink"
+                },
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": ", available at "
+                },
+                {
+                  "data": {
+                  },
+                  "marks": [
+                    {
+                      "type": "code"
+                    }
+                  ],
+                  "nodeType": "text",
+                  "value": "images.contentful.com"
+                },
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": ", allows you to resize and crop images, change their background color and convert them to different formats. Using our API for these transformations lets you upload high-quality assets, deliver exactly what your app needs, and still get all the benefits of our caching CDN."
+                }
+              ],
+              "data": {
+              },
+              "nodeType": "paragraph"
+            }
+          ],
+          "data": {
+          },
+          "nodeType": "document"
+        },
+        "description": {
+          "content": [
+            {
+              "content": [
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": "Your very first content with Contentful, pulled in JSON format using the Content Delivery API."
+                }
+              ],
+              "data": {
+              },
+              "nodeType": "paragraph"
+            }
+          ],
+          "data": {
+          },
+          "nodeType": "document"
+        },
+        "heroImage": {
+          "sys": {
+            "id": "6Od9v3wzLOysiMum0Wkmme",
+            "linkType": "Asset",
+            "type": "Link"
+          }
+        },
+        "publishDate": "2017-05-15T00:00+02:00",
+        "slug": "hello-world",
+        "tags": [
+          "general"
+        ],
+        "title": "Hello world"
+      },
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "contentType": {
+          "sys": {
+            "id": "blogPost",
+            "linkType": "ContentType",
+            "type": "Link"
+          }
+        },
+        "createdAt": "2023-04-25T23:58:28.038Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "linkType": "Environment",
+            "type": "Link"
+          }
+        },
+        "id": "3K9b0esdy0q0yGqgW2g6Ke",
+        "locale": "en-US",
+        "revision": 2,
+        "space": {
+          "sys": {
+            "id": "tosh0yt7steu",
+            "linkType": "Space",
+            "type": "Link"
+          }
+        },
+        "type": "Entry",
+        "updatedAt": "2023-05-08T23:19:54.914Z"
+      }
+    },
+    {
+      "fields": {
+        "author": {
+          "sys": {
+            "id": "15jwOBqpxqSAOy2eOO4S0m",
+            "linkType": "Entry",
+            "type": "Link"
+          }
+        },
+        "body": {
+          "content": [
+            {
+              "content": [
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": "What are webhooks?"
+                }
+              ],
+              "data": {
+              },
+              "nodeType": "heading-2"
+            },
+            {
+              "content": [
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": "The webhooks are used to notify you when content has been changed. Specify a URL, configure your webhook, and we will send an HTTP POST request whenever something happens to your content."
+                }
+              ],
+              "data": {
+              },
+              "nodeType": "paragraph"
+            },
+            {
+              "content": [
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": "How do I configure a webhook?"
+                }
+              ],
+              "data": {
+              },
+              "nodeType": "heading-2"
+            },
+            {
+              "content": [
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": "Go to Settings → Webhooks from the navigation bar at the top. From there, hit Add webhook, and you will be directed to your new webhook. Then choose a name, put in the information of your HTTP endpoint (URL and authentication), specify any custom headers and select the types of events that should trigger the webhook."
+                }
+              ],
+              "data": {
+              },
+              "nodeType": "paragraph"
+            },
+            {
+              "content": [
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": "Why do I get an old version in the CDA?"
+                }
+              ],
+              "data": {
+              },
+              "nodeType": "heading-2"
+            },
+            {
+              "content": [
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": "As the delivery API is powered by a CDN network consisting of hundreds of servers distributed across continents, it takes some time (up to a few minutes) to reflect the changes to the published content. This must be taken into consideration when reacting to webhooks. In normal conditions, there could be a reasonable delay of 2 to 5 minutes."
+                }
+              ],
+              "data": {
+              },
+              "nodeType": "paragraph"
+            },
+            {
+              "content": [
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": "Extracted from the "
+                },
+                {
+                  "content": [
+                    {
+                      "data": {
+                      },
+                      "marks": [
+                      ],
+                      "nodeType": "text",
+                      "value": "Webhooks FAQ"
+                    }
+                  ],
+                  "data": {
+                    "uri": "https://www.contentful.com/faq/webhooks/"
+                  },
+                  "nodeType": "hyperlink"
+                },
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": "."
+                }
+              ],
+              "data": {
+              },
+              "nodeType": "paragraph"
+            }
+          ],
+          "data": {
+          },
+          "nodeType": "document"
+        },
+        "description": {
+          "content": [
+            {
+              "content": [
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": "Webhooks notify you, another person or system when resources have changed by calling a given HTTP endpoint."
+                }
+              ],
+              "data": {
+              },
+              "nodeType": "paragraph"
+            }
+          ],
+          "data": {
+          },
+          "nodeType": "document"
+        },
+        "heroImage": {
+          "sys": {
+            "id": "4shwYI3POEGkw0Eg6kcyaQ",
+            "linkType": "Asset",
+            "type": "Link"
+          }
+        },
+        "publishDate": "2017-05-12T00:00+02:00",
+        "slug": "automate-with-webhooks",
+        "tags": [
+          "javascript"
+        ],
+        "title": "Automate with webhooks"
+      },
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "contentType": {
+          "sys": {
+            "id": "blogPost",
+            "linkType": "ContentType",
+            "type": "Link"
+          }
+        },
+        "createdAt": "2023-04-25T23:58:27.351Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "linkType": "Environment",
+            "type": "Link"
+          }
+        },
+        "id": "31TNnjHlfaGUoMOwU0M2og",
+        "locale": "en-US",
+        "revision": 2,
+        "space": {
+          "sys": {
+            "id": "tosh0yt7steu",
+            "linkType": "Space",
+            "type": "Link"
+          }
+        },
+        "type": "Entry",
+        "updatedAt": "2023-05-08T23:19:54.266Z"
+      }
+    },
+    {
+      "fields": {
+        "company": "ACME",
+        "email": "john@doe.com",
+        "facebook": "johndoe",
+        "github": "johndoe",
+        "image": {
+          "sys": {
+            "id": "7orLdboQQowIUs22KAW4U",
+            "linkType": "Asset",
+            "type": "Link"
+          }
+        },
+        "name": "John Doe",
+        "phone": "0176 / 1234567",
+        "shortBio": {
+          "content": [
+            {
+              "content": [
+                {
+                  "data": {
+                  },
+                  "marks": [
+                  ],
+                  "nodeType": "text",
+                  "value": "Research and recommendations for modern stack websites."
+                }
+              ],
+              "data": {
+              },
+              "nodeType": "paragraph"
+            }
+          ],
+          "data": {
+          },
+          "nodeType": "document"
+        },
+        "title": "Web Developer",
+        "twitter": "johndoe"
+      },
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "contentType": {
+          "sys": {
+            "id": "person",
+            "linkType": "ContentType",
+            "type": "Link"
+          }
+        },
+        "createdAt": "2023-04-25T23:58:26.568Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "linkType": "Environment",
+            "type": "Link"
+          }
+        },
+        "id": "15jwOBqpxqSAOy2eOO4S0m",
+        "locale": "en-US",
+        "revision": 2,
+        "space": {
+          "sys": {
+            "id": "tosh0yt7steu",
+            "linkType": "Space",
+            "type": "Link"
+          }
+        },
+        "type": "Entry",
+        "updatedAt": "2023-05-08T23:19:53.569Z"
+      }
+    }
+  ],
+  "limit": 100,
+  "skip": 0,
+  "sys": {
+    "type": "Array"
+  },
+  "total": 4
+}
