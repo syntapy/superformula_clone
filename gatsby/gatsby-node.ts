@@ -1,4 +1,5 @@
 import path from 'path'
+import type { graphql } from "gatsby"
 
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
@@ -9,16 +10,18 @@ export default createPages = async ({ graphql, actions, reporter }) => {
   const page = path.resolve('./src/templates/page.tsx');
 
   const result = await graphql(
-    `
-      {
-        allSitePage {
-          nodes {
-            title
-            slug
+    `query RootQuery {
+        allFile {
+          edges {
+            node {
+              relativePath
+              prettySize
+              ext
+              birthTime
+            }
           }
         }
-      }
-    `
+      }`
   )
 
   if (result.errors) {

@@ -1,5 +1,4 @@
 import * as React from "react"
-import type { graphql, useStaticQuery, HeadFC } from "gatsby"
 
 import Header from "../components/header"
 import img_a from "../images/img_a.png"
@@ -31,22 +30,37 @@ import { Insight } from "../components/info"
 import { SectionBlack, SectionWhite } from "../components/section"
 
 import * as utils from "../utils"
+import { graphql, useStaticQuery, HeadFC } from "gatsby"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
-    query IndexContentQuery{
-      allServicesJson {
-        edges {
-          node {
+    query LandingPageQuery {
+      contentfulLandingPage {
+        title
+        spaceId
+        insight {
+          a {
             title
-            description
-            href
-            buttonText
+            hashtags
+          }
+          b {
+            title
+            hashtags
           }
         }
+        headerLink
+        headerDescription
+        header
       }
     }
   `)
+  //const data = useStaticQuery(graphql`
+  //  query contentfulLandingPage {
+  //    title
+  //  }
+  //`)
+
+  console.log(data)
 
   return (
     <div className={styles.root}>
@@ -54,10 +68,10 @@ const IndexPage = () => {
       <main>
         <SectionBlack className={sectionStyles.firstSection}>
           <HeaderSection
-            title={data.services.headline}
-            description={data.services.description}
-            href={data.services.href}
-            buttonText={data.services.buttonText}
+            title={data.contentfulLandingPage.title}
+            description="We can go faster and further together"
+            href="/services"
+            buttonText="Explore our services"
           />
         </SectionBlack>
         <SectionBlack>
