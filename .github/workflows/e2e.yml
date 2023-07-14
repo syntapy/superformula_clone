@@ -12,7 +12,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - run: echo CONTENTFUL_HOST
+      - run: echo $CONTENTFUL_HOST
         env:
           deploy_key: ${ { secrets.ENV_PRODUCTION } }
           CONTENTFUL_SPACE_ID: ${ { secrets.CONTENTFUL_SPACE_ID }}
