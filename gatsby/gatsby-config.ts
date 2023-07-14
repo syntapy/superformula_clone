@@ -3,6 +3,8 @@ import type { GatsbyConfig } from "gatsby";
 import dotenv from "dotenv";
 
 console.log("GATSBY CONFIG")
+console.log("CONTENTFUL_SPACE_ID")
+console.log(process.env.CONTENTFUL_SPACE_ID)
 
 dotenv.config({
   path: `.env.${process.env.NODE_ENV}`,
