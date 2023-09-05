@@ -15,6 +15,7 @@ jobs:
       - run: cd gatsby && npm ci && npm run cy:install && npm run e2e:ci
         env:
           CONTENTFUL_SPACE_ID: ${ { secrets.CONTENTFUL_SPACE_ID }}
+          CONTENTFUL_ACCESS_TOKEN: ${ { secrets.CONTENTFUL_ACCESS_TOKEN } }
       - name: Upload image diff outputs
         uses: actions/upload-artifact@v3
         with:
