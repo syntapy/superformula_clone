@@ -68,8 +68,8 @@ const IndexPage = () => {
       <main>
         <SectionBlack className={sectionStyles.firstSection}>
           <HeaderSection
-            title={data.contentfulLandingPage.title}
-            description="We can go faster and further together"
+            title={data.contentfulLandingPage.header}
+            description={data.contentfulLandingPage.headerDescription}
             href="/services"
             buttonText="Explore our services"
           />
