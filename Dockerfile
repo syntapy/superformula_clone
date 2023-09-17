@@ -1,4 +1,4 @@
-arg NODE_VERSION='18.15.0'
+arg NODE_VERSION='18.17.1'
 
 ### Get versions from:
 ### 	https://hub.docker.com/r/cypress/factory/
@@ -23,8 +23,9 @@ workdir /site
 copy gatsby .
 
 run apt-get update && apt-get upgrade -y && \
-		npm install -g npm@latest && \
-		npm install -g gatsby-cli
+		npm install -g npm@9.6.7 && \
+		npm install -g gatsby-cli && \
+		npm run cy:install
 
 # Sigh...yes, I needed to do this =/
 run chown -R node:node /root
