@@ -21,7 +21,7 @@ export const mobile = {
   ]
 }
 
-export const waitTime = 200
+export const waitTime = 400
 export const animationWaitTime = 550
 
 export function isDesktopMenuOnMobile(device, orientation) {
