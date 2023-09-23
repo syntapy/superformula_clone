@@ -5,3 +5,4 @@ gatsby/cypress/report.html
 gatsby/src/gatsby-types.d.ts
 reg.json
 .ssh/
+.env.*

@@ -1,5 +1,4 @@
 import * as React from "react"
-import type { HeadFC } from "gatsby"
 
 import Header from "../components/header"
 import img_a from "../images/img_a.png"
@@ -31,17 +30,47 @@ import { Insight } from "../components/info"
 import { SectionBlack, SectionWhite } from "../components/section"
 
 import * as utils from "../utils"
+import { graphql, useStaticQuery, HeadFC } from "gatsby"
 
 const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+    query LandingPageQuery {
+      contentfulLandingPage {
+        title
+        spaceId
+        insight {
+          a {
+            title
+            hashtags
+          }
+          b {
+            title
+            hashtags
+          }
+        }
+        headerLink
+        headerDescription
+        header
+      }
+    }
+  `)
+  //const data = useStaticQuery(graphql`
+  //  query contentfulLandingPage {
+  //    title
+  //  }
+  //`)
+
+  console.log(data)
+
   return (
     <div className={styles.root}>
       <Header isMobile={utils.isMobile} />
       <main>
         <SectionBlack className={sectionStyles.firstSection}>
           <HeaderSection
-            title="We can go faster and further together"
-            description="We are digital experts driven by the passion needed to accelerate and transform your business."
-            href="/services" 
+            title={data.contentfulLandingPage.header}
+            description={data.contentfulLandingPage.headerDescription}
+            href="/services"
             buttonText="Explore our services"
           />
         </SectionBlack>
