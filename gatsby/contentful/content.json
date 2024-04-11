@@ -12,7 +12,7 @@
         "id": "landingPage",
         "type": "ContentType",
         "createdAt": "2023-04-12T21:08:07.121Z",
-        "updatedAt": "2023-05-18T17:55:31.773Z",
+        "updatedAt": "2024-04-11T21:57:48.121Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -20,8 +20,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 39,
-        "publishedAt": "2023-05-18T17:55:31.773Z",
+        "publishedVersion": 43,
+        "publishedAt": "2024-04-11T21:57:48.121Z",
         "firstPublishedAt": "2023-04-12T21:08:07.914Z",
         "createdBy": {
           "sys": {
@@ -37,15 +37,16 @@
             "id": "4eZhgAJFvEvVPZKFrmTVoA"
           }
         },
-        "publishedCounter": 20,
-        "version": 40,
+        "publishedCounter": 22,
+        "version": 44,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
             "id": "4eZhgAJFvEvVPZKFrmTVoA"
           }
-        }
+        },
+        "urn": "crn:contentful:::content:spaces/tosh0yt7steu/environments/master/content_types/landingPage"
       },
       "displayField": "title",
       "name": "Landing Page",
@@ -108,6 +109,34 @@
           ],
           "disabled": false,
           "omitted": false
+        },
+        {
+          "id": "insightImages",
+          "name": "Insight Images",
+          "type": "Array",
+          "localized": true,
+          "required": true,
+          "validations": [
+            {
+              "size": {
+                "min": 0,
+                "max": 4
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkMimetypeGroup": [
+                  "image"
+                ]
+              }
+            ],
+            "linkType": "Asset"
+          }
         }
       ]
     },
@@ -156,7 +185,8 @@
             "linkType": "User",
             "id": "4eZhgAJFvEvVPZKFrmTVoA"
           }
-        }
+        },
+        "urn": "crn:contentful:::content:spaces/tosh0yt7steu/environments/master/content_types/blogPost"
       },
       "displayField": "title",
       "name": "Blog Post",
@@ -316,7 +346,8 @@
             "linkType": "User",
             "id": "4eZhgAJFvEvVPZKFrmTVoA"
           }
-        }
+        },
+        "urn": "crn:contentful:::content:spaces/tosh0yt7steu/environments/master/content_types/person"
       },
       "displayField": "name",
       "name": "Person",
@@ -437,6 +468,45 @@
     }
   ],
   "tags": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "tosh0yt7steu"
+          }
+        },
+        "id": "superformulaClone",
+        "type": "Tag",
+        "createdAt": "2024-04-05T23:32:24.950Z",
+        "updatedAt": "2024-04-05T23:32:24.950Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4eZhgAJFvEvVPZKFrmTVoA"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4eZhgAJFvEvVPZKFrmTVoA"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "superformula_clone"
+    }
   ],
   "editorInterfaces": [
     {
@@ -450,7 +520,7 @@
             "linkType": "Space"
           }
         },
-        "version": 40,
+        "version": 44,
         "createdAt": "2023-04-12T21:08:08.055Z",
         "createdBy": {
           "sys": {
@@ -459,7 +529,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2023-05-18T17:55:32.885Z",
+        "updatedAt": "2024-04-11T21:57:48.994Z",
         "updatedBy": {
           "sys": {
             "id": "4eZhgAJFvEvVPZKFrmTVoA",
@@ -500,10 +570,14 @@
       ],
       "sidebar": [
         {
+          "settings": {
+          },
           "widgetId": "publication-widget",
           "widgetNamespace": "sidebar-builtin"
         },
         {
+          "settings": {
+          },
           "widgetId": "content-preview-widget",
           "widgetNamespace": "sidebar-builtin"
         },
@@ -565,6 +639,11 @@
         {
           "fieldId": "insight",
           "widgetId": "objectEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "insightImages",
+          "widgetId": "assetLinksEditor",
           "widgetNamespace": "builtin"
         }
       ]
@@ -755,7 +834,7 @@
         "id": "2LisABuyTf48yzNG0LBCin",
         "type": "Entry",
         "createdAt": "2023-05-18T17:50:35.948Z",
-        "updatedAt": "2023-09-15T01:05:56.415Z",
+        "updatedAt": "2024-04-11T22:02:15.913Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -763,8 +842,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 25,
-        "publishedAt": "2023-09-15T01:05:56.415Z",
+        "publishedVersion": 42,
+        "publishedAt": "2024-04-11T22:02:15.913Z",
         "firstPublishedAt": "2023-05-18T17:53:00.030Z",
         "createdBy": {
           "sys": {
@@ -780,8 +859,8 @@
             "id": "4eZhgAJFvEvVPZKFrmTVoA"
           }
         },
-        "publishedCounter": 6,
-        "version": 26,
+        "publishedCounter": 10,
+        "version": 43,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -797,7 +876,8 @@
             "linkType": "ContentType",
             "id": "landingPage"
           }
-        }
+        },
+        "urn": "crn:contentful:::content:spaces/tosh0yt7steu/environments/master/entries/2LisABuyTf48yzNG0LBCin"
       },
       "fields": {
         "title": {
@@ -830,6 +910,24 @@
               ]
             }
           }
+        },
+        "insightImages": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6VcVk4qL89cUyFM444khj1"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "596OTfBsy20LWFGAFUwO5t"
+              }
+            }
+          ]
         }
       }
     },
@@ -891,7 +989,8 @@
             "linkType": "ContentType",
             "id": "blogPost"
           }
-        }
+        },
+        "urn": "crn:contentful:::content:spaces/tosh0yt7steu/environments/master/entries/7DmZtZ2AuYwbGaxHA6ouaM"
       },
       "fields": {
         "title": {
@@ -1013,7 +1112,8 @@
             "linkType": "User",
             "id": "4eZhgAJFvEvVPZKFrmTVoA"
           }
-        }
+        },
+        "urn": "crn:contentful:::content:spaces/tosh0yt7steu/environments/master/assets/6Od9v3wzLOysiMum0Wkmme"
       },
       "fields": {
         "title": {
@@ -1087,7 +1187,8 @@
             "linkType": "User",
             "id": "4eZhgAJFvEvVPZKFrmTVoA"
           }
-        }
+        },
+        "urn": "crn:contentful:::content:spaces/tosh0yt7steu/environments/master/assets/4shwYI3POEGkw0Eg6kcyaQ"
       },
       "fields": {
         "title": {
@@ -1161,7 +1262,8 @@
             "linkType": "User",
             "id": "4eZhgAJFvEvVPZKFrmTVoA"
           }
-        }
+        },
+        "urn": "crn:contentful:::content:spaces/tosh0yt7steu/environments/master/assets/4NzwDSDlGECGIiokKomsyI"
       },
       "fields": {
         "title": {
@@ -1235,7 +1337,8 @@
             "linkType": "User",
             "id": "4eZhgAJFvEvVPZKFrmTVoA"
           }
-        }
+        },
+        "urn": "crn:contentful:::content:spaces/tosh0yt7steu/environments/master/assets/7orLdboQQowIUs22KAW4U"
       },
       "fields": {
         "title": {
@@ -1309,7 +1412,8 @@
             "linkType": "User",
             "id": "4eZhgAJFvEvVPZKFrmTVoA"
           }
-        }
+        },
+        "urn": "crn:contentful:::content:spaces/tosh0yt7steu/environments/master/assets/3CIEmFzZ1aBUpz6nFeWCfK"
       },
       "fields": {
         "title": {
@@ -1330,6 +1434,164 @@
             },
             "fileName": "engines.jpg",
             "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "superformulaClone"
+            }
+          }
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "tosh0yt7steu"
+          }
+        },
+        "id": "6VcVk4qL89cUyFM444khj1",
+        "type": "Asset",
+        "createdAt": "2023-10-09T04:51:43.266Z",
+        "updatedAt": "2024-04-05T23:32:52.238Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2024-04-05T23:32:52.238Z",
+        "firstPublishedAt": "2023-10-09T17:53:22.256Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4eZhgAJFvEvVPZKFrmTVoA"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4eZhgAJFvEvVPZKFrmTVoA"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4eZhgAJFvEvVPZKFrmTVoA"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/tosh0yt7steu/environments/master/assets/6VcVk4qL89cUyFM444khj1"
+      },
+      "fields": {
+        "title": {
+          "en-US": "img_a"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/tosh0yt7steu/6VcVk4qL89cUyFM444khj1/399321a43caea9e19a662341f64b4876/img_a.png",
+            "details": {
+              "size": 75812,
+              "image": {
+                "width": 1024,
+                "height": 512
+              }
+            },
+            "fileName": "img_a.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "superformulaClone"
+            }
+          }
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "tosh0yt7steu"
+          }
+        },
+        "id": "596OTfBsy20LWFGAFUwO5t",
+        "type": "Asset",
+        "createdAt": "2023-10-09T04:51:43.273Z",
+        "updatedAt": "2024-04-05T23:33:07.132Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2024-04-05T23:33:07.132Z",
+        "firstPublishedAt": "2023-10-09T17:53:30.173Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4eZhgAJFvEvVPZKFrmTVoA"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4eZhgAJFvEvVPZKFrmTVoA"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4eZhgAJFvEvVPZKFrmTVoA"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/tosh0yt7steu/environments/master/assets/596OTfBsy20LWFGAFUwO5t"
+      },
+      "fields": {
+        "title": {
+          "en-US": "img_b"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/tosh0yt7steu/596OTfBsy20LWFGAFUwO5t/92fddb0ac3502a82c59ed73cca2b189f/img_b.png",
+            "details": {
+              "size": 43766,
+              "image": {
+                "width": 1023,
+                "height": 512
+              }
+            },
+            "fileName": "img_b.png",
+            "contentType": "image/png"
           }
         }
       }
