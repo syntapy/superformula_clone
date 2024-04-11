@@ -31,7 +31,13 @@ import { SectionBlack, SectionWhite } from "../components/section"
 
 import * as utils from "../utils"
 import { graphql, useStaticQuery, HeadFC } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
+            //img {
+            //  sys {
+            //    id
+            //  }
+            //}
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query LandingPageQuery {
@@ -60,7 +66,15 @@ const IndexPage = () => {
   //  }
   //`)
 
-  console.log(data)
+  //console.log("CONTENTFULL DATA ASSET: IMG_A URL")
+  //console.log(data.allContentfulAsset)
+  //console.log("GET EDGES")
+  //console.log(data.allContentfulAsset.edges)
+  //console.log("GET FIRST EDGE")
+  //console.log(data.allContentfulAsset.edges[0])
+  //console.log("GET FIRST EDGE'S NODE")
+  //console.log(data.allContentfulAsset.edges[0].node)
+  //console.log(data.contentfulLandingPage)
 
   return (
     <div className={styles.root}>
@@ -77,11 +91,11 @@ const IndexPage = () => {
         <SectionBlack>
           <InsightsSection title="Our Insights">
             <Insight 
-              title="Opportunities: How Superformula team members step up" 
+              title={data.contentfulLandingPage.insight.a.title}
               href="/articles/unexpected-opportunities-how-superformula-team-members-step-up"
               src={img_a}
               dataCy="insight-img-a"
-              tags={["experience", "culture"]}
+              tags={data.contentfulLandingPage.insight.a.hashtags}
             />
             <Insight 
               title="Save time! Optimizing rebuilds With Flutter" 
