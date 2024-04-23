@@ -48,6 +48,11 @@ export const data = graphql`
           hashtags
         }
       }
+      insightImages {
+        file {
+          url
+        }
+      }
       headerLink
       headerDescription
       header
@@ -56,6 +61,8 @@ export const data = graphql`
 
 const IndexPage: React.FC<PageProps<PageData>> = ({data}: Queries.landingPageQuery) => {
 
+  console.log("DATA")
+  console.log(data)
   return (
     <div className={styles.root}>
       <Header isMobile={utils.isMobile} />
