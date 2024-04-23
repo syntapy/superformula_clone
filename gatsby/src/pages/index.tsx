@@ -28,9 +28,10 @@ import { HeaderSection, InsightsSection, ServicesSection, CultureSection, Contac
 import { OlSection } from "../components/section"
 import { Insight } from "../components/info"
 import { SectionBlack, SectionWhite } from "../components/section"
+//export const Head: HeadFC = () => <title>Home Page</title>
 
 import * as utils from "../utils"
-import { graphql, useStaticQuery, HeadFC } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
             //img {
@@ -38,36 +39,58 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
             //    id
             //  }
             //}
-const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-    query LandingPageQuery {
-      contentfulLandingPage {
-        title
-        spaceId
-        insight {
-          a {
-            title
-            hashtags
-          }
-          b {
-            title
-            hashtags
-          }
-        }
-        headerLink
-        headerDescription
-        header
+
+interface PageData {
+  contentfulPage: {
+    title: string;
+    spaceId;
+    insight: {
+      a: {
+        title: string
+        hashtags: string[]
       }
+      b: {
+        title: string
+        hashtags: string[]
+      };
+    };
+    headerLink: string;
+    headerDescription: string;
+    header: string;
+  };
+}
+
+
+export const data = graphql`
+  query landingPage($id: String) {
+    contentfulLandingPage(id: { eq: $id }) {
+      title
+      spaceId
+      insight {
+        a {
+          title
+          hashtags
+        }
+        b {
+          title
+          hashtags
+        }
+      }
+      headerLink
+      headerDescription
+      header
     }
-  `)
+  }`
+
+const IndexPage: React.FC<PageProps<PageData>> = ({data}: Queries.landingPageQuery) => {
   //const data = useStaticQuery(graphql`
   //  query contentfulLandingPage {
   //    title
   //  }
   //`)
 
-  //console.log("CONTENTFULL DATA ASSET: IMG_A URL")
-  //console.log(data.allContentfulAsset)
+  console.log("DATA")
+  console.log(data)
   //console.log("GET EDGES")
   //console.log(data.allContentfulAsset.edges)
   //console.log("GET FIRST EDGE")
@@ -155,5 +178,3 @@ const IndexPage = () => {
 }
 
 export default IndexPage
-
-export const Head: HeadFC = () => <title>Home Page</title>
