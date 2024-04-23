@@ -61,8 +61,6 @@ export const data = graphql`
 
 const IndexPage: React.FC<PageProps<PageData>> = ({data}: Queries.landingPageQuery) => {
 
-  console.log("DATA")
-  console.log(data)
   return (
     <div className={styles.root}>
       <Header isMobile={utils.isMobile} />
@@ -80,16 +78,16 @@ const IndexPage: React.FC<PageProps<PageData>> = ({data}: Queries.landingPageQue
             <Insight 
               title={data.contentfulLandingPage.insight.a.title}
               href="/articles/unexpected-opportunities-how-superformula-team-members-step-up"
-              src={img_a}
+              src={data.contentfulLandingPage.insightImages[0].file.url}
               dataCy="insight-img-a"
               tags={data.contentfulLandingPage.insight.a.hashtags}
             />
             <Insight 
               title="Save time! Optimizing rebuilds With Flutter" 
               href="/articles/optimizing-rebuilds-with-flutter"
-              src={img_b}
+              src={data.contentfulLandingPage.insightImages[1].file.url}
               dataCy="insight-img-b"
-              tags={["flutter", "dart", "tips"]}
+              tags={data.contentfulLandingPage.insight.b.hashtags}
             />
           </InsightsSection>
         </SectionBlack>
