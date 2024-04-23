@@ -11,6 +11,14 @@ export default createPages = async ({ graphql, actions, reporter }) => {
 
   const result = await graphql(
     `query RootQuery {
+        contentfulLandingPage(
+          insight: {a: {title: {}, hashtags: {}}, b: {title: {}, hashtags: {}}}
+          headerLink: {}
+          headerDescription: {}
+          header: {}
+        ) {
+          id
+        }
         allFile {
           edges {
             node {
