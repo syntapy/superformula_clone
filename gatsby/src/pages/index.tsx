@@ -28,38 +28,10 @@ import { HeaderSection, InsightsSection, ServicesSection, CultureSection, Contac
 import { OlSection } from "../components/section"
 import { Insight } from "../components/info"
 import { SectionBlack, SectionWhite } from "../components/section"
-//export const Head: HeadFC = () => <title>Home Page</title>
 
 import * as utils from "../utils"
 import { graphql, PageProps } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-
-            //img {
-            //  sys {
-            //    id
-            //  }
-            //}
-
-interface PageData {
-  contentfulPage: {
-    title: string;
-    spaceId;
-    insight: {
-      a: {
-        title: string
-        hashtags: string[]
-      }
-      b: {
-        title: string
-        hashtags: string[]
-      };
-    };
-    headerLink: string;
-    headerDescription: string;
-    header: string;
-  };
-}
-
 
 export const data = graphql`
   query landingPage($id: String) {
@@ -83,21 +55,6 @@ export const data = graphql`
   }`
 
 const IndexPage: React.FC<PageProps<PageData>> = ({data}: Queries.landingPageQuery) => {
-  //const data = useStaticQuery(graphql`
-  //  query contentfulLandingPage {
-  //    title
-  //  }
-  //`)
-
-  console.log("DATA")
-  console.log(data)
-  //console.log("GET EDGES")
-  //console.log(data.allContentfulAsset.edges)
-  //console.log("GET FIRST EDGE")
-  //console.log(data.allContentfulAsset.edges[0])
-  //console.log("GET FIRST EDGE'S NODE")
-  //console.log(data.allContentfulAsset.edges[0].node)
-  //console.log(data.contentfulLandingPage)
 
   return (
     <div className={styles.root}>
@@ -178,3 +135,4 @@ const IndexPage: React.FC<PageProps<PageData>> = ({data}: Queries.landingPageQue
 }
 
 export default IndexPage
+//export const Head: HeadFC = () => <title>Home Page</title>
