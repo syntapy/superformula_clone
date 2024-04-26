@@ -1,16 +1,6 @@
 import * as React from "react"
 
 import Header from "../components/header"
-import img_a from "../images/img_a.png"
-import img_b from "../images/img_b.png"
-import img_c from "../images/img_c.png"
-
-import team1 from "../images/team/team1.png"
-import team2 from "../images/team/team2.png"
-import team3 from "../images/team/team3.png"
-import team4 from "../images/team/team4.png"
-import team_img from "../images/team/team_img.png"
-
 import waves from "../images/svg/sf-white-waves.svg"
 
 import ig from "../images/svg/ig.svg"
