@@ -136,8 +136,10 @@ const IndexPage: React.FC<PageProps<PageData>> = ({data}: Queries.landingPageQue
             title={data.allContentfulSection.nodes[5].title}
             subtitle={data.allContentfulSection.nodes[5].subtitle}
             description={data.allContentfulSection.nodes[5].description}
-            src={data.allContentfulSection.nodes[5].imageSrc.file.url} alt={data.allContentfulSection.nodes[5].imageAlt}
-            href={data.allContentfulSection.nodes[5].linkHref} buttonText={data.allContentfulSection.nodes[5].buttonText}
+            src={data.allContentfulSection.nodes[5].imageSrc.file.url}
+            alt={data.allContentfulSection.nodes[5].imageAlt}
+            href={data.allContentfulSection.nodes[5].linkHref}
+            buttonText={data.allContentfulSection.nodes[5].buttonText}
           />
         </SectionWhite>
         <SectionWhite>
@@ -145,28 +147,30 @@ const IndexPage: React.FC<PageProps<PageData>> = ({data}: Queries.landingPageQue
             title={data.allContentfulSection.nodes[6].title}
             subtitle={data.allContentfulSection.nodes[6].subtitle}
             description={data.allContentfulSection.nodes[6].description}
-            href={data.allContentfulSection.nodes[6].linkHref} text={data.allContentfulSection.nodes[6].linkText}
+            href={data.allContentfulSection.nodes[6].linkHref}
+            text={data.allContentfulSection.nodes[6].linkText}
             imgListDesktop={[
               {
-                src: {data.allContentfulSection.nodes[6].imageListDesktop[0].file.url},
-                alt: {data.allContentfulSection.nodes[6].imageListDesktop[0].description}
+                src: data.allContentfulSection.nodes[6].imageListDesktop[0].file.url,
+                alt: data.allContentfulSection.nodes[6].imageListDesktop[0].description
               },
               {
-                src: {data.allContentfulSection.nodes[6].imageListDesktop[1].file.url},
-                alt: {data.allContentfulSection.nodes[6].imageListDesktop[1].description}
+                src: data.allContentfulSection.nodes[6].imageListDesktop[1].file.url,
+                alt: data.allContentfulSection.nodes[6].imageListDesktop[1].description
               },
               {
-                src: {data.allContentfulSection.nodes[6].imageListDesktop[2].file.url},
-                alt: {data.allContentfulSection.nodes[6].imageListDesktop[2].description}
+                src: data.allContentfulSection.nodes[6].imageListDesktop[2].file.url,
+                alt: data.allContentfulSection.nodes[6].imageListDesktop[2].description
               },
               {
-                src: {data.allContentfulSection.nodes[6].imageListDesktop[3].file.url},
-                alt: {data.allContentfulSection.nodes[6].imageListDesktop[3].description}
-              },
+                src: data.allContentfulSection.nodes[6].imageListDesktop[3].file.url,
+                alt: data.allContentfulSection.nodes[6].imageListDesktop[3].description
+              }
             ]}
             imgMobile={{
-              src: {data.allContentfulSection.nodes[6].imageMobile.file.url},
-              alt: {data.allContentfulSection.nodes[6].imageMobile.description}}}
+              src: data.allContentfulSection.nodes[6].imageMobile.file.url,
+              alt: data.allContentfulSection.nodes[6].imageMobile.description
+            }}
             isMobile={utils.isMobile}
           />
         </SectionWhite>
