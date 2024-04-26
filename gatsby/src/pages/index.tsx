@@ -36,33 +36,35 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 export const data = graphql`
   query landingPage($id: String) {
     allContentfulSection(sort: {sort_id: ASC}) {
-      edges {
-        node {
-          sort_id
-          section
-          title
-          subtitle
+      nodes {
+        sort_id
+        section
+        title
+        subtitle
+        description
+        imageListDesktop {
           description
-          imageSrc {
-            file {
-              url
-            }
+          file {
+            url
           }
-          imageAlt
-          imageListDesktop {
-            file {
-              url
-            }
-          }
-          imageMobile {
-            file {
-              url
-            }
-          }
-          itemList
-          linkHref
-          linkText
         }
+        imageMobile {
+          description
+          file {
+            url
+          }
+        }
+        imageSrc {
+          file {
+            url
+          }
+        }
+        imageAlt
+        buttonText
+        itemList
+        linkHref
+        linkText
+        tags
       }
     }
     contentfulLandingPage(id: { eq: $id }) {
@@ -91,88 +93,98 @@ export const data = graphql`
 
 const IndexPage: React.FC<PageProps<PageData>> = ({data}: Queries.landingPageQuery) => {
 
-  console.log("DATA")
-  console.log(data)
-  console.log(data.allContentfulSection.edges[0])
-  console.log(data.allContentfulSection.edges[1])
-  console.log(data.allContentfulSection.edges[2])
-  console.log(data.allContentfulSection.edges[3])
-  console.log(data.allContentfulSection.edges[4])
-  console.log(data.allContentfulSection.edges[5])
-  console.log(data.allContentfulSection.edges[6])
-  //console.log(data.allContentfulSection.edges[7])
-  //console.log(data.allContentfulSection.edges[8])
+  //console.log("DATA")
+  //console.log(data)
+  //console.log(data.allContentfulSection.nodes[0])
+  //console.log(data.allContentfulSection.nodes[1])
+  //console.log(data.allContentfulSection.nodes[2])
+  //console.log(data.allContentfulSection.nodes[3])
+  //console.log(data.allContentfulSection.nodes[4])
+  //console.log(data.allContentfulSection.nodes[5])
+  //console.log(data.allContentfulSection.nodes[6])
+  //console.log(data.allContentfulSection.nodes[6].imageListDesktop[0])
+  //console.log(data.allContentfulSection.nodes[7])
+  //console.log(data.allContentfulSection.nodes[8])
   return (
     <div className={styles.root}>
       <Header isMobile={utils.isMobile} />
       <main>
         <SectionBlack className={sectionStyles.firstSection}>
           <HeaderSection
-            title={data.contentfulLandingPage.header}
-            description={data.contentfulLandingPage.headerDescription}
-            href="/services"
-            buttonText="Explore our services"
+            title={data.allContentfulSection.nodes[0].title}
+            description={data.allContentfulSection.nodes[0].description}
+            href={data.allContentfulSection.nodes[0].linkHref}
+            buttonText={data.allContentfulSection.nodes[0].buttonText}
           />
         </SectionBlack>
         <SectionBlack>
-          <InsightsSection title="Our Insights">
+          <InsightsSection title={data.allContentfulSection.nodes[1].title}>
             <Insight 
-              title={data.contentfulLandingPage.insight.a.title}
-              href="/articles/unexpected-opportunities-how-superformula-team-members-step-up"
-              src={data.contentfulLandingPage.insightImages[0].file.url}
+              title={data.allContentfulSection.nodes[2].title}
+              href={data.allContentfulSection.nodes[2].linkHref}
+              src={data.allContentfulSection.nodes[2].imageSrc.file.url}
               dataCy="insight-img-a"
-              tags={data.contentfulLandingPage.insight.a.hashtags}
+              tags={data.allContentfulSection.nodes[2].tags}
             />
             <Insight 
-              title="Save time! Optimizing rebuilds With Flutter" 
-              href="/articles/optimizing-rebuilds-with-flutter"
-              src={data.contentfulLandingPage.insightImages[1].file.url}
+              title={data.allContentfulSection.nodes[3].title}
+              href={data.allContentfulSection.nodes[3].linkHref}
+              src={data.allContentfulSection.nodes[3].imageSrc.file.url}
               dataCy="insight-img-b"
-              tags={data.contentfulLandingPage.insight.b.hashtags}
+              tags={data.allContentfulSection.nodes[3].tags}
             />
           </InsightsSection>
         </SectionBlack>
         <SectionBlack>
           <OlSection
-            title="How we do it"
-            items={[
-              "Expertise (not ego) in all things digital",
-              "Next-level creative problem solving (no smoke and mirrors here)",
-              "Design thinking and digital tools to build know-how and skill",
-              "Process improvements that are a no-brainer to implement",
-              "Fully remote company culture, totally dialed infrastructure",
-            ]}
+            title={data.allContentfulSection.nodes[4].title}
+            items={data.allContentfulSection.nodes[4].itemList}
           />
         </SectionBlack>
         <SectionWhite>
           <ServicesSection
-            title="Services"
-            subtitle="Flutter Experts"
-            description="With major releases under our belt, we've got the know-how needed to deliver premium experiences for our clients and their users."
-            src={img_c} alt="Flutter Experts"
-            href="/services" buttonText="Learn more"
+            title={data.allContentfulSection.nodes[5].title}
+            subtitle={data.allContentfulSection.nodes[5].subtitle}
+            description={data.allContentfulSection.nodes[5].description}
+            src={data.allContentfulSection.nodes[5].imageSrc.file.url} alt={data.allContentfulSection.nodes[5].imageAlt}
+            href={data.allContentfulSection.nodes[5].linkHref} buttonText={data.allContentfulSection.nodes[5].buttonText}
           />
         </SectionWhite>
         <SectionWhite>
           <CultureSection
-            title="100% remote and loving it"
-            subtitle="Collaborative, diverse, and really, really good at what we do"
-            description="Because we’re a team of passionate problem solvers doing work we love in a way that works, in every respect. In other words, low-ego, high-drive—and it makes all the difference"
-            href="https://careers.superformula.com/culture-values" text="Explore our culture"
+            title={data.allContentfulSection.nodes[6].title}
+            subtitle={data.allContentfulSection.nodes[6].subtitle}
+            description={data.allContentfulSection.nodes[6].description}
+            href={data.allContentfulSection.nodes[6].linkHref} text={data.allContentfulSection.nodes[6].linkText}
             imgListDesktop={[
-              {src: team1, alt: "Team 1"},
-              {src: team2, alt: "Team 2"},
-              {src: team3, alt: "Team 3"},
-              {src: team4, alt: "Team 4"},
+              {
+                src: {data.allContentfulSection.nodes[6].imageListDesktop[0].file.url},
+                alt: {data.allContentfulSection.nodes[6].imageListDesktop[0].description}
+              },
+              {
+                src: {data.allContentfulSection.nodes[6].imageListDesktop[1].file.url},
+                alt: {data.allContentfulSection.nodes[6].imageListDesktop[2].description}
+              },
+              {
+                src: {data.allContentfulSection.nodes[6].imageListDesktop[2].file.url},
+                alt: {data.allContentfulSection.nodes[6].imageListDesktop[2].description}
+              },
+              {
+                src: {data.allContentfulSection.nodes[6].imageListDesktop[3].file.url},
+                alt: {data.allContentfulSection.nodes[6].imageListDesktop[3].description}
+              },
             ]}
-            imgMobile={{src: team_img, alt: "Team"}}
+            imgMobile={{
+              src: {data.allContentfulSection.nodes[6].imageMobile.file.url},
+              alt: {data.allContentfulSection.nodes[6].imageMobile.description}}}
             isMobile={utils.isMobile}
           />
         </SectionWhite>
         <SectionBlack>
           <ContactSection
-            title="Whether it’s our services that speak to you or joining our team seems like a dream come true, get in touch, or follow along on all our digital adventures"
-            href="https://superformula.com/contact" text="Contact us"
+            title={data.allContentfulSection.nodes[7].title}
+            href={data.allContentfulSection.nodes[7].linkHref}
+            text={data.allContentfulSection.nodes[7].linkText}
           />
         </SectionBlack>
       </main>
