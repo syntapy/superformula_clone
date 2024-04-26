@@ -153,7 +153,7 @@ const IndexPage: React.FC<PageProps<PageData>> = ({data}: Queries.landingPageQue
               },
               {
                 src: {data.allContentfulSection.nodes[6].imageListDesktop[1].file.url},
-                alt: {data.allContentfulSection.nodes[6].imageListDesktop[2].description}
+                alt: {data.allContentfulSection.nodes[6].imageListDesktop[1].description}
               },
               {
                 src: {data.allContentfulSection.nodes[6].imageListDesktop[2].file.url},
