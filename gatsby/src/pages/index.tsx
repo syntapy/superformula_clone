@@ -35,6 +35,36 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 export const data = graphql`
   query landingPage($id: String) {
+    allContentfulSection(sort: {sort_id: ASC}) {
+      edges {
+        node {
+          sort_id
+          section
+          title
+          subtitle
+          description
+          imageSrc {
+            file {
+              url
+            }
+          }
+          imageAlt
+          imageListDesktop {
+            file {
+              url
+            }
+          }
+          imageMobile {
+            file {
+              url
+            }
+          }
+          itemList
+          linkHref
+          linkText
+        }
+      }
+    }
     contentfulLandingPage(id: { eq: $id }) {
       title
       spaceId
@@ -61,6 +91,17 @@ export const data = graphql`
 
 const IndexPage: React.FC<PageProps<PageData>> = ({data}: Queries.landingPageQuery) => {
 
+  console.log("DATA")
+  console.log(data)
+  console.log(data.allContentfulSection.edges[0])
+  console.log(data.allContentfulSection.edges[1])
+  console.log(data.allContentfulSection.edges[2])
+  console.log(data.allContentfulSection.edges[3])
+  console.log(data.allContentfulSection.edges[4])
+  console.log(data.allContentfulSection.edges[5])
+  console.log(data.allContentfulSection.edges[6])
+  //console.log(data.allContentfulSection.edges[7])
+  //console.log(data.allContentfulSection.edges[8])
   return (
     <div className={styles.root}>
       <Header isMobile={utils.isMobile} />
