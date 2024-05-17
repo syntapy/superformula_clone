@@ -60,6 +60,6 @@
     "reg-cli": "^0.17.7",
     "start-server-and-test": "^2.0.0",
     "ts-jest": "^29.0.5",
-    "typescript": "^5.4.5"
+    "typescript": "^5.0.2"
   }
 }
