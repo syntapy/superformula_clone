@@ -82,19 +82,6 @@ export const data = graphql`
   }`
 
 const IndexPage: React.FC<PageProps<PageData>> = ({data}: Queries.landingPageQuery) => {
-
-  //console.log("DATA")
-  //console.log(data)
-  //console.log(data.allContentfulSection.nodes[0])
-  //console.log(data.allContentfulSection.nodes[1])
-  //console.log(data.allContentfulSection.nodes[2])
-  //console.log(data.allContentfulSection.nodes[3])
-  //console.log(data.allContentfulSection.nodes[4])
-  //console.log(data.allContentfulSection.nodes[5])
-  //console.log(data.allContentfulSection.nodes[6])
-  //console.log(data.allContentfulSection.nodes[6].imageListDesktop[0])
-  //console.log(data.allContentfulSection.nodes[7])
-  //console.log(data.allContentfulSection.nodes[8])
   return (
     <div className={styles.root}>
       <Header isMobile={utils.isMobile} />
