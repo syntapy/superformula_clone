@@ -8,7 +8,7 @@ interface NavItemsProps {
   navItemStyle: string
 }
 
-export default function NavItems(props: NavItemsProps) {
+export function NavItems(props: NavItemsProps) {
   const navItem: string = props.navItemStyle + " " + styles.navItem
   return (
     <div className={props.navItemListStyle}>
