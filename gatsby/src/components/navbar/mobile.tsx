@@ -5,6 +5,7 @@ import { hidden, mobile } from "../../styles/utilities/visibility.module.css"
 
 import Chilidogmenu from "../../images/svg/chilidogmenu.svg"
 import Menuclose from "../../images/svg/menuclose.svg"
+import { NavItems } from "./common"
 
 import { HomeNavButton, NavButton, SvgButton, CareersNavButton } from "../buttons"
 
@@ -24,29 +25,6 @@ function NavHeaderMobile(props: NavHeaderMobileProps) {
         className={chilidogStyle}
         onClick={props.onClick}
         icon={<Chilidogmenu width={32} height={45} data-cy="chilidog-svg" />}
-      />
-    </div>
-  )
-}
-
-interface NavItemsProps {
-  id: string
-  navItemListStyle: string
-  navItemStyle: string
-}
-
-function NavItems(props: NavItemsProps) {
-  const navItem: string = props.navItemStyle + " " + styles.navItem
-  return (
-    <div className={props.navItemListStyle}>
-      <NavButton className={navItem} href="/services" text="Services" />
-      <NavButton className={navItem} href="/work" text="Work" />
-      <NavButton className={navItem} href="/articles" text="Articles" />
-      <NavButton className={navItem} href="/contact" text="Contact" />
-      <CareersNavButton 
-        className={navItem}
-        href="https://careers.superformula.com"
-        text="Careers"
       />
     </div>
   )

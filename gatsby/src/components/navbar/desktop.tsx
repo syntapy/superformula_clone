@@ -3,29 +3,7 @@ import * as styles from "../../styles/navbar.module.css"
 import * as orientationStyles from "../../styles/utilities/orientation.module.css"
 import { desktop } from "../../styles/utilities/visibility.module.css"
 import { HomeNavButton, NavButton, CareersNavButton, SvgButton } from "../buttons"
-
-interface NavItemsProps {
-  id: string
-  navItemListStyle: string
-  navItemStyle: string
-}
-
-function NavItems(props: NavItemsProps) {
-  const navItem: string = props.navItemStyle + " " + styles.navItem
-  return (
-    <div className={props.navItemListStyle}>
-      <NavButton className={navItem} href="/services" text="Services" />
-      <NavButton className={navItem} href="/work" text="Work" />
-      <NavButton className={navItem} href="/articles" text="Articles" />
-      <NavButton className={navItem} href="/contact" text="Contact" />
-      <CareersNavButton 
-        className={navItem}
-        href="https://careers.superformula.com"
-        text="Careers"
-      />
-    </div>
-  )
-}
+import { NavItems } from "./common"
 
 export default function NavDesktop() {
   const root: string = styles.navbar
