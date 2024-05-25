@@ -30,12 +30,6 @@ function NavHeaderMobile(props: NavHeaderMobileProps) {
   )
 }
 
-interface NavItemsProps {
-  id: string
-  navItemListStyle: string
-  navItemStyle: string
-}
-
 interface NavMenuMobileProps {
   id: string
   onClick: () => void
