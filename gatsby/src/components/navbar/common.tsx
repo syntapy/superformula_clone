@@ -19,6 +19,7 @@ export function NavItems(props: NavItemsProps) {
             sort_id
             linkHref
             linkText
+            title
           }
         }
       }
