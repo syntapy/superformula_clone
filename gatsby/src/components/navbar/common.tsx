@@ -1,4 +1,6 @@
 import * as React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+
 import * as styles from "../../styles/navbar.module.css"
 import { NavButton, CareersNavButton } from "../buttons"
 
@@ -8,32 +10,19 @@ interface NavItemsProps {
   navItemStyle: string
 }
 
-export const data = graphql`
-  query navbar {
-    allContentfulSection(sort: {sort_id: ASC}) {
-      nodes {
-        sort_id
-        linkHref
-        linkText
-      }
-    }
-  }`
-
 export function NavItems(props: NavItemsProps) {
   const data = useStaticQuery(
     graphql`
       query {
-        navbar {
-          allContentfulSection(sort: {sort_id: ASC}) {
-            nodes {
-              sort_id
-              linkHref
-              linkText
-            }
+        allContentfulSection(sort: {sort_id: ASC}) {
+          nodes {
+            sort_id
+            linkHref
+            linkText
           }
         }
-      }`
-  )
+      }
+    `)
   const servicesHref: string = data.allContentfulSection.nodes[5].linkHref
   const servicesText: string = data.allContentfulSection.nodes[5].title
   const workHref: string = data.allContentfulSection.nodes[9].linkHref
