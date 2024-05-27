@@ -57,7 +57,7 @@ export default function NavBar(props: ResponsiveProps) {
   return (
     <div id={"desktop-nav-wrapper"} className={navIndexRoot}>
       <NavDesktop title={data.contentfulLandingPage.title} items={items} />
-      <NavMobile title={data.contentfulLandingPage.title} items={items} />
+      <NavMobile title={data.contentfulLandingPage.title} rootHref={"/"} items={items} />
     </div>
   )
 }

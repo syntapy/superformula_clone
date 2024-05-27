@@ -7,7 +7,7 @@ import { graphql, useStaticQuery, HeadFC } from "gatsby"
 
 import { NavProps, NavItems, NavItemsList } from "./common"
 
-export default function NavDesktop(props: NavPropsDesktop) {
+export default function NavDesktop(props: NavProps) {
   const root: string = styles.navbar
         + " " + orientationStyles.horizontalFlex
         + " " + desktop
@@ -18,7 +18,11 @@ export default function NavDesktop(props: NavPropsDesktop) {
 
   return (
     <nav className={root}>
-      <HomeNavButton className={homeItem} href="/" text={props.title} />
+      <HomeNavButton 
+        className={homeItem}
+        href={props.rootHref}
+        text={props.title}
+      />
       <NavItems
         id={"desktop-nav"}
         itemListStyle={navItemList}

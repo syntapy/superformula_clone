@@ -3,17 +3,18 @@ import * as styles from "../../styles/navbar.module.css"
 import { NavButton, CareersNavButton } from "../buttons"
 import { NavItemInfo, NavItemsProps } from "./utils"
 
-export interface NavProps {
-  title: string
-  items: NavItemsList
-}
-
 export interface NavItemInfo {
   href: string
   text: string
 }
 
 export type NavItemsList = [NavItemInfo, NavItemInfo, NavItemInfo, NavItemInfo, NavItemInfo]
+
+export interface NavProps {
+  title: string
+  rootHref: string
+  items: NavItemsList
+}
 
 export interface NavItemsProps {
   id: string
