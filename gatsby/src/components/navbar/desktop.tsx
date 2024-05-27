@@ -21,8 +21,8 @@ export default function NavDesktop(props: NavPropsDesktop) {
       <HomeNavButton className={homeItem} href="/" text={props.title} />
       <NavItems
         id={"desktop-nav"}
-        navItemListStyle={navItemList}
-        navItemStyle={navItem}
+        itemListStyle={navItemList}
+        itemStyle={navItem}
         items={props.items}
       />
     </nav>
