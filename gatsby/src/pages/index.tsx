@@ -24,7 +24,7 @@ import { graphql, PageProps } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 export const data = graphql`
-  query landingPage($id: String) {
+  query landingPage {
     allContentfulSection(sort: {sort_id: ASC}) {
       nodes {
         sort_id
@@ -56,28 +56,6 @@ export const data = graphql`
         linkText
         tags
       }
-    }
-    contentfulLandingPage(id: { eq: $id }) {
-      title
-      spaceId
-      insight {
-        a {
-          title
-          hashtags
-        }
-        b {
-          title
-          hashtags
-        }
-      }
-      insightImages {
-        file {
-          url
-        }
-      }
-      headerLink
-      headerDescription
-      header
     }
   }`
 
