@@ -23,7 +23,7 @@ workdir /site
 copy gatsby .
 
 run apt-get update && apt-get upgrade -y && \
-		npm install -g npm@9.6.7 && \
+		npm install -g npm@latest && \
 		npm install -g gatsby-cli && \
 		npm run cy:install
 
