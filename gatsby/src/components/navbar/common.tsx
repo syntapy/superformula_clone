@@ -1,51 +1,39 @@
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-
 import * as styles from "../../styles/navbar.module.css"
 import { NavButton, CareersNavButton } from "../buttons"
+import { NavItemInfo, NavItemsProps } from "./utils"
 
-interface NavItemsProps {
+export interface NavProps {
+  title: string
+  items: NavItemsList
+}
+
+export interface NavItemInfo {
+  href: string
+  text: string
+}
+
+export type NavItemsList = [NavItemInfo, NavItemInfo, NavItemInfo, NavItemInfo, NavItemInfo]
+
+export interface NavItemsProps {
   id: string
-  navItemListStyle: string
-  navItemStyle: string
+  itemListStyle: string
+  itemStyle: string
+  items: NavItemsList
 }
 
 export function NavItems(props: NavItemsProps) {
-  const data = useStaticQuery(
-    graphql`
-      query {
-        allContentfulSection(sort: {sort_id: ASC}) {
-          nodes {
-            sort_id
-            linkHref
-            linkText
-            title
-          }
-        }
-      }
-    `)
-  const servicesHref: string = data.allContentfulSection.nodes[5].linkHref
-  const servicesText: string = data.allContentfulSection.nodes[5].title
-  const workHref: string = data.allContentfulSection.nodes[9].linkHref
-  const workText: string = data.allContentfulSection.nodes[9].linkText
-  const articlesHref: string = data.allContentfulSection.nodes[10].linkHref
-  const articlesText: string = data.allContentfulSection.nodes[10].linkText
-  const contactHref: string = data.allContentfulSection.nodes[11].linkHref
-  const contactText: string = data.allContentfulSection.nodes[11].linkText
-  const careersHref: string = data.allContentfulSection.nodes[12].linkHref
-  const careersText: string = data.allContentfulSection.nodes[12].linkText
-
-  const navItem: string = props.navItemStyle + " " + styles.navItem
+  const navItem: string = props.itemStyle + " " + styles.navItem
   return (
-    <div className={props.navItemListStyle}>
-      <NavButton className={navItem} href={servicesHref} text={servicesText} />
-      <NavButton className={navItem} href={workHref} text={workText} />
-      <NavButton className={navItem} href={articlesHref} text={articlesText} />
-      <NavButton className={navItem} href={contactHref} text={contactText} />
+    <div className={props.itemListStyle}>
+      <NavButton className={navItem} href={props.items[0].href} text={props.items[0].text} />
+      <NavButton className={navItem} href={props.items[1].href} text={props.items[1].text} />
+      <NavButton className={navItem} href={props.items[2].href} text={props.items[2].text} />
+      <NavButton className={navItem} href={props.items[3].href} text={props.items[3].text} />
       <CareersNavButton 
         className={navItem}
-        href={careersHref}
-        text={careersText}
+        href={props.items[4].href}
+        text={props.items[4].text}
       />
     </div>
   )

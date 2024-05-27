@@ -7,7 +7,7 @@ import Chilidogmenu from "../../images/svg/chilidogmenu.svg"
 import Menuclose from "../../images/svg/menuclose.svg"
 
 import { HomeNavButton, NavButton, SvgButton, CareersNavButton } from "../buttons"
-import { NavItems } from "./common"
+import { NavProps, NavItemInfo, NavItems } from "./common"
 
 interface NavHeaderMobileProps {
   onClick: () => void
@@ -33,6 +33,7 @@ function NavHeaderMobile(props: NavHeaderMobileProps) {
 interface NavMenuMobileProps {
   id: string
   onClick: () => void
+  navItemsInfo: [NavItemInfo, NavItemInfo, NavItemInfo, NavItemInfo, NavItemInfo]
 }
 
 function NavMenuMobile(props: NavMenuMobileProps) {
@@ -94,7 +95,11 @@ function NavMenuMobile(props: NavMenuMobileProps) {
   )
 }
 
-export default function NavMobile() {
+interface NavPropsMobile {
+  items: [NavItemInfo, NavItemInfo, NavItemInfo, NavItemInfo, NavItemInfo]
+}
+
+export default function NavMobile(props: NavPropsMobile) {
   const [isMobileMenuOpen, setIsMenuOpen] = React.useState(false)
   const mobileMenuId: string = "mobile-menu"
 
@@ -122,7 +127,11 @@ export default function NavMobile() {
   return (
     <nav className={root}>
       <NavHeaderMobile onClick={onChilidogClick} />
-      <NavMenuMobile id={mobileMenuId} onClick={onMenuCloseClick} />
+      <NavMenuMobile 
+        id={mobileMenuId}
+        onClick={onMenuCloseClick}
+        navItemsInfo={props.navItemsInfo}
+      />
     </nav>
   )
 }
