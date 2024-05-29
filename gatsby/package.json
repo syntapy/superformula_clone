@@ -36,7 +36,7 @@
     "gatsby-source-contentful": "^8.9.1",
     "gatsby-source-filesystem": "^5.7.0",
     "gatsby-transformer-json": "^5.8.0",
-    "postcss": "^8.4.21",
+    "postcss": "^8.4.31",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "dotenv": "^16.0.3"
