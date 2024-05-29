@@ -25,7 +25,6 @@ export default function NavBar(props: ResponsiveProps) {
           filter: {sort_id: {in: [5, 9, 10, 11, 12]}}
         ) {
           nodes {
-            sort_id
             linkHref
             linkText
             title

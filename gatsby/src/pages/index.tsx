@@ -30,8 +30,6 @@ export const data = graphql`
       filter: {sort_id: {lt: 9}}
     ) {
       nodes {
-        sort_id
-        section
         title
         subtitle
         description
