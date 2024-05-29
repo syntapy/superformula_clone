@@ -1,3 +1,4 @@
+// Some gatsby setup script I grabbed somewhere
 const spaceImport = require("contentful-import");
 const exportFile = require("../contentful/content.json");
 const inquirer = require("inquirer");
