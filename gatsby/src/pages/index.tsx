@@ -25,7 +25,10 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 export const data = graphql`
   query landingPage {
-    allContentfulSection(sort: {sort_id: ASC}) {
+    allContentfulSection(
+      sort: {sort_id: ASC}
+      filter: {sort_id: {lt: 9}}
+    ) {
       nodes {
         sort_id
         section
