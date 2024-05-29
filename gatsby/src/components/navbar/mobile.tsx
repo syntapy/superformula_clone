@@ -5,11 +5,13 @@ import { hidden, mobile } from "../../styles/utilities/visibility.module.css"
 
 import Chilidogmenu from "../../images/svg/chilidogmenu.svg"
 import Menuclose from "../../images/svg/menuclose.svg"
-import { NavItems } from "./common"
 
 import { HomeNavButton, NavButton, SvgButton, CareersNavButton } from "../buttons"
+import { NavProps, NavItemsList, NavItems } from "./common"
 
 interface NavHeaderMobileProps {
+  title: string
+  rootHref: string
   onClick: () => void
 }
 
@@ -20,7 +22,7 @@ function NavHeaderMobile(props: NavHeaderMobileProps) {
   const homeItem: string = styles.navHeaderHomeItem
   return (
     <div className={root}>
-      <HomeNavButton className={homeItem} href="/" text="Superformula." />
+      <HomeNavButton className={homeItem} href={props.rootHref} text={props.title} />
       <SvgButton
         className={chilidogStyle}
         onClick={props.onClick}
@@ -33,6 +35,9 @@ function NavHeaderMobile(props: NavHeaderMobileProps) {
 interface NavMenuMobileProps {
   id: string
   onClick: () => void
+  rootHref: string
+  title: string
+  items: NavItemsList
 }
 
 function NavMenuMobile(props: NavMenuMobileProps) {
@@ -57,44 +62,44 @@ function NavMenuMobile(props: NavMenuMobileProps) {
       <HomeNavButton 
         dataCy="home-nav-mobile"
         className={homeNavItem}
-        href="/"
-        text="Superformula."
+        href={props.rootHref}
+        text={props.title}
       />
       <NavButton
         dataCy="services-nav-mobile"
         className={navItem}
-        href="/services"
-        text="Services"
+        href={props.items[0].href}
+        text={props.items[0].text}
       />
       <NavButton
         dataCy="work-nav-mobile"
         className={navItem}
-        href="/work"
-        text="Work"
+        href={props.items[1].href}
+        text={props.items[1].text}
       />
       <NavButton 
         dataCy="articles-nav-mobile"
         className={navItem}
-        href="/articles"
-        text="Articles"
+        href={props.items[2].href}
+        text={props.items[2].text}
       />
       <NavButton
         dataCy="contact-nav-mobile"
         className={navItem}
-        href="/contact"
-        text="Contact"
+        href={props.items[3].href}
+        text={props.items[3].text}
       />
       <CareersNavButton 
         dataCy="careers-nav-mobile"
         className={navItem}
-        href="https://careers.superformula.com"
-        text="Careers"
+        href={props.items[4].href}
+        text={props.items[4].text}
       />
     </div>
   )
 }
 
-export default function NavMobile() {
+export default function NavMobile(props: NavProps) {
   const [isMobileMenuOpen, setIsMenuOpen] = React.useState(false)
   const mobileMenuId: string = "mobile-menu"
 
@@ -121,8 +126,18 @@ export default function NavMobile() {
 
   return (
     <nav className={root}>
-      <NavHeaderMobile onClick={onChilidogClick} />
-      <NavMenuMobile id={mobileMenuId} onClick={onMenuCloseClick} />
+      <NavHeaderMobile
+        title={props.title}
+        rootHref={props.rootHref}
+        onClick={onChilidogClick}
+      />
+      <NavMenuMobile 
+        title={props.title}
+        rootHref={props.rootHref}
+        id={mobileMenuId}
+        onClick={onMenuCloseClick}
+        items={props.items}
+      />
     </nav>
   )
 }

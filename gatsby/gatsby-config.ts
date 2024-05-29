@@ -1,5 +1,11 @@
 import type { GatsbyConfig } from "gatsby";
 
+import dotenv from "dotenv";
+
+dotenv.config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Superformula LP Clone`,
@@ -11,6 +17,7 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: ['gatsby-plugin-postcss',
     `gatsby-plugin-image`,
+    `gatsby-plugin-typescript`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -25,7 +32,15 @@ const config: GatsbyConfig = {
           include: /images\/svg/
         }
       }
-    }
+    },
+    {
+      resolve: "gatsby-source-contentful",
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        host: process.env.CONTENTFUL_HOST
+      },
+    },
   ]
 };
 

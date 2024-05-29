@@ -3,9 +3,11 @@ import * as styles from "../../styles/navbar.module.css"
 import * as orientationStyles from "../../styles/utilities/orientation.module.css"
 import { desktop } from "../../styles/utilities/visibility.module.css"
 import { HomeNavButton, NavButton, CareersNavButton, SvgButton } from "../buttons"
-import { NavItems } from "./common"
+import { graphql, useStaticQuery, HeadFC } from "gatsby"
 
-export default function NavDesktop() {
+import { NavProps, NavItems, NavItemsList } from "./common"
+
+export default function NavDesktop(props: NavProps) {
   const root: string = styles.navbar
         + " " + orientationStyles.horizontalFlex
         + " " + desktop
@@ -16,11 +18,16 @@ export default function NavDesktop() {
 
   return (
     <nav className={root}>
-      <HomeNavButton className={homeItem} href="/" text="Superformula." />
+      <HomeNavButton 
+        className={homeItem}
+        href={props.rootHref}
+        text={props.title}
+      />
       <NavItems
         id={"desktop-nav"}
-        navItemListStyle={navItemList}
-        navItemStyle={navItem}
+        itemListStyle={navItemList}
+        itemStyle={navItem}
+        items={props.items}
       />
     </nav>
   )

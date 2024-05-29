@@ -24,7 +24,8 @@ copy gatsby .
 
 run apt-get update && apt-get upgrade -y && \
 		npm install -g npm@latest && \
-		npm install -g gatsby-cli
+		npm install -g gatsby-cli && \
+		npm run cy:install
 
 # Sigh...yes, I needed to do this =/
 run chown -R node:node /root

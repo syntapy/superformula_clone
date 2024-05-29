@@ -1,17 +1,6 @@
 import * as React from "react"
-import type { HeadFC } from "gatsby"
 
 import Header from "../components/header"
-import img_a from "../images/img_a.png"
-import img_b from "../images/img_b.png"
-import img_c from "../images/img_c.png"
-
-import team1 from "../images/team/team1.png"
-import team2 from "../images/team/team2.png"
-import team3 from "../images/team/team3.png"
-import team4 from "../images/team/team4.png"
-import team_img from "../images/team/team_img.png"
-
 import waves from "../images/svg/sf-white-waves.svg"
 
 import ig from "../images/svg/ig.svg"
@@ -31,79 +20,131 @@ import { Insight } from "../components/info"
 import { SectionBlack, SectionWhite } from "../components/section"
 
 import * as utils from "../utils"
+import { graphql, PageProps } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-const IndexPage = () => {
+export const data = graphql`
+  query landingPage {
+    allContentfulSection(
+      sort: {sort_id: ASC}
+      filter: {sort_id: {lt: 9}}
+    ) {
+      nodes {
+        title
+        subtitle
+        description
+        imageListDesktop {
+          description
+          file {
+            url
+          }
+        }
+        imageMobile {
+          description
+          file {
+            url
+          }
+        }
+        imageSrc {
+          file {
+            url
+          }
+        }
+        imageAlt
+        buttonText
+        itemList
+        linkHref
+        linkText
+        tags
+      }
+    }
+  }`
+
+const IndexPage: React.FC<PageProps<PageData>> = ({data}: Queries.landingPageQuery) => {
   return (
     <div className={styles.root}>
       <Header isMobile={utils.isMobile} />
       <main>
         <SectionBlack className={sectionStyles.firstSection}>
           <HeaderSection
-            title="We can go faster and further together"
-            description="We are digital experts driven by the passion needed to accelerate and transform your business."
-            href="/services" 
-            buttonText="Explore our services"
+            title={data.allContentfulSection.nodes[0].title}
+            description={data.allContentfulSection.nodes[0].description}
+            href={data.allContentfulSection.nodes[0].linkHref}
+            buttonText={data.allContentfulSection.nodes[0].buttonText}
           />
         </SectionBlack>
         <SectionBlack>
-          <InsightsSection title="Our Insights">
+          <InsightsSection title={data.allContentfulSection.nodes[1].title}>
             <Insight 
-              title="Opportunities: How Superformula team members step up" 
-              href="/articles/unexpected-opportunities-how-superformula-team-members-step-up"
-              src={img_a}
+              title={data.allContentfulSection.nodes[2].title}
+              href={data.allContentfulSection.nodes[2].linkHref}
+              src={data.allContentfulSection.nodes[2].imageSrc.file.url}
               dataCy="insight-img-a"
-              tags={["experience", "culture"]}
+              tags={data.allContentfulSection.nodes[2].tags}
             />
             <Insight 
-              title="Save time! Optimizing rebuilds With Flutter" 
-              href="/articles/optimizing-rebuilds-with-flutter"
-              src={img_b}
+              title={data.allContentfulSection.nodes[3].title}
+              href={data.allContentfulSection.nodes[3].linkHref}
+              src={data.allContentfulSection.nodes[3].imageSrc.file.url}
               dataCy="insight-img-b"
-              tags={["flutter", "dart", "tips"]}
+              tags={data.allContentfulSection.nodes[3].tags}
             />
           </InsightsSection>
         </SectionBlack>
         <SectionBlack>
           <OlSection
-            title="How we do it"
-            items={[
-              "Expertise (not ego) in all things digital",
-              "Next-level creative problem solving (no smoke and mirrors here)",
-              "Design thinking and digital tools to build know-how and skill",
-              "Process improvements that are a no-brainer to implement",
-              "Fully remote company culture, totally dialed infrastructure",
-            ]}
+            title={data.allContentfulSection.nodes[4].title}
+            items={data.allContentfulSection.nodes[4].itemList}
           />
         </SectionBlack>
         <SectionWhite>
           <ServicesSection
-            title="Services"
-            subtitle="Flutter Experts"
-            description="With major releases under our belt, we've got the know-how needed to deliver premium experiences for our clients and their users."
-            src={img_c} alt="Flutter Experts"
-            href="/services" buttonText="Learn more"
+            title={data.allContentfulSection.nodes[5].title}
+            subtitle={data.allContentfulSection.nodes[5].subtitle}
+            description={data.allContentfulSection.nodes[5].description}
+            src={data.allContentfulSection.nodes[5].imageSrc.file.url}
+            alt={data.allContentfulSection.nodes[5].imageAlt}
+            href={data.allContentfulSection.nodes[5].linkHref}
+            buttonText={data.allContentfulSection.nodes[5].buttonText}
           />
         </SectionWhite>
         <SectionWhite>
           <CultureSection
-            title="100% remote and loving it"
-            subtitle="Collaborative, diverse, and really, really good at what we do"
-            description="Because we’re a team of passionate problem solvers doing work we love in a way that works, in every respect. In other words, low-ego, high-drive—and it makes all the difference"
-            href="https://careers.superformula.com/culture-values" text="Explore our culture"
+            title={data.allContentfulSection.nodes[6].title}
+            subtitle={data.allContentfulSection.nodes[6].subtitle}
+            description={data.allContentfulSection.nodes[6].description}
+            href={data.allContentfulSection.nodes[6].linkHref}
+            text={data.allContentfulSection.nodes[6].linkText}
             imgListDesktop={[
-              {src: team1, alt: "Team 1"},
-              {src: team2, alt: "Team 2"},
-              {src: team3, alt: "Team 3"},
-              {src: team4, alt: "Team 4"},
+              {
+                src: data.allContentfulSection.nodes[6].imageListDesktop[0].file.url,
+                alt: data.allContentfulSection.nodes[6].imageListDesktop[0].description
+              },
+              {
+                src: data.allContentfulSection.nodes[6].imageListDesktop[1].file.url,
+                alt: data.allContentfulSection.nodes[6].imageListDesktop[1].description
+              },
+              {
+                src: data.allContentfulSection.nodes[6].imageListDesktop[2].file.url,
+                alt: data.allContentfulSection.nodes[6].imageListDesktop[2].description
+              },
+              {
+                src: data.allContentfulSection.nodes[6].imageListDesktop[3].file.url,
+                alt: data.allContentfulSection.nodes[6].imageListDesktop[3].description
+              }
             ]}
-            imgMobile={{src: team_img, alt: "Team"}}
+            imgMobile={{
+              src: data.allContentfulSection.nodes[6].imageMobile.file.url,
+              alt: data.allContentfulSection.nodes[6].imageMobile.description
+            }}
             isMobile={utils.isMobile}
           />
         </SectionWhite>
         <SectionBlack>
           <ContactSection
-            title="Whether it’s our services that speak to you or joining our team seems like a dream come true, get in touch, or follow along on all our digital adventures"
-            href="https://superformula.com/contact" text="Contact us"
+            title={data.allContentfulSection.nodes[7].title}
+            href={data.allContentfulSection.nodes[7].linkHref}
+            text={data.allContentfulSection.nodes[7].linkText}
           />
         </SectionBlack>
       </main>
@@ -112,5 +153,4 @@ const IndexPage = () => {
 }
 
 export default IndexPage
-
 export const Head: HeadFC = () => <title>Home Page</title>

@@ -1,4 +1,9 @@
 .homeNavButton {
+    text-decoration: underline;
+}
+
+.buttonArrow {
+    text-decoration: underline;
 }
 
 .a {
