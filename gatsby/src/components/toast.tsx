@@ -14,12 +14,14 @@ function clickToast() {
 }
 
 export default function Toast(props: ToastProps) {
+  const toastContainerStyle: string = styles.toastContainer
   const insetStyle: string = styles.insetShadow
   const className: string = styles.toast
   const btnClassName: string = styles.toastOkButton
   const exclamationStyle: string = styles.exclamation
   const closeClassName: string = styles.close
   return (
+    <div className={toastContainerStyle}>
     <div className={insetStyle}>
     <div className={className}>
       <div className={exclamationStyle}>
@@ -29,6 +31,7 @@ export default function Toast(props: ToastProps) {
       </div>
       <div>{props.message}</div>
       <div className={closeClassName}>x</div>
+    </div>
     </div>
     </div>
   )

@@ -1,18 +1,26 @@
+:import('./vars.module.css') {
+	$toast-bg-color: toast-bg-color;
+}
+
+.toastContainer {
+  position: fixed;
+  background-color: $toast-bg-color;
+  color: black;
+  top: 12px;
+  left: 50%;
+  transform: translate(-50%, -0%);
+}
+
 .insetShadow {
-  box-shadow: 1px 1px 8px #00000099 inset;
+  border: 0px solid red;
+  box-shadow: 2px 1px 8px #000000aa inset;
 }
 
 .toast {
   box-sizing: border-box;
-  position: fixed;
-  background-color: #c2a220fa;
-  color: black;
   display: flex;
   flex-direction: row;
   padding: 6px 8px;
-  top: 12px;
-  left: 50%;
-  transform: translate(-50%, -0%);
 }
 
 .exclamation {
