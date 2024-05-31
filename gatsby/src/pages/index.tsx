@@ -1,5 +1,6 @@
 import * as React from "react"
 
+import Toast from "../components/toast"
 import Header from "../components/header"
 import waves from "../images/svg/sf-white-waves.svg"
 
@@ -64,6 +65,7 @@ const IndexPage: React.FC<PageProps<PageData>> = ({data}: Queries.landingPageQue
   return (
     <div className={styles.root}>
       <Header isMobile={utils.isMobile} />
+      <Toast message={"This is a practice clone site and is not the actual Superformula website"} />
       <main>
         <SectionBlack className={sectionStyles.firstSection}>
           <HeaderSection
