@@ -6,10 +6,17 @@
   position: fixed;
   background-color: $toast-bg-color;
   color: black;
-  top: 12px;
   left: 50%;
   transform: translate(-50%, -0%);
   z-index: 0;
+}
+
+.visible {
+  top: 12px;
+}
+
+.hidden {
+  top: -100%;
 }
 
 .insetShadow {
@@ -21,20 +28,38 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  padding: 6px 8px;
+  padding: 2px 4px;
 }
 
 .exclamation {
   padding: 2px 8px 2px 2px;
 }
 
+.pad {
+  box-sizing: border-box;
+  padding: 0 2px;
+}
+
 .close {
   box-sizing: border-box;
+  background-color: #00000000;
   color: #00000099;
-  font-size: 0.9rem;
-  border: 0px solid black;
-  padding: 2px 2px 6px 6px;
+  font-size: 1.1rem;
+  border: 0px solid red;
+  padding: 2px 2px 10px 6px;
   margin: auto;
+  text-align: center;
+}
+
+.closePar {
+  margin: 0;
+  padding: 0 ;
+  bottom: 3px;
+}
+
+.close:hover {
+  color: #000000ff;
+  font-weight: bold;
 }
 
 .toastItem {
