@@ -1,5 +1,6 @@
 :import('./vars.module.css') {
 	$toast-bg-color: toast-bg-color;
+    $toast-close-spacing: toast-close-spacing;
 }
 
 .toastContainer {
@@ -51,11 +52,11 @@
 }
 
 .flexPad {
-  padding: 2px 6px 4px 6px;
+  padding: 2px $toast-close-spacing 4px $toast-close-spacing;
 }
 
 .svgPad {
-  padding: 1px 8px 0px 0;
+  padding: 1px $toast-close-spacing 0px 0;
 }
 
 .svgTranslate {
@@ -67,7 +68,7 @@
 }
 
 .closePad {
-  padding: 1px 0 0 6px;
+  padding: 1px 0 0 $toast-close-spacing;
 }
 
 .close {
