@@ -52,7 +52,7 @@
 }
 
 .flexPad {
-  padding: 2px $toast-close-spacing 4px $toast-close-spacing;
+  padding: 6px $toast-close-spacing 8px $toast-close-spacing;
 }
 
 .svgPad {
@@ -60,7 +60,7 @@
 }
 
 .svgTranslate {
-  transform: translate(0, 1px);
+  transform: translate(-1px, 1px);
 }
 
 .msgPad {
