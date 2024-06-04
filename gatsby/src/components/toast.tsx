@@ -16,11 +16,19 @@ export default function Toast(props: ToastProps) {
   const insetShadowStyle: string = styles.insetShadow
   const toastStyle: string = styles.toast
   const horizontalFlex: string = orientationStyles.horizontalFlex
+
+  // Padding styles
   const flexPadStyle: string = styles.flexPad
+  const svgPadStyle: string = styles.svgPad
+  const msgPadStyle: string = styles.msgPad
+  const closePadStyle: string = styles.closePad
+
+  const svgTranslateStyle: string = styles.svgTranslate
+
+  // Other styles
   const btnClassName: string = styles.toastOkButton
   const exclamationStyle: string = styles.exclamation
   const closeStyle: string = styles.close
-  const padCloseStyle: string = styles.padClose
   const borderStyle: string = styles.border
   const centerStyle: string = orientationStyles.flexStartItems
   const pointerStyle: string = otherStyles.pointer
@@ -35,11 +43,15 @@ export default function Toast(props: ToastProps) {
     <div className={insetShadowStyle}>
     <div className={toastStyle}>
     <div className={horizontalFlex + " " + centerStyle + " " + flexPadStyle}>
-      <SvgButton className={inlineStyle} icon={<Exclamation width={14} height={14} data-cy="toast-exclamation-svg" />} />
-      <div className={borderStyle}>
+      <div className={inlineStyle + " " + svgPadStyle + " " + borderStyle}>
+        <SvgButton className={svgTranslateStyle} icon={<Exclamation width={14} height={14} data-cy="toast-exclamation-svg" />} />
+      </div>
+      <div className={inlineStyle + " " + msgPadStyle}>
         {props.message}
       </div>
-      <button className={closeStyle + " " + padCloseStyle + " " + pointerStyle}>x</button>
+      <button className={inlineStyle + " " + closeStyle + " " + closePadStyle + " " + pointerStyle}>
+        x
+      </button>
     </div>
     </div>
     </div>

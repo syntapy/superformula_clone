@@ -50,12 +50,24 @@
   border: 0px solid red;
 }
 
-.padClose {
-  padding: 0 0 0 6px;
-}
-
 .flexPad {
   padding: 2px 6px 4px 6px;
+}
+
+.svgPad {
+  padding: 1px 8px 0px 0;
+}
+
+.svgTranslate {
+  transform: translate(0, 1px);
+}
+
+.msgPad {
+  padding: 1px 0 0 0;
+}
+
+.closePad {
+  padding: 1px 0 0 6px;
 }
 
 .close {
