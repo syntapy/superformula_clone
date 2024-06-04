@@ -22,7 +22,6 @@
 }
 
 .insetShadow {
-  border: 0px solid red;
   box-shadow: inset 0px 0px 18px #000000cc, 0px 0px 2px $toast-bg-color;
 }
 
@@ -45,11 +44,6 @@
 .inline {
   display: inline-block;
   padding: 2px;
-  border: 0px solid red;
-}
-
-.border {
-  border: 0px solid red;
 }
 
 .flexPad {
@@ -78,7 +72,7 @@
   font-weight: bold;
   font-size: 1.0em;
   color: #00000099;
-  border: 0px solid red;
+  border-width: 0px;
   margin: auto;
 }
 

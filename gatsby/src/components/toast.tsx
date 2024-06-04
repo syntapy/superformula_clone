@@ -29,7 +29,6 @@ export default function Toast(props: ToastProps) {
   const btnClassName: string = styles.toastOkButton
   const exclamationStyle: string = styles.exclamation
   const closeStyle: string = styles.close
-  const borderStyle: string = styles.border
   const centerStyle: string = orientationStyles.flexStartItems
   const pointerStyle: string = otherStyles.pointer
   const inlineStyle: string = otherStyles.inline
@@ -45,7 +44,7 @@ export default function Toast(props: ToastProps) {
     <div className={toastContainerStyle + " " + insetShadowStyle} id={toastId}>
     <div className={toastStyle}>
     <div className={horizontalFlex + " " + centerStyle + " " + flexPadStyle}>
-      <div className={inlineStyle + " " + svgPadStyle + " " + borderStyle}>
+      <div className={inlineStyle + " " + svgPadStyle}>
         <SvgButton
           className={svgTranslateStyle}
           icon={<Exclamation width={14} height={14} data-cy="toast-exclamation-svg" />}
