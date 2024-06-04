@@ -42,8 +42,7 @@ export default function Toast(props: ToastProps) {
   }
 
   return (
-    <div className={toastContainerStyle} id={toastId}>
-    <div className={insetShadowStyle}>
+    <div className={toastContainerStyle + " " + insetShadowStyle} id={toastId}>
     <div className={toastStyle}>
     <div className={horizontalFlex + " " + centerStyle + " " + flexPadStyle}>
       <div className={inlineStyle + " " + svgPadStyle + " " + borderStyle}>
@@ -61,7 +60,6 @@ export default function Toast(props: ToastProps) {
       >
         x
       </button>
-    </div>
     </div>
     </div>
     </div>

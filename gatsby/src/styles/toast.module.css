@@ -6,6 +6,7 @@
 .toastContainer {
   position: fixed;
   background-color: $toast-bg-color;
+  border-radius: 3px;
   color: black;
   left: 50%;
   transform: translate(-50%, -0%);
