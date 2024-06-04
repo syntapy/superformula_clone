@@ -27,7 +27,6 @@ export default function Toast(props: ToastProps) {
 
   // Other styles
   const btnClassName: string = styles.toastOkButton
-  const exclamationStyle: string = styles.exclamation
   const closeStyle: string = styles.close
   const centerStyle: string = orientationStyles.flexStartItems
   const pointerStyle: string = otherStyles.pointer
@@ -41,24 +40,22 @@ export default function Toast(props: ToastProps) {
   }
 
   return (
-    <div className={toastContainerStyle + " " + insetShadowStyle} id={toastId}>
+    <div data-cy="cy-toast-message" 
+         className={toastContainerStyle + " " + insetShadowStyle} 
+         id={toastId}
+    >
     <div className={toastStyle}>
     <div className={horizontalFlex + " " + centerStyle + " " + flexPadStyle}>
       <div className={inlineStyle + " " + svgPadStyle}>
         <SvgButton
           className={svgTranslateStyle}
-          icon={<Exclamation width={14} height={14} data-cy="toast-exclamation-svg" />}
+          icon={<Exclamation width={14} height={14} data-cy="cy-toast-exclamation-svg" />}
         />
       </div>
-      <div className={inlineStyle + " " + msgPadStyle}>
-        {props.message}
-      </div>
+      <div className={inlineStyle + " " + msgPadStyle}>{props.message}</div>
       <button
         className={inlineStyle + " " + closeStyle + " " + closePadStyle + " " + pointerStyle}
-        onClick={onCloseClick}
-      >
-        x
-      </button>
+        onClick={onCloseClick}>x</button>
     </div>
     </div>
     </div>
