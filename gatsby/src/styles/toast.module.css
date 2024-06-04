@@ -35,26 +35,37 @@
   padding: 2px 8px 2px 2px;
 }
 
-.pad {
-  box-sizing: border-box;
-  padding: 0 2px;
+.center {
+   align-items: center;
+   justify-content: center;
+}
+
+.inline {
+  display: inline-block;
+  padding: 2px;
+  border: 1px solid red;
+}
+
+.border {
+  border: 0px solid red;
+}
+
+.padClose {
+  padding: 0 0 0 6px;
+}
+
+.flexPad {
+  padding: 2px 6px 4px 6px;
 }
 
 .close {
   box-sizing: border-box;
   background-color: #00000000;
+  font-weight: bold;
+  font-size: 1.0em;
   color: #00000099;
-  font-size: 1.1rem;
   border: 0px solid red;
-  padding: 2px 2px 10px 6px;
   margin: auto;
-  text-align: center;
-}
-
-.closePar {
-  margin: 0;
-  padding: 0 ;
-  bottom: 3px;
 }
 
 .close:hover {

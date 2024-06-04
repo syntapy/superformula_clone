@@ -1,0 +1,11 @@
+.pointer {
+    cursor: pointer;
+}
+
+.pointer:hover {
+    cursor: grab;
+}
+
+.inline {
+    display: inline;
+}
