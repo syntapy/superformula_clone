@@ -34,22 +34,31 @@ export default function Toast(props: ToastProps) {
   const pointerStyle: string = otherStyles.pointer
   const inlineStyle: string = otherStyles.inline
 
-  function onCloseClick(): void {
+  const toastId: string = "toast-message"
 
+  function onCloseClick(): void {
+    const toast: HTMLElement | null = document.getElementById(toastId)
+    toast.classList.add(styles.hidden)
   }
 
   return (
-    <div className={toastContainerStyle}>
+    <div className={toastContainerStyle} id={toastId}>
     <div className={insetShadowStyle}>
     <div className={toastStyle}>
     <div className={horizontalFlex + " " + centerStyle + " " + flexPadStyle}>
       <div className={inlineStyle + " " + svgPadStyle + " " + borderStyle}>
-        <SvgButton className={svgTranslateStyle} icon={<Exclamation width={14} height={14} data-cy="toast-exclamation-svg" />} />
+        <SvgButton
+          className={svgTranslateStyle}
+          icon={<Exclamation width={14} height={14} data-cy="toast-exclamation-svg" />}
+        />
       </div>
       <div className={inlineStyle + " " + msgPadStyle}>
         {props.message}
       </div>
-      <button className={inlineStyle + " " + closeStyle + " " + closePadStyle + " " + pointerStyle}>
+      <button
+        className={inlineStyle + " " + closeStyle + " " + closePadStyle + " " + pointerStyle}
+        onClick={onCloseClick}
+      >
         x
       </button>
     </div>
