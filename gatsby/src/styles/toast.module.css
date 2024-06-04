@@ -22,7 +22,7 @@
 
 .insetShadow {
   border: 0px solid red;
-  box-shadow: 2px 1px 8px #000000aa inset;
+  box-shadow: inset 0px 0px 18px #000000cc, 0px 0px 2px $toast-bg-color;
 }
 
 .toast {
@@ -44,7 +44,7 @@
 .inline {
   display: inline-block;
   padding: 2px;
-  border: 1px solid red;
+  border: 0px solid red;
 }
 
 .border {
