@@ -36,7 +36,7 @@ mobile.devices.forEach((device) => {
       })
 
       it('page screenshot', () => {
-        cy.get('[data-cy="cy-toast-message"]').should('be.visible').click().wait(clickWaitTime).then(() => {
+        cy.get('#toast-close-button').click().wait(clickWaitTime).then(() => {
           cy.compareSnapshot('page_mobile_' + device + '_' + orientation, {
             errorThreshold: errorThreshold
           })

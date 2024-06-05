@@ -7,12 +7,13 @@ desktop.devices.forEach((device) => {
         cy.viewport(device, orientation)
         cy.visit('/')
         cy.wait(waitTime)
-        cy.get('[data-cy="cy-toast-message"]').click().wait(clickWaitTime)
       })
 
       it('page', () => {
+        cy.get('#toast-close-button').click().wait(clickWaitTime).then(() => {
           const fname = 'page_desktop_' + device + '_' + orientation
           cy.compareSnapshot(fname)
+        })
       })
     })
   })

@@ -54,6 +54,7 @@ export default function Toast(props: ToastProps) {
       </div>
       <div className={inlineStyle + " " + msgPadStyle}>{props.message}</div>
       <button
+        id="toast-close-button"
         className={inlineStyle + " " + closeStyle + " " + closePadStyle + " " + pointerStyle}
         onClick={onCloseClick}>x</button>
     </div>

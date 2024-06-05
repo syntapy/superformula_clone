@@ -21,7 +21,7 @@ export const mobile = {
   ]
 }
 
-export const clickWaitTime = 200
+export const clickWaitTime = 500
 export const waitTime = 1400
 export const animationWaitTime = 750
 
