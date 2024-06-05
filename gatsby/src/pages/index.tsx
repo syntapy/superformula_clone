@@ -1,7 +1,7 @@
 import * as React from "react"
 
-import Toast from "../components/toast"
 import Header from "../components/header"
+import Toast from "../components/toast"
 import waves from "../images/svg/sf-white-waves.svg"
 
 import ig from "../images/svg/ig.svg"
