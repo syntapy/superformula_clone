@@ -22,7 +22,7 @@
   top: -100%;
 }
 
-.insetShadow {
+.shadow {
   box-shadow: inset 0px 0px 18px #000000cc, 0px 0px 2px $toast-bg-color;
 }
 

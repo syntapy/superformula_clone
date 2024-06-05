@@ -13,7 +13,7 @@ interface ToastProps {
 
 export default function Toast(props: ToastProps) {
   const toastContainerStyle: string = styles.toastContainer + " " + styles.visible
-  const insetShadowStyle: string = styles.insetShadow
+  const shadowStyle: string = styles.shadow
   const toastStyle: string = styles.toast
   const horizontalFlex: string = orientationStyles.horizontalFlex
 
@@ -40,7 +40,7 @@ export default function Toast(props: ToastProps) {
 
   return (
     <div data-cy="cy-toast-message" 
-         className={toastContainerStyle + " " + insetShadowStyle} 
+         className={toastContainerStyle + " " + shadowStyle} 
          id={toastId}
     >
     <div className={toastStyle}>
