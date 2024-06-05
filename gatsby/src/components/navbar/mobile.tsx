@@ -3,9 +3,6 @@ import * as styles from "../../styles/navbar.module.css"
 import * as orientationStyles from "../../styles/utilities/orientation.module.css"
 import { hidden, mobile } from "../../styles/utilities/visibility.module.css"
 
-import Chilidogmenu from "../../images/svg/chilidogmenu.svg"
-import Menuclose from "../../images/svg/menuclose.svg"
-
 import { HomeNavButton, NavButton, SvgButton, CareersNavButton } from "../buttons"
 import { NavProps, NavItemsList, NavItems } from "./common"
 
@@ -18,16 +15,10 @@ interface NavHeaderMobileProps {
 function NavHeaderMobile(props: NavHeaderMobileProps) {
   const root: string = orientationStyles.horizontalFlex
       + " " + styles.navHeaderMobile
-  const chilidogStyle: string = styles.chilidog
   const homeItem: string = styles.navHeaderHomeItem
   return (
     <div className={root}>
       <HomeNavButton className={homeItem} href={props.rootHref} text={props.title} />
-      <SvgButton
-        className={chilidogStyle}
-        onClick={props.onClick}
-        icon={<Chilidogmenu width={32} height={45} data-cy="chilidog-svg" />}
-      />
     </div>
   )
 }
@@ -46,8 +37,6 @@ function NavMenuMobile(props: NavMenuMobileProps) {
       + " " + styles.mobileMenuHidden
 
   const homeNavWrapper: string = orientationStyles.horizontalFlex
-  const closeMenu: string = styles.mobileMenuCloseBtn 
-      + " " + orientationStyles.horizontalFlex
   const homeNavItem: string = styles.mobileNavHomeItem
 
   const navItem: string = styles.mobileNavItem

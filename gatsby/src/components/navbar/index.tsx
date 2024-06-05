@@ -1,9 +1,12 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import { HomeNavButton, NavButton, CareersNavButton } from "../buttons"
+import { HomeNavButton, NavButton, SvgButton, CareersNavButton } from "../buttons"
 import { isMobile, ResponsiveProps } from "../../utils"
 import { NavItemInfo, NavItemsProps } from "./utils"
+
+import Chilidogmenu from "../../images/svg/chilidogmenu.svg"
+import Menuclose from "../../images/svg/menuclose.svg"
 
 import * as styles from "../../styles/navbar.module.css"
 import * as orientationStyles from "../../styles/utilities/orientation.module.css"
@@ -49,7 +52,25 @@ function NavItems(props: NavItemsProps) {
   )
 }
 
-export default function NavBar(props: ResponsiveProps) {
+function NavMenu(props: NavMenuProps) {
+  const closeMenu: string = styles.mobileMenuCloseBtn 
+      + " " + orientationStyles.horizontalFlex
+  return (
+    <>
+      <SvgButton
+        className={closeMenu}
+        onClick={props.onClick}
+        icon={<Menuclose width={40} height={40} />}
+      />
+      <NavItems
+        id="nav-items"
+        items={props.items}
+      />
+    </>
+  )
+}
+
+export default function NavHeader(props: ResponsiveProps) {
   const data = useStaticQuery(
     graphql`
       query {
@@ -98,6 +119,7 @@ export default function NavBar(props: ResponsiveProps) {
   const navItemList: string = styles.marginVerticalAuto
         + " " + orientationStyles.horizontalFlex
   const navItem: string = styles.marginVerticalAuto
+  const chilidogStyle: string = styles.chilidog
 
   return (
     <div id={"desktop-nav-wrapper"} className={navIndexRoot}>
@@ -107,11 +129,14 @@ export default function NavBar(props: ResponsiveProps) {
           href={props.rootHref}
           text={props.title}
         />
-        <NavItems
-          id={"desktop-nav"}
-          itemListStyle={navItemList}
-          itemStyle={navItem}
+        <NavMenu
+          id="nav-menu"
           items={items}
+        />
+        <SvgButton
+          className={chilidogStyle}
+          onClick={props.onClick}
+          icon={<Chilidogmenu width={32} height={45} data-cy="chilidog-svg" />}
         />
       </nav>
     </div>
