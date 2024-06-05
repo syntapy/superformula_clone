@@ -1,7 +1,7 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import { HomeNavButton, NavButton, CareersNavButton, SvgButton } from "../buttons"
+import { HomeNavButton, NavButton, CareersNavButton } from "../buttons"
 import { isMobile, ResponsiveProps } from "../../utils"
 import { NavItemInfo, NavItemsProps } from "./utils"
 

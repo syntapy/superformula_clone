@@ -1,0 +1,69 @@
+:import('./vars.module.css') {
+	$toast-bg-color: toast-bg-color;
+    $toast-close-spacing: toast-close-spacing;
+}
+
+.toastContainer {
+  position: fixed;
+  background-color: $toast-bg-color;
+  border-radius: 3px;
+  color: black;
+  left: 50%;
+  transform: translate(-50%, -0%);
+  z-index: 0;
+}
+
+.visible {
+  top: 12px;
+}
+
+.hidden {
+  display: none;
+  top: -100%;
+}
+
+.shadow {
+  box-shadow: inset 0px 0px 18px #000000cc, 0px 0px 2px $toast-bg-color;
+}
+
+.toast {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  padding: 2px 4px;
+}
+
+.flexPad {
+  padding: 6px $toast-close-spacing 8px $toast-close-spacing;
+}
+
+.svgPad {
+  padding: 1px $toast-close-spacing 0px 0;
+}
+
+.svgTranslate {
+  transform: translate(-1px, 1px);
+}
+
+.msgPad {
+  padding: 1px 0 0 0;
+}
+
+.closePad {
+  padding: 1px 0 0 $toast-close-spacing;
+}
+
+.close {
+  box-sizing: border-box;
+  background-color: #00000000;
+  font-weight: bold;
+  font-size: 1.0em;
+  color: #00000099;
+  border-width: 0px;
+  margin: auto;
+}
+
+.close:hover {
+  color: #000000ff;
+  font-weight: bold;
+}

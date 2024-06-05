@@ -1,4 +1,4 @@
-import { mobile, waitTime, animationWaitTime, errorThreshold, isDesktopMenuOnMobile } from '../support/utils.js'
+import { mobile, waitTime, clickWaitTime, animationWaitTime, errorThreshold, isDesktopMenuOnMobile } from '../support/utils.js'
 
 mobile.devices.forEach((device) => {
   mobile.orientationList.forEach((orientation) => {
@@ -36,8 +36,10 @@ mobile.devices.forEach((device) => {
       })
 
       it('page screenshot', () => {
-        cy.compareSnapshot('page_mobile_' + device + '_' + orientation, {
-          errorThreshold: errorThreshold
+        cy.get('#toast-close-button').click().wait(clickWaitTime).then(() => {
+          cy.compareSnapshot('page_mobile_' + device + '_' + orientation, {
+            errorThreshold: errorThreshold
+          })
         })
       })
     })

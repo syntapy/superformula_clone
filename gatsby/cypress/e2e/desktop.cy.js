@@ -1,4 +1,4 @@
-import { desktop, waitTime, errorThreshold } from '../support/utils.js'
+import { desktop, waitTime, clickWaitTime, errorThreshold } from '../support/utils.js'
 
 desktop.devices.forEach((device) => {
   desktop.orientationList.forEach((orientation) => {
@@ -10,8 +10,10 @@ desktop.devices.forEach((device) => {
       })
 
       it('page', () => {
-        const fname = 'page_desktop_' + device + '_' + orientation
-        cy.compareSnapshot(fname)
+        cy.get('#toast-close-button').click().wait(clickWaitTime).then(() => {
+          const fname = 'page_desktop_' + device + '_' + orientation
+          cy.compareSnapshot(fname)
+        })
       })
     })
   })
