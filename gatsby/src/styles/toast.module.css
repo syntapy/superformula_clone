@@ -33,20 +33,6 @@
   padding: 2px 4px;
 }
 
-.exclamation {
-  padding: 2px 8px 2px 2px;
-}
-
-.center {
-   align-items: center;
-   justify-content: center;
-}
-
-.inline {
-  display: inline-block;
-  padding: 2px;
-}
-
 .flexPad {
   padding: 6px $toast-close-spacing 8px $toast-close-spacing;
 }

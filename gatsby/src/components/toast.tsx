@@ -26,7 +26,6 @@ export default function Toast(props: ToastProps) {
   const svgTranslateStyle: string = styles.svgTranslate
 
   // Other styles
-  const btnClassName: string = styles.toastOkButton
   const closeStyle: string = styles.close
   const centerStyle: string = orientationStyles.flexStartItems
   const pointerStyle: string = otherStyles.pointer
