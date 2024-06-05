@@ -6,29 +6,3 @@ import { HomeNavButton, NavButton, CareersNavButton, SvgButton } from "../button
 import { graphql, useStaticQuery, HeadFC } from "gatsby"
 
 import { NavProps, NavItems, NavItemsList } from "./common"
-
-export default function NavDesktop(props: NavProps) {
-  const root: string = styles.navbar
-        + " " + orientationStyles.horizontalFlex
-        + " " + desktop
-  const homeItem: string = styles.homeItemDesktop
-  const navItemList: string = styles.marginVerticalAuto
-        + " " + orientationStyles.horizontalFlex
-  const navItem: string = styles.marginVerticalAuto
-
-  return (
-    <nav className={root}>
-      <HomeNavButton 
-        className={homeItem}
-        href={props.rootHref}
-        text={props.title}
-      />
-      <NavItems
-        id={"desktop-nav"}
-        itemListStyle={navItemList}
-        itemStyle={navItem}
-        items={props.items}
-      />
-    </nav>
-  )
-}

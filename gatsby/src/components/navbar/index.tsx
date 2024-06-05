@@ -9,9 +9,45 @@ import * as styles from "../../styles/navbar.module.css"
 import * as orientationStyles from "../../styles/utilities/orientation.module.css"
 import { hidden, desktop, mobile } from "../../styles/utilities/visibility.module.css"
 
-import { NavItems, NavProps } from "./common"
 import NavDesktop from "./desktop"
 import NavMobile from "./mobile"
+
+interface NavItemInfo {
+  href: string
+  text: string
+}
+
+type NavItemsList = [NavItemInfo, NavItemInfo, NavItemInfo, NavItemInfo, NavItemInfo]
+
+interface NavProps {
+  title: string
+  rootHref: string
+  items: NavItemsList
+}
+
+interface NavItemsProps {
+  id: string
+  itemListStyle: string
+  itemStyle: string
+  items: NavItemsList
+}
+
+function NavItems(props: NavItemsProps) {
+  const navItem: string = props.itemStyle + " " + styles.navItem
+  return (
+    <div className={props.itemListStyle}>
+      <NavButton className={navItem} href={props.items[0].href} text={props.items[0].text} />
+      <NavButton className={navItem} href={props.items[1].href} text={props.items[1].text} />
+      <NavButton className={navItem} href={props.items[2].href} text={props.items[2].text} />
+      <NavButton className={navItem} href={props.items[3].href} text={props.items[3].text} />
+      <CareersNavButton 
+        className={navItem}
+        href={props.items[4].href}
+        text={props.items[4].text}
+      />
+    </div>
+  )
+}
 
 export default function NavBar(props: ResponsiveProps) {
   const data = useStaticQuery(
@@ -47,16 +83,37 @@ export default function NavBar(props: ResponsiveProps) {
   const navMobile: string = ""
 
   const items: NavItemInfo[] = []
+
   items.push({ href: servicesHref, text: servicesText })
   items.push({ href: workHref, text: workText })
   items.push({ href: articlesHref, text: articlesText })
   items.push({ href: contactHref, text: contactText })
   items.push({ href: careersHref, text: careersText })
 
+  // Styles
+  const root: string = styles.navbar
+        + " " + orientationStyles.horizontalFlex
+        + " " + desktop
+  const homeItem: string = styles.homeItemDesktop
+  const navItemList: string = styles.marginVerticalAuto
+        + " " + orientationStyles.horizontalFlex
+  const navItem: string = styles.marginVerticalAuto
+
   return (
     <div id={"desktop-nav-wrapper"} className={navIndexRoot}>
-      <NavDesktop title={data.contentfulLandingPage.title} items={items} />
-      <NavMobile title={data.contentfulLandingPage.title} rootHref={"/"} items={items} />
+      <nav className={root}>
+        <HomeNavButton 
+          className={homeItem}
+          href={props.rootHref}
+          text={props.title}
+        />
+        <NavItems
+          id={"desktop-nav"}
+          itemListStyle={navItemList}
+          itemStyle={navItem}
+          items={items}
+        />
+      </nav>
     </div>
   )
 }
