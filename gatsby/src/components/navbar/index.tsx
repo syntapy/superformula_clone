@@ -55,6 +55,17 @@ function NavItems(props: NavItemsProps) {
 function NavMenu(props: NavMenuProps) {
   const closeMenu: string = styles.mobileMenuCloseBtn 
       + " " + orientationStyles.horizontalFlex
+
+  function onMenuCloseClick(): void {
+    console.log("onMenuCloseClick")
+    if (isMobileMenuOpen) {
+      const menu: HTMLElement | null = document.getElementById(mobileMenuId)
+      menu.classList.remove(styles.mobileMenuActive)
+      menu.classList.add(styles.mobileMenuHidden)
+      setIsMenuOpen(false)
+    }
+  }
+
   return (
     <>
       <SvgButton
@@ -121,6 +132,15 @@ export default function NavHeader(props: ResponsiveProps) {
   const navItem: string = styles.marginVerticalAuto
   const chilidogStyle: string = styles.chilidog
 
+  function onChilidogClick(): void {
+    if (!isMobileMenuOpen) {
+      const menu: HTMLElement | null = document.getElementById(mobileMenuId)
+      menu.classList.remove(styles.mobileMenuHidden)
+      menu.classList.add(styles.mobileMenuActive)
+      setIsMenuOpen(true)
+    }
+  }
+
   return (
     <div id={"desktop-nav-wrapper"} className={navIndexRoot}>
       <nav className={root}>
@@ -135,7 +155,7 @@ export default function NavHeader(props: ResponsiveProps) {
         />
         <SvgButton
           className={chilidogStyle}
-          onClick={props.onClick}
+          onClick={onChilidogClick}
           icon={<Chilidogmenu width={32} height={45} data-cy="chilidog-svg" />}
         />
       </nav>

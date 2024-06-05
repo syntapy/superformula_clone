@@ -94,25 +94,6 @@ export default function NavMobile(props: NavProps) {
 
   const root: string = styles.mobileMenuRoot + " " + mobile
 
-  function onChilidogClick(): void {
-    if (!isMobileMenuOpen) {
-      const menu: HTMLElement | null = document.getElementById(mobileMenuId)
-      menu.classList.remove(styles.mobileMenuHidden)
-      menu.classList.add(styles.mobileMenuActive)
-      setIsMenuOpen(true)
-    }
-  }
-
-  function onMenuCloseClick(): void {
-    console.log("onMenuCloseClick")
-    if (isMobileMenuOpen) {
-      const menu: HTMLElement | null = document.getElementById(mobileMenuId)
-      menu.classList.remove(styles.mobileMenuActive)
-      menu.classList.add(styles.mobileMenuHidden)
-      setIsMenuOpen(false)
-    }
-  }
-
   return (
     <nav className={root}>
       <NavHeaderMobile
