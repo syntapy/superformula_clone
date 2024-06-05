@@ -23,6 +23,11 @@
 	flex-direction: row;
 }
 
+.verticalFlex {
+	display: flex;
+	flex-direction: column;
+}
+
 .centeredItems {
     align-items: center;
     justify-content: center;
@@ -31,9 +36,4 @@
 .flexStartItems {
     align-items: flex-start;
     justify-content: center;
-}
-
-.verticalFlex {
-	display: flex;
-	flex-direction: column;
 }
