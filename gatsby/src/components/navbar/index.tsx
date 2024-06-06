@@ -8,7 +8,8 @@ import { NavItemInfo, NavItemsProps } from "./utils"
 import Chilidogmenu from "../../images/svg/chilidogmenu.svg"
 import Menuclose from "../../images/svg/menuclose.svg"
 
-import * as styles from "../../styles/navbar.module.css"
+import * as mobileStyles from "../../styles/mobileNavbar.module.css"
+import * as desktopStyles from "../../styles/desktopNavbar.module.css"
 import * as orientationStyles from "../../styles/utilities/orientation.module.css"
 import { hidden, desktop, mobile } from "../../styles/utilities/visibility.module.css"
 
@@ -36,9 +37,12 @@ interface NavItemsProps {
 }
 
 function NavItems(props: NavItemsProps) {
-  const navItem: string = props.itemStyle + " " + styles.navItem
+  const itemListStyle: string = mobileStyles.mobileMenu
+      + " " + desktopStyles.desktopMenu
+      + " " + orientationStyles.mobileV_desktopH
+  const navItem: string = mobileStyles.mobileNavItem
   return (
-    <div className={props.itemListStyle}>
+    <div className={itemListStyle}>
       <NavButton className={navItem} href={props.items[0].href} text={props.items[0].text} />
       <NavButton className={navItem} href={props.items[1].href} text={props.items[1].text} />
       <NavButton className={navItem} href={props.items[2].href} text={props.items[2].text} />
@@ -53,8 +57,10 @@ function NavItems(props: NavItemsProps) {
 }
 
 function NavMenu(props: NavMenuProps) {
-  const closeMenu: string = styles.mobileMenuCloseBtn 
+  const closeBtnStyle: string = mobileStyles.mobileMenuCloseBtn 
+      + " " + mobile
       + " " + orientationStyles.horizontalFlex
+  const navItemsStyle: string = orientationStyles.mobileV_desktopH
 
   function onMenuCloseClick(): void {
     console.log("onMenuCloseClick")
@@ -69,11 +75,12 @@ function NavMenu(props: NavMenuProps) {
   return (
     <>
       <SvgButton
-        className={closeMenu}
+        className={closeBtnStyle}
         onClick={props.onClick}
         icon={<Menuclose width={40} height={40} />}
       />
       <NavItems
+        className={navItemsStyle}
         id="nav-items"
         items={props.items}
       />
@@ -100,6 +107,8 @@ export default function NavHeader(props: ResponsiveProps) {
         }
       }
     `)
+  const title: string = data.contentfulLandingPage.title
+
   const servicesHref: string = data.allContentfulSection.nodes[0].linkHref
   const servicesText: string = data.allContentfulSection.nodes[0].title
   const workHref: string = data.allContentfulSection.nodes[1].linkHref
@@ -110,8 +119,6 @@ export default function NavHeader(props: ResponsiveProps) {
   const contactText: string = data.allContentfulSection.nodes[3].linkText
   const careersHref: string = data.allContentfulSection.nodes[4].linkHref
   const careersText: string = data.allContentfulSection.nodes[4].linkText
-  const navIndexRoot: string = styles.navIndexRoot
-      + " " + orientationStyles.horizontalFlex
   const navMobile: string = ""
 
   const items: NavItemInfo[] = []
@@ -123,14 +130,12 @@ export default function NavHeader(props: ResponsiveProps) {
   items.push({ href: careersHref, text: careersText })
 
   // Styles
-  const root: string = styles.navbar
+  const navbarStyle: string = desktopStyles.navbar  + " " + orientationStyles.horizontalFlex
+  const homeItem: string = desktopStyles.homeItemDesktop
+  const navItemList: string = desktopStyles.marginVerticalAuto
         + " " + orientationStyles.horizontalFlex
-        + " " + desktop
-  const homeItem: string = styles.homeItemDesktop
-  const navItemList: string = styles.marginVerticalAuto
-        + " " + orientationStyles.horizontalFlex
-  const navItem: string = styles.marginVerticalAuto
-  const chilidogStyle: string = styles.chilidog
+  const navItem: string = desktopStyles.marginVerticalAuto
+  const chilidogStyle: string = mobileStyles.chilidog + " " + mobile
 
   function onChilidogClick(): void {
     if (!isMobileMenuOpen) {
@@ -142,23 +147,21 @@ export default function NavHeader(props: ResponsiveProps) {
   }
 
   return (
-    <div id={"desktop-nav-wrapper"} className={navIndexRoot}>
-      <nav className={root}>
-        <HomeNavButton 
-          className={homeItem}
-          href={props.rootHref}
-          text={props.title}
-        />
-        <NavMenu
-          id="nav-menu"
-          items={items}
-        />
-        <SvgButton
-          className={chilidogStyle}
-          onClick={onChilidogClick}
-          icon={<Chilidogmenu width={32} height={45} data-cy="chilidog-svg" />}
-        />
-      </nav>
-    </div>
+    <nav className={navbarStyle}>
+      <HomeNavButton 
+        className={homeItem}
+        href="/"
+        text={title}
+      />
+      <NavMenu
+        id="nav-menu"
+        items={items}
+      />
+      <SvgButton
+        className={chilidogStyle}
+        onClick={onChilidogClick}
+        icon={<Chilidogmenu width={32} height={45} data-cy="chilidog-svg" />}
+      />
+    </nav>
   )
 }
