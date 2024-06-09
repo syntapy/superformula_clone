@@ -7,7 +7,7 @@ import { ResponsiveProps } from "../utils"
 export default function Header(props: ResponsiveProps) {
   return (
     <header>
-      <NavBar isMobile={props.isMobile} />
+      <NavBar />
     </header>
   )
 }

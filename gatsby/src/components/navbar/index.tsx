@@ -44,15 +44,13 @@ function NavItems(props: ResponsiveNavItemsProps) {
 
   function onMenuCloseClick(): void {
     console.log("onMenuCloseClick")
-    if (props.mobileMenuActive) {
-      const menu: HTMLElement | null = document.getElementById(props.menuId)
-      console.log("MENU")
-      console.log(menu)
-      if (menu || !!menu) {
-        menu.classList.remove(mobileStyles.menuActive)
-        menu.classList.add(mobileStyles.menuHidden)
-        setIsMenuOpen(false)
-      }
+    const menu: HTMLElement | null = document.getElementById(props.menuId)
+    console.log("MENU")
+    console.log(menu)
+    if (menu || !!menu) {
+      menu.classList.remove(mobileStyles.menuActive)
+      menu.classList.add(mobileStyles.menuHidden)
+      props.setMobileMenuActive(false)
     }
   }
 
@@ -80,7 +78,7 @@ function NavItems(props: ResponsiveNavItemsProps) {
   )
 }
 
-function NavMenu(props: NavItemsProps) {
+function NavMenu(props: ResponsiveNavItemsProps) {
   const closeBtnStyle: string = mobileStyles.mobileMenuCloseBtn 
       + " " + mobile
       + " " + orientationStyles.horizontalFlex
@@ -88,14 +86,16 @@ function NavMenu(props: NavItemsProps) {
 
   return (
     <NavItems
-      className={navItemsStyle}
       menuId={props.menuId}
+      className={navItemsStyle}
       items={props.items}
+      mobileMenuActive={props.mobileMenuActive}
+      setMobileMenuActive={props.setMobileMenuActive}
     />
   )
 }
 
-export default function NavBar(props: ResponsiveProps) {
+export default function NavBar() {
   const [mobileMenuActive, setMobileMenuActive] = React.useState(false)
   const data = useStaticQuery(
     graphql`
@@ -115,6 +115,7 @@ export default function NavBar(props: ResponsiveProps) {
         }
       }
     `)
+
   const title: string = data.contentfulLandingPage.title
   const servicesHref: string = data.allContentfulSection.nodes[0].linkHref
   const servicesText: string = data.allContentfulSection.nodes[0].title
@@ -147,6 +148,7 @@ export default function NavBar(props: ResponsiveProps) {
   const menuId: string = "nav-menu"
 
   function onChilidogClick(): void {
+    console.log("onChilidogClick")
     if (!mobileMenuActive) {
       const menu: HTMLElement | null = document.getElementById(menuId)
       console.log("MENU")
