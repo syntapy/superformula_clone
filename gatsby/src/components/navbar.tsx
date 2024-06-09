@@ -42,10 +42,7 @@ function NavItems(props: ResponsiveNavItemsProps) {
   const navItem: string = mobileStyles.mobileNavItem
 
   function onMenuCloseClick(): void {
-    console.log("onMenuCloseClick")
     const menu: HTMLElement | null = document.getElementById(props.menuId)
-    console.log("MENU")
-    console.log(menu)
     if (menu || !!menu) {
       menu.classList.remove(mobileStyles.menuActive)
       menu.classList.add(mobileStyles.menuHidden)
@@ -147,11 +144,8 @@ export default function NavBar() {
   const menuId: string = "nav-menu"
 
   function onChilidogClick(): void {
-    console.log("onChilidogClick")
     if (!mobileMenuActive) {
       const menu: HTMLElement | null = document.getElementById(menuId)
-      console.log("MENU")
-      console.log(menu)
       if (menu || !!menu) {
         menu.classList.remove(mobileStyles.menuHidden)
         menu.classList.add(mobileStyles.menuActive)
