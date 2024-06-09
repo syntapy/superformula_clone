@@ -3,6 +3,12 @@
 	$nav-height: nav-height;
 }
 
+@media (max-width: $max-mobile-width) {
+    .homeItemDesktop {
+        display: none;
+    }
+}
+
 @media (min-width: calc($max-mobile-width + 1px)) {
     .navbar {
         display: flex;
