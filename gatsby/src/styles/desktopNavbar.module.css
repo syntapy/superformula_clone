@@ -3,41 +3,45 @@
 	$nav-height: nav-height;
 }
 
-.navbar {
-	box-sizing: border-box;
-	padding: 5px 10px 15px 10px;
-	margin: 0 1rem;
-	position: relative;
-	height: $nav-height;
-	width: 100%;
-	border-bottom: 1px solid #dcded6;
-}
+@media (min-width: calc($max-mobile-width + 1px)) {
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        box-sizing: border-box;
+        padding: 5px 10px 15px 10px;
+        margin: 0 1rem;
+        position: relative;
+        height: $nav-height;
+        width: 100%;
+        border-bottom: 1px solid #dcded6;
+    }
 
-.mobileMenuCloseBtn {
-	position: absolute;
-	left: 3rem;
-	top: 1.45rem;
-}
+    .mobileMenuCloseBtn {
+        position: absolute;
+        left: 3rem;
+        top: 1.45rem;
+    }
 
-/* Index */
-.navIndexRoot {
-}
+    /* Index */
+    .navIndexRoot {
+    }
 
-.navHeaderHomeItem {
-	margin: auto auto auto 0;
-}
+    .navHeaderHomeItem {
+        margin: auto auto auto 0;
+    }
 
-.marginVerticalAuto {
-	margin: auto 0;
-}
+    .marginVerticalAuto {
+        margin: auto 0;
+    }
 
-.homeItemDesktop {
-	margin: auto auto auto 0;
-}
+    .homeItemDesktop {
+        margin: auto auto auto 0;
+    }
 
-/* all */
-.navItem {
-	flex: 0 1 0;
-	margin: auto 0;
-	padding: 0 0.4rem;
+    /* all */
+    .navItem {
+        flex: 0 1 0;
+        margin: auto 0;
+        padding: 0 0.4rem;
+    }
 }

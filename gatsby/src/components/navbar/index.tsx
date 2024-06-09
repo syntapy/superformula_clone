@@ -23,26 +23,50 @@ interface NavItemInfo {
 
 type NavItemsList = [NavItemInfo, NavItemInfo, NavItemInfo, NavItemInfo, NavItemInfo]
 
-interface NavProps {
-  title: string
-  rootHref: string
-  items: NavItemsList
-}
-
 interface NavItemsProps {
-  id: string
-  itemListStyle: string
-  itemStyle: string
+  menuId: string
   items: NavItemsList
 }
 
-function NavItems(props: NavItemsProps) {
+interface ResponsiveProps {
+  mobileMenuActive: boolean
+  setMobileMenuActive: () => void
+}
+
+type ResponsiveNavItemsProps = NavItemsProps | ResponsiveProps
+
+function NavItems(props: ResponsiveNavItemsProps) {
+  const closeBtnStyle: string = mobileStyles.closeBtn
   const itemListStyle: string = mobileStyles.mobileMenu
       + " " + desktopStyles.desktopMenu
       + " " + orientationStyles.mobileV_desktopH
   const navItem: string = mobileStyles.mobileNavItem
+
+  function onMenuCloseClick(): void {
+    console.log("onMenuCloseClick")
+    if (props.mobileMenuActive) {
+      const menu: HTMLElement | null = document.getElementById(props.menuId)
+      console.log("MENU")
+      console.log(menu)
+      if (menu || !!menu) {
+        menu.classList.remove(mobileStyles.menuActive)
+        menu.classList.add(mobileStyles.menuHidden)
+        setIsMenuOpen(false)
+      }
+    }
+  }
+
+  if (!props.mobileMenuActive) {
+    onMenuCloseClick()
+  }
+
   return (
-    <div className={itemListStyle}>
+    <div id={props.menuId} className={itemListStyle}>
+      <SvgButton
+        className={closeBtnStyle}
+        onClick={onMenuCloseClick}
+        icon={<Menuclose width={40} height={40} />}
+      />
       <NavButton className={navItem} href={props.items[0].href} text={props.items[0].text} />
       <NavButton className={navItem} href={props.items[1].href} text={props.items[1].text} />
       <NavButton className={navItem} href={props.items[2].href} text={props.items[2].text} />
@@ -56,39 +80,23 @@ function NavItems(props: NavItemsProps) {
   )
 }
 
-function NavMenu(props: NavMenuProps) {
+function NavMenu(props: NavItemsProps) {
   const closeBtnStyle: string = mobileStyles.mobileMenuCloseBtn 
       + " " + mobile
       + " " + orientationStyles.horizontalFlex
   const navItemsStyle: string = orientationStyles.mobileV_desktopH
 
-  function onMenuCloseClick(): void {
-    console.log("onMenuCloseClick")
-    if (isMobileMenuOpen) {
-      const menu: HTMLElement | null = document.getElementById(mobileMenuId)
-      menu.classList.remove(styles.mobileMenuActive)
-      menu.classList.add(styles.mobileMenuHidden)
-      setIsMenuOpen(false)
-    }
-  }
-
   return (
-    <>
-      <SvgButton
-        className={closeBtnStyle}
-        onClick={props.onClick}
-        icon={<Menuclose width={40} height={40} />}
-      />
-      <NavItems
-        className={navItemsStyle}
-        id="nav-items"
-        items={props.items}
-      />
-    </>
+    <NavItems
+      className={navItemsStyle}
+      menuId={props.menuId}
+      items={props.items}
+    />
   )
 }
 
-export default function NavHeader(props: ResponsiveProps) {
+export default function NavBar(props: ResponsiveProps) {
+  const [mobileMenuActive, setMobileMenuActive] = React.useState(false)
   const data = useStaticQuery(
     graphql`
       query {
@@ -108,7 +116,6 @@ export default function NavHeader(props: ResponsiveProps) {
       }
     `)
   const title: string = data.contentfulLandingPage.title
-
   const servicesHref: string = data.allContentfulSection.nodes[0].linkHref
   const servicesText: string = data.allContentfulSection.nodes[0].title
   const workHref: string = data.allContentfulSection.nodes[1].linkHref
@@ -130,19 +137,25 @@ export default function NavHeader(props: ResponsiveProps) {
   items.push({ href: careersHref, text: careersText })
 
   // Styles
-  const navbarStyle: string = desktopStyles.navbar  + " " + orientationStyles.horizontalFlex
+  const navbarStyle: string = desktopStyles.navbar 
+        + " " + mobileStyles.navbar + " " + mobileStyles.menuHidden
   const homeItem: string = desktopStyles.homeItemDesktop
   const navItemList: string = desktopStyles.marginVerticalAuto
         + " " + orientationStyles.horizontalFlex
   const navItem: string = desktopStyles.marginVerticalAuto
   const chilidogStyle: string = mobileStyles.chilidog + " " + mobile
+  const menuId: string = "nav-menu"
 
   function onChilidogClick(): void {
-    if (!isMobileMenuOpen) {
-      const menu: HTMLElement | null = document.getElementById(mobileMenuId)
-      menu.classList.remove(styles.mobileMenuHidden)
-      menu.classList.add(styles.mobileMenuActive)
-      setIsMenuOpen(true)
+    if (!mobileMenuActive) {
+      const menu: HTMLElement | null = document.getElementById(menuId)
+      console.log("MENU")
+      console.log(menu)
+      if (menu || !!menu) {
+        menu.classList.remove(mobileStyles.menuHidden)
+        menu.classList.add(mobileStyles.menuActive)
+        setMobileMenuActive(true)
+      }
     }
   }
 
@@ -154,7 +167,9 @@ export default function NavHeader(props: ResponsiveProps) {
         text={title}
       />
       <NavMenu
-        id="nav-menu"
+        menuId={menuId}
+        mobileMenuActive={mobileMenuActive}
+        setMobileMenuActive={setMobileMenuActive}
         items={items}
       />
       <SvgButton
