@@ -1,17 +1,16 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import { HomeNavButton, NavButton, SvgButton, CareersNavButton } from "../buttons"
-import { isMobile, ResponsiveProps } from "../../utils"
-import { NavItemInfo, NavItemsProps } from "./utils"
+import { HomeNavButton, NavButton, SvgButton, CareersNavButton } from "./buttons"
+import { isMobile, ResponsiveProps } from "../utils"
 
-import Chilidogmenu from "../../images/svg/chilidogmenu.svg"
-import Menuclose from "../../images/svg/menuclose.svg"
+import Chilidogmenu from "../images/svg/chilidogmenu.svg"
+import Menuclose from "../images/svg/menuclose.svg"
 
-import * as mobileStyles from "../../styles/mobileNavbar.module.css"
-import * as desktopStyles from "../../styles/desktopNavbar.module.css"
-import * as orientationStyles from "../../styles/utilities/orientation.module.css"
-import { hidden, desktop, mobile } from "../../styles/utilities/visibility.module.css"
+import * as mobileStyles from "../styles/mobileNavbar.module.css"
+import * as desktopStyles from "../styles/desktopNavbar.module.css"
+import * as orientationStyles from "../styles/utilities/orientation.module.css"
+import { hidden, desktop, mobile } from "../styles/utilities/visibility.module.css"
 
 import NavDesktop from "./desktop"
 import NavMobile from "./mobile"
