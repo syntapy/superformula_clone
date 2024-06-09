@@ -37,7 +37,7 @@ type ResponsiveNavItemsProps = NavItemsProps | ResponsiveProps
 function NavItems(props: ResponsiveNavItemsProps) {
   const closeBtnStyle: string = mobileStyles.closeBtn
   const itemListStyle: string = mobileStyles.mobileMenu
-      + " " + desktopStyles.desktopMenu
+      + " " + mobileStyles.menuHidden
       + " " + orientationStyles.mobileV_desktopH
   const navItem: string = mobileStyles.mobileNavItem
 
@@ -138,7 +138,7 @@ export default function NavBar() {
 
   // Styles
   const navbarStyle: string = desktopStyles.navbar 
-        + " " + mobileStyles.navbar + " " + mobileStyles.menuHidden
+        + " " + mobileStyles.navbar
   const homeItem: string = desktopStyles.homeItemDesktop
   const navItemList: string = desktopStyles.marginVerticalAuto
         + " " + orientationStyles.horizontalFlex
