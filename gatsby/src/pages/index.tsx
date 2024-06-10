@@ -64,7 +64,7 @@ export const data = graphql`
 const IndexPage: React.FC<PageProps<PageData>> = ({data}: Queries.landingPageQuery) => {
   return (
     <div className={styles.root}>
-      <Header isMobile={utils.isMobile} />
+      <Header />
       <Toast message={"This is a practice clone site and is not the actual Superformula website"} />
       <main>
         <SectionBlack className={sectionStyles.firstSection}>
