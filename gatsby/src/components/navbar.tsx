@@ -7,8 +7,9 @@ import { isMobile, ResponsiveProps } from "../utils"
 import Chilidogmenu from "../images/svg/chilidogmenu.svg"
 import Menuclose from "../images/svg/menuclose.svg"
 
-import * as mobileStyles from "../styles/mobileNavbar.module.css"
-import * as desktopStyles from "../styles/desktopNavbar.module.css"
+import * as stylesMobile from "../styles/navbar/mobile.module.css"
+import * as stylesDesktop from "../styles/navbar/desktop.module.css"
+import * as styles from "../styles/navbar/common.module.css"
 import * as orientationStyles from "../styles/utilities/orientation.module.css"
 import { hidden, desktop, mobile } from "../styles/utilities/visibility.module.css"
 
@@ -35,17 +36,17 @@ interface ResponsiveProps {
 type ResponsiveNavItemsProps = NavItemsProps | ResponsiveProps
 
 function NavItems(props: ResponsiveNavItemsProps) {
-  const closeBtnStyle: string = mobileStyles.closeBtn
-  const itemListStyle: string = mobileStyles.mobileMenu
-      + " " + mobileStyles.menuHidden
+  const closeBtnStyle: string = stylesMobile.closeBtn
+  const itemListStyle: string = stylesMobile.mobileMenu
+      + " " + stylesMobile.menuHidden
       + " " + orientationStyles.mobileV_desktopH
-  const navItem: string = mobileStyles.mobileNavItem
+  const navItem: string = stylesMobile.mobileNavItem
 
   function onMenuCloseClick(): void {
     const menu: HTMLElement | null = document.getElementById(props.menuId)
     if (menu || !!menu) {
-      menu.classList.remove(mobileStyles.menuActive)
-      menu.classList.add(mobileStyles.menuHidden)
+      menu.classList.remove(stylesMobile.menuActive)
+      menu.classList.add(stylesMobile.menuHidden)
       props.setMobileMenuActive(false)
     }
   }
@@ -75,7 +76,7 @@ function NavItems(props: ResponsiveNavItemsProps) {
 }
 
 function NavMenu(props: ResponsiveNavItemsProps) {
-  const closeBtnStyle: string = mobileStyles.mobileMenuCloseBtn 
+  const closeBtnStyle: string = stylesMobile.mobileMenuCloseBtn 
       + " " + mobile
       + " " + orientationStyles.horizontalFlex
   const navItemsStyle: string = orientationStyles.mobileV_desktopH
@@ -134,21 +135,22 @@ export default function NavBar() {
   items.push({ href: careersHref, text: careersText })
 
   // Styles
-  const navbarStyle: string = desktopStyles.navbar 
-        + " " + mobileStyles.navbar
-  const homeItem: string = desktopStyles.homeItemDesktop
-  const navItemList: string = desktopStyles.marginVerticalAuto
+  const navbarStyle: string = styles.navbar
+        + " " + stylesDesktop.navbar 
+        + " " + stylesMobile.navbar
+  const homeItem: string = stylesDesktop.homeItemDesktop
+  const navItemList: string = stylesDesktop.marginVerticalAuto
         + " " + orientationStyles.horizontalFlex
-  const navItem: string = desktopStyles.marginVerticalAuto
-  const chilidogStyle: string = mobileStyles.chilidog + " " + mobile
+  const navItem: string = stylesDesktop.marginVerticalAuto
+  const chilidogStyle: string = stylesMobile.chilidog + " " + mobile
   const menuId: string = "nav-menu"
 
   function onChilidogClick(): void {
     if (!mobileMenuActive) {
       const menu: HTMLElement | null = document.getElementById(menuId)
       if (menu || !!menu) {
-        menu.classList.remove(mobileStyles.menuHidden)
-        menu.classList.add(mobileStyles.menuActive)
+        menu.classList.remove(stylesMobile.menuHidden)
+        menu.classList.add(stylesMobile.menuActive)
         setMobileMenuActive(true)
       }
     }

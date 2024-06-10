@@ -1,6 +1,5 @@
-:import('./vars.module.css') {
+:import('../vars.module.css') {
 	$max-mobile-width: max-mobile-width;
-	$nav-height: nav-height;
 }
 
 .closeBtn {
@@ -9,11 +8,8 @@
 
 @media (max-width: $max-mobile-width) {
     .navbar {
-        display: flex;
         flex-direction: column;
         padding: auto;
-        width: 100%;
-        height: $nav-height;
     }
 
     .closeBtn {
@@ -28,12 +24,14 @@
         width: 100%;
         height: $nav-height;
     }
+
     .chilidog {
         position: absolute;
         top: 6px;
         right: 2.0rem;
         margin: auto 0;
     }
+
     .navHomeItem {
         flex: 0.1 1 0;
         margin-top: 1rem;

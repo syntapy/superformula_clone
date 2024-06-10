@@ -1,0 +1,10 @@
+:import('../vars.module.css') {
+	$nav-height: nav-height;
+}
+
+.navbar {
+  display: flex;
+  border-bottom: 1px solid #dcded6;
+  height: $nav-height;
+  width: 100%;
+}
