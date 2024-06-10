@@ -138,7 +138,8 @@ export default function NavBar() {
   const navbarStyle: string = styles.navbar
         + " " + stylesDesktop.navbar 
         + " " + stylesMobile.navbar
-  const homeItem: string = stylesDesktop.homeItemDesktop
+  const homeItem: string = stylesDesktop.homeItem
+        + " " + stylesMobile.homeItem
   const navItemList: string = stylesDesktop.marginVerticalAuto
         + " " + orientationStyles.horizontalFlex
   const navItem: string = stylesDesktop.marginVerticalAuto

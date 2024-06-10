@@ -32,12 +32,8 @@
         margin: auto 0;
     }
 
-    .navHomeItem {
-        flex: 0.1 1 0;
-        margin-top: 1rem;
-        width: 100%;
-        padding: 2rem auto;
-        text-align: center;
+    .homeItem {
+        margin: auto auto auto 0;
     }
 
     .navItem {

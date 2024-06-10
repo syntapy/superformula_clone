@@ -2,12 +2,6 @@
 	$max-mobile-width: max-mobile-width;
 }
 
-@media (max-width: $max-mobile-width) {
-    .homeItemDesktop {
-        display: none;
-    }
-}
-
 @media (min-width: calc($max-mobile-width + 1px)) {
     .navbar {
         flex-direction: row;
@@ -35,7 +29,7 @@
         margin: auto 0;
     }
 
-    .homeItemDesktop {
+    .homeItem {
         margin: auto auto auto 0;
     }
 
