@@ -1,9 +1,6 @@
 import * as React from "react"
 import * as styles from "../styles/buttons.module.css"
-
-interface StyleProps {
-  className?: string
-}
+import { StyleProps } from "../utils"
 
 interface ButtonProps {
   href: string

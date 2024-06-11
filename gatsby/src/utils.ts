@@ -1,5 +1,9 @@
 import * as styleVars from "./styles/vars.module.css"
 
+export interface StyleProps {
+  className?: string
+}
+
 export interface ResponsiveProps {
   isMobile: () => boolean
 }

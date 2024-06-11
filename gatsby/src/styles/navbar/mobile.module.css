@@ -7,9 +7,8 @@
 }
 
 @media (max-width: $max-mobile-width) {
-    .navbar {
-        flex-direction: column;
-        padding: auto;
+    .chilidog {
+        box-sizing: border-box;
     }
 
     .closeBtn {
@@ -19,31 +18,7 @@
         top: 1.45rem;
     }
 
-    .mobileMenuRoot {
-        padding: auto;
-        width: 100%;
-        height: $nav-height;
-    }
-
-    .chilidog {
-        position: absolute;
-        top: 6px;
-        right: 2.0rem;
-        margin: auto 0;
-    }
-
-    .homeItem {
-        margin: auto auto auto 0;
-    }
-
-    .navItem {
-        flex: 0.1 1 0;
-        text-align: center;
-        width: 100%;
-        padding: 2rem auto;
-    }
-
-    .mobileMenu {
+    .navItems {
       position: fixed;
       right: 0;
       left: 0;
@@ -59,15 +34,11 @@
       z-index: 666;
     }
 
-    .menuActive {
+    .navItemsActive {
       bottom: 0;
     }
 
-    .menuHidden {
+    .navItemsHidden {
       bottom: 100%;
-    }
-
-    .navHeaderMobile {
-        height: 100%;
     }
 }

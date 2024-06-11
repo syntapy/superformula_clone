@@ -7,6 +7,8 @@ import { isMobile, ResponsiveProps } from "../utils"
 import Chilidogmenu from "../images/svg/chilidogmenu.svg"
 import Menuclose from "../images/svg/menuclose.svg"
 
+import { StyleProps } from "../utils"
+
 import * as stylesMobile from "../styles/navbar/mobile.module.css"
 import * as stylesDesktop from "../styles/navbar/desktop.module.css"
 import * as styles from "../styles/navbar/common.module.css"
@@ -35,18 +37,15 @@ interface ResponsiveProps {
 
 type ResponsiveNavItemsProps = NavItemsProps | ResponsiveProps
 
-function NavItems(props: ResponsiveNavItemsProps) {
+function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
   const closeBtnStyle: string = stylesMobile.closeBtn
-  const itemListStyle: string = stylesMobile.mobileMenu
-      + " " + stylesMobile.menuHidden
-      + " " + orientationStyles.mobileV_desktopH
   const navItem: string = stylesMobile.mobileNavItem
 
   function onMenuCloseClick(): void {
     const menu: HTMLElement | null = document.getElementById(props.menuId)
     if (menu || !!menu) {
-      menu.classList.remove(stylesMobile.menuActive)
-      menu.classList.add(stylesMobile.menuHidden)
+      menu.classList.remove(stylesMobile.navItemsActive)
+      menu.classList.add(stylesMobile.navItemsHidden)
       props.setMobileMenuActive(false)
     }
   }
@@ -56,7 +55,7 @@ function NavItems(props: ResponsiveNavItemsProps) {
   }
 
   return (
-    <div id={props.menuId} className={itemListStyle}>
+    <div id={props.menuId} className={props.className}>
       <SvgButton
         className={closeBtnStyle}
         onClick={onMenuCloseClick}
@@ -72,23 +71,6 @@ function NavItems(props: ResponsiveNavItemsProps) {
         text={props.items[4].text}
       />
     </div>
-  )
-}
-
-function NavMenu(props: ResponsiveNavItemsProps) {
-  const closeBtnStyle: string = stylesMobile.mobileMenuCloseBtn 
-      + " " + mobile
-      + " " + orientationStyles.horizontalFlex
-  const navItemsStyle: string = orientationStyles.mobileV_desktopH
-
-  return (
-    <NavItems
-      menuId={props.menuId}
-      className={navItemsStyle}
-      items={props.items}
-      mobileMenuActive={props.mobileMenuActive}
-      setMobileMenuActive={props.setMobileMenuActive}
-    />
   )
 }
 
@@ -135,14 +117,14 @@ export default function NavBar() {
   items.push({ href: careersHref, text: careersText })
 
   // Styles
-  const navbarStyle: string = styles.navbar
+  const navStyle: string = styles.navbar
         + " " + stylesDesktop.navbar 
         + " " + stylesMobile.navbar
-  const homeItem: string = stylesDesktop.homeItem
-        + " " + stylesMobile.homeItem
-  const navItemList: string = stylesDesktop.marginVerticalAuto
-        + " " + orientationStyles.horizontalFlex
-  const navItem: string = stylesDesktop.marginVerticalAuto
+
+  const navItemsStyle: string = stylesDesktop.navItems
+      + " " + stylesMobile.navItems
+      + " " + stylesMobile.navItemsHidden
+      + " " + orientationStyles.mobileV_desktopH
   const chilidogStyle: string = stylesMobile.chilidog + " " + mobile
   const menuId: string = "nav-menu"
 
@@ -150,25 +132,25 @@ export default function NavBar() {
     if (!mobileMenuActive) {
       const menu: HTMLElement | null = document.getElementById(menuId)
       if (menu || !!menu) {
-        menu.classList.remove(stylesMobile.menuHidden)
-        menu.classList.add(stylesMobile.menuActive)
+        menu.classList.remove(stylesMobile.navItemsHidden)
+        menu.classList.add(stylesMobile.navItemsActive)
         setMobileMenuActive(true)
       }
     }
   }
 
   return (
-    <nav className={navbarStyle}>
+    <nav className={navStyle}>
       <HomeNavButton 
-        className={homeItem}
         href="/"
         text={title}
       />
-      <NavMenu
+      <NavItems
+        className={navItemsStyle}
         menuId={menuId}
+        items={items}
         mobileMenuActive={mobileMenuActive}
         setMobileMenuActive={setMobileMenuActive}
-        items={items}
       />
       <SvgButton
         className={chilidogStyle}

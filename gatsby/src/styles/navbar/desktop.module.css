@@ -3,24 +3,6 @@
 }
 
 @media (min-width: calc($max-mobile-width + 1px)) {
-    .navbar {
-        flex-direction: row;
-        box-sizing: border-box;
-        padding: 5px 10px 15px 10px;
-        margin: 0 1rem;
-        position: relative;
-    }
-
-    .mobileMenuCloseBtn {
-        position: absolute;
-        left: 3rem;
-        top: 1.45rem;
-    }
-
-    /* Index */
-    .navIndexRoot {
-    }
-
     .navHeaderHomeItem {
         margin: auto auto auto 0;
     }
@@ -29,14 +11,8 @@
         margin: auto 0;
     }
 
-    .homeItem {
-        margin: auto auto auto 0;
-    }
-
-    /* all */
-    .navItem {
-        flex: 0 1 0;
-        margin: auto 0;
-        padding: 0 0.4rem;
+    .navItems {
+        align-items: center;
+        justify-content: flex-end;
     }
 }
