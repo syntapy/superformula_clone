@@ -118,8 +118,8 @@ export default function NavBar() {
 
   // Styles
   const navStyle: string = styles.navbar
-        + " " + stylesDesktop.navbar 
-        + " " + stylesMobile.navbar
+      + " " + stylesDesktop.navbar 
+      + " " + stylesMobile.navbar
 
   const navItemsStyle: string = stylesDesktop.navItems
       + " " + stylesMobile.navItems
