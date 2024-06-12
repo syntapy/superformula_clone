@@ -27,6 +27,7 @@ type NavItemsList = [NavItemInfo, NavItemInfo, NavItemInfo, NavItemInfo, NavItem
 
 interface NavItemsProps {
   menuId: string
+  title: string
   items: NavItemsList
 }
 
@@ -39,6 +40,7 @@ type ResponsiveNavItemsProps = NavItemsProps | ResponsiveProps
 
 function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
   const closeBtnStyle: string = stylesMobile.closeBtn
+  const homeNavItemStyle: string = stylesDesktop.navItemsHomeNavItem
   const navItem: string = stylesMobile.mobileNavItem
 
   function onMenuCloseClick(): void {
@@ -60,6 +62,11 @@ function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
         className={closeBtnStyle}
         onClick={onMenuCloseClick}
         icon={<Menuclose width={40} height={40} />}
+      />
+      <HomeNavButton 
+        className={homeNavItemStyle}
+        href="/"
+        text={props.title}
       />
       <NavButton className={navItem} href={props.items[0].href} text={props.items[0].text} />
       <NavButton className={navItem} href={props.items[1].href} text={props.items[1].text} />
@@ -147,6 +154,7 @@ export default function NavBar() {
       <NavItems
         className={navItemsStyle}
         menuId={menuId}
+        title={title}
         items={items}
         mobileMenuActive={mobileMenuActive}
         setMobileMenuActive={setMobileMenuActive}

@@ -11,6 +11,10 @@
         margin: auto 0;
     }
 
+    .navItemsHomeNav {
+        display: none;
+    }
+
     .navItems {
         align-items: center;
         justify-content: flex-end;

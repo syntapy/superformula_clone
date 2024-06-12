@@ -18,6 +18,10 @@
         top: 1.45rem;
     }
 
+    .navItemsHomeNav {
+
+    }
+
     .navItems {
       position: fixed;
       right: 0;
@@ -25,11 +29,14 @@
       box-sizing: border-box;
       justify-content: flex-start;
       align-items: center;
+      padding-top: 4rem;
+      row-gap: 4rem;
       height: 100%;
       width: 100%;
       background-color: #1a1a1a;
       transition: bottom 0.5s ease-in-out;
       z-index: 666;
+      border: 1px solid red;
     }
 
     .navItemsActive {
