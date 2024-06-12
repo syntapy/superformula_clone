@@ -64,17 +64,28 @@ function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
         icon={<Menuclose width={40} height={40} />}
       />
       <HomeNavButton 
-        className={homeNavItemStyle}
-        text={props.title}
+        dataCy="home-nav-item"
+        className={homeNavItemStyle} text={props.title}
       />
-      <NavButton className={navItem} href={props.items[0].href} text={props.items[0].text} />
-      <NavButton className={navItem} href={props.items[1].href} text={props.items[1].text} />
-      <NavButton className={navItem} href={props.items[2].href} text={props.items[2].text} />
-      <NavButton className={navItem} href={props.items[3].href} text={props.items[3].text} />
+      <NavButton 
+        dataCy="services-nav-item"
+        className={navItem} href={props.items[0].href} text={props.items[0].text} 
+      />
+      <NavButton 
+        dataCy="work-nav-item"
+        className={navItem} href={props.items[1].href} text={props.items[1].text}
+      />
+      <NavButton
+        dataCy="articles-nav-item"
+        className={navItem} href={props.items[2].href} text={props.items[2].text}
+      />
+      <NavButton
+        dataCy="contact-nav-item"
+        className={navItem} href={props.items[3].href} text={props.items[3].text}
+      />
       <CareersNavButton 
-        className={navItem}
-        href={props.items[4].href}
-        text={props.items[4].text}
+        dataCy="careers-nav-item"
+        className={navItem} href={props.items[4].href} text={props.items[4].text}
       />
     </div>
   )
