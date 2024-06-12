@@ -40,7 +40,7 @@ type ResponsiveNavItemsProps = NavItemsProps | ResponsiveProps
 
 function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
   const closeBtnStyle: string = stylesMobile.closeBtn
-  const homeNavItemStyle: string = stylesDesktop.navItemsHomeNavItem
+  const homeNavItemStyle: string = stylesDesktop.navItemsHomeNav
   const navItem: string = stylesMobile.mobileNavItem
 
   function onMenuCloseClick(): void {
