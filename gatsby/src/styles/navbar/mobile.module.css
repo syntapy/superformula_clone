@@ -36,7 +36,6 @@
       background-color: #1a1a1a;
       transition: bottom 0.5s ease-in-out;
       z-index: 666;
-      border: 1px solid red;
     }
 
     .navItemsActive {
