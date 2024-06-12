@@ -65,7 +65,6 @@ function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
       />
       <HomeNavButton 
         className={homeNavItemStyle}
-        href="/"
         text={props.title}
       />
       <NavButton className={navItem} href={props.items[0].href} text={props.items[0].text} />
@@ -148,7 +147,6 @@ export default function NavBar() {
   return (
     <nav className={navStyle}>
       <HomeNavButton 
-        href="/"
         text={title}
       />
       <NavItems
