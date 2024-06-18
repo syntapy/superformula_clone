@@ -12,7 +12,7 @@ mobile.devices.forEach((device) => {
       it('navbar expanded audit', () => {
         if (!isDesktopMenuOnMobile(device, orientation)) {
           cy.get('[data-cy="chilidog-svg"]').click().wait(animationWaitTime).then(() => {
-            cy.pa11yWithDefaultSettings({})
+            cy.pa11y()
           })
         }
       })
