@@ -1,8 +1,8 @@
-import { mobile, waitTime, animationWaitTime, isDesktopMenuOnMobile } from '../support/utils.js'
+import { mobile, waitTime, animationWaitTime, clickWaitTime, isDesktopMenuOnMobile } from '../support/utils.js'
 
 mobile.devices.forEach((device) => {
   mobile.orientationList.forEach((orientation) => {
-    describe('mobile tests: ' + device + ' (' + orientation + ')', () => {
+    describe('mobile audit: ' + device + ' (' + orientation + ')', () => {
       beforeEach(() => {
         cy.viewport(device, orientation)
         cy.visit('/')
@@ -15,6 +15,12 @@ mobile.devices.forEach((device) => {
             cy.pa11y()
           })
         }
+      })
+
+      it('page screenshot', () => {
+        cy.get('#toast-close-button').click().wait(clickWaitTime).then(() => {
+          cy.pa11y()
+        })
       })
     })
   })
