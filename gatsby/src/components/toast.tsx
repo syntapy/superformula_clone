@@ -48,6 +48,7 @@ export default function Toast(props: ToastProps) {
       <div className={inlineStyle + " " + svgPadStyle}>
         <SvgButton
           className={svgTranslateStyle}
+          aria-label="Close"
           icon={<Exclamation width={14} height={14} data-cy="cy-toast-exclamation-svg" />}
         />
       </div>

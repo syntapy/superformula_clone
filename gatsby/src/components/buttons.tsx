@@ -86,7 +86,7 @@ export function ArticleButton(props: ButtonProps) {
 
 interface SvgProps {
   icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>
-  alt: string
+  aria-label: string
 }
 
 export function SvgButton(props: StyleProps & SvgProps) {
@@ -103,7 +103,7 @@ export function SvgButton(props: StyleProps & SvgProps) {
     <button 
       style={dimensionStyle}
       className={className}
-      alt={props.alt}
+      aria-label={props.aria-label}
       onClick={props.onClick}
     >
       {props.icon}
