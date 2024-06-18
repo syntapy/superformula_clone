@@ -36,4 +36,4 @@ jobs:
       - env:
           CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
           CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
-        run: cd gatsby && npm ci && npm run cy:install && npm run audit
+        run: cd gatsby && npm ci && npm run cy:install && npm run audit:ci
