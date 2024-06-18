@@ -23,7 +23,7 @@
     "cy:open": "cypress open",
     "cy:help": "cypress run --help",
     "e2e": "cypress run --e2e --browser chrome",
-    "audit": "cypress run --browser chrome --spec 'cypress/audit/**/*.cy.js'",
+    "audit": "cypress run --browser chrome --spec 'cypress/audit/**/*.audit.cy.js'",
     "e2e:ci": "start-server-and-test develop http://localhost:8000 e2e",
     "e2e:reset": "cypress run --env type=base --e2e --browser chrome",
     "e2e:report": "reg-cli ./cypress/screenshots ./cypress/base ./cypress/_diff -R ./cypress/report.html",

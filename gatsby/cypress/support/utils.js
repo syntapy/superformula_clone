@@ -21,6 +21,13 @@ export const mobile = {
   ]
 }
 
+export const audit_devices = {
+  devices: [
+    "iphone-6",
+    "macbook-16"
+  ]
+}
+
 export const clickWaitTime = 100
 export const waitTime = 1400
 export const animationWaitTime = 750
