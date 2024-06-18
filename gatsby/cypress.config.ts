@@ -14,7 +14,7 @@ export default defineConfig({
   e2e: {
     video: false,
     baseUrl: "http://localhost:8000",
-    specPattern: ["cypress/e2e/**/*.cy.js"],
+    specPattern: ["cypress/e2e/**/*.cy.js", "cypress/audit/**/*.cy.js"],
     setupNodeEvents(on, config) {
       // implement node event listeners here
       getCompareSnapshotsPlugin(on, config)
