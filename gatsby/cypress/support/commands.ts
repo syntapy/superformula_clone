@@ -49,3 +49,10 @@ Cypress.Commands.add('getViewport', () => {
     return {width: win.innerWidth, height: win.innerHeight};
   })
 })
+
+/// <reference types="cypress" />
+/// <reference types="@appsfactory/cypress-audit/packages/lighthouse/commands" />
+/// <reference types="@appsfactory/cypress-audit/packages/pa11y/commands" />
+
+import "@appsfactory/cypress-audit/packages/pa11y/commands"
+import "@appsfactory/cypress-audit/packages/lighthouse/commands"
