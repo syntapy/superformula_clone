@@ -21,12 +21,12 @@ mobile.devices.forEach((device) => {
       it('navbar expanded', () => {
         if (!isDesktopMenuOnMobile(device, orientation)) {
           cy.get('[data-cy="chilidog-svg"]').click().wait(animationWaitTime).then(() => {
-            cy.get('[data-cy="home-nav-mobile"]').should('be.visible')
-            cy.get('[data-cy="services-nav-mobile"]').should('be.visible')
-            cy.get('[data-cy="work-nav-mobile"]').should('be.visible')
-            cy.get('[data-cy="articles-nav-mobile"]').should('be.visible')
-            cy.get('[data-cy="contact-nav-mobile"]').should('be.visible')
-            cy.get('[data-cy="careers-nav-mobile"]').should('be.visible')
+            cy.get('[data-cy="home-nav-item"]').should('be.visible')
+            cy.get('[data-cy="services-nav-item"]').should('be.visible')
+            cy.get('[data-cy="work-nav-item"]').should('be.visible')
+            cy.get('[data-cy="articles-nav-item"]').should('be.visible')
+            cy.get('[data-cy="contact-nav-item"]').should('be.visible')
+            cy.get('[data-cy="careers-nav-item"]').should('be.visible')
 
             cy.compareSnapshot('navbar_expanded_' + device + '_' + orientation, {
               errorThreshold: errorThreshold

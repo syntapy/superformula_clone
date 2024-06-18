@@ -1,3 +1,7 @@
+:import('./vars.module.css') {
+	$max-mobile-width: max-mobile-width;
+}
+
 .homeNavButton {
 }
 
@@ -8,12 +12,14 @@
     text-decoration: none;
 }
 
-.navButton {
-	padding: 0 0.8rem;
-}
+@media (min-width: calc($max-mobile-width + 1px)) {
+    .navButton {
+        padding: 0 0 0 1.6rem;
+    }
 
-.careersNavButton {
-	padding: 0 0.4rem;
+    .careersNavButton {
+        padding: 0 0 0 0.8rem;
+    }
 }
 
 .svgButton {

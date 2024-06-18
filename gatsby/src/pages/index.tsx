@@ -1,7 +1,6 @@
 import * as React from "react"
 
 import Header from "../components/header"
-import Toast from "../components/toast"
 import waves from "../images/svg/sf-white-waves.svg"
 
 import ig from "../images/svg/ig.svg"
@@ -64,8 +63,7 @@ export const data = graphql`
 const IndexPage: React.FC<PageProps<PageData>> = ({data}: Queries.landingPageQuery) => {
   return (
     <div className={styles.root}>
-      <Header isMobile={utils.isMobile} />
-      <Toast message={"This is a practice clone site and is not the actual Superformula website"} />
+      <Header />
       <main>
         <SectionBlack className={sectionStyles.firstSection}>
           <HeaderSection

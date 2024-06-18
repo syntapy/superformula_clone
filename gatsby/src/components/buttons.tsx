@@ -1,12 +1,9 @@
 import * as React from "react"
 import * as styles from "../styles/buttons.module.css"
-
-interface StyleProps {
-  className?: string
-}
+import { StyleProps } from "../utils"
 
 interface ButtonProps {
-  href: string
+  href?: string
   text: string
 }
 
@@ -28,7 +25,7 @@ export function HomeNavButton(props: ButtonProps & StyleProps & DataCyProps) {
   let className: string = styles.homeNavButton + " " + props.className
   return (
     <div data-cy={props.dataCy} className={className}>
-      <A href={props.href}>{props.text}</A>
+      <A href="/">{props.text}</A>
     </div>
   )
 }

@@ -2,12 +2,16 @@ import * as React from "react"
 import type { HeadFC } from "gatsby"
 
 import NavBar from "../components/navbar"
-import { ResponsiveProps } from "../utils"
+import Toast from "../components/toast"
 
-export default function Header(props: ResponsiveProps) {
+import * as styles from "../styles/header.module.css"
+
+export default function Header() {
+  const headerStyles: string = styles.header
   return (
-    <header>
-      <NavBar isMobile={props.isMobile} />
+    <header className={headerStyles}>
+      <NavBar />
+      <Toast message={"This is a practice clone site and is not the actual Superformula website"} />
     </header>
   )
 }

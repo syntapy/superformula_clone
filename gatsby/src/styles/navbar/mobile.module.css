@@ -1,0 +1,48 @@
+:import('../vars.module.css') {
+	$max-mobile-width: max-mobile-width;
+}
+
+.closeBtn {
+    display: none;
+}
+
+@media (max-width: $max-mobile-width) {
+    .chilidog {
+        box-sizing: border-box;
+    }
+
+    .closeBtn {
+        display: block;
+        position: absolute;
+        left: 3rem;
+        top: 1.45rem;
+    }
+
+    .navItemsHomeNav {
+
+    }
+
+    .navItems {
+      position: fixed;
+      right: 0;
+      left: 0;
+      box-sizing: border-box;
+      justify-content: flex-start;
+      align-items: center;
+      padding-top: 2rem;
+      row-gap: 2rem;
+      height: 100%;
+      width: 100%;
+      background-color: #1a1a1a;
+      transition: bottom 0.5s ease-in-out;
+      z-index: 666;
+    }
+
+    .navItemsActive {
+      bottom: 0;
+    }
+
+    .navItemsHidden {
+      bottom: 100%;
+    }
+}
