@@ -105,6 +105,9 @@ export function ServicesSection(props: ServicesSectionProps) {
   const className: string = orientationStyles.mobileV_desktopH
   const imgClassName: string = servicesStyles.servicesImg
   const flexItem: string = servicesStyles.servicesItem
+  if (props.alt === undefined || props.alt === "") {
+    throw new Error()
+  }
   return (
     <React.Fragment>
       <div className={className}>
@@ -122,7 +125,7 @@ export function ServicesSection(props: ServicesSectionProps) {
 
 interface img {
   src: string
-  alt?: string
+  alt: string
 }
 
 interface CultureSectionProps {
@@ -139,6 +142,9 @@ interface CultureSectionProps {
 import * as cultureStyles from "../styles/section/culture.module.css"
 function CultureImgMobile(props: img) {
   const className: string = styles.img
+  if (props.img.alt === undefined || props.img.alt === "") {
+    throw new Error()
+  }
   return <img className={className} src={props.img.src} alt={props.img.alt} />
 }
 
@@ -149,6 +155,9 @@ export function CultureImgDesktop(props: {imgs: img[]}) {
         {props.imgs.map((img, index) => {
           let imgClassName = stylesList[index] + ' ' + cultureStyles.imgDesktopMargin
           let wrapperClassName = cultureStyles.imgDesktopMargin + ' ' + cultureStyles.imgDesktopFlexItem
+          if (img.alt === undefined || img.alt === "") {
+            throw new Error()
+          }
           return <div className={wrapperClassName} key={index.toString()}>
                   <img className={imgClassName} 
                     src={img.src} 
