@@ -46,6 +46,7 @@ export const data = graphql`
           }
         }
         imageSrc {
+          description
           file {
             url
           }
@@ -79,6 +80,7 @@ const IndexPage: React.FC<PageProps<PageData>> = ({data}: Queries.landingPageQue
               title={data.allContentfulSection.nodes[2].title}
               href={data.allContentfulSection.nodes[2].linkHref}
               src={data.allContentfulSection.nodes[2].imageSrc.file.url}
+              alt={data.allContentfulSection.nodes[2].imageSrc.description}
               dataCy="insight-img-a"
               tags={data.allContentfulSection.nodes[2].tags}
             />
@@ -86,6 +88,7 @@ const IndexPage: React.FC<PageProps<PageData>> = ({data}: Queries.landingPageQue
               title={data.allContentfulSection.nodes[3].title}
               href={data.allContentfulSection.nodes[3].linkHref}
               src={data.allContentfulSection.nodes[3].imageSrc.file.url}
+              alt={data.allContentfulSection.nodes[3].imageSrc.description}
               dataCy="insight-img-b"
               tags={data.allContentfulSection.nodes[3].tags}
             />
@@ -103,7 +106,7 @@ const IndexPage: React.FC<PageProps<PageData>> = ({data}: Queries.landingPageQue
             subtitle={data.allContentfulSection.nodes[5].subtitle}
             description={data.allContentfulSection.nodes[5].description}
             src={data.allContentfulSection.nodes[5].imageSrc.file.url}
-            alt={data.allContentfulSection.nodes[5].imageAlt}
+            alt={data.allContentfulSection.nodes[5].imageSrc.description}
             href={data.allContentfulSection.nodes[5].linkHref}
             buttonText={data.allContentfulSection.nodes[5].buttonText}
           />

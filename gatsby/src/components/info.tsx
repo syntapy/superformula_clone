@@ -19,6 +19,7 @@ function HashTags(props: HashTagsProps) {
 
 interface InsightProps {
   title: string
+  alt: string
   src: string
   dataCy: string
   tags: string[]
