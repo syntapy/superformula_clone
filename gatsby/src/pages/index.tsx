@@ -50,7 +50,6 @@ export const data = graphql`
             url
           }
         }
-        imageAlt
         buttonText
         itemList
         linkHref
