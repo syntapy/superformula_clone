@@ -1,6 +1,13 @@
 :import('./vars.module.css') {
-	$toast-bg-color: toast-bg-color;
     $toast-close-spacing: toast-close-spacing;
+}
+
+:import('./vars-colors.module.css') {
+	$toast-bg-color: toast-bg-color;
+    $toast-inset-shadow: toast-inset-shadow;
+    $transparent: transparent;
+    $black-shadow-light: black-shadow-light;
+    $black: black;
 }
 
 .toastContainer {
@@ -23,7 +30,7 @@
 }
 
 .shadow {
-  box-shadow: inset 0px 0px 18px #000000cc, 0px 0px 2px $toast-bg-color;
+  box-shadow: inset 0px 0px 18px $toast-inset-shadow, 0px 0px 2px $toast-bg-color;
 }
 
 .toast {
@@ -55,15 +62,15 @@
 
 .close {
   box-sizing: border-box;
-  background-color: #00000000;
+  background-color: $transparent;
   font-weight: bold;
   font-size: 1.0em;
-  color: #00000099;
+  color: $black-shadow-light;
   border-width: 0px;
   margin: auto;
 }
 
 .close:hover {
-  color: #000000ff;
+  color: $black;
   font-weight: bold;
 }
