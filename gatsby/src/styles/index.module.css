@@ -1,5 +1,9 @@
+:import('./vars.module.css') {
+	$light-font-color: light-font-color;
+}
+
 .root {
-  color: #dcded6;
+  color: $light-font-color;
   overflow: hidden;
   background-color: #000;
   margin: 0;

@@ -1,6 +1,7 @@
 :import('../vars.module.css') {
 	$max-mobile-width: max-mobile-width;
 	$nav-height: nav-height;
+    $light-font-color: light-font-color;
 	$padding-top: padding-top;
 }
 
@@ -20,14 +21,14 @@
 
 .sectionBlack {
 	background-color: #000;
-	color: #dcded6;
+	color: $light-font-color;
 }
 
 .sectionBlack h1 {
 }
 
 .sectionBlack a {
-	color: #dcded6;
+	color: $light-font-color;
 }
 
 .sectionWhite {
