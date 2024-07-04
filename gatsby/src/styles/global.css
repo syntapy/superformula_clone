@@ -1,4 +1,4 @@
-:import('./vars-colors.module.css') {
+:import('./vars_colors.module.css') {
 	$light-font-color: light-font-color;
 }
 

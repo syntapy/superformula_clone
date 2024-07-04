@@ -2,7 +2,7 @@
     $toast-close-spacing: toast-close-spacing;
 }
 
-:import('./vars-colors.module.css') {
+:import('./vars_colors.module.css') {
 	$toast-bg-color: toast-bg-color;
     $toast-inset-shadow: toast-inset-shadow;
     $transparent: transparent;
