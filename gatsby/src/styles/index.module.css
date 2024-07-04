@@ -1,8 +1,5 @@
-:import('./vars.module.css') {
-	$light-font-color: light-font-color;
-}
-
 :import('./vars-colors.module.css') {
+	$light-font-color: light-font-color;
     $black: black;
 }
 
