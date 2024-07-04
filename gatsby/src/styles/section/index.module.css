@@ -1,8 +1,11 @@
 :import('../vars.module.css') {
 	$max-mobile-width: max-mobile-width;
 	$nav-height: nav-height;
-    $light-font-color: light-font-color;
 	$padding-top: padding-top;
+}
+
+:import('../vars_colors.module.css') {
+    $light-font-color: light-font-color;
 }
 
 .section {
