@@ -2,10 +2,14 @@
 	$light-font-color: light-font-color;
 }
 
+:import('./vars-colors.module.css') {
+    $black: black;
+}
+
 .root {
   color: $light-font-color;
   overflow: hidden;
-  background-color: #000;
+  background-color: $black;
   margin: 0;
   padding: 0;
   font-family: "-apple-system", "Roboto", "sans-serif", serif;
