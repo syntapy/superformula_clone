@@ -2,9 +2,6 @@
 	$max-mobile-width: max-mobile-width;
 	$nav-height: nav-height;
 	$padding-top: padding-top;
-}
-
-:import('../vars_colors.module.css') {
     $light-font-color: light-font-color;
 }
 

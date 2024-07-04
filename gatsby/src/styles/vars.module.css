@@ -1,4 +1,10 @@
 :export {
+    light-font-color: #dcded6;
+    toast-bg-color: #debe3aff;
+    toast-inset-shadow: #000000cc;
+    transparent: #00000000;
+    black-shadow-light: #00000099;
+    black: #000000ff;
     toast-close-spacing: 8px;
 	max-mobile-width: 678px;
 	max-mobile-culture-offset: 153px;

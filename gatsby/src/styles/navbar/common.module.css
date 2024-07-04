@@ -1,8 +1,5 @@
 :import('../vars.module.css') {
 	$nav-height: nav-height;
-}
-
-:import('../vars_colors.module.css') {
     $light-font-color: light-font-color;
 }
 
