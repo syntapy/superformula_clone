@@ -1,5 +1,6 @@
 :import('../vars.module.css') {
 	$max-mobile-width: max-mobile-width;
+    $nav-bg-color: nav-bg-color;
 }
 
 .closeBtn {
@@ -33,7 +34,7 @@
       row-gap: 2rem;
       height: 100%;
       width: 100%;
-      background-color: #1a1a1a;
+      background-color: $nav-bg-color;
       transition: bottom 0.5s ease-in-out;
       z-index: 666;
     }
