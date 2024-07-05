@@ -2,6 +2,8 @@
 	$max-mobile-width: max-mobile-width;
 	$nav-height: nav-height;
 	$padding-top: padding-top;
+    $light-font-color: light-font-color;
+    $black: black;
 }
 
 .section {
@@ -19,24 +21,24 @@
 }
 
 .sectionBlack {
-	background-color: #000;
-	color: #dcded6;
+	background-color: $black;
+	color: $light-font-color;
 }
 
 .sectionBlack h1 {
 }
 
 .sectionBlack a {
-	color: #dcded6;
+	color: $light-font-color;
 }
 
 .sectionWhite {
 	background-color: white;
-	color: #000;
+	color: $black;
 }
 
 .sectionWhite a {
-	color: #000;
+	color: $black;
 }
 
 .img0 {
