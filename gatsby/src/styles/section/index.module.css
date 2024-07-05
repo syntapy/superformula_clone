@@ -3,6 +3,7 @@
 	$nav-height: nav-height;
 	$padding-top: padding-top;
     $light-font-color: light-font-color;
+    $black: black;
 }
 
 .section {
@@ -20,7 +21,7 @@
 }
 
 .sectionBlack {
-	background-color: #000;
+	background-color: $black;
 	color: $light-font-color;
 }
 
@@ -33,11 +34,11 @@
 
 .sectionWhite {
 	background-color: white;
-	color: #000;
+	color: $black;
 }
 
 .sectionWhite a {
-	color: #000;
+	color: $black;
 }
 
 .img0 {
