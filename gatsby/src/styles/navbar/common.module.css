@@ -1,5 +1,6 @@
 :import('../vars.module.css') {
 	$nav-height: nav-height;
+    $light-font-color: light-font-color;
 }
 
 .navbar {
@@ -9,7 +10,7 @@
   align-items: center;
   box-sizing: border-box;
   padding: 0 0 0.25rem 0;
-  border-bottom: 1px solid #dcded6;
+  border-bottom: 1px solid $light-font-color;
   height: $nav-height;
   width: 100%;
 }
