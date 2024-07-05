@@ -1,9 +1,5 @@
-:import('./vars.module.css') {
-	$light-font-color: light-font-color;
-}
-
 a {
-	color: $light-font-color;
+	color: #dcded6;
 }
 
 header {
