@@ -172,7 +172,7 @@ function CultureSectionHeader(props: CultureSectionProps) {
   return (
     <React.Fragment>
       <h3>{props.title}</h3>
-      <h5>{props.subtitle}</h5>
+      <h4>{props.subtitle}</h4>
       <p>{props.description}</p>
       <ButtonLight href={props.href} text={props.buttonText} />
       {props.children}
