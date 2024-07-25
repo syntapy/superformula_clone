@@ -68,7 +68,7 @@ Cypress.Commands.add(
       // Thresholds
       {
         // Add more lighthouse options here for more tests
-        accessibility: 80,
+        accessibility: 100,
         // In case you want to overwrite the default thresholds, you can do it via the overwriteTreshholds parameter
         ...overwriteTresholds,
       },

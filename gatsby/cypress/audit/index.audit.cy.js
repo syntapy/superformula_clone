@@ -12,14 +12,14 @@ audit_devices.devices.forEach((device) => {
     if (device === 'iphone-6') {
       it('navbar expanded audit', () => {
         cy.get('[data-cy="chilidog-svg"]').click().wait(animationWaitTime).then(() => {
-          cy.lighthouseWithDefaultSettings( {accessibility: 100} )
+          cy.lighthouseWithDefaultSettings()
         })
       })
     }
 
     it('page audit', () => {
       cy.get('#toast-close-button').click().wait(clickWaitTime).then(() => {
-        cy.lighthouseWithDefaultSettings( {accessibility: 100} )
+        cy.lighthouseWithDefaultSettings()
       })
     })
   })
