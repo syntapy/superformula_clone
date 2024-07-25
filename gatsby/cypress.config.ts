@@ -34,14 +34,14 @@ export default defineConfig({
             return
           }
 
-          const reportsDir = path.join(process.cwd(), 'cypress/reports')
+          const reportsDir = path.join(process.cwd(), 'cypress/')
 
           if (!fs.existsSync(reportsDir)) {
             fs.mkdirSync(reportsDir)
           }
 
           const url = new URL(result.lhr.finalDisplayedUrl)
-          const sanitizedUrlPath = url.pathname.replace(/\//g, '_')
+          const sanitizedUrlPath = url.pathname.replace(/\//g, 'report')
 
           fs.writeFileSync(`${reportsDir}/${sanitizedUrlPath}.html`, htmlReport)
         }),
