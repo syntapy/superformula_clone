@@ -2,6 +2,7 @@ node_modules/
 .cache/
 public
 gatsby/cypress/report.html
+gatsby/cypress/reports
 gatsby/src/gatsby-types.d.ts
 reg.json
 .ssh/

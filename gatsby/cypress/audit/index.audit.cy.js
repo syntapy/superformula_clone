@@ -9,17 +9,17 @@ audit_devices.devices.forEach((device) => {
       cy.wait(waitTime)
     })
 
-    it('navbar expanded audit', () => {
-      if (device === 'iphone-6') {
+    if (device === 'iphone-6') {
+      it('navbar expanded audit', () => {
         cy.get('[data-cy="chilidog-svg"]').click().wait(animationWaitTime).then(() => {
-          cy.pa11y()
+          cy.lighthouseWithDefaultSettings( {accessibility: 100} )
         })
-      }
-    })
+      })
+    }
 
-    it('page screenshot', () => {
+    it('page audit', () => {
       cy.get('#toast-close-button').click().wait(clickWaitTime).then(() => {
-        cy.pa11y()
+        cy.lighthouseWithDefaultSettings( {accessibility: 100} )
       })
     })
   })
