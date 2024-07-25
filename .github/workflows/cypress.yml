@@ -25,7 +25,7 @@ jobs:
           name: image diff output directory
           path: gatsby/cypress/snapshots/diff
         if: failure()
-  a11y_audit:
+  lighthouse_audit:
     runs-on: ubuntu-latest
     steps:
       - name: checkout ${{ env.GITHUB_REF }}
