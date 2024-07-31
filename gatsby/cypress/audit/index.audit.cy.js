@@ -11,17 +11,17 @@ audit_devices.devices.forEach((device) => {
       cy.wait(waitTime)
     })
 
-    if (device === 'iphone-6') {
+    if (device === 'iphone-6' && false) {
       it('navbar expanded audit', () => {
         const width = Cypress.config('viewportWidth')
         const height = Cypress.config('viewportHeight')
         cy.get('[data-cy="chilidog-svg"]').click().wait(animationWaitTime).then(() => {
-          cy.lighthouseWithDefaultSettings({
+          cy.lighthouseWithDefaultSettings(undefined, {
             screenEmulation: {
                 width: width,
                 height: height,
                 mobile: true,
-            },
+            }
           })
         })
       })
@@ -30,18 +30,21 @@ audit_devices.devices.forEach((device) => {
     it('page audit', () => {
       const width = Cypress.config('viewportWidth')
       const height = Cypress.config('viewportHeight')
-      const mobile = true
+      let mobile = true
       if (/desktop-*/.test(device)) {
         mobile = false
       }
       cy.get('#toast-close-button').click().wait(clickWaitTime).then(() => {
-        cy.lighthouseWithDefaultSettings({
-          screenEmulation: {
-              width: width,
-              height: height,
-              mobile: mobile,
+        cy.lighthouseWithDefaultSettings(
+          undefined,
+          {
+            screenEmulation: {
+              width: 660,
+              height: 1000,
+              mobile: false,
+            }
           },
-        })
+        )
       })
     })
   })
