@@ -1,3 +1,5 @@
+// @ts-ignore
+import { log } from "console"
 import { audit_devices, waitTime, animationWaitTime, clickWaitTime, isDesktopMenuOnMobile } from '../support/utils.js'
 
 const orientation = 'portrait'
@@ -11,15 +13,35 @@ audit_devices.devices.forEach((device) => {
 
     if (device === 'iphone-6') {
       it('navbar expanded audit', () => {
+        const width = Cypress.config('viewportWidth')
+        const height = Cypress.config('viewportHeight')
         cy.get('[data-cy="chilidog-svg"]').click().wait(animationWaitTime).then(() => {
-          cy.lighthouseWithDefaultSettings()
+          cy.lighthouseWithDefaultSettings({
+            screenEmulation: {
+                width: width,
+                height: height,
+                mobile: true,
+            },
+          })
         })
       })
     }
 
     it('page audit', () => {
+      const width = Cypress.config('viewportWidth')
+      const height = Cypress.config('viewportHeight')
+      const mobile = true
+      if (/desktop-*/.test(device)) {
+        mobile = false
+      }
       cy.get('#toast-close-button').click().wait(clickWaitTime).then(() => {
-        cy.lighthouseWithDefaultSettings()
+        cy.lighthouseWithDefaultSettings({
+          screenEmulation: {
+              width: width,
+              height: height,
+              mobile: mobile,
+          },
+        })
       })
     })
   })
