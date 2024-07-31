@@ -31,17 +31,20 @@ audit_devices.devices.forEach((device) => {
       const width = Cypress.config('viewportWidth')
       const height = Cypress.config('viewportHeight')
       let mobile = true
+      let formFactor = "mobile"
       if (/desktop-*/.test(device)) {
         mobile = false
+        formFactor = "desktop"
       }
       cy.get('#toast-close-button').click().wait(clickWaitTime).then(() => {
         cy.lighthouseWithDefaultSettings(
           undefined,
           {
+            formFactor: formFactor,
             screenEmulation: {
-              width: 660,
-              height: 1000,
-              mobile: false,
+              width: width,
+              height: height,
+              mobile: mobile,
             }
           },
         )
