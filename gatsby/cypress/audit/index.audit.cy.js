@@ -11,18 +11,22 @@ audit_devices.devices.forEach((device) => {
       cy.wait(waitTime)
     })
 
-    if (device === 'iphone-6' && false) {
+    if (device === 'iphone-6') {
       it('navbar expanded audit', () => {
         const width = Cypress.config('viewportWidth')
         const height = Cypress.config('viewportHeight')
         cy.get('[data-cy="chilidog-svg"]').click().wait(animationWaitTime).then(() => {
-          cy.lighthouseWithDefaultSettings(undefined, {
-            screenEmulation: {
+          cy.lighthouseWithDefaultSettings(
+            undefined,
+            {
+              formFactor: "mobile",
+              screenEmulation: {
                 width: width,
                 height: height,
                 mobile: true,
-            }
-          })
+              }
+            },
+          )
         })
       })
     }
