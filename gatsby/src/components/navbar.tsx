@@ -61,6 +61,8 @@ function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
       <SvgButton
         className={closeBtnStyle}
         onClick={onMenuCloseClick}
+        aria-label="Close Navbar"
+        title="Close Navbar"
         icon={<Menuclose width={40} height={40} />}
       />
       <HomeNavButton 
@@ -171,6 +173,8 @@ export default function NavBar() {
       <SvgButton
         className={chilidogStyle}
         onClick={onChilidogClick}
+        aria-label="Open Navbar"
+        title="Open Navbar"
         icon={<Chilidogmenu width={32} height={45} data-cy="chilidog-svg" />}
       />
     </nav>

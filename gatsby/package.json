@@ -22,10 +22,13 @@
     "cy:install": "cypress install",
     "cy:open": "cypress open",
     "cy:help": "cypress run --help",
-    "e2e": "cypress run --e2e --browser chrome",
+    "audit": "cypress run --e2e --browser chrome --spec 'cypress/audit/**/*.cy.js'",
+    "audit:ci": "start-server-and-test develop http://localhost:8000 audit",
+    "audit:debug": "DEBUG='cypress:server:task' cypress run --e2e --browser chrome --spec 'cypress/audit/**/*.cy.js'",
+    "e2e": "cypress run --e2e --browser chrome --spec 'cypress/e2e/**/*.cy.js'",
     "e2e:ci": "start-server-and-test develop http://localhost:8000 e2e",
     "e2e:reset": "cypress run --env type=base --e2e --browser chrome",
-    "e2e:report": "reg-cli ./cypress/screenshots ./cypress/base ./cypress/_diff -R ./cypress/report.html",
+    "e2e:report": "reg-cli ./cypress/screenshots ./cypress/base ./cypress/diff -R ./cypress/report.html",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -42,6 +45,7 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@appsfactory/cypress-audit": "^3.0.4",
     "@babel/preset-typescript": "^7.24.6",
     "@testing-library/jest-dom": "^6.4.5",
     "@testing-library/react": "^15.0.7",
