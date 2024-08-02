@@ -6,14 +6,14 @@ import path from 'path'
 import fs from 'fs'
 
 export default defineConfig({
+  env: {
+    screenshotsFolder: './cypress/snapshots/actual',
+    type: 'actual',
+    trashAssetsBeforeRuns: true,
+    failSilently: false,
+    video: false
+  },
   e2e: {
-    env: {
-      screenshotsFolder: './cypress/snapshots/actual',
-      type: 'actual',
-      trashAssetsBeforeRuns: true,
-      failSilently: false,
-      video: false
-    },
     video: false,
     baseUrl: "http://localhost:8000",
     specPattern: ["cypress/e2e/**/*.cy.js", "cypress/audit/**/*.cy.js"],
