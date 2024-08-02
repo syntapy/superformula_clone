@@ -35,6 +35,8 @@
 //     }
 //   }
 // }
+import { addCompareSnapshotCommand } from 'cypress-visual-regression/dist/command'
+addCompareSnapshotCommand()
 
 //Cypress.on('viewport:changed', (viewport) => {
 //  Cypress.config('viewportWidth', viewport.width)
