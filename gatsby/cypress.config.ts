@@ -1,5 +1,5 @@
 import { defineConfig } from "cypress"
-import getCompareSnapshotsPlugin from 'cypress-visual-regression/dist/plugin'
+import { configureVisualRegression } from 'cypress-visual-regression'
 import { pa11y, lighthouse, prepareAudit } from '@appsfactory/cypress-audit'
 import cypressTerminalReport from 'cypress-terminal-report/src/installLogsPrinter'
 import path from 'path'
@@ -18,7 +18,7 @@ export default defineConfig({
     baseUrl: "http://localhost:8000",
     specPattern: ["cypress/e2e/**/*.cy.js", "cypress/audit/**/*.cy.js"],
     setupNodeEvents(on, config) {
-      getCompareSnapshotsPlugin(on, config)
+      configureVisualRegression(on)
       cypressTerminalReport(on)
       on('before:browser:launch', (browser = {}, launchOptions) => {
         prepareAudit(launchOptions)
