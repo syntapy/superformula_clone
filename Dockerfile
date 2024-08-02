@@ -1,12 +1,12 @@
-arg NODE_VERSION='22.2.0'
+arg NODE_VERSION='22.5.1'
 
 ### Get versions from:
 ### 	https://hub.docker.com/r/cypress/factory/
-arg CHROME_VERSION='125.0.6422.112-1'
-arg EDGE_VERSION='125.0.2535.67-1'
-arg FIREFOX_VERSION='126.0.1'
+arg CHROME_VERSION='127.0.6533.88-1'
+arg EDGE_VERSION='127.0.2651.86-1'
+arg FIREFOX_VERSION='128.0.3'
 
-arg CYPRESS_VERSION='13.10.0'
+arg CYPRESS_VERSION='13.13.2'
 
 from cypress/factory
 
