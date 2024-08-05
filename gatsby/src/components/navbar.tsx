@@ -129,8 +129,8 @@ export default function NavBar() {
 
   const items: NavItemInfo[] = []
 
-  items.push({ href: servicesHref, text: servicesText })
   items.push({ href: workHref, text: workText })
+  items.push({ href: servicesHref, text: servicesText })
   items.push({ href: articlesHref, text: articlesText })
   items.push({ href: contactHref, text: contactText })
   items.push({ href: careersHref, text: careersText })
