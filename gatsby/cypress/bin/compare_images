@@ -12,36 +12,36 @@ if [[ $1 == "--desktop" ]]; then
 fi
 
 # Define the directories
-dir1="cypress/snapshots/diff/cypress/e2e/${screen_folder}/"
-dir2="cypress/snapshots/base/cypress/e2e/${screen_folder}/"
-dir3="cypress/screenshots/${screen_folder}/cypress/e2e/${screen_folder}/"
+dir_diff="cypress/snapshots/diff/cypress/e2e/${screen_folder}/"
+dir_base="cypress/snapshots/base/cypress/e2e/${screen_folder}/"
+dir_actual="cypress/screenshots/${screen_folder}/cypress/e2e/${screen_folder}/"
 
 # Loop through each file and open the corresponding images with feh
-if [ -d $dir1 ]; then
+if [ -d $dir_diff ]; then
     echo "diff folder exists"
     # Get the list of files in the first directory (assuming all directories have the same filenames)
-    files=$(ls "$dir1")
+    files=$(ls "$dir_diff")
     echo "found in diff folder: $files"
     for file in $files; do
         # Construct the full paths for each image
-        img1="$dir1$file"
-        img2="$dir2$file"
-        img3="$dir3$file"
+        img_diff="$dir_diff$file"
+        img_base="$dir_base$file"
+        img_actual="$dir_actual$file"
 
         # Check if the files exist in all directories
-        if [[ -f "$img1" && -f "$img2" && -f "$img3" ]]; then
+        if [[ -f "$img_diff" && -f "$img_base" && -f "$img_actual" ]]; then
             # Use feh to display the images
-            feh -F "$img1" "$img2" "$img3"
+            feh -F "$img_diff" "$img_base" "$img_actual"
         fi
 
         read -p "update base image? y/[n]/q " UPDATE
 
         if [ $UPDATE == "y" ]; then
-            cp -y $img3 $img2
+            cp -y $img_actual $img_base
         elif [ $UPDATE == "q" ]; then
             break
         fi
     done
 else
-    echo "no diff folder"
+    echo "no diff folder, nothing to compare"
 fi
