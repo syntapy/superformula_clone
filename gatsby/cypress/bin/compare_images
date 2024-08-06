@@ -43,7 +43,7 @@ elif [ -d $dir_diff ]; then
         read -p "update base image? y/[n]/q " UPDATE
 
         if [ $UPDATE == "y" ]; then
-            cp -y $img_actual $img_base
+            cp -i $img_actual $img_base
         elif [ $UPDATE == "q" ]; then
             break
         fi
