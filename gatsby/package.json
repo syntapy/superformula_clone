@@ -30,6 +30,7 @@
     "e2e:reset": "cypress run --env type=base --e2e --browser chrome",
     "e2e:view:mobile": "sh cypress/bin/compare_images",
     "e2e:view:desktop": "sh cypress/bin/compare_images --desktop",
+    "e2e:clear": "sh cypress/bin/compare_images --clear",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
