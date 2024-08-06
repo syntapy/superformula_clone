@@ -28,7 +28,8 @@
     "e2e": "cypress run --e2e --browser chrome --spec 'cypress/e2e/**/*.cy.js'",
     "e2e:ci": "start-server-and-test develop http://localhost:8000 e2e",
     "e2e:reset": "cypress run --env type=base --e2e --browser chrome",
-    "e2e:report": "reg-cli ./cypress/screenshots ./cypress/base ./cypress/diff -R ./cypress/report.html",
+    "e2e:view:mobile": "sh cypress/bin/compare_images",
+    "e2e:view:desktop": "sh cypress/bin/compare_images --desktop",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
