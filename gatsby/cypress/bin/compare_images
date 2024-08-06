@@ -34,6 +34,7 @@ if [ -d $dir_diff ]; then
             feh -F "$img_diff" "$img_base" "$img_actual"
         fi
 
+        # Optionally update base image with actual or quit
         read -p "update base image? y/[n]/q " UPDATE
 
         if [ $UPDATE == "y" ]; then
