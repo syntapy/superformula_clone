@@ -40,10 +40,11 @@ elif [ -d $dir_diff ]; then
         fi
 
         # Optionally update base image with actual or quit
-        read -p "update base image? y/[n]/q " UPDATE
+        read -p "update base image? y/[n]/q: " UPDATE
 
         if [ $UPDATE == "y" ]; then
-            cp -i $img_actual $img_base
+            cp -v $img_actual $img_base
+            read -p "press any key to continue: "
         elif [ $UPDATE == "q" ]; then
             break
         fi
