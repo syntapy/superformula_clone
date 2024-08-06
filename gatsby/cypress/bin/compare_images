@@ -1,0 +1,54 @@
+#!/bin/bash
+
+if ! command -v feh &> /dev/null
+then
+    echo "feh could not be found"
+    exit 1
+fi
+
+screen_folder="mobile.cy.js"
+if [[ $1 == "--desktop" ]]; then
+    screen_folder="desktop.cy.js"
+fi
+
+# Define the directories
+dir_diff="cypress/snapshots/diff/cypress/e2e/${screen_folder}/"
+dir_base="cypress/snapshots/base/cypress/e2e/${screen_folder}/"
+dir_actual="cypress/screenshots/${screen_folder}/cypress/e2e/${screen_folder}/"
+
+# Option to clear actual & diff images
+if [[ $1 == "--clear" ]]; then
+    rm -rfv $dir_diff $dir_actual
+    rm -rfv "cypress/snapshots/base/*.png"
+    exit 0
+# Loop through each file and open the corresponding images with feh
+elif [ -d $dir_diff ]; then
+    echo "diff folder exists"
+    # Get the list of files in the first directory (assuming all directories have the same filenames)
+    files=$(ls "$dir_diff")
+    echo "found in diff folder: $files"
+    for file in $files; do
+        # Construct the full paths for each image
+        img_diff="$dir_diff$file"
+        img_base="$dir_base$file"
+        img_actual="$dir_actual$file"
+
+        # Check if the files exist in all directories
+        if [[ -f "$img_diff" && -f "$img_base" && -f "$img_actual" ]]; then
+            # Use feh to display the images
+            feh -F "$img_diff" "$img_base" "$img_actual"
+        fi
+
+        # Options
+        read -p "update base image? y/[n]/q: " UPDATE
+
+        if [ $UPDATE == "y" ]; then
+            cp -v $img_actual $img_base
+            read -p "press any key to continue: "
+        elif [ $UPDATE == "q" ]; then
+            break
+        fi
+    done
+else
+    echo "no diff folder, nothing to compare"
+fi

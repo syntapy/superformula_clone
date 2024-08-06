@@ -28,7 +28,9 @@
     "e2e": "cypress run --e2e --browser chrome --spec 'cypress/e2e/**/*.cy.js'",
     "e2e:ci": "start-server-and-test develop http://localhost:8000 e2e",
     "e2e:reset": "cypress run --env type=base --e2e --browser chrome",
-    "e2e:report": "reg-cli ./cypress/screenshots ./cypress/base ./cypress/diff -R ./cypress/report.html",
+    "e2e:view:mobile": "sh cypress/bin/compare_images",
+    "e2e:view:desktop": "sh cypress/bin/compare_images --desktop",
+    "e2e:clear": "sh cypress/bin/compare_images --clear",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -67,7 +69,6 @@
     "jest-environment-jsdom": "^29.7.0",
     "jest-transform-css": "^6.0.1",
     "react-test-renderer": "^18.3.1",
-    "reg-cli": "^0.18.6",
     "start-server-and-test": "^2.0.5",
     "ts-jest": "^29.2.4",
     "typescript": "^5.5.4"
