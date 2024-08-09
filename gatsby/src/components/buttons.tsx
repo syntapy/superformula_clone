@@ -1,6 +1,7 @@
 import * as React from "react"
 import * as styles from "../styles/buttons.module.css"
-import * as utilityStyles from "../styles/utilities/other.module.css"
+import * as visibilityStyles from "../styles/utilities/visibility.module.css"
+import * as orientationStyles from "../styles/utilities/orientation.module.css"
 import { StyleProps } from "../utils"
 import { SvgRightArrow } from "./icons.tsx"
 
@@ -52,13 +53,12 @@ export function NavButton(props: ButtonProps & StyleProps & DataCyProps) {
 
 export function NavButtonMobile(props: ButtonProps & StyleProps & DataCyProps) {
   const className: string = styles.navButton + " " + props.className
+  const anchorClass: string = orientationStyles.horizontalFlex + " " + orientationStyles.spaceBetweenItems
   return (
     <div data-cy={props.dataCy} className={className}>
-      <A href={props.href}>
-        <span className={utilityStyles.marginRight}>
-          {props.text}
-        </span>
-        <SvgRightArrow className={styles.marginLeft} />
+      <A className={anchorClass} href={props.href}>
+        <span>{props.text}</span>
+        <SvgRightArrow className={visibilityStyles.mobile} />
       </A>
     </div>
   )

@@ -33,6 +33,10 @@
     justify-content: center;
 }
 
+.spaceBetweenItems {
+    justify-content: space-between;
+}
+
 .flexStartItems {
     align-items: flex-start;
     justify-content: center;
