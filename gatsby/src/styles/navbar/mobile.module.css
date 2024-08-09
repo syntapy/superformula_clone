@@ -39,6 +39,10 @@
       z-index: 666;
     }
 
+    .mobileNavItem {
+      border: 1px solid red;
+    }
+
     .navItemsActive {
       bottom: 0;
     }

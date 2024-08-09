@@ -1,6 +1,8 @@
 import * as React from "react"
 import * as styles from "../styles/buttons.module.css"
+import * as utilityStyles from "../styles/utilities/other.module.css"
 import { StyleProps } from "../utils"
+import { SvgRightArrow } from "./icons.tsx"
 
 interface ButtonProps {
   href?: string
@@ -30,11 +32,34 @@ export function HomeNavButton(props: ButtonProps & StyleProps & DataCyProps) {
   )
 }
 
+export function HomeNavButtonMobile(props: ButtonProps & StyleProps & DataCyProps) {
+  let className: string = styles.homeNavButton + " " + props.className
+  return (
+    <div data-cy={props.dataCy} className={className}>
+      <A href="/">{props.text}</A>
+    </div>
+  )
+}
+
 export function NavButton(props: ButtonProps & StyleProps & DataCyProps) {
   const className: string = styles.navButton + " " + props.className
   return (
     <div data-cy={props.dataCy} className={className}>
       <A href={props.href}>{props.text}</A>
+    </div>
+  )
+}
+
+export function NavButtonMobile(props: ButtonProps & StyleProps & DataCyProps) {
+  const className: string = styles.navButton + " " + props.className
+  return (
+    <div data-cy={props.dataCy} className={className}>
+      <A href={props.href}>
+        <span className={utilityStyles.marginRight}>
+          {props.text}
+        </span>
+        <SvgRightArrow className={styles.marginLeft} />
+      </A>
     </div>
   )
 }
@@ -49,7 +74,6 @@ export function CareersNavButton(props: ButtonProps & StyleProps & DataCyProps) 
 }
 
 interface HRefProps {
-  href: string
 }
 
 function ButtonArrow(props: ButtonProps & StyleProps) {
