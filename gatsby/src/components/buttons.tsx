@@ -42,7 +42,7 @@ export function HomeNavButtonMobile(props: ButtonProps & StyleProps & DataCyProp
   )
 }
 
-export function NavButton(props: ButtonProps & StyleProps & DataCyProps) {
+export function NavButtonOld(props: ButtonProps & StyleProps & DataCyProps) {
   const className: string = styles.navButton + " " + props.className
   return (
     <div data-cy={props.dataCy} className={className}>
@@ -51,7 +51,7 @@ export function NavButton(props: ButtonProps & StyleProps & DataCyProps) {
   )
 }
 
-export function NavButtonMobile(props: ButtonProps & StyleProps & DataCyProps) {
+export function NavButton(props: ButtonProps & StyleProps & DataCyProps) {
   const className: string = styles.navButton + " " + props.className
   const anchorClass: string = orientationStyles.horizontalFlex + " " + orientationStyles.spaceBetweenItems
   return (

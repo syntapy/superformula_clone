@@ -69,11 +69,11 @@ function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
         dataCy="home-nav-item"
         className={homeNavItemStyle} text={props.title}
       />
-      <NavButtonMobile
+      <NavButton
         dataCy="services-nav-item"
         className={navItem} href={props.items[0].href} text={props.items[0].text} 
       />
-      <NavButtonMobile
+      <NavButton
         dataCy="work-nav-item"
         className={navItem} href={props.items[1].href} text={props.items[1].text}
       />
@@ -159,9 +159,7 @@ export default function NavBar() {
 
   return (
     <nav className={navStyle}>
-      <HomeNavButton 
-        text={title}
-      />
+      <HomeNavButton text={title}/>
       <NavItems
         className={navItemsStyle}
         menuId={menuId}

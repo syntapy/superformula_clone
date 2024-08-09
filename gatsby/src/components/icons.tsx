@@ -6,9 +6,9 @@ interface StyleProps {
   className: string
 }
 
-export function SvgRightArrow() {
+export function SvgRightArrow(props: StyleProps) {
   return (
-    <span className={styles.marginLeft}>
+    <span className={props.className}>
       <Rightarrow width={12} height={12} />
     </span>
   )
