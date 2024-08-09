@@ -9,3 +9,11 @@
 .inline {
     display: inline;
 }
+
+.marginRight {
+    padding: 0 auto 0 0;
+}
+
+.marginLeft {
+    padding: 0 0 0 auto;
+}

@@ -1,7 +1,7 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import { HomeNavButton, NavButton, SvgButton, CareersNavButton } from "./buttons"
+import { HomeNavButton, NavButton, NavButtonMobile, SvgButton, CareersNavButton } from "./buttons"
 import { isMobile, ResponsiveProps } from "../utils"
 
 import Chilidogmenu from "../images/svg/chilidogmenu.svg"
@@ -69,11 +69,11 @@ function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
         dataCy="home-nav-item"
         className={homeNavItemStyle} text={props.title}
       />
-      <NavButton 
+      <NavButtonMobile
         dataCy="services-nav-item"
         className={navItem} href={props.items[0].href} text={props.items[0].text} 
       />
-      <NavButton 
+      <NavButtonMobile
         dataCy="work-nav-item"
         className={navItem} href={props.items[1].href} text={props.items[1].text}
       />
@@ -129,8 +129,8 @@ export default function NavBar() {
 
   const items: NavItemInfo[] = []
 
-  items.push({ href: servicesHref, text: servicesText })
   items.push({ href: workHref, text: workText })
+  items.push({ href: servicesHref, text: servicesText })
   items.push({ href: articlesHref, text: articlesText })
   items.push({ href: contactHref, text: contactText })
   items.push({ href: careersHref, text: careersText })
