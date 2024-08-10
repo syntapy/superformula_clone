@@ -82,8 +82,12 @@ function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
         className={navItem} href={props.items[2].href} text={props.items[2].text}
       />
       <NavButton
+        dataCy="about-nav-item"
+        className={navItem} href={props.items[5].href} text={props.items[5].text}
+      />
+      <NavButton
         dataCy="contact-nav-item"
-        className={navItem} href={props.items[3].href} text={props.items[3].text}
+        className={navItem + " " + desktop} href={props.items[3].href} text={props.items[3].text}
       />
     </div>
   )
@@ -99,7 +103,7 @@ export default function NavBar() {
         }
         allContentfulSection(
           sort: {sort_id: ASC}
-          filter: {sort_id: {in: [5, 9, 10, 11, 12]}}
+          filter: {sort_id: {in: [5, 9, 10, 11, 12, 13]}}
         ) {
           nodes {
             linkHref
@@ -121,6 +125,8 @@ export default function NavBar() {
   const contactText: string = data.allContentfulSection.nodes[3].linkText
   const careersHref: string = data.allContentfulSection.nodes[4].linkHref
   const careersText: string = data.allContentfulSection.nodes[4].linkText
+  const aboutHref: string = data.allContentfulSection.nodes[5].linkHref
+  const aboutText: string = data.allContentfulSection.nodes[5].linkText
   const navMobile: string = ""
 
   const items: NavItemInfo[] = []
@@ -130,6 +136,7 @@ export default function NavBar() {
   items.push({ href: articlesHref, text: articlesText })
   items.push({ href: contactHref, text: contactText })
   items.push({ href: careersHref, text: careersText })
+  items.push({ href: aboutHref, text: aboutText })
 
   // Styles
   const navStyle: string = styles.navbar
