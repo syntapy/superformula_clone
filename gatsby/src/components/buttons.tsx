@@ -4,6 +4,7 @@ import * as visibilityStyles from "../styles/utilities/visibility.module.css"
 import * as orientationStyles from "../styles/utilities/orientation.module.css"
 import { StyleProps } from "../utils"
 import { SvgRightArrow } from "./icons.tsx"
+import { HorizontalRule } from "./hr.tsx"
 
 interface ButtonProps {
   href?: string
@@ -60,6 +61,7 @@ export function NavButton(props: ButtonProps & StyleProps & DataCyProps) {
         <span>{props.text}</span>
         <SvgRightArrow className={visibilityStyles.mobile} />
       </A>
+      <HorizontalRule className={visibilityStyles.mobile} />
     </div>
   )
 }
