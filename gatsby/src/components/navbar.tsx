@@ -85,10 +85,6 @@ function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
         dataCy="contact-nav-item"
         className={navItem} href={props.items[3].href} text={props.items[3].text}
       />
-      <CareersNavButton 
-        dataCy="careers-nav-item"
-        className={navItem} href={props.items[4].href} text={props.items[4].text}
-      />
     </div>
   )
 }
