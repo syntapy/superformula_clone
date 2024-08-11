@@ -18,8 +18,29 @@ as well as similar definitions in Github Actions secrets or whatnot
 
 ## Usage
 
-run tests `npm run test`
+### start docker container
 
-run dev server: `npm run develop`
+`./bin/run`
 
-run prod server: `npm run serve`
+### run dev / prod server
+`npm run develop`
+
+`npm run serve`
+
+### update npm packages
+
+`npx npm-check-updates -u` then `npm install`
+
+### run e2e tests
+
+`npm run e2e`
+
+### view e2e test results (requires feh installed), probably only works on linux
+
+`npm run e2e:view:desktop`
+
+`npm run e2e:view:mobile`
+
+### run accessibility tests
+
+`npm run audit`
