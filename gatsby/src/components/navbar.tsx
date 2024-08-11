@@ -74,17 +74,17 @@ function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
         dataCy="services-nav-item"
         className={navItem} href={props.items[0].href} text={props.items[0].text} 
       />
-      <HorizontalRule />
+      <HorizontalRule className={mobile} />
       <NavButton
         dataCy="work-nav-item"
         className={navItem} href={props.items[1].href} text={props.items[1].text}
       />
-      <HorizontalRule />
+      <HorizontalRule className={mobile} />
       <NavButton
         dataCy="articles-nav-item"
         className={navItem} href={props.items[2].href} text={props.items[2].text}
       />
-      <HorizontalRule />
+      <HorizontalRule className={mobile} />
       <NavButton
         dataCy="about-nav-item"
         className={navItem} href={props.items[5].href} text={props.items[5].text}
