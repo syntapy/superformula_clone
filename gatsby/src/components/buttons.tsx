@@ -52,16 +52,21 @@ export function NavButtonOld(props: ButtonProps & StyleProps & DataCyProps) {
   )
 }
 
-export function NavButton(props: ButtonProps & StyleProps & DataCyProps) {
-  const className: string = styles.navButton + " " + props.className
+function NavAnchor(props: ButtonProps & StyleProps) {
   const anchorClass: string = orientationStyles.horizontalFlex + " " + orientationStyles.spaceBetweenItems
   return (
+    <A className={anchorClass} href={props.href}>
+      <span>{props.text}</span>
+      <SvgRightArrow className={visibilityStyles.mobile} />
+    </A>
+  )
+}
+
+export function NavButton(props: ButtonProps & StyleProps & DataCyProps) {
+  const className: string = styles.navButton + " " + props.className
+  return (
     <div data-cy={props.dataCy} className={className}>
-      <A className={anchorClass} href={props.href}>
-        <span>{props.text}</span>
-        <SvgRightArrow className={visibilityStyles.mobile} />
-      </A>
-      <HorizontalRule className={visibilityStyles.mobile} />
+      <NavAnchor href={props.href} text={props.text} />
     </div>
   )
 }

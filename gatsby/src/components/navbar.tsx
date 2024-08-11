@@ -13,6 +13,7 @@ import * as stylesMobile from "../styles/navbar/mobile.module.css"
 import * as stylesDesktop from "../styles/navbar/desktop.module.css"
 import * as styles from "../styles/navbar/common.module.css"
 import * as orientationStyles from "../styles/utilities/orientation.module.css"
+import { HorizontalRule } from "./hr.tsx"
 import { hidden, desktop, mobile } from "../styles/utilities/visibility.module.css"
 
 import NavDesktop from "./desktop"
@@ -73,14 +74,17 @@ function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
         dataCy="services-nav-item"
         className={navItem} href={props.items[0].href} text={props.items[0].text} 
       />
+      <HorizontalRule />
       <NavButton
         dataCy="work-nav-item"
         className={navItem} href={props.items[1].href} text={props.items[1].text}
       />
+      <HorizontalRule />
       <NavButton
         dataCy="articles-nav-item"
         className={navItem} href={props.items[2].href} text={props.items[2].text}
       />
+      <HorizontalRule />
       <NavButton
         dataCy="about-nav-item"
         className={navItem} href={props.items[5].href} text={props.items[5].text}
