@@ -1,6 +1,10 @@
 import * as React from "react"
 import * as styles from "../styles/buttons.module.css"
+import * as visibilityStyles from "../styles/utilities/visibility.module.css"
+import * as orientationStyles from "../styles/utilities/orientation.module.css"
 import { StyleProps } from "../utils"
+import { SvgRightArrow } from "./icons.tsx"
+import { HorizontalRule } from "./hr.tsx"
 
 interface ButtonProps {
   href?: string
@@ -30,11 +34,39 @@ export function HomeNavButton(props: ButtonProps & StyleProps & DataCyProps) {
   )
 }
 
-export function NavButton(props: ButtonProps & StyleProps & DataCyProps) {
+export function HomeNavButtonMobile(props: ButtonProps & StyleProps & DataCyProps) {
+  let className: string = styles.homeNavButton + " " + props.className
+  return (
+    <div data-cy={props.dataCy} className={className}>
+      <A href="/">{props.text}</A>
+    </div>
+  )
+}
+
+export function NavButtonOld(props: ButtonProps & StyleProps & DataCyProps) {
   const className: string = styles.navButton + " " + props.className
   return (
     <div data-cy={props.dataCy} className={className}>
       <A href={props.href}>{props.text}</A>
+    </div>
+  )
+}
+
+function NavAnchor(props: ButtonProps & StyleProps) {
+  const anchorClass: string = orientationStyles.horizontalFlex + " " + orientationStyles.spaceBetweenItems
+  return (
+    <A className={anchorClass} href={props.href}>
+      <span>{props.text}</span>
+      <SvgRightArrow className={visibilityStyles.mobile} />
+    </A>
+  )
+}
+
+export function NavButton(props: ButtonProps & StyleProps & DataCyProps) {
+  const className: string = styles.navButton + " " + props.className
+  return (
+    <div data-cy={props.dataCy} className={className}>
+      <NavAnchor href={props.href} text={props.text} />
     </div>
   )
 }
@@ -49,7 +81,6 @@ export function CareersNavButton(props: ButtonProps & StyleProps & DataCyProps) 
 }
 
 interface HRefProps {
-  href: string
 }
 
 function ButtonArrow(props: ButtonProps & StyleProps) {

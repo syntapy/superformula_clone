@@ -15,7 +15,7 @@
     .closeBtn {
         display: block;
         position: absolute;
-        left: 3rem;
+        right: 0;
         top: 1.45rem;
     }
 
@@ -29,14 +29,18 @@
       left: 0;
       box-sizing: border-box;
       justify-content: flex-start;
-      align-items: center;
-      padding-top: 2rem;
+      align-items: left;
+      padding: 2rem 1rem 0 1rem;
       row-gap: 2rem;
       height: 100%;
       width: 100%;
       background-color: $nav-bg-color;
       transition: bottom 0.5s ease-in-out;
       z-index: 666;
+    }
+
+    .mobileNavItem {
+      border: 0px solid red;
     }
 
     .navItemsActive {

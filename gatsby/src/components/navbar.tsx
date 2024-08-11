@@ -1,7 +1,7 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import { HomeNavButton, NavButton, SvgButton, CareersNavButton } from "./buttons"
+import { HomeNavButton, NavButton, NavButtonMobile, SvgButton, CareersNavButton } from "./buttons"
 import { isMobile, ResponsiveProps } from "../utils"
 
 import Chilidogmenu from "../images/svg/chilidogmenu.svg"
@@ -13,6 +13,7 @@ import * as stylesMobile from "../styles/navbar/mobile.module.css"
 import * as stylesDesktop from "../styles/navbar/desktop.module.css"
 import * as styles from "../styles/navbar/common.module.css"
 import * as orientationStyles from "../styles/utilities/orientation.module.css"
+import { HorizontalRule } from "./hr.tsx"
 import { hidden, desktop, mobile } from "../styles/utilities/visibility.module.css"
 
 import NavDesktop from "./desktop"
@@ -69,25 +70,28 @@ function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
         dataCy="home-nav-item"
         className={homeNavItemStyle} text={props.title}
       />
-      <NavButton 
+      <NavButton
         dataCy="services-nav-item"
         className={navItem} href={props.items[0].href} text={props.items[0].text} 
       />
-      <NavButton 
+      <HorizontalRule className={mobile} />
+      <NavButton
         dataCy="work-nav-item"
         className={navItem} href={props.items[1].href} text={props.items[1].text}
       />
+      <HorizontalRule className={mobile} />
       <NavButton
         dataCy="articles-nav-item"
         className={navItem} href={props.items[2].href} text={props.items[2].text}
       />
+      <HorizontalRule className={mobile} />
+      <NavButton
+        dataCy="about-nav-item"
+        className={navItem} href={props.items[5].href} text={props.items[5].text}
+      />
       <NavButton
         dataCy="contact-nav-item"
-        className={navItem} href={props.items[3].href} text={props.items[3].text}
-      />
-      <CareersNavButton 
-        dataCy="careers-nav-item"
-        className={navItem} href={props.items[4].href} text={props.items[4].text}
+        className={navItem + " " + desktop} href={props.items[3].href} text={props.items[3].text}
       />
     </div>
   )
@@ -103,7 +107,7 @@ export default function NavBar() {
         }
         allContentfulSection(
           sort: {sort_id: ASC}
-          filter: {sort_id: {in: [5, 9, 10, 11, 12]}}
+          filter: {sort_id: {in: [5, 9, 10, 11, 12, 13]}}
         ) {
           nodes {
             linkHref
@@ -125,15 +129,18 @@ export default function NavBar() {
   const contactText: string = data.allContentfulSection.nodes[3].linkText
   const careersHref: string = data.allContentfulSection.nodes[4].linkHref
   const careersText: string = data.allContentfulSection.nodes[4].linkText
+  const aboutHref: string = data.allContentfulSection.nodes[5].linkHref
+  const aboutText: string = data.allContentfulSection.nodes[5].linkText
   const navMobile: string = ""
 
   const items: NavItemInfo[] = []
 
-  items.push({ href: servicesHref, text: servicesText })
   items.push({ href: workHref, text: workText })
+  items.push({ href: servicesHref, text: servicesText })
   items.push({ href: articlesHref, text: articlesText })
   items.push({ href: contactHref, text: contactText })
   items.push({ href: careersHref, text: careersText })
+  items.push({ href: aboutHref, text: aboutText })
 
   // Styles
   const navStyle: string = styles.navbar
@@ -159,9 +166,7 @@ export default function NavBar() {
 
   return (
     <nav className={navStyle}>
-      <HomeNavButton 
-        text={title}
-      />
+      <HomeNavButton text={title}/>
       <NavItems
         className={navItemsStyle}
         menuId={menuId}
