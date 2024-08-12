@@ -25,7 +25,7 @@ as well as similar definitions in Github Actions secrets or whatnot
 ### run dev / prod server
 `npm run develop`
 
-`npm run serve`
+`npm run build; npm run serve` (not yet working)
 
 ### update npm packages
 
