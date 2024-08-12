@@ -3,8 +3,6 @@ A clone of superformula.com I am doing to learn React and Typescript
 
 I chose Gatsby because it [seems fast](https://www.gatsbyjs.com/blog/comparing-website-performance-gatsby-vs-next-vs-nuxt/), and that seems like a pretty strong requirement for a landing page
 
-Main thing I'm proud about on this is my unit tests of CSS styles using [jest-transform-css](https://github.com/dferber90/jest-transform-css) and which I first got working on [PR 21](https://github.com/syntapy/superformula_clone/pull/21)
-
 ## Contentful Setup
 
 It interfaces to Contentful using graphql to fetch data, so you will need a Contentful account with appropriate fields in place
@@ -20,8 +18,29 @@ as well as similar definitions in Github Actions secrets or whatnot
 
 ## Usage
 
-run tests `npm run test`
+### start docker container
 
-run dev server: `npm run develop`
+`./bin/run`
 
-run prod server: `npm run serve`
+### run dev / prod server
+`npm run develop`
+
+`npm run build; npm run serve` (not yet working)
+
+### update npm packages
+
+`npx npm-check-updates -u` then `npm install`
+
+### run e2e tests
+
+`npm run e2e`
+
+### view e2e test results (requires feh installed), probably only works on linux
+
+`npm run e2e:view:desktop`
+
+`npm run e2e:view:mobile`
+
+### run accessibility tests
+
+`npm run audit`
