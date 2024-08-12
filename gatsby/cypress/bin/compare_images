@@ -21,12 +21,13 @@ if [[ $1 == "--clear" ]]; then
     rm -rfv $dir_diff $dir_actual
     rm -rfv "cypress/snapshots/base/*.png"
     exit 0
+
 # Loop through each file and open the corresponding images with feh
-elif [ -d $dir_diff ]; then
-    echo "diff folder exists"
+elif [ -d $dir_base ]; then
+    #echo "base folder exists"
     # Get the list of files in the first directory (assuming all directories have the same filenames)
-    files=$(ls "$dir_diff")
-    echo "found in diff folder: $files"
+    files=$(ls "$dir_base")
+    echo "found in base folder: $files"
     for file in $files; do
         # Construct the full paths for each image
         img_diff="$dir_diff$file"
@@ -34,10 +35,10 @@ elif [ -d $dir_diff ]; then
         img_actual="$dir_actual$file"
 
         # Check if the files exist in all directories
-        if [[ -f "$img_diff" && -f "$img_base" && -f "$img_actual" ]]; then
+        #if [[ -f "$img_diff" && -f "$img_base" && -f "$img_actual" ]]; then
             # Use feh to display the images
             feh -F "$img_diff" "$img_base" "$img_actual"
-        fi
+        #fi
 
         # Options
         read -p "update base image? y/[n]/q: " UPDATE
