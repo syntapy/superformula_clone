@@ -36,4 +36,4 @@ export function isDesktopMenuOnMobile(device, orientation) {
   return orientation === 'landscape' && ['iphone-xr'].includes(device)
 }
 
-export const errorThreshold = 0.01
+export const errorThreshold = 0.0
