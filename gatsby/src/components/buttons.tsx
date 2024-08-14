@@ -10,7 +10,6 @@ import { HorizontalRule } from "./hr.tsx"
 interface ButtonProps {
   href?: string
   text: string
-  subnav?: React.ElementType
 }
 
 interface DataCyProps {
@@ -69,10 +68,12 @@ export function NavButton(props: ButtonProps & StyleProps & DataCyProps & SubNav
   return (
     <div data-cy={props.dataCy} className={className}>
       <NavAnchor href={props.href} text={props.text} />
-      {props.subNavItems !== undefined && <SubNavBar subNavItems={props.subNavItems} />}
+      {<SubNavBar subNavItems={props.subNavItems} />}
     </div>
   )
 }
+
+//{props.subNavItems !== undefined ? {<SubNavBar subNavItems={props.subNavItems} />}}
 
 export function CareersNavButton(props: ButtonProps & StyleProps & DataCyProps) {
   const className: string = props.className + " " + styles.careersNavButton

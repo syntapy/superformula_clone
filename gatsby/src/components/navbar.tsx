@@ -1,5 +1,6 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { SubNavItem } from "./subnav.tsx"
 
 import { HomeNavButton, NavButton, NavButtonMobile, SvgButton, CareersNavButton } from "./buttons"
 import { isMobile, ResponsiveProps } from "../utils"
@@ -53,6 +54,21 @@ function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
     }
   }
 
+  const servicesItems: SubNavItem[] = [
+    {
+      icon: <Menuclose width={12} height={12} />,
+      text: "Flutter"
+    },
+    {
+      icon: <Menuclose width={12} height={12} />,
+      text: "Putter"
+    },
+    {
+      icon: <Menuclose width={12} height={12} />,
+      text: "Gutter"
+    }
+  ]
+
   if (!props.mobileMenuActive) {
     onMenuCloseClick()
   }
@@ -71,13 +87,14 @@ function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
         className={homeNavItemStyle} text={props.title}
       />
       <NavButton
-        dataCy="services-nav-item"
+        dataCy="work-nav-item"
         className={navItem} href={props.items[0].href} text={props.items[0].text} 
       />
       <HorizontalRule className={mobile} />
       <NavButton
-        dataCy="work-nav-item"
+        dataCy="services-nav-item"
         className={navItem} href={props.items[1].href} text={props.items[1].text}
+        subNavItems={servicesItems}
       />
       <HorizontalRule className={mobile} />
       <NavButton
