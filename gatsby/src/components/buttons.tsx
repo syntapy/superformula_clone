@@ -2,6 +2,7 @@ import * as React from "react"
 import * as styles from "../styles/buttons.module.css"
 import * as visibilityStyles from "../styles/utilities/visibility.module.css"
 import * as orientationStyles from "../styles/utilities/orientation.module.css"
+import { SubNavProps, SubNavBar } from "./subnav.tsx"
 import { StyleProps } from "../utils"
 import { SvgRightArrow } from "./icons.tsx"
 import { HorizontalRule } from "./hr.tsx"
@@ -9,6 +10,7 @@ import { HorizontalRule } from "./hr.tsx"
 interface ButtonProps {
   href?: string
   text: string
+  subnav?: React.ElementType
 }
 
 interface DataCyProps {
@@ -62,11 +64,12 @@ function NavAnchor(props: ButtonProps & StyleProps) {
   )
 }
 
-export function NavButton(props: ButtonProps & StyleProps & DataCyProps) {
+export function NavButton(props: ButtonProps & StyleProps & DataCyProps & SubNavProps) {
   const className: string = styles.navButton + " " + props.className
   return (
     <div data-cy={props.dataCy} className={className}>
       <NavAnchor href={props.href} text={props.text} />
+      {props.subNavItems !== undefined && <SubNavBar subNavItems={props.subNavItems} />}
     </div>
   )
 }
