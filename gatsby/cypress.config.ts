@@ -8,6 +8,7 @@ import fs from 'fs'
 export default defineConfig({
   env: {
     screenshotsFolder: './cypress/snapshots/actual',
+    visualRegressionGenerateDiff: 'always',
     type: 'regression',
     trashAssetsBeforeRuns: true,
     failSilently: false,
