@@ -11,7 +11,7 @@ export interface SubNavProps {
   subNavItems?: SubNavItem[]
 }
 
-function SubNav(props: SubNavProps) {
+function SubNavBar(props: SubNavProps) {
   return (
     <div>
       {props.subNavItems.map((item) => (
