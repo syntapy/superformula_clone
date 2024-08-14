@@ -19,7 +19,7 @@ function SubNavBar(props: SubNavProps) {
           {item.icon}
           {item.text}
         </div>
-      )}
+      ))}
     </div>
   )
 }
