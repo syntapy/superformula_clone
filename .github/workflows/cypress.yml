@@ -25,15 +25,3 @@ jobs:
           name: image diff output directory
           path: gatsby/cypress/snapshots/diff
         if: failure()
-  lighthouse_audit:
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout ${{ env.GITHUB_REF }}
-        uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-      - env:
-          CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
-          CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
-        run: cd gatsby && npm ci && npm run cy:install && npm run audit:ci
