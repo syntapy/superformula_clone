@@ -7,14 +7,14 @@ type SubNavItem = {
   leaveSite: boolean
 }
 
-interface SubNavProps {
-  items: SubNavItem[]
+export interface SubNavProps {
+  subNavItems?: SubNavItem[]
 }
 
 function SubNav(props: SubNavProps) {
   return (
     <div>
-      {props.items.map((item) => (
+      {props.subNavItems.map((item) => (
         <div>
           {item.icon}
           {item.text}
