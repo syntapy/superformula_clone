@@ -1,5 +1,6 @@
 :import('./vars.module.css') {
 	$max-mobile-width: max-mobile-width;
+    $grey-color: grey-color;
 }
 
 @media (min-width: calc($max-mobile-width + 1px)) {
@@ -9,7 +10,15 @@
 
     .navButton .subNav {
         position: absolute;
+        background-color: $grey-color;
+        padding: 1rem;
+        border-radius: 1rem;
+        top: 4rem;
         visibility: hidden;
+    }
+
+    .subNavItem {
+        margin: 0.5rem;
     }
 
     .navButton:hover .subNav {

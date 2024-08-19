@@ -17,7 +17,7 @@ export function SubNavBar(props: SubNavProps) {
     return (
       <div className={buttonStyles.subNav}>
         {props.subNavItems.map((item) => (
-          <div>{item.icon}{item.text}</div>
+          <div className={buttonStyles.subNavItem}>{item.icon}{item.text}</div>
         ))}
       </div>
     )
