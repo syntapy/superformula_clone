@@ -15,6 +15,7 @@
         background-color: $grey-color;
         row-gap: $subnav-padding;
         padding: $subnav-padding;
+        border: 2px solid $grey-color;
         border-radius: $subnav-border-radius;
         top: 4rem;
         visibility: hidden;
