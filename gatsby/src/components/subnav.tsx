@@ -1,4 +1,5 @@
 import * as React from "react"
+import * as buttonStyles from "../styles/buttons.module.css"
 import { useStaticQuery, graphql } from "gatsby"
 
 export type SubNavItem = {
@@ -14,7 +15,7 @@ export interface SubNavProps {
 export function SubNavBar(props: SubNavProps) {
   if (props.subNavItems !== undefined) {
     return (
-      <div>
+      <div className={buttonStyles.subNav}>
         {props.subNavItems.map((item) => (
           <div>{item.icon}{item.text}</div>
         ))}

@@ -7,6 +7,15 @@
         padding: 0 0 0 1.6rem;
     }
 
+    .navButton .subNav {
+        position: absolute;
+        visibility: hidden;
+    }
+
+    .navButton:hover .subNav {
+        visibility: visible;
+    }
+
     .careersNavButton {
         padding: 0 0 0 0.8rem;
     }
