@@ -13,6 +13,7 @@
     .navButton .subNav {
         position: absolute;
         background-color: $grey-color;
+        row-gap: $subnav-padding;
         padding: $subnav-padding;
         border-radius: $subnav-border-radius;
         top: 4rem;
