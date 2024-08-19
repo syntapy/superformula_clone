@@ -12,4 +12,6 @@
 	max-mobile-culture-offset: 153px;
 	nav-height: 3rem;
 	padding-top: 1rem;
+    subnav-padding: 1rem;
+    subnav-border-radius: 0.5rem;
 }

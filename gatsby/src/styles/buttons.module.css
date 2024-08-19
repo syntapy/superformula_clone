@@ -1,6 +1,8 @@
 :import('./vars.module.css') {
 	$max-mobile-width: max-mobile-width;
     $grey-color: grey-color;
+    $subnav-padding: subnav-padding;
+    $subnav-border-radius: subnav-border-radius;
 }
 
 @media (min-width: calc($max-mobile-width + 1px)) {
@@ -11,14 +13,14 @@
     .navButton .subNav {
         position: absolute;
         background-color: $grey-color;
-        padding: 1rem;
-        border-radius: 1rem;
+        padding: $subnav-padding;
+        border-radius: $subnav-border-radius;
         top: 4rem;
         visibility: hidden;
     }
 
     .subNavItem {
-        margin: 0.5rem;
+        margin: 0;
     }
 
     .navButton:hover .subNav {
