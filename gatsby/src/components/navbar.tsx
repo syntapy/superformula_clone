@@ -3,6 +3,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import { SubNavItem } from "./subnav.tsx"
 
 import { HomeNavButton, NavButton, NavButtonMobile, SvgButton, CareersNavButton } from "./buttons"
+import { ButtonProps, DataCyProps } from "./buttons"
+import { SubNavProps } from "./subnav.tsx"
 import { isMobile, ResponsiveProps } from "../utils"
 
 import Chilidogmenu from "../images/svg/chilidogmenu.svg"
@@ -40,20 +42,7 @@ interface ResponsiveProps {
 
 type ResponsiveNavItemsProps = NavItemsProps | ResponsiveProps
 
-function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
-  const closeBtnStyle: string = stylesMobile.closeBtn
-  const homeNavItemStyle: string = stylesDesktop.navItemsHomeNav
-  const navItem: string = stylesMobile.mobileNavItem
-
-  function onMenuCloseClick(): void {
-    const menu: HTMLElement | null = document.getElementById(props.menuId)
-    if (menu || !!menu) {
-      menu.classList.remove(stylesMobile.navItemsActive)
-      menu.classList.add(stylesMobile.navItemsHidden)
-      props.setMobileMenuActive(false)
-    }
-  }
-
+function ServicesNavButton(props: ButtonProps & StyleProps & DataCyProps) {
   const servicesItems: SubNavItem[] = [
     {
       icon: <Menuclose width={12} height={12} />,
@@ -68,6 +57,27 @@ function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
       text: "Gutter"
     }
   ]
+
+  return (<NavButton
+    dataCy="services-nav-item"
+    className={props.className} href={props.href} text={props.text}
+    subNavItems={servicesItems}
+  />)
+}
+
+function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
+  const closeBtnStyle: string = stylesMobile.closeBtn
+  const homeNavItemStyle: string = stylesDesktop.navItemsHomeNav
+  const navItem: string = stylesMobile.mobileNavItem
+
+  function onMenuCloseClick(): void {
+    const menu: HTMLElement | null = document.getElementById(props.menuId)
+    if (menu || !!menu) {
+      menu.classList.remove(stylesMobile.navItemsActive)
+      menu.classList.add(stylesMobile.navItemsHidden)
+      props.setMobileMenuActive(false)
+    }
+  }
 
   if (!props.mobileMenuActive) {
     onMenuCloseClick()
@@ -91,10 +101,9 @@ function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
         className={navItem} href={props.items[0].href} text={props.items[0].text} 
       />
       <HorizontalRule className={mobile} />
-      <NavButton
+      <ServicesNavButton
         dataCy="services-nav-item"
         className={navItem} href={props.items[1].href} text={props.items[1].text}
-        subNavItems={servicesItems}
       />
       <HorizontalRule className={mobile} />
       <NavButton
