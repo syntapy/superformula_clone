@@ -11,6 +11,7 @@
 	max-mobile-width: 678px;
 	max-mobile-culture-offset: 153px;
 	nav-height: 3rem;
+    desktop-nav-items-gap: 1.6rem;
 	padding-top: 1rem;
     subnav-padding: 1rem;
     subnav-border-radius: 0.5rem;

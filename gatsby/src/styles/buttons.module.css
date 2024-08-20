@@ -1,5 +1,5 @@
 :import('./vars.module.css') {
-	$max-mobile-width: max-mobile-width;
+    $max-mobile-width: max-mobile-width;
     $grey-color: grey-color;
     $subnav-padding: subnav-padding;
     $subnav-border-radius: subnav-border-radius;
@@ -7,7 +7,7 @@
 
 @media (min-width: calc($max-mobile-width + 1px)) {
     .navButton {
-        padding: 0 0 0 1.6rem;
+        padding: 0;
         border: 1px solid green;
     }
 
@@ -30,7 +30,7 @@
     }
 
     .subNavContainer {
-        position: absolute;
+        position: relative;
         border: 1px solid red;
     }
 
