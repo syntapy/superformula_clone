@@ -7,8 +7,17 @@ import { ButtonProps, DataCyProps } from "./buttons"
 import { SubNavProps } from "./subnav.tsx"
 import { isMobile, ResponsiveProps } from "../utils"
 
+// Menu Icons
 import Chilidogmenu from "../images/svg/chilidogmenu.svg"
 import Menuclose from "../images/svg/menuclose.svg"
+
+// SubNav Icons
+import FlutterSvg from "../images/svg/subnav/flutter.svg"
+import DigitalTransformationSvg from "../images/svg/subnav/digital_transformation.svg"
+import DigitalProductsSvg from "../images/svg/subnav/digital_products.svg"
+import CustomerExperienceSvg from "../images/svg/subnav/customer_experience.svg"
+import CloudAndPlatformsSvg from "../images/svg/subnav/cloud_and_platforms.svg"
+import StrategyAndInnovationSvg from "../images/svg/subnav/strategy_and_innovation.svg"
 
 import { StyleProps } from "../utils"
 
@@ -43,18 +52,31 @@ interface ResponsiveProps {
 type ResponsiveNavItemsProps = NavItemsProps | ResponsiveProps
 
 function ServicesNavButton(props: ButtonProps & StyleProps & DataCyProps) {
+  const d: number = 20
   const servicesItems: SubNavItem[] = [
     {
-      icon: <Menuclose width={12} height={12} />,
+      icon: <FlutterSvg width={d} height={d} />,
       text: "Flutter"
     },
     {
-      icon: <Menuclose width={12} height={12} />,
-      text: "Putter"
+      icon: <DigitalTransformationSvg width={d} height={d} />,
+      text: "Digital Transformation"
     },
     {
-      icon: <Menuclose width={12} height={12} />,
-      text: "Gutter"
+      icon: <DigitalProductsSvg width={d} height={d} />,
+      text: "Digital Products"
+    },
+    {
+      icon: <CustomerExperienceSvg width={d} height={d} />,
+      text: "Customer Experience"
+    },
+    {
+      icon: <CloudAndPlatformsSvg width={d} height={d} />,
+      text: "Cloud & Platforms"
+    },
+    {
+      icon: <StrategyAndInnovationSvg width={d} height={d} />,
+      text: "Strategy & Innovation"
     }
   ]
 
@@ -117,7 +139,9 @@ function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
       />
       <NavButton
         dataCy="contact-nav-item"
-        className={navItem + " " + desktop} href={props.items[3].href} text={props.items[3].text}
+        className={navItem + " " + desktop}
+        href={props.items[3].href}
+        text={props.items[3].text}
       />
     </div>
   )
