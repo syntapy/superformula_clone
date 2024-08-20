@@ -73,8 +73,6 @@ export function NavButton(props: ButtonProps & StyleProps & DataCyProps & SubNav
   )
 }
 
-//{props.subNavItems !== undefined ? {<SubNavBar subNavItems={props.subNavItems} />}}
-
 export function CareersNavButton(props: ButtonProps & StyleProps & DataCyProps) {
   const className: string = props.className + " " + styles.careersNavButton
   return (

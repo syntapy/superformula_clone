@@ -8,24 +8,33 @@
 @media (min-width: calc($max-mobile-width + 1px)) {
     .navButton {
         padding: 0 0 0 1.6rem;
+        border: 1px solid green;
     }
 
-    .navButton .subNav {
+    .navButton .subNavContainer {
         position: absolute;
-        background-color: $grey-color;
-        row-gap: $subnav-padding;
-        padding: $subnav-padding;
-        border: 2px solid $grey-color;
-        border-radius: $subnav-border-radius;
-        top: 4rem;
         visibility: hidden;
     }
 
-    .subNavItem {
-        margin: 0;
+    .subNav {
+        position: relative;
+        top: 3rem;
+        row-gap: $subnav-padding;
+        background-color: $grey-color;
+        padding: $subnav-padding;
+        border: 2px solid $grey-color;
+        border-radius: $subnav-border-radius;
     }
 
-    .navButton:hover .subNav {
+    .subNavItem {
+    }
+
+    .subNavContainer {
+        position: absolute;
+        border: 1px solid red;
+    }
+
+    .navButton:hover .subNavContainer {
         visibility: visible;
     }
 

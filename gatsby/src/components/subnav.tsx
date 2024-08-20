@@ -15,12 +15,15 @@ export interface SubNavProps {
 
 export function SubNavBar(props: SubNavProps) {
   if (props.subNavItems !== undefined) {
-    const className = buttonStyles.subNav + " " + orientationStyles.verticalFlex + " " + orientationStyles.spaceBetweenItems
+    const classNameContainer = buttonStyles.subNavContainer
+    const classNameSubNav = buttonStyles.subNav + " " + orientationStyles.verticalFlex + " " + orientationStyles.spaceBetweenItems
     return (
-      <div className={className}>
+      <div className={classNameContainer}>
+        <ul className={classNameSubNav}>
         {props.subNavItems.map((item) => (
           <div className={buttonStyles.subNavItem}>{item.icon}{item.text}</div>
         ))}
+        </ul>
       </div>
     )
   }
