@@ -4,6 +4,7 @@
     $subnav-padding: subnav-padding;
     $subnav-border-radius: subnav-border-radius;
     $subnav-separation-top: subnav-separation-top;
+    $subnav-icon-text-gap: subnav-icon-text-gap;
 }
 
 @media (min-width: calc($max-mobile-width + 1px)) {
@@ -27,6 +28,7 @@
     }
 
     .subNavItem {
+        gap: $subnav-icon-text-gap;
     }
 
     .subNavContainer {
