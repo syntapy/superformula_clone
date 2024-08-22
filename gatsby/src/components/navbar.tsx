@@ -18,6 +18,8 @@ import DigitalProductsSvg from "../images/svg/subnav/digital_products.svg"
 import CustomerExperienceSvg from "../images/svg/subnav/customer_experience.svg"
 import CloudAndPlatformsSvg from "../images/svg/subnav/cloud_and_platforms.svg"
 import StrategyAndInnovationSvg from "../images/svg/subnav/strategy_and_innovation.svg"
+import CareersSvg from "../images/svg/subnav/careers.svg"
+import CultureAndValuesSvg from "../images/svg/subnav/culture_and_values.svg"
 
 import { StyleProps } from "../utils"
 
@@ -87,6 +89,26 @@ function ServicesNavButton(props: ButtonProps & StyleProps & DataCyProps) {
   />)
 }
 
+function AboutNavButton(props: ButtonProps & StyleProps & DataCyProps) {
+  const d: number = 20
+  const servicesItems: SubNavItem[] = [
+    {
+      icon: <CareersSvg width={d} height={d} />,
+      text: "Careers"
+    },
+    {
+      icon: <CultureAndValuesSvg width={d} height={d} />,
+      text: "Culture & Values"
+    }
+  ]
+
+  return (<NavButton
+    dataCy="services-nav-item"
+    className={props.className} href={props.href} text={props.text}
+    subNavItems={servicesItems}
+  />)
+}
+
 function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
   const closeBtnStyle: string = stylesMobile.closeBtn
   const homeNavItemStyle: string = stylesDesktop.navItemsHomeNav
@@ -133,7 +155,7 @@ function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
         className={navItem} href={props.items[2].href} text={props.items[2].text}
       />
       <HorizontalRule className={mobile} />
-      <NavButton
+      <AboutNavButton
         dataCy="about-nav-item"
         className={navItem} href={props.items[5].href} text={props.items[5].text}
       />
