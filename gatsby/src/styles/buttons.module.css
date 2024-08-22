@@ -14,6 +14,7 @@
 
 @media (min-width: calc($max-mobile-width + 1px)) {
     .navButton {
+        position: relative;
         padding: 0;
     }
 
@@ -25,15 +26,12 @@
     .subNavUl {
         position: relative;
         top: $subnav-separation-top;
+        left: -4rem;
         row-gap: $subnav-padding;
         background-color: $grey-color;
         padding: $subnav-padding;
         border: 2px solid $grey-color;
         border-radius: $subnav-border-radius;
-    }
-
-    .subNavConnector {
-        position: relative;
     }
 
     .subNavItem {
