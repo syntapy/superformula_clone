@@ -7,7 +7,7 @@
     $subnav-icon-text-gap: subnav-icon-text-gap;
 }
 
-.subNav {
+.subNavUl {
     align-self: flex-start;
     padding: 0;
 }
@@ -17,12 +17,12 @@
         padding: 0;
     }
 
-    .navButton .subNavContainer {
+    .navButton .subNavConnector {
         position: absolute;
         visibility: hidden;
     }
 
-    .subNav {
+    .subNavUl {
         position: relative;
         top: $subnav-separation-top;
         row-gap: $subnav-padding;
@@ -32,14 +32,14 @@
         border-radius: $subnav-border-radius;
     }
 
-    .subNavContainer {
+    .subNavConnector {
         position: relative;
     }
 
     .subNavItem {
     }
 
-    .navButton:hover .subNavContainer {
+    .navButton:hover .subNavConnector {
         visibility: visible;
     }
 
