@@ -53,31 +53,32 @@ interface ResponsiveProps {
 
 type ResponsiveNavItemsProps = NavItemsProps | ResponsiveProps
 
+const SUB_NAV_ICON_SIZE: number = 20
+
 function ServicesNavButton(props: ButtonProps & StyleProps & DataCyProps) {
-  const d: number = 20
   const servicesItems: SubNavItem[] = [
     {
-      icon: <FlutterSvg width={d} height={d} />,
+      icon: <FlutterSvg width={SUB_NAV_ICON_SIZE} height={SUB_NAV_ICON_SIZE} />,
       text: "Flutter"
     },
     {
-      icon: <DigitalTransformationSvg width={d} height={d} />,
+      icon: <DigitalTransformationSvg width={SUB_NAV_ICON_SIZE} height={SUB_NAV_ICON_SIZE} />,
       text: "Digital Transformation"
     },
     {
-      icon: <DigitalProductsSvg width={d} height={d} />,
+      icon: <DigitalProductsSvg width={SUB_NAV_ICON_SIZE} height={SUB_NAV_ICON_SIZE} />,
       text: "Digital Products"
     },
     {
-      icon: <CustomerExperienceSvg width={d} height={d} />,
+      icon: <CustomerExperienceSvg width={SUB_NAV_ICON_SIZE} height={SUB_NAV_ICON_SIZE} />,
       text: "Customer Experience"
     },
     {
-      icon: <CloudAndPlatformsSvg width={d} height={d} />,
+      icon: <CloudAndPlatformsSvg width={SUB_NAV_ICON_SIZE} height={SUB_NAV_ICON_SIZE} />,
       text: "Cloud & Platforms"
     },
     {
-      icon: <StrategyAndInnovationSvg width={d} height={d} />,
+      icon: <StrategyAndInnovationSvg width={SUB_NAV_ICON_SIZE} height={SUB_NAV_ICON_SIZE} />,
       text: "Strategy & Innovation"
     }
   ]
@@ -90,14 +91,13 @@ function ServicesNavButton(props: ButtonProps & StyleProps & DataCyProps) {
 }
 
 function AboutNavButton(props: ButtonProps & StyleProps & DataCyProps) {
-  const d: number = 20
   const servicesItems: SubNavItem[] = [
     {
-      icon: <CareersSvg width={d} height={d} />,
+      icon: <CareersSvg width={SUB_NAV_ICON_SIZE} height={SUB_NAV_ICON_SIZE} />,
       text: "Careers"
     },
     {
-      icon: <CultureAndValuesSvg width={d} height={d} />,
+      icon: <CultureAndValuesSvg width={SUB_NAV_ICON_SIZE} height={SUB_NAV_ICON_SIZE} />,
       text: "Culture & Values"
     }
   ]
