@@ -7,6 +7,11 @@
     $subnav-icon-text-gap: subnav-icon-text-gap;
 }
 
+.subNav {
+    align-self: flex-start;
+    padding: 0;
+}
+
 @media (min-width: calc($max-mobile-width + 1px)) {
     .navButton {
         padding: 0;
@@ -27,12 +32,11 @@
         border-radius: $subnav-border-radius;
     }
 
-    .subNavItem {
-        gap: $subnav-icon-text-gap;
-    }
-
     .subNavContainer {
         position: relative;
+    }
+
+    .subNavItem {
     }
 
     .navButton:hover .subNavContainer {
@@ -42,6 +46,11 @@
     .careersNavButton {
         padding: 0 0 0 0.8rem;
     }
+}
+
+.subNavItem {
+    justify-content: flex-start;
+    gap: $subnav-icon-text-gap;
 }
 
 .svgButton {
