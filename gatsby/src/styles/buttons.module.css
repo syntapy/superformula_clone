@@ -21,12 +21,18 @@
     .navButton .subNavConnector {
         position: absolute;
         visibility: hidden;
+        opacity: 0;
+    }
+
+    .subNavConnector {
+        transition: opacity 0.2s ease-in-out;
     }
 
     .subNavUl {
         position: relative;
-        top: $subnav-separation-top;
         left: -4rem;
+        top: 0;
+        transition: top 0.25s;
         row-gap: $subnav-padding;
         background-color: $grey-color;
         padding: $subnav-padding;
@@ -34,10 +40,15 @@
         border-radius: $subnav-border-radius;
     }
 
+    .navButton:hover .subNavUl {
+        top: $subnav-separation-top;
+    }
+
     .subNavItem {
     }
 
     .navButton:hover .subNavConnector {
+        opacity: 1;
         visibility: visible;
     }
 
