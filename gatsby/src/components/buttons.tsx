@@ -68,7 +68,7 @@ export function NavButton(props: ButtonProps & StyleProps & DataCyProps & SubNav
   return (
     <div data-cy={props.dataCy} className={className}>
       <NavAnchor href={props.href} text={props.text} />
-      {<SubNavBar subNavItems={props.subNavItems} />}
+      {<SubNavBar subNavHiddenInMobile={props.subNavHiddenInMobile} subNavItems={props.subNavItems} />}
     </div>
   )
 }
