@@ -8,6 +8,7 @@ export type SubNavItem = {
   icon: React.ElementType
   text: string
   leaveSite: boolean
+  url: string
 }
 
 export interface SubNavProps {

@@ -59,27 +59,33 @@ function ServicesNavButton(props: ButtonProps & StyleProps & DataCyProps) {
   const servicesItems: SubNavItem[] = [
     {
       icon: <FlutterSvg width={SUB_NAV_ICON_SIZE} height={SUB_NAV_ICON_SIZE} />,
-      text: "Flutter"
+      text: "Flutter",
+      url: "https://www.superformula.com/services/flutter/"
     },
     {
       icon: <DigitalTransformationSvg width={SUB_NAV_ICON_SIZE} height={SUB_NAV_ICON_SIZE} />,
-      text: "Digital Transformation"
+      text: "Digital Transformation",
+      url: "https://www.superformula.com/services/digital-transformation/"
     },
     {
       icon: <DigitalProductsSvg width={SUB_NAV_ICON_SIZE} height={SUB_NAV_ICON_SIZE} />,
-      text: "Digital Products"
+      text: "Digital Products",
+      url: "https://www.superformula.com/services/digital-products/"
     },
     {
       icon: <CustomerExperienceSvg width={SUB_NAV_ICON_SIZE} height={SUB_NAV_ICON_SIZE} />,
-      text: "Customer Experience"
+      text: "Customer Experience",
+      url: "https://www.superformula.com/services/customer-experience/"
     },
     {
       icon: <CloudAndPlatformsSvg width={SUB_NAV_ICON_SIZE} height={SUB_NAV_ICON_SIZE} />,
-      text: "Cloud & Platforms"
+      text: "Cloud & Platforms",
+      url: "https://www.superformula.com/services/cloud-and-platforms/"
     },
     {
       icon: <StrategyAndInnovationSvg width={SUB_NAV_ICON_SIZE} height={SUB_NAV_ICON_SIZE} />,
-      text: "Strategy & Innovation"
+      text: "Strategy & Innovation",
+      url: "https://www.superformula.com/services/strategy-innovation/"
     }
   ]
 
@@ -94,11 +100,13 @@ function AboutNavButton(props: ButtonProps & StyleProps & DataCyProps) {
   const servicesItems: SubNavItem[] = [
     {
       icon: <CareersSvg width={SUB_NAV_ICON_SIZE} height={SUB_NAV_ICON_SIZE} />,
-      text: "Careers"
+      text: "Careers",
+      url: "https://careers.superformula.com/"
     },
     {
       icon: <CultureAndValuesSvg width={SUB_NAV_ICON_SIZE} height={SUB_NAV_ICON_SIZE} />,
-      text: "Culture & Values"
+      text: "Culture & Values",
+      url: "https://careers.superformula.com/culture-values"
     }
   ]
 
