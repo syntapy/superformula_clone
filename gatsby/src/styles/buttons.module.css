@@ -25,14 +25,14 @@
     }
 
     .subNavConnector {
-        transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.10s ease-out;
     }
 
     .subNavUl {
         position: relative;
         left: -4rem;
         top: 0;
-        transition: top 0.25s;
+        transition: top 0.13s ease-in;
         row-gap: $subnav-padding;
         background-color: $grey-color;
         padding: $subnav-padding;
