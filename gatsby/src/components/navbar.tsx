@@ -111,7 +111,7 @@ function AboutNavButton(props: ButtonProps & StyleProps & DataCyProps) {
   ]
 
   return (<NavButton
-    dataCy="services-nav-item"
+    dataCy="about-nav-item"
     className={props.className} href={props.href} text={props.text}
     subNavItems={servicesItems}
     subNavHiddenInMobile={true}
