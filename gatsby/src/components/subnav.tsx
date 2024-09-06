@@ -30,7 +30,7 @@ export function SubNavBar(props: SubNavProps) {
       <div className={classNameConnector}>
         <ul className={classNameSubNavUl}>
         {props.subNavItems.map((item) => (
-          <div className={classNameSubNavRow}>{item.icon}<span>{item.text}</span></div>
+          <a href={item.url} className={classNameSubNavRow}>{item.icon}<span>{item.text}</span></a>
         ))}
         </ul>
       </div>
