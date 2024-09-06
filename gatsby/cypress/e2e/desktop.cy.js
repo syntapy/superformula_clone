@@ -15,6 +15,28 @@ desktop.devices.forEach((device) => {
           cy.compareSnapshot(fname)
         })
       })
+
+      it('nav items visible', () => {
+        cy.get('#toast-close-button').click().wait(clickWaitTime).then(() => {
+          cy.get('[data-cy="work-nav-item"]').should('be.visible')
+          cy.get('[data-cy="services-nav-item"]').should('be.visible')
+          cy.get('[data-cy="articles-nav-item"]').should('be.visible')
+          cy.get('[data-cy="about-nav-item"]').should('be.visible')
+        })
+      })
+
+      it('subnav items hover', () => {
+        cy.get('#toast-close-button').click().wait(clickWaitTime).then(() => {
+          let fname = 'subnav_desktop_services_' + device + '_' + orientation
+          cy.get('[data-cy="services-nav-item"]').realHover('mouse').wait(500)
+          cy.compareSnapshot(fname)
+
+          fname = 'subnav_desktop_about_' + device + '_' + orientation
+          cy.get('[data-cy="about-nav-item"]').realHover('mouse').wait(500)
+          cy.compareSnapshot(fname)
+        })
+      })
+
     })
   })
 })

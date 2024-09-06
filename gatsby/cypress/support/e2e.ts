@@ -17,3 +17,4 @@
 import './commands'
 import cypressTerminalReport from 'cypress-terminal-report/src/installLogsCollector'
 cypressTerminalReport()
+import "cypress-real-events/support"
