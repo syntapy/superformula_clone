@@ -39,7 +39,6 @@
         flex-direction: column;
         position: relative;
         width: fit-content;
-        white-space: nowrap;
         visibility: collapse;
         row-gap: $subnav-padding;
         top: -1rem;
