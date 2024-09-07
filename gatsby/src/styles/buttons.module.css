@@ -14,13 +14,10 @@
 
 @media (min-width: calc($max-mobile-width + 1px)) {
     .navButton {
-        position: relative;
         padding: 0;
     }
 
     .navButton .subNavConnector {
-        position: absolute;
-        visibility: hidden;
         opacity: 0;
     }
 
@@ -28,8 +25,14 @@
         transition: opacity 0.10s ease-out;
     }
 
-    .subNavUl {
+    .dropDown {
         position: relative;
+    }
+
+    .dropDownContent {
+        display: none;
+        flex-direction: column;
+        position: absolute;
         left: -4rem;
         top: 0;
         transition: top 0.13s ease-in;
@@ -40,16 +43,13 @@
         border-radius: $subnav-border-radius;
     }
 
-    .navButton:hover .subNavUl {
+    .dropDown:hover .dropDownContent {
         top: $subnav-separation-top;
+        display: flex;
+        opacity: 1;
     }
 
     .subNavItem {
-    }
-
-    .navButton:hover .subNavConnector {
-        opacity: 1;
-        visibility: visible;
     }
 
     .careersNavButton {
@@ -58,7 +58,6 @@
 }
 
 .subNavItem {
-    display: block;
     overflow: hidden;
     white-space: nowrap;
     justify-content: flex-start;

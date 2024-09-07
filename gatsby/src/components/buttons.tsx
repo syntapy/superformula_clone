@@ -64,7 +64,9 @@ function NavAnchor(props: ButtonProps & StyleProps) {
 }
 
 export function NavButton(props: ButtonProps & StyleProps & DataCyProps & SubNavProps) {
-  const className: string = styles.navButton + " " + props.className
+  const className: string = styles.navButton 
+                            + " " + styles.dropDown
+                            + " " + props.className
   return (
     <div data-cy={props.dataCy} className={className}>
       <NavAnchor href={props.href} text={props.text} />
