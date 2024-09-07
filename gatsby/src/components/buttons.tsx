@@ -65,11 +65,11 @@ function NavAnchor(props: ButtonProps & StyleProps) {
 
 export function NavButton(props: ButtonProps & StyleProps & DataCyProps & SubNavProps) {
   const className: string = styles.navButton 
-                            + " " + styles.dropDown
-                            + " " + props.className
+                    + " " + styles.dropDown
+                    + " " + props.className
   return (
-    <div data-cy={props.dataCy} className={className}>
-      <NavAnchor href={props.href} text={props.text} />
+    <div className={className} data-cy={props.dataCy}>
+      <NavAnchor href={props.href} text={props.text}/>
       {<SubNavBar subNavHiddenInMobile={props.subNavHiddenInMobile} subNavItems={props.subNavItems} />}
     </div>
   )

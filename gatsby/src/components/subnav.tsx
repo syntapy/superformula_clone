@@ -18,15 +18,18 @@ export interface SubNavProps {
 
 export function SubNavBar(props: SubNavProps) {
   if (props.subNavItems !== undefined) {
+    const classNameConnector: string = buttonStyles.dropDownConnector
     const classNameContent = buttonStyles.dropDownContent + " " + orientationStyles.spaceBetweenItems
     const classNameSubNavRow: string = buttonStyles.subNavItem + " " + orientationStyles.horizontalFlex
 
     return (
-      <ul className={classNameContent}>
-      {props.subNavItems.map((item) => (
-        <a href={item.url} className={classNameSubNavRow}>{item.icon}<span>{item.text}</span></a>
-      ))}
-      </ul>
+      <div className={classNameConnector}>
+        <ul className={classNameContent}>
+        {props.subNavItems.map((item) => (
+          <a href={item.url} className={classNameSubNavRow}>{item.icon}<span>{item.text}</span></a>
+        ))}
+        </ul>
+      </div>
     )
   }
 }
