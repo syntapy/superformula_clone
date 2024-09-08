@@ -37,22 +37,22 @@
         position: relative;
         width: fit-content;
         row-gap: $subnav-padding;
-        top: -1rem;
+        top: -.5rem;
         opacity: 0;
         background-color: $grey-color;
         padding: $subnav-padding;
         border: 2px solid $grey-color;
         border-radius: $subnav-border-radius;
         transition: 
-            opacity 1.6s ease-out,
-            top 1.04s ease-in;
+            opacity 0.10s ease-out,
+            top 0.13s ease-out;
     }
 
     .dropDown:hover .dropDownConnector {
     }
 
     .dropDown:hover .dropDownContent {
-        top: 0;
+        top: 0rem;
         opacity: 1;
     }
 
