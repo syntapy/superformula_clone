@@ -42,9 +42,7 @@
         padding: $subnav-padding;
         border: 2px solid $grey-color;
         border-radius: $subnav-border-radius;
-        opacity: 1;
         transition: top 1.04s ease-in;
-        transition: opacity 1.6s ease-out;
     }
 
     .dropDown:hover .dropDownConnector {
@@ -52,7 +50,6 @@
 
     .dropDown:hover .dropDownContent {
         top: 0;
-        opacity: 1;
     }
 
     .careersNavButton {
