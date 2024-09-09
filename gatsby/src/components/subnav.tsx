@@ -14,11 +14,20 @@ export type SubNavItem = {
 export interface SubNavProps {
   subNavItems?: SubNavItem[]
   subNavHiddenInMobile?: boolean
+  right?: boolean
 }
 
 export function SubNavBar(props: SubNavProps) {
   if (props.subNavItems !== undefined) {
-    const classNameConnector: string = buttonStyles.dropDownConnector
+    let classNameDir: string = ""
+
+    if (props.right) {
+        classNameDir = buttonStyles.right
+    } else {
+        classNameDir = buttonStyles.left
+    }
+
+    const classNameConnector: string = buttonStyles.dropDownConnector + " " + classNameDir
     const classNameContent = buttonStyles.dropDownContent + " " + orientationStyles.spaceBetweenItems
     const classNameSubNavRow: string = buttonStyles.subNavItem + " " + orientationStyles.horizontalFlex
 

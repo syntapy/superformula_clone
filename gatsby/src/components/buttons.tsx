@@ -10,6 +10,7 @@ import { HorizontalRule } from "./hr.tsx"
 interface ButtonProps {
   href?: string
   text: string
+  right?: boolean
 }
 
 interface DataCyProps {
@@ -70,7 +71,7 @@ export function NavButton(props: ButtonProps & StyleProps & DataCyProps & SubNav
   return (
     <div className={className} data-cy={props.dataCy}>
       <NavAnchor href={props.href} text={props.text}/>
-      {<SubNavBar subNavHiddenInMobile={props.subNavHiddenInMobile} subNavItems={props.subNavItems} />}
+      {<SubNavBar right={props.right} subNavHiddenInMobile={props.subNavHiddenInMobile} subNavItems={props.subNavItems} />}
     </div>
   )
 }
