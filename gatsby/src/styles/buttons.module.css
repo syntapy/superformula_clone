@@ -29,6 +29,7 @@
         max-width: 100%;
         width: 100%;
         height: 4rem;
+        visibility: collapse;
     }
 
     .left {
@@ -67,6 +68,7 @@
     }
 
     .dropDown:hover .dropDownConnector {
+        visibility: visible;
     }
 
     .dropDown:hover .dropDownContent {
