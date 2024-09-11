@@ -7,9 +7,18 @@
     $subnav-icon-text-gap: subnav-icon-text-gap;
 }
 
-.subNavUl {
-    align-self: flex-start;
-    padding: 0;
+@media (max-width: $max-mobile-width ) {
+    .dropDownConnector {
+        margin: 0;
+        padding: 0;
+    }
+
+    .dropDownContent {
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+        padding: 0;
+    }
 }
 
 @media (min-width: calc($max-mobile-width + 1px)) {
