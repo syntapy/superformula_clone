@@ -116,7 +116,6 @@ function AboutNavButton(props: ButtonProps & StyleProps & DataCyProps) {
     right={true}
     className={props.className} href={props.href} text={props.text}
     subNavItems={servicesItems}
-    subNavHiddenInMobile={true}
   />)
 }
 

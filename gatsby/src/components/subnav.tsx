@@ -1,7 +1,6 @@
 import * as React from "react"
 import * as buttonStyles from "../styles/buttons.module.css"
 import * as orientationStyles from "../styles/utilities/orientation.module.css"
-import * as visibilityStyles from "../styles/utilities/visibility.module.css"
 import { useStaticQuery, graphql } from "gatsby"
 
 export type SubNavItem = {
@@ -13,7 +12,6 @@ export type SubNavItem = {
 
 export interface SubNavProps {
   subNavItems?: SubNavItem[]
-  subNavHiddenInMobile?: boolean
   right?: boolean
 }
 
