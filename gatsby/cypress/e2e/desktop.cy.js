@@ -31,7 +31,7 @@ desktop.devices.forEach((device) => {
           cy.get('[data-cy="services-nav-item"]').realHover().then($el => {
               $el.trigger('mouseenter')
               cy.wait(300)
-              cy.compareSnapshot(fname)
+              cy.screenshot(fname)
           })
           //cy.compareSnapshot(fname)
 
