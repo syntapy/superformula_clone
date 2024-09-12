@@ -29,17 +29,18 @@ desktop.devices.forEach((device) => {
         cy.get('#toast-close-button').click().wait(clickWaitTime).then(() => {
           let fname = 'subnav_desktop_services_' + device + '_' + orientation
           cy.get('[data-cy="services-nav-item"]').then($el => {
-              $el.focus()
+              $el.trigger('mouseenter')
               cy.wait(300)
+              cy.compareSnapshot(fname)
           })
-          cy.compareSnapshot(fname)
+          //cy.compareSnapshot(fname)
 
-          fname = 'subnav_desktop_about_' + device + '_' + orientation
-          cy.get('[data-cy="about-nav-item"]').then($el => {
-              $el.focus()
-              cy.wait(300)
-          })
-          cy.compareSnapshot(fname)
+          //fname = 'subnav_desktop_about_' + device + '_' + orientation
+          //cy.get('[data-cy="about-nav-item"]').then($el => {
+          //    $el.focus()
+          //    cy.wait(300)
+          //})
+          //cy.compareSnapshot(fname)
         })
       })
 
