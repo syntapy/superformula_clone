@@ -28,7 +28,7 @@ desktop.devices.forEach((device) => {
       it('subnav items hover', () => {
         cy.get('#toast-close-button').click().wait(clickWaitTime).then(() => {
           let fname = 'subnav_desktop_services_' + device + '_' + orientation
-          cy.get('[data-cy="services-nav-item"]').then($el => {
+          cy.get('[data-cy="services-nav-item"]').realHover().then($el => {
               $el.trigger('mouseenter')
               cy.wait(300)
               cy.compareSnapshot(fname)
