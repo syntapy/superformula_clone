@@ -28,11 +28,15 @@ desktop.devices.forEach((device) => {
       it('subnav items hover', () => {
         cy.get('#toast-close-button').click().wait(clickWaitTime).then(() => {
           let fname = 'subnav_desktop_services_' + device + '_' + orientation
-          cy.get('[data-cy="services-nav-item"]').realHover('mouse').wait(500)
+          cy.get('[data-cy="services-nav-item"]').then($el => {
+              $el.css('hover', 'hover')
+          }).wait(300)
           cy.compareSnapshot(fname)
 
           fname = 'subnav_desktop_about_' + device + '_' + orientation
-          cy.get('[data-cy="about-nav-item"]').realHover('mouse').wait(500)
+          cy.get('[data-cy="about-nav-item"]').then($el => {
+              $el.css('hover', 'hover')
+          }).wait(300)
           cy.compareSnapshot(fname)
         })
       })
