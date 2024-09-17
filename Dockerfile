@@ -23,6 +23,7 @@ workdir /site
 copy gatsby .
 
 run apt-get update && apt-get upgrade -y && \
+        apt install -y x11-apps && \
 		npm install -g npm@latest && \
 		npm install -g gatsby-cli && \
 		npm run cy:install
