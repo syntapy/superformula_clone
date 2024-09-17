@@ -1,4 +1,4 @@
-arg NODE_VERSION='22.5.1'
+arg NODE_VERSION='22.8.0'
 
 ### Get versions from:
 ### 	https://hub.docker.com/r/cypress/factory/
