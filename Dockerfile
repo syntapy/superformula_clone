@@ -4,7 +4,7 @@ arg NODE_VERSION='22.8.0'
 ### 	https://hub.docker.com/r/cypress/factory/
 arg CHROME_VERSION='128.0.6613.137-1'
 arg EDGE_VERSION='127.0.2651.86-1'
-arg FIREFOX_VERSION='128.0.3'
+arg FIREFOX_VERSION='130.0.1'
 
 arg CYPRESS_VERSION='13.14.2'
 
