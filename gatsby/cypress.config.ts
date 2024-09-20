@@ -5,6 +5,7 @@ import cypressTerminalReport from 'cypress-terminal-report/src/installLogsPrinte
 import path from 'path'
 import fs from 'fs'
 
+
 export default defineConfig({
   env: {
     screenshotsFolder: './cypress/snapshots/actual',
