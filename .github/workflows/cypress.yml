@@ -23,7 +23,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: image diff output directory
-          path: gatsby/cypress/snapshots/diff
+          path: gatsby/cypress/snapshots/
         if: failure()
   lighthouse_audit:
     runs-on: ubuntu-latest
