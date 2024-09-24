@@ -14,7 +14,7 @@ fi
 # Define the directories
 dir_diff="cypress/snapshots/diff/cypress/e2e/${screen_folder}/"
 dir_base="cypress/snapshots/base/cypress/e2e/${screen_folder}/"
-dir_actual="cypress/screenshots/${screen_folder}/cypress/e2e/${screen_folder}/"
+dir_actual="cypress/snapshots/actual/${screen_folder}/cypress/e2e/${screen_folder}/"
 
 # Option to clear actual & diff images
 if [[ $1 == "--clear" ]]; then
