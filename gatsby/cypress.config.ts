@@ -8,14 +8,14 @@ import fs from 'fs'
 
 export default defineConfig({
   env: {
-    screenshotsFolder: './cypress/snapshots/actual',
     visualRegressionGenerateDiff: 'always',
-    type: 'regression',
+    type: 'base',
     trashAssetsBeforeRuns: true,
     failSilently: false,
     video: false
   },
   e2e: {
+    screenshotsFolder: './cypress/snapshots/actual',
     video: false,
     baseUrl: "http://localhost:8000",
     specPattern: ["cypress/e2e/**/*.cy.js", "cypress/audit/**/*.cy.js"],
