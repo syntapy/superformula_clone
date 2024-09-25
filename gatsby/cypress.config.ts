@@ -8,7 +8,7 @@ import fs from 'fs'
 export default defineConfig({
   env: {
     visualRegressionGenerateDiff: 'always',
-    type: 'base',
+    type: 'regression',
     trashAssetsBeforeRuns: true,
     failSilently: false,
     video: false
