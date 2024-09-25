@@ -22,7 +22,7 @@ jobs:
       - name: Upload image diff outputs
         uses: actions/upload-artifact@v3
         with:
-          name: image diff output directory
+          name: e2e image output directory
           path: gatsby/cypress/snapshots/
         if: failure()
   lighthouse_audit:
