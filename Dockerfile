@@ -1,12 +1,12 @@
-arg NODE_VERSION='22.5.1'
+arg NODE_VERSION='22.9.0'
 
 ### Get versions from:
 ### 	https://hub.docker.com/r/cypress/factory/
-arg CHROME_VERSION='127.0.6533.88-1'
-arg EDGE_VERSION='127.0.2651.86-1'
-arg FIREFOX_VERSION='128.0.3'
+arg CHROME_VERSION='129.0.6668.70-1'
+arg EDGE_VERSION='129.0.2792.52-1'
+arg FIREFOX_VERSION='130.0.1'
 
-arg CYPRESS_VERSION='13.13.2'
+arg CYPRESS_VERSION='13.14.2'
 
 from cypress/factory
 
@@ -23,6 +23,7 @@ workdir /site
 copy gatsby .
 
 run apt-get update && apt-get upgrade -y && \
+        apt install -y x11-apps feh && \
 		npm install -g npm@latest && \
 		npm install -g gatsby-cli && \
 		npm run cy:install
