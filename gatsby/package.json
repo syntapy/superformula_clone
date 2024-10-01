@@ -53,6 +53,7 @@
   "devDependencies": {
     "@appsfactory/cypress-audit": "^3.0.4",
     "@babel/preset-typescript": "^7.24.7",
+    "@cypress/grep": "^4.1.0",
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.1",
     "@types/dotenv": "^8.2.0",
@@ -64,8 +65,8 @@
     "babel-preset-gatsby": "^3.13.2",
     "contentful-import": "^9.4.59",
     "css-mediaquery": "^0.1.2",
-    "cypress-real-events": "^1.13.0",
     "cypress": "^13.14.2",
+    "cypress-real-events": "^1.13.0",
     "cypress-terminal-report": "^7.0.2",
     "cypress-visual-regression": "^5.2.2",
     "identity-obj-proxy": "^3.0.0",
