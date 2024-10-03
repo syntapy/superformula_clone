@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 
 if [[ $1 == "--ci" ]]; then
   docker compose -f docker-compose.yml run --entrypoint "npm run e2e:ci" page
