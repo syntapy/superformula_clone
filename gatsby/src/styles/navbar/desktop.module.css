@@ -1,5 +1,6 @@
 :import('../vars.module.css') {
 	$max-mobile-width: max-mobile-width;
+    $desktop-nav-items-gap: desktop-nav-items-gap;
 }
 
 @media (min-width: calc($max-mobile-width + 1px)) {
@@ -18,5 +19,6 @@
     .navItems {
         align-items: center;
         justify-content: flex-end;
+        column-gap: $desktop-nav-items-gap;
     }
 }

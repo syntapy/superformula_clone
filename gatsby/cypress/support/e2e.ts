@@ -17,3 +17,15 @@
 import './commands'
 import cypressTerminalReport from 'cypress-terminal-report/src/installLogsCollector'
 cypressTerminalReport()
+import "cypress-real-events/support"
+
+// @cypress/grep
+import registerCypressGrep = require('@cypress/grep');
+registerCypressGrep();
+
+import registerCypressGrep from '@cypress/grep/src/support';
+registerCypressGrep();
+
+// @ts-ignore
+import registerCypressGrep from '@cypress/grep';
+registerCypressGrep();

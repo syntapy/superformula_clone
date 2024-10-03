@@ -19,14 +19,13 @@ dir_actual="cypress/snapshots/actual/${screen_folder}/cypress/e2e/${screen_folde
 # Option to clear actual & diff images
 if [[ $1 == "--clear" ]]; then
     rm -rfv $dir_diff $dir_actual
-    rm -rfv "cypress/snapshots/base/*.png"
-    exit 0
+    rm -rfv "cypress/snapshots/actual/*.png"
 # Loop through each file and open the corresponding images with feh
 elif [ -d $dir_diff ]; then
     echo "diff folder exists"
     # Get the list of files in the first directory (assuming all directories have the same filenames)
-    files=$(ls "$dir_diff")
-    echo "found in diff folder: $files"
+    files=$(ls "$dir_actual")
+    echo "found in actual folder: $files"
     for file in $files; do
         # Construct the full paths for each image
         img_diff="$dir_diff$file"
