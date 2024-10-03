@@ -9,6 +9,7 @@ env:
 jobs:
   e2e:
     runs-on: ubuntu-latest
+    container: syntapynew/superformula_clone:latest
     steps:
       - name: checkout ${{ env.GITHUB_REF }}
         uses: actions/checkout@v3
@@ -18,7 +19,7 @@ jobs:
       - env:
           CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
           CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
-        run: ./bin/build && cd gatsby && npm ci && cd .. && ./bin/run --ci
+        run: cd gatsby && npm ci && npm run cy:install && npm run e2e:ci
       - name: Upload image diff outputs
         uses: actions/upload-artifact@v3
         with:
@@ -27,6 +28,7 @@ jobs:
         if: failure()
   lighthouse_audit:
     runs-on: ubuntu-latest
+    container: syntapynew/superformula_clone:latest
     steps:
       - name: checkout ${{ env.GITHUB_REF }}
         uses: actions/checkout@v3
