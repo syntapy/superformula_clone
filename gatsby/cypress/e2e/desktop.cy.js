@@ -25,25 +25,25 @@ desktop.devices.forEach((device) => {
         })
       })
 
-      it('subnav items hover', () => {
+      it('services subnav', () => {
         cy.get('#toast-close-button').click().wait(clickWaitTime).then(() => {
-          let fname = 'subnav_desktop_services_' + device + '_' + orientation
-          cy.get('[data-cy="services-nav-item"]').realHover().then($el => {
-              $el.trigger('mouseenter')
-              cy.wait(300)
-              cy.screenshot(fname)
-          })
-          //cy.compareSnapshot(fname)
-
-          //fname = 'subnav_desktop_about_' + device + '_' + orientation
-          //cy.get('[data-cy="about-nav-item"]').then($el => {
-          //    $el.focus()
-          //    cy.wait(300)
-          //})
-          //cy.compareSnapshot(fname)
+          let fname = 'subnav_services_' + device + '_' + orientation
+          cy.get('[data-cy="services-nav-item"] > div').invoke('attr', 'style', 'visibility: visible;')
+          cy.get('[data-cy="services-nav-item"] > div > ul').invoke('attr', 'style', 'visibility: visible; opacity: 1;')
+          cy.wait(200)
+          cy.compareSnapshot(fname)
         })
       })
 
+      it('about subnav', () => {
+        cy.get('#toast-close-button').click().wait(clickWaitTime).then(() => {
+          let fname = 'subnav_about_' + device + '_' + orientation
+          cy.get('[data-cy="about-nav-item"] > div').invoke('attr', 'style', 'visibility: visible;')
+          cy.get('[data-cy="about-nav-item"] > div > ul').invoke('attr', 'style', 'visibility: visible; opacity: 1;')
+          cy.wait(200)
+          cy.compareSnapshot(fname)
+        })
+      })
     })
   })
 })
