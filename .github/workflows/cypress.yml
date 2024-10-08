@@ -30,7 +30,7 @@ jobs:
         env:
           CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
           CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
-        run: npm run develop & && npm run wait && npm run e2e
+        run: npm run develop & ; npm run wait ; npm run e2e
       - name: Upload image diff outputs
         uses: actions/upload-artifact@v3
         with:
