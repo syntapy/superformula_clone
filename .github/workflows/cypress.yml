@@ -22,21 +22,15 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODE_VERSION }}
-      - name: cd / & ls & pwd
-        run: cd / && ls && pwd
       - name: install npm packages
         run: npm ci
       - name: install cypress
         run: npm run cy:install
-      - name: run server in background
+      - name: run server in background, wait, test
         env:
           CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
           CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
-        run: npm run develop &
-      - name: wait on server
-        run: npm run wait
-      - name: run e2e tests
-        run: npm run e2e
+        run: npm run develop & && npm run wait && npm run e2e
       - name: Upload image diff outputs
         uses: actions/upload-artifact@v3
         with:
