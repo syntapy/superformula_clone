@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "develop": "gatsby develop --host 127.0.0.1 --port 8000",
-    "wait": "wait-on tcp:8000",
+    "wait": "wait-on -d 20000 -i 2000 -t 5m tcp:8000",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "serve:help": "gatsby serve --help",
