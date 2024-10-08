@@ -22,8 +22,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODE_VERSION }}
-      - name: ls & pwd
-        run: ls && pwd
+      - name: cd / & ls & pwd
+        run: cd / && ls && pwd
       - name: install npm packages
         run: npm ci
       - name: install cypress
