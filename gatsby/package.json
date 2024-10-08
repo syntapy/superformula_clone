@@ -8,7 +8,7 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "gatsby develop",
+    "develop": "gatsby develop -H http://127.0.0.1 -P 8000",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "serve:help": "gatsby serve --help",
