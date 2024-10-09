@@ -23,7 +23,7 @@ workdir /site
 copy gatsby .
 
 run apt-get update && apt-get upgrade -y && \
-        apt install -y x11-apps feh && \
+        apt install -y x11-apps feh net-tools && \
 		npm install -g npm@latest && \
 		npm install -g gatsby-cli && \
 		npm run cy:install
