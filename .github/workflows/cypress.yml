@@ -9,9 +9,6 @@ env:
 jobs:
   e2e:
     runs-on: ubuntu-latest
-    container:
-      image: syntapynew/superformula_clone:latest
-      options: --user root
     steps:
       - name: checkout ${{ env.GITHUB_REF }}
         uses: actions/checkout@v3
@@ -30,9 +27,6 @@ jobs:
         if: failure()
   lighthouse_audit:
     runs-on: ubuntu-latest
-    container:
-      image: syntapynew/superformula_clone:latest
-      options: --user root
     steps:
       - name: checkout ${{ env.GITHUB_REF }}
         uses: actions/checkout@v3
