@@ -1,3 +1,10 @@
 #! /bin/sh
 
-docker build -f docker/Dockerfile.cypress -t superformula/clone .
+echo "Building Cypress Client"
+docker build -f docker/Dockerfile.cypress -t cypress_client ./gatsby/
+
+echo
+echo
+echo
+echo "Building Web Server"
+docker build -f docker/Dockerfile.gatsby -t gatsby_server ./gatsby/
