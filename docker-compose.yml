@@ -1,12 +1,24 @@
 services:
-  page:
-    image: syntapynew/superformula_clone
+  gatsby_server:
+    image: gatsby_server
     tty: true
     stdin_open: true
-    entrypoint: [ 
-      "bash"
-    ]
-    network_mode: "host"
+    command: ["bash"]
+    volumes:
+      - type: bind
+        source: "./gatsby"
+        target: "/site"
+    networks:
+      - shared
+    ports:
+      - "8000:8000"
+  e2e_client:
+    image: cypress_client
+    tty: true
+    stdin_open: true
+    command: ["netstat", "-lt"]
+    depends_on:
+      - gatsby_server
     environment:
       DISPLAY: $DISPLAY
     volumes:
@@ -15,3 +27,9 @@ services:
       - type: bind
         source: "./gatsby"
         target: "/site"
+    networks:
+      - shared
+
+networks:
+  shared:
+    driver: bridge
