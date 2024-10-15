@@ -8,8 +8,8 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "gatsby develop",
-    "wait": "wait-on tcp:8000",
+    "develop": "gatsby clean; gatsby develop -H 0.0.0.0 -p 8000",
+    "wait": "wait-on -d 20000 -i 2000 -t 3m tcp:8000",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "serve:help": "gatsby serve --help",
