@@ -24,10 +24,10 @@ copy . .
 # Sigh...yes, I needed to do this =/
 run chown -R node:node /root
 
-volume ["./"]
+volume /site
 
 run apt-get update && apt-get upgrade -y && \
-        apt install -y x11-apps feh && \
+        apt install -y x11-apps feh net-tools && \
         npm install cypress --save-dev && \
         npx cypress install
 
