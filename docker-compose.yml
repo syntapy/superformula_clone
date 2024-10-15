@@ -3,7 +3,7 @@ services:
     image: gatsby_server
     tty: true
     stdin_open: true
-    command: ["bash"]
+    command: ["npm", "run", "develop"]
     volumes:
       - type: bind
         source: "./gatsby"
@@ -16,7 +16,7 @@ services:
     image: cypress_client
     tty: true
     stdin_open: true
-    command: ["netstat", "-lt"]
+    command: ["npm", "run", "e2e"]
     depends_on:
       - gatsby
     environment:
