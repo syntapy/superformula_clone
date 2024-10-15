@@ -1,5 +1,5 @@
 services:
-  gatsby_server:
+  gatsby:
     image: gatsby_server
     tty: true
     stdin_open: true
@@ -18,7 +18,7 @@ services:
     stdin_open: true
     command: ["netstat", "-lt"]
     depends_on:
-      - gatsby_server
+      - gatsby
     environment:
       DISPLAY: $DISPLAY
     volumes:
