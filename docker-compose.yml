@@ -1,6 +1,6 @@
 services:
   gatsby:
-    image: gatsby_server
+    image: syntapynew/gatsby_server
     tty: true
     stdin_open: true
     command: ["npm", "run", "develop"]
@@ -13,7 +13,7 @@ services:
     ports:
       - "8000:8000"
   e2e_client:
-    image: cypress_client
+    image: syntapynew/cypress_client
     tty: true
     stdin_open: true
     command: ["npm", "run", "e2e"]
