@@ -22,12 +22,10 @@ jobs:
     steps:
       - name: checkout ${{ env.GITHUB_REF }}
         uses: actions/checkout@v3
-      - name: ls docker containers
-        run: docker container ls -a
-     #- name: wait for gatsby server
-     #  run: docker exec $(docker ps -q --filter ancestor=cyntapynew/cypress_client:latest) /bin/bash -c "npm run wait"
-     #- name: run e2e tests
-     #  run: docker exec $(docker ps -q --filter ancestor=cyntapynew/cypress_client:latest) /bin/bash -c "npm run e2e"
+     - name: wait for gatsby server
+       run: docker exec $(docker ps -q --filter ancestor=cyntapynew/e2e_client:latest) /bin/bash -c "npm run wait"
+     - name: run e2e tests
+       run: docker exec $(docker ps -q --filter ancestor=cyntapynew/e2e_client:latest) /bin/bash -c "npm run e2e"
       - name: Upload image diff outputs
         uses: actions/upload-artifact@v3
         with:
