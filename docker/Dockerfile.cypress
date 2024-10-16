@@ -27,7 +27,7 @@ run chown -R node:node /root
 volume /site
 
 run apt-get update && apt-get upgrade -y && \
-        apt install -y x11-apps feh net-tools && \
+        apt install -y x11-apps feh net-tools Xvfb && \
         npm install cypress --save-dev && \
         npx cypress install
 
