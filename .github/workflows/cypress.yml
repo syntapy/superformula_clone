@@ -22,6 +22,7 @@ jobs:
     steps:
       - name: checkout ${{ env.GITHUB_REF }}
         uses: actions/checkout@v3
+      - run: docker container ls -a
       - run: echo $(docker ps -q --filter ancestor=syntapynew/cypress_client:latest)
       #- name: wait for gatsby server
       #  run: docker exec $(docker ps -q --filter ancestor=syntapynew/cypress_client:latest) /bin/bash -c "npm run wait"
