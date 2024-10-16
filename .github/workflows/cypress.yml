@@ -18,7 +18,7 @@ jobs:
         ports:
           - 8000:8000
       e2e_client:
-        image: syntapynew/e2e_client
+        image: syntapynew/cypress_client
     steps:
       - name: checkout ${{ env.GITHUB_REF }}
         uses: actions/checkout@v3
