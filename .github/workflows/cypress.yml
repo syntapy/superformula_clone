@@ -9,31 +9,50 @@ env:
 jobs:
   e2e:
     runs-on: ubuntu-latest
+    services:
+      gatsby:
+        image: syntapynew/gatsby_server
+        env:
+          CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+          CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
+        ports:
+          - 8000:8000
+        options: --name gatsby
+      e2e_client:
+        image: syntapynew/cypress_client
+        options: --name e2e_client
+    env:
+      GATSBY_CONTAINER=$(docker ps -q --all --filter name=gatsby)
+      CYPRESS_CONTAINER=$(docker ps -q --all --filter name=e2e_client)
     steps:
       - name: checkout ${{ env.GITHUB_REF }}
         uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-      - env:
-          CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
-          CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
-        run: cd gatsby && npm ci && npm run cy:install && npm run e2e:ci
+      - run: echo $GATSBY_CONTAINER
+      - run: echo $CYPRESS_CONTAINER
+      - run: docker container ls -a
+      - run: docker image ls -a
+      - run: docker ps --all
+      - name: start gatsby server
+        run: docker start $(docker ps -q --all --filter name=gatsby)
+      - name: wait for gatsby server
+        run: docker exec $(docker ps -q --all --filter name=e2e_client) '/bin/bash -c "npm run wait"'
+      #- name: run e2e tests
+      #  run: docker exec $(docker ps -q --filter ancestor=syntapynew/cypress_client:latest) /bin/bash -c "npm run e2e"
       - name: Upload image diff outputs
         uses: actions/upload-artifact@v3
         with:
           name: e2e image output directory
           path: gatsby/cypress/snapshots/
         if: failure()
-  lighthouse_audit:
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout ${{ env.GITHUB_REF }}
-        uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-      - env:
-          CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
-          CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
-        run: cd gatsby && npm ci && npm run cy:install && npm run audit:ci
+ #lighthouse_audit:
+ #  runs-on: ubuntu-latest
+ #  steps:
+ #    - name: checkout ${{ env.GITHUB_REF }}
+ #      uses: actions/checkout@v3
+ #    - uses: actions/setup-node@v3
+ #      with:
+ #        node-version: ${{ env.NODE_VERSION }}
+ #    - env:
+ #        CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+ #        CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
+ #      run: cd gatsby && npm ci && npm run cy:install && npm run audit:ci

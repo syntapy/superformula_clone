@@ -8,7 +8,8 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "gatsby develop",
+    "develop": "gatsby clean; gatsby develop -H 0.0.0.0 -p 8000",
+    "wait": "wait-on -d 20000 -i 2000 -t 3m tcp:8000",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "serve:help": "gatsby serve --help",
@@ -26,7 +27,7 @@
     "audit:ci": "start-server-and-test develop http://localhost:8000 audit",
     "audit:debug": "DEBUG='cypress:server:task' cypress run --e2e --browser firefox --spec 'cypress/audit/**/*.cy.js'",
     "e2e": "cypress run --e2e --browser firefox --spec 'cypress/e2e/**/*.cy.js'",
-    "e2e:ci": "start-server-and-test develop http://localhost:8000 e2e",
+    "e2e:ci": "npm run wait; npm run e2e",
     "e2e:reset": "cypress run --env type=base --e2e --browser firefox",
     "e2e:view:mobile": "sh cypress/bin/compare_images",
     "e2e:view:desktop": "sh cypress/bin/compare_images --desktop",
@@ -71,6 +72,7 @@
     "react-test-renderer": "^18.3.1",
     "start-server-and-test": "^2.0.8",
     "ts-jest": "^29.2.5",
-    "typescript": "^5.6.2"
+    "typescript": "^5.6.2",
+    "wait-on": "^8.0.1"
   }
 }
