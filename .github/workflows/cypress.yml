@@ -19,11 +19,13 @@ jobs:
           - 8000:8000
       e2e_client:
         image: syntapynew/cypress_client
+        options: --name e2e_client
     steps:
       - name: checkout ${{ env.GITHUB_REF }}
         uses: actions/checkout@v3
       - run: docker container ls -a
-      - run: echo $(docker ps --filter ancestor=syntapynew/cypress_client)
+      - run: docker image ls -a
+      - run: docker ps --filter name=e2e_client
       #- name: wait for gatsby server
       #  run: docker exec $(docker ps -q --filter ancestor=syntapynew/cypress_client:latest) /bin/bash -c "npm run wait"
       #- name: run e2e tests
