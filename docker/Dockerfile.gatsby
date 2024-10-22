@@ -26,4 +26,4 @@ user $UNAME
 
 expose 8000/tcp
 
-entrypoint ["npm", "run"]
+cmd ["npm", "run", "develop"]

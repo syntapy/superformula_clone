@@ -17,7 +17,7 @@ jobs:
           CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
         ports:
           - 8000:8000
-        options: --name gatsby develop
+        options: --name gatsby
       e2e_client:
         image: syntapynew/cypress_client
         options: --name e2e_client
