@@ -35,6 +35,8 @@ jobs:
       - run: docker ps --all
       - name: start gatsby server
         run: docker start $GATSBY_CONTAINER
+      - name: start cypress container
+        run: docker start $CYPRESS_CONTAINER
       - name: wait for gatsby server
         run: docker exec $CYPRESS_CONTAINER "npm run wait"
       - name: run e2e tests
