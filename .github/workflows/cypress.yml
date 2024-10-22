@@ -21,29 +21,30 @@ jobs:
       e2e_client:
         image: syntapynew/cypress_client
         options: --name e2e_client
-    env:
-      GATSBY_CONTAINER=$(docker ps -q --all --filter name=gatsby)
-      CYPRESS_CONTAINER=$(docker ps -q --all --filter name=e2e_client)
     steps:
-      - name: checkout ${{ env.GITHUB_REF }}
-        uses: actions/checkout@v3
+      - name: set gatsby container env variable
+        run: echo "GATSBY_CONTAINER=$(docker ps -q --all --filter name=gatsby)" >> $GITHUB_ENV
+      - name: set cypress container env variable
+        run: echo "CYPRESS_CONTAINER=$(docker ps -q --all --filter name=e2e_client)" >> $GITHUB_ENV
       - run: echo $GATSBY_CONTAINER
       - run: echo $CYPRESS_CONTAINER
-      - run: docker container ls -a
-      - run: docker image ls -a
-      - run: docker ps --all
-      - name: start gatsby server
-        run: docker start $(docker ps -q --all --filter name=gatsby)
-      - name: wait for gatsby server
-        run: docker exec $(docker ps -q --all --filter name=e2e_client) '/bin/bash -c "npm run wait"'
+      - name: checkout ${{ env.GITHUB_REF }}
+        uses: actions/checkout@v3
+      #- run: docker container ls -a
+      #- run: docker image ls -a
+      #- run: docker ps --all
+      #- name: start gatsby server
+      #  run: docker start $(docker ps -q --all --filter name=gatsby)
+      #- name: wait for gatsby server
+      #  run: docker exec $(docker ps -q --all --filter name=e2e_client) '/bin/bash -c "npm run wait"'
       #- name: run e2e tests
       #  run: docker exec $(docker ps -q --filter ancestor=syntapynew/cypress_client:latest) /bin/bash -c "npm run e2e"
-      - name: Upload image diff outputs
-        uses: actions/upload-artifact@v3
-        with:
-          name: e2e image output directory
-          path: gatsby/cypress/snapshots/
-        if: failure()
+      #- name: Upload image diff outputs
+      #  uses: actions/upload-artifact@v3
+      #  with:
+      #    name: e2e image output directory
+      #    path: gatsby/cypress/snapshots/
+      #  if: failure()
  #lighthouse_audit:
  #  runs-on: ubuntu-latest
  #  steps:
