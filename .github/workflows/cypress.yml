@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: set gatsby container env variable
         run: echo "GATSBY_CONTAINER=$(docker ps -q --all --filter name=gatsby)" >> $GITHUB_ENV
-      - name: pull cypress container
+      - name: pull cypress image
         run: docker pull syntapynew/cypress_client
       - run: echo $GATSBY_CONTAINER
       - name: checkout ${{ env.GITHUB_REF }}
