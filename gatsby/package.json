@@ -8,6 +8,7 @@
     "gatsby"
   ],
   "scripts": {
+    "ls": "bash -c '/usr/bin/ls'",
     "develop": "gatsby clean; gatsby develop -H 0.0.0.0 -p 8000",
     "wait": "wait-on -d 20000 -i 2000 -t 3m tcp:8000",
     "build": "gatsby build",
