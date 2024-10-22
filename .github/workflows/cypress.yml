@@ -31,6 +31,8 @@ jobs:
       - run: docker ps --all
       - name: start gatsby server
         run: docker start $GATSBY_CONTAINER
+      - name: ls in cypress container
+        run: docker run syntapynew/cypress_client '/bin/bash -c "ls"'
       - name: wait for gatsby server
         run: docker run syntapynew/cypress_client '/bin/bash -c "npm run wait"'
       - run: docker ps --all
