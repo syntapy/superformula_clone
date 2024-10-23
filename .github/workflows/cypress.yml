@@ -33,6 +33,8 @@ jobs:
         run: docker start $GATSBY_CONTAINER
       - name: show containers
         run: docker container ls -a
+      - name: show networks
+        run: docker network ls
       - name: wait for gatsby server
         run: docker run syntapynew/cypress_client netstat -lt
       - name: wait for gatsby server
