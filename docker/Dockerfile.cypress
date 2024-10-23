@@ -28,6 +28,7 @@ volume /site
 
 run apt-get update && apt-get upgrade -y && \
         apt install -y x11-apps feh net-tools && \
+        npm install -g npm@latest && \
         npm install cypress --save-dev && \
         npx cypress install
 
