@@ -24,7 +24,7 @@ jobs:
       - name: set network env variable
         run: |
           GATSBY_NETWORK=$(docker inspect $GATSBY_CONTAINER --format '{{json .NetworkSettings.Networks }}')
-          echo "NETWORK=$NETWORK" >> $GITHUB_ENV
+          echo "$GATSBY_NETWORK" >> $GITHUB_ENV
       - name: show network nev variable
         run: echo $GATSBY_NETWORK
       - name: show networks
