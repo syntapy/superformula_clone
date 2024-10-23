@@ -34,10 +34,10 @@ jobs:
       - name: ls in cyprss container
         run: docker run syntapynew/cypress_client ls
       - name: wait for gatsby server
-        run: docker run syntapynew/cypress_client wait
+        run: docker run syntapynew/cypress_client "npm run wait"
       - run: docker ps --all
       - name: run e2e tests
-        run: docker run syntapynew/cypress_client e2e
+        run: docker run syntapynew/cypress_client "npm run e2e"
       - name: Upload image diff outputs
         uses: actions/upload-artifact@v3
         with:
