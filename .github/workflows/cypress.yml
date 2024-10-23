@@ -21,6 +21,12 @@ jobs:
     steps:
       - name: set gatsby container env variable
         run: echo "GATSBY_CONTAINER=$(docker ps -q --all --filter name=gatsby)" >> $GITHUB_ENV
+      - name: set network env variable
+        run: echo "GATSBY_NETWORK=$(job.container.network)" >> $GITHUB_ENV
+      - name: show network nev variable
+        run: echo $GATSBY_NETWORK
+      - name: show networks
+        run: docker network ls
       - name: pull cypress image
         run: docker pull syntapynew/cypress_client
       - run: echo $GATSBY_CONTAINER
@@ -32,16 +38,14 @@ jobs:
       - name: start gatsby server
         run: docker start $GATSBY_CONTAINER
       - name: show containers
-        run: docker inspect $GATSBY_CONTAINER
-      - name: show networks
-        run: docker network ls
+        run: docker inspect $GATSBY_CONTAINER | grep "NetworkMode"
       - name: netstat -lt
-        run: docker run --network host syntapynew/cypress_client netstat -lt
+        run: docker run --network $GATSBY_NETWORK syntapynew/cypress_client netstat -lt
       - name: wait for gatsby server
-        run: docker run --network host syntapynew/cypress_client npm run wait
+        run: docker run --network $GATSBY_NETWORK syntapynew/cypress_client npm run wait
       - run: docker ps --all
       - name: run e2e tests
-        run: docker run --network host syntapynew/cypress_client npm run e2e
+        run: docker run --network $GATSBY_NETWORK syntapynew/cypress_client npm run e2e
       - name: Upload image diff outputs
         uses: actions/upload-artifact@v3
         with:
