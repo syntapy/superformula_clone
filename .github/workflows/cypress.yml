@@ -22,7 +22,9 @@ jobs:
       - name: set gatsby container env variable
         run: echo "GATSBY_CONTAINER=$(docker ps -q --all --filter name=gatsby)" >> $GITHUB_ENV
       - name: set network env variable
-        run: echo "GATSBY_NETWORK=$(job.container.network)" >> $GITHUB_ENV
+        run: |
+          GATSBY_NETWORK=$(docker inspect $GATSBY_CONTAINER --format '{{json .NetworkSettings.Networks }}')
+          echo "NETWORK=$NETWORK" >> $GITHUB_ENV
       - name: show network nev variable
         run: echo $GATSBY_NETWORK
       - name: show networks
