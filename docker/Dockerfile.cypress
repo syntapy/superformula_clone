@@ -32,5 +32,3 @@ run apt-get update && apt-get upgrade -y && \
         npx cypress install
 
 user $UNAME
-
-entrypoint ["npm", "run"]
