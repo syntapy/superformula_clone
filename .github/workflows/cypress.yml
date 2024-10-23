@@ -32,7 +32,7 @@ jobs:
       - name: start gatsby server
         run: docker start $GATSBY_CONTAINER
       - name: ls in cyprss container
-        run: docker run syntapynew/cypress_client show
+        run: docker run syntapynew/cypress_client --entrypoint=/bin/bash ls
       - name: wait for gatsby server
         run: docker run syntapynew/cypress_client wait
       - run: docker ps --all
