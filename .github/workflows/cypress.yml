@@ -17,7 +17,7 @@ jobs:
           CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
         ports:
           - 8000:8000
-        options: --name gatsby gatsby-network
+        options: --name gatsby
     steps:
       - name: set gatsby container env variable
         run: echo "GATSBY_CONTAINER=$(docker ps -q --all --filter name=gatsby)" >> $GITHUB_ENV
