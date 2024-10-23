@@ -32,7 +32,7 @@ jobs:
       - name: start gatsby server
         run: docker start $GATSBY_CONTAINER
       - name: show containers
-        run: docker container ls -a
+        run: docker inspect $GATSBY_CONTAINER
       - name: show networks
         run: docker network ls
       - name: netstat -lt
