@@ -8,7 +8,6 @@
     "gatsby"
   ],
   "scripts": {
-    "show": "/usr/bin/ls",
     "develop": "gatsby clean; gatsby develop -H 0.0.0.0 -p 8000",
     "wait": "wait-on -d 20000 -i 2000 -t 3m tcp:8000",
     "build": "gatsby build",
@@ -33,6 +32,7 @@
     "e2e:view:mobile": "sh cypress/bin/compare_images",
     "e2e:view:desktop": "sh cypress/bin/compare_images --desktop",
     "e2e:clear": "sh cypress/bin/compare_images --clear",
+    "show": "ls",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
