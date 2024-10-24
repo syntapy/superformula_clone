@@ -10,10 +10,8 @@ jobs:
   e2e:
     runs-on: ubuntu-latest
     steps:
-      - name: pwd
-        run: pwd
-      - name: ls
-        run: ls
+      - run: pwd
+      - run: ls
       - name: run gatsby server
         run: docker compose up -d gatsby
       - name: Upload image diff outputs
