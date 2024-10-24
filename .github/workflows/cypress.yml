@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: pwd
         run: pwd
+      - name: ls
+        run: ls
       - name: run gatsby server
         run: docker compose up -d gatsby
       - name: Upload image diff outputs
