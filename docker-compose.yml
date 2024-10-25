@@ -12,6 +12,11 @@ services:
       - shared
     ports:
       - "8000:8000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000"]
+      interval: 20s
+      timeout: 5s
+      retries: 3
   e2e_client:
     image: syntapynew/cypress_client
     tty: true
