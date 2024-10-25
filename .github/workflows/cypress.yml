@@ -12,9 +12,8 @@ jobs:
     steps:
       - name: checkout ${{ env.GITHUB_REF }}
         uses: actions/checkout@v3
-      - run: ls -lht
-      - run: ls -lht gatsby
-      - run: whoami
+      - run: echo $UID
+      - run: echo $GID
       #- name: npm install
       #  run: docker compose run --rm gatsby npm ci
       #- name: gatsby develop
