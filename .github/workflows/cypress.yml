@@ -24,6 +24,8 @@ jobs:
       #- run: docker compose run gatsby echo $GID
       - name: gatsby id
         run: docker compose run --rm gatsby id
+      - name: host id
+        run: id
       - name: gatsby whoami
         run: docker compose run --rm gatsby whoami
       - name: gatsby ls
