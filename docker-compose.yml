@@ -1,6 +1,9 @@
 services:
   gatsby:
     image: syntapynew/gatsby_server
+    environment:
+      UID: $(id -u)
+      GID: $(id -g)
     user: "${UID}:${GID}"
     tty: true
     stdin_open: true
