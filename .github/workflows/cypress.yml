@@ -5,12 +5,11 @@ on: [push]
 
 env:
   NODE_VERSION: 22
+  DISPLAY: ""
 
 jobs:
   e2e:
     runs-on: ubuntu-latest
-    env:
-      DISPLAY: ""
     steps:
       - name: checkout ${{ env.GITHUB_REF }}
         uses: actions/checkout@v3
