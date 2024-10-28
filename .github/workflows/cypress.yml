@@ -16,7 +16,7 @@ jobs:
       - run: env
       - name: pull images
         run: docker compose pull
-      #- run: echo "GID=$(id -g)" >> $GITHUB_ENV
+      - run: echo "GID=$(id -g)" >> $GITHUB_ENV
       #- run: echo $UID
       #- run: echo $GID
       #- run: docker compose run gatsby echo $UID
@@ -24,7 +24,7 @@ jobs:
       - name: npm install
         run: docker compose run --rm gatsby npm ci
       - name: gatsby id
-        run: docker compose run --rm gatsby whoami
+        run: docker compose run --rm gatsby id
       - name: gatsby whoami
         run: docker compose run --rm gatsby whoami
       - name: gatsby ls

@@ -2,8 +2,8 @@ services:
   gatsby:
     image: syntapynew/gatsby_server
     environment:
-      UID: $(id -u)
-      GID: $(id -g)
+      - UID=${UID}
+      - GID=${GID}
     user: "${UID}:${GID}"
     tty: true
     stdin_open: true
@@ -29,9 +29,9 @@ services:
     depends_on:
       - gatsby
     environment:
-      UID: $(id -u)
-      GID: $(id -g)
-      DISPLAY: $DISPLAY
+      - UID=${UID}
+      - GID=${GID}
+      - DISPLAY=${DISPLAY}
     user: "${UID}:${GID}"
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
