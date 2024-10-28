@@ -12,23 +12,25 @@ jobs:
     steps:
       - name: checkout ${{ env.GITHUB_REF }}
         uses: actions/checkout@v3
-      - run: echo "GID=$(id -g)" >> $GITHUB_ENV
-      - run: echo $UID
-      - run: echo $GID
-      - run: docker compose run gatsby echo $UID
-      - run: docker compose run gatsby echo $GID
-      #- name: npm install
-      #  run: docker compose run --rm gatsby npm ci
-      #- name: gatsby develop
-      #  run: docker compose up --wait gatsby
-      #- name: run e2e tests
-      #  run: docker compose up e2e_client
-      #- name: Upload image diff outputs
-      #  uses: actions/upload-artifact@v3
-      #  with:
-      #    name: e2e image output directory
-      #    path: gatsby/cypress/snapshots/
-      #  if: failure()
+      - name: pull images
+        run: docker compose pull
+      #- run: echo "GID=$(id -g)" >> $GITHUB_ENV
+      #- run: echo $UID
+      #- run: echo $GID
+      #- run: docker compose run gatsby echo $UID
+      #- run: docker compose run gatsby echo $GID
+      - name: npm install
+        run: docker compose run --rm gatsby npm ci
+      - name: gatsby develop
+        run: docker compose up --wait gatsby
+      - name: run e2e tests
+        run: docker compose up e2e_client
+      - name: Upload image diff outputs
+        uses: actions/upload-artifact@v3
+        with:
+          name: e2e image output directory
+          path: gatsby/cypress/snapshots/
+        if: failure()
  #lighthouse_audit:
  #  runs-on: ubuntu-latest
  #  steps:
