@@ -4,7 +4,7 @@ services:
     environment:
       UID: $(id -u)
       GID: $(id -g)
-    user: "$(UID):$(GID)"
+    user: "${UID}:${GID}"
     tty: true
     stdin_open: true
     command: ["npm", "run", "develop"]
@@ -32,7 +32,7 @@ services:
       UID: $(id -u)
       GID: $(id -g)
       DISPLAY: $DISPLAY
-    user: "$(UID):$(GID)"
+    user: "${UID}:${GID}"
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
       - ~/.Xauthority:/root/.Xauthority
