@@ -29,8 +29,8 @@ services:
     depends_on:
       - gatsby
     environment:
-      UID: $UID
-      GID: $GID
+      UID: $(id -u)
+      GID: $(id -g)
       DISPLAY: $DISPLAY
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
