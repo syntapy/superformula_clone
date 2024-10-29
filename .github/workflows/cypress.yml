@@ -16,6 +16,9 @@ jobs:
       - run: env
       - name: pull images
         run: docker compose pull
+      - env:
+          CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+          CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
       - run: echo "GID=$(sudo id -g)" >> $GITHUB_ENV
       - run: echo "UID=$(sudo id -u)" >> $GITHUB_ENV
       #- run: echo $UID
