@@ -13,6 +13,7 @@ arg FIREFOX_VERSION='130.0.1'
 
 arg CYPRESS_VERSION='13.14.2'
 
+run mkdir /home/node/site
 workdir /home/node/site
 
 
