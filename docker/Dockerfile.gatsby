@@ -3,7 +3,7 @@ from node:22-bookworm
 arg UID=1000
 arg GID=1000
 
-workdir /home/node
+workdir /home/node/site
 
 run apt-get update && apt-get upgrade -y && \
     apt install -y net-tools && \
@@ -12,6 +12,6 @@ run apt-get update && apt-get upgrade -y && \
 
 user node
 
-volume /home/node
+volume /home/node/site
 
 expose 8000/tcp

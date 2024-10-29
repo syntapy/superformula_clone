@@ -13,7 +13,7 @@ arg FIREFOX_VERSION='130.0.1'
 
 arg CYPRESS_VERSION='13.14.2'
 
-workdir /home/node
+workdir /home/node/site
 
 
 run apt-get update && apt-get upgrade -y && \
