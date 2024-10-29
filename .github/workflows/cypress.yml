@@ -16,14 +16,14 @@ jobs:
       - run: env
       - name: pull images
         run: docker compose pull
-        #- run: echo "GID=$(id -g)" >> $GITHUB_ENV
-        #- run: echo "UID=$(id -u)" >> $GITHUB_ENV
+      - run: echo "GID=$(sudo id -g)" >> $GITHUB_ENV
+      - run: echo "UID=$(sudo id -u)" >> $GITHUB_ENV
       #- run: echo $UID
       #- run: echo $GID
       #- run: docker compose run gatsby echo $UID
       #- run: docker compose run gatsby echo $GID
-      - name: tmate session
-        uses: mxschmitt/action-tmate@v3
+      #- name: tmate session
+      #  uses: mxschmitt/action-tmate@v3
       - name: gatsby ls
         run: docker compose run --rm gatsby ls -lhta
       - name: gatsby id
