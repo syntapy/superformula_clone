@@ -11,7 +11,7 @@ services:
     volumes:
       - type: bind
         source: "./gatsby"
-        target: "/site"
+        target: "/home/node/site"
     networks:
       - shared
     ports:
