@@ -38,7 +38,7 @@ services:
       - ~/.Xauthority:/root/.Xauthority
       - type: bind
         source: "./gatsby"
-        target: "/site"
+        target: "/home/node/site"
     networks:
       - shared
 
