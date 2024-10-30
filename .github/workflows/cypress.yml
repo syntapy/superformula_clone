@@ -18,10 +18,6 @@ jobs:
       - run: env
       - name: pull images
         run: docker compose pull
-      - run: echo "GID=$(sudo id -g)" >> $GITHUB_ENV
-      - run: echo "UID=$(sudo id -u)" >> $GITHUB_ENV
-      - run: echo $UID
-      - run: echo $GID
       #- run: docker compose run gatsby echo $UID
       #- run: docker compose run gatsby echo $GID
       #- name: tmate session

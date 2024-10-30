@@ -9,9 +9,6 @@ arg CYPRESS_VERSION='13.14.2'
 
 from cypress/factory
 
-env UID=1000
-env GID=1000
-
 run apt update && apt install -y x11-apps feh net-tools
 #    npm install -g npm@latest && \
 #    npm install -D cypress@$CYPRESS_VERSION --save-dev && \
