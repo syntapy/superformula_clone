@@ -1,26 +1,24 @@
-from cypress/factory
-
-arg UID=1000
-arg GID=1000
-
 arg NODE_VERSION='22.9.0'
 
 ### Get versions from:
 ### 	https://hub.docker.com/r/cypress/factory/
-arg CHROME_VERSION='129.0.6668.70-1'
-arg EDGE_VERSION='129.0.2792.52-1'
+#arg CHROME_VERSION='129.0.6668.70-1'
+#arg EDGE_VERSION='129.0.2792.52-1'
 arg FIREFOX_VERSION='130.0.1'
-
 arg CYPRESS_VERSION='13.14.2'
 
+from cypress/factory
+
+env UID=1000
+env GID=1000
+
+run apt install -y x11-apps feh net-tools
+#    npm install -g npm@latest && \
+#    npm install -D cypress@$CYPRESS_VERSION --save-dev && \
+#    npx cypress install
+
+user node
+
 run mkdir /home/node/site
-workdir /home/node/site
-
-
-run apt-get update && apt-get upgrade -y && \
-    apt install -y x11-apps feh net-tools && \
-    npm install -g npm@latest && \
-    npm install cypress --save-dev && \
-    npx cypress install
-
 volume /home/node/site
+workdir /home/node/site
