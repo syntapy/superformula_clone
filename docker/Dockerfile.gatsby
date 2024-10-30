@@ -1,7 +1,7 @@
 from node:22-bookworm
 
-arg UID=1000
-arg GID=1000
+env UID=1000
+env GID=1000
 
 run mkdir /home/node/site
 workdir /home/node/site
