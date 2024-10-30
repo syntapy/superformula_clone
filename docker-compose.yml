@@ -31,12 +31,9 @@ services:
     depends_on:
       - gatsby
     environment:
-      - UID=${UID}
-      - GID=${GID}
       - DISPLAY=${DISPLAY}
       - CONTENTFUL_SPACE_ID=${CONTENTFUL_SPACE_ID}
       - CONTENTFUL_ACCESS_TOKEN=${CONTENTFUL_ACCESS_TOKEN}
-    user: "${UID}:${GID}"
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
       - ~/.Xauthority:/root/.Xauthority
