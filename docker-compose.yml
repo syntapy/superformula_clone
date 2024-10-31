@@ -6,6 +6,7 @@ services:
       GID: ${NGID}
       CONTENTFUL_SPACE_ID: $CONTENTFUL_SPACE_ID
       CONTENTFUL_ACCESS_TOKEN: $CONTENTFUL_ACCESS_TOKEN
+    user: "${UID}:${GID}"
     tty: true
     stdin_open: true
     command: ["npm", "run", "develop"]
