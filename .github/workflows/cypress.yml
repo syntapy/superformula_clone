@@ -18,10 +18,10 @@ jobs:
       - run: env
       - run: echo "NGID=$(id -g)" >> $GITHUB_ENV
       - run: echo "NUID=$(id -u)" >> $GITHUB_ENV
-      - name: tmate session
-        uses: mxschmitt/action-tmate@v3
       - name: pull images
         run: NUID=$NUID NGID=$NGID docker compose pull
+      - name: tmate session
+        uses: mxschmitt/action-tmate@v3
       #- run: docker compose run gatsby echo $UID
       #- run: docker compose run gatsby echo $GID
       #- name: gatsby ls
