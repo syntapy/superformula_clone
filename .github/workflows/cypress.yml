@@ -21,7 +21,7 @@ jobs:
       - name: tmate session
         uses: mxschmitt/action-tmate@v3
       - name: pull images
-        run: UID=$NUID GID=$NGID docker compose pull
+        run: NUID=$NUID NGID=$NGID docker compose pull
       #- run: docker compose run gatsby echo $UID
       #- run: docker compose run gatsby echo $GID
       #- name: gatsby ls
@@ -33,11 +33,11 @@ jobs:
       #- name: gatsby ls
       #  run: docker compose run --rm gatsby ls -lht
       - name: npm install
-        run: UID=$NUID GID=$NGID docker compose run --rm gatsby npm ci
+        run: NUID=$NUID NGID=$NGID docker compose run --rm gatsby npm ci
       - name: gatsby develop
-        run: UID=$NUID GID=$NGID docker compose up --wait gatsby
+        run: NUID=$NUID NGID=$NGID docker compose up --wait gatsby
       - name: run e2e tests
-        run: UID=$NUID GID=$NGID docker compose up e2e_client
+        run: NUID=$NUID NGID=$NGID docker compose up e2e_client
       - name: Upload image diff outputs
         uses: actions/upload-artifact@v3
         with:

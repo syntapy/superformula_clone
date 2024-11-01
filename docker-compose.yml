@@ -4,7 +4,7 @@ services:
     environment:
       CONTENTFUL_SPACE_ID: $CONTENTFUL_SPACE_ID
       CONTENTFUL_ACCESS_TOKEN: $CONTENTFUL_ACCESS_TOKEN
-    user: "${UID}:${GID}"
+    user: "${NUID}:${NGID}"
     tty: true
     stdin_open: true
     command: ["npm", "run", "develop"]
@@ -25,6 +25,7 @@ services:
     image: syntapynew/cypress_client
     tty: true
     stdin_open: true
+    user: "${NUID}:${NGID}"
     command: ["npm", "run", "e2e"]
     depends_on:
       - gatsby
