@@ -9,7 +9,7 @@ arg CYPRESS_VERSION='13.14.2'
 
 from cypress/factory
 
-run apt update && apt install -y x11-apps feh net-tools
+run apt update && apt install -y x11-apps feh net-tools sudo
 #    npm install -g npm@latest && \
 #    npm install -D cypress@$CYPRESS_VERSION --save-dev && \
 #    npx cypress install
