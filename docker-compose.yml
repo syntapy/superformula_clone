@@ -2,9 +2,10 @@ services:
   gatsby:
     image: syntapynew/gatsby_server
     environment:
+      LOCAL_UID: ${NUID:-1000}
+      LOCAL_GID: ${NGID:-1000}
       CONTENTFUL_SPACE_ID: $CONTENTFUL_SPACE_ID
       CONTENTFUL_ACCESS_TOKEN: $CONTENTFUL_ACCESS_TOKEN
-    user: "${NUID}:${NGID}"
     tty: true
     stdin_open: true
     command: ["npm", "run", "develop"]
@@ -25,7 +26,6 @@ services:
     image: syntapynew/cypress_client
     tty: true
     stdin_open: true
-    user: "${NUID}:${NGID}"
     command: ["npm", "run", "e2e"]
     depends_on:
       - gatsby

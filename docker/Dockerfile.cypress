@@ -9,13 +9,19 @@ arg CYPRESS_VERSION='13.14.2'
 
 from cypress/factory
 
-run apt update && apt install -y x11-apps feh net-tools sudo
+run apt update && apt install -y x11-apps feh net-tools sudo gosu
 #    npm install -g npm@latest && \
 #    npm install -D cypress@$CYPRESS_VERSION --save-dev && \
 #    npx cypress install
 
-user node
+env ENTRY=/usr/local/bin/entrypoint.sh
+env SITE=/home/node/site
 
-run mkdir /home/node/site
-volume /home/node/site
-workdir /home/node/site
+copy docker/entrypoint.sh $ENTRY
+
+run mkdir $SITE
+workdir $SITE
+
+volume $SITE
+
+entrypoint ["$ENTRY"]

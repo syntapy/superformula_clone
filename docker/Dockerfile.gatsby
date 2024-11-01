@@ -1,15 +1,19 @@
 from node:22-bookworm
 
-run mkdir /home/node/site
-workdir /home/node/site
-
 run apt-get update && apt-get upgrade -y && \
-    apt install -y net-tools sudo && \
+    apt install -y net-tools sudo gosu && \
     npm install -g npm@latest && \
     npm install -g gatsby-cli
 
-user node
+env ENTRY=/usr/local/bin/entrypoint.sh
+copy docker/entrypoint.sh $ENTRY
+run chmod +x $ENTRY
+
+run mkdir /home/node/site
+workdir /home/node/site
 
 volume /home/node/site
 
 expose 8000/tcp
+
+cmd ["$ENTRY"]
