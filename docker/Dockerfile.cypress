@@ -17,7 +17,7 @@ run apt update && apt install -y x11-apps feh net-tools sudo gosu
 env ENTRY=/usr/local/bin/entrypoint.sh
 env SITE=/home/node/site
 
-copy ./docker/entrypoint.sh $ENTRY
+copy /docker/entrypoint.sh $ENTRY
 
 run mkdir $SITE
 workdir $SITE

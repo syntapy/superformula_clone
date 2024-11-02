@@ -1,10 +1,10 @@
 #! /bin/sh
 
 echo "Building Cypress Client"
-docker build -f docker/Dockerfile.cypress -t syntapynew/cypress_client ./gatsby/
+docker build -f docker/Dockerfile.cypress -t syntapynew/cypress_client ./
 
 echo
 echo
 echo
 echo "Building Web Server"
-docker build -f docker/Dockerfile.gatsby -t syntapynew/gatsby_server ./gatsby/
+docker build -f docker/Dockerfile.gatsby -t syntapynew/gatsby_server ./
