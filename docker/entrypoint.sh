@@ -9,4 +9,4 @@ echo "Starting with UID: $USER_ID, GID: $GROUP_ID"
 groupmod -g $GROUP_ID node
 usermod -u $USER_ID -g $GROUP_ID node
 
-exec "$@"
+exec gosu node "$@"
