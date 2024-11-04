@@ -18,8 +18,8 @@ jobs:
       - run: env
       - name: pull images
         run: docker compose pull
-        #- name: tmate session
-        #uses: mxschmitt/action-tmate@v3
+      - name: tmate session
+        uses: mxschmitt/action-tmate@v3
       #- name: gatsby ls
       #  run: docker compose run --rm gatsby ls -lhta
       #- name: gatsby id
