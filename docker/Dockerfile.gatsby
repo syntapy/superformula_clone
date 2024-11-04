@@ -5,15 +5,9 @@ run apt-get update && apt-get upgrade -y && \
     npm install -g npm@latest && \
     npm install -g gatsby-cli
 
-env ENTRY=/usr/local/bin/entrypoint.sh
-copy /docker/entrypoint.sh $ENTRY
-run chmod +x $ENTRY
-
-run mkdir /home/node/site
-workdir /home/node/site
-
-volume /home/node/site
+env SITE=/home/node/site
+run mkdir $SITE
+workdir $SITE
+volume $SITE
 
 expose 8000/tcp
-
-cmd ["$ENTRY"]
