@@ -40,7 +40,7 @@ services:
       - /tmp/.X11-unix:/tmp/.X11-unix
       - ~/.Xauthority:/root/.Xauthority
       - type: bind
-        source: "./gatsby"
+        source: "./cypress"
         target: "/home/node/site"
     networks:
       - shared
