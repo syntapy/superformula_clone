@@ -29,13 +29,13 @@ jobs:
       #- name: gatsby ls
       #  run: docker compose run --rm gatsby ls -lht
       - name: npm install - gatsby
-        run: docker compose run --rm gatsby npm ci
+        run: docker compose run --rm -u root gatsby npm ci
       - name: npm install - cypress
-        run: docker compose run --rm cypress npm ci
+        run: docker compose run --rm -u root cypress npm ci
       - name: gatsby develop
-        run: docker compose up --wait gatsby
+        run: docker compose -f docker-compose.yml -f docker-compose.actions.yml up --wait gatsby
       - name: run e2e tests
-        run: docker compose up e2e_client
+        run: docker compose -f docker-compose.yml -f docker-compose.actions.yml up root e2e_client
       - name: Upload image diff outputs
         uses: actions/upload-artifact@v3
         with:

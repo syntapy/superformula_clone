@@ -1,0 +1,5 @@
+services:
+  gatsby:
+    user: root
+  e2e_client:
+    user: root
