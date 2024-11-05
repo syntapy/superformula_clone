@@ -6,7 +6,8 @@ services:
       CONTENTFUL_ACCESS_TOKEN: $CONTENTFUL_ACCESS_TOKEN
     tty: true
     stdin_open: true
-    command: ["npm", "run", "develop"]
+    entrypoint: ["npm"]
+    command: ["run", "develop"]
     volumes:
       - type: bind
         source: "./gatsby"
