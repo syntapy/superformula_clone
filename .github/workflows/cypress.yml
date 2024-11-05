@@ -28,9 +28,9 @@ jobs:
       #  run: id
       #- name: gatsby ls
       #  run: docker compose run --rm gatsby ls -lht
-      - name: npm install - gatsby
+      - name: gatsby - npm install
         run: docker compose run --rm -u root gatsby npm ci
-      - name: npm install - cypress
+      - name: cypress - npm install
         run: docker compose run --rm -u root cypress npm ci
       - name: gatsby develop
         run: docker compose -f docker-compose.yml -f docker-compose.actions.yml up --wait gatsby
