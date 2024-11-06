@@ -4,7 +4,6 @@ services:
     tty: true
     stdin_open: true
     entrypoint: ["npm"]
-    command: ["run", "develop"]
     volumes:
       - type: bind
         source: "./gatsby"
@@ -23,7 +22,6 @@ services:
     tty: true
     stdin_open: true
     entrypoint: ["npm"]
-    command: ["run", "e2e"]
     depends_on:
       - gatsby
     environment:
