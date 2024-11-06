@@ -4,6 +4,7 @@ services:
     tty: true
     stdin_open: true
     entrypoint: ["npm"]
+    command: ["run", "develop"]
     volumes:
       - type: bind
         source: "./gatsby"
