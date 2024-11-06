@@ -10,9 +10,19 @@ arg CYPRESS_VERSION='13.14.2'
 from cypress/factory
 
 run apt update && apt install -y x11-apps feh net-tools sudo gosu
-run npx cypress install
-#    npm install -g npm@latest && \
-#    npm install -D cypress@$CYPRESS_VERSION --save-dev && \
+run npm install -g npm@latest
+run npm install -g @appsfactory/cypress-audit@3.0.4 
+run npm install -g cypress-terminal-report@7.0.2
+run npm install -g cypress-visual-regression@5.2.2
+run npm install -g jest@29.7.0
+run npm install -g ts-jest@29.2.5
+
+#run npm install -g && \
+#      @appsfactory/cypress-audit@3.0.4 && \
+#      cypress-terminal-report@7.0.2 && \
+#      cypress-visual-regression@5.2.2 && \
+#      jest@29.7.0 && \
+#      ts-jest@29.2.5
 
 user node
 
