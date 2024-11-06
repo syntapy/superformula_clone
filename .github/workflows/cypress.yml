@@ -34,7 +34,7 @@ jobs:
           name: e2e image output directory
           path: gatsby/cypress/snapshots/
         if: failure()
- lighthouse_audit:
+  lighthouse_audit:
     runs-on: ubuntu-latest
     steps:
       - name: checkout ${{ env.GITHUB_REF }}
