@@ -22,8 +22,8 @@ services:
     image: syntapynew/cypress_client
     tty: true
     stdin_open: true
-    entrypoint: ["cypress"]
-    command: ["run", "--e2e", "--browser", "firefox", "--spec", "'cypress/e2e/**/*.cy.js'"]
+    entrypoint: ["npm"]
+    command: ["run", "e2e"]
     depends_on:
       - gatsby
     environment:
