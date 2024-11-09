@@ -21,6 +21,8 @@ jobs:
     steps:
       - name: checkout ${{ env.GITHUB_REF }}
         uses: actions/checkout@v3
+      - name: show secrets
+        run: echo $CONTENTFUL_SPACE_ID
       - name: pull images
         run: docker compose pull
         #- name: tmate session
