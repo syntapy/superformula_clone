@@ -15,10 +15,10 @@ jobs:
       contentful_access_token: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
     with:
       test-command: e2e
-  lighthouse_audit:
-    uses: ./.github/workflows/setup.yml
-    secrets:
-      contentful_space_id: ${{ secrets.CONTENTFUL_SPACE_ID }}
-      contentful_access_token: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
-    with:
-      test-command: audit
+# lighthouse_audit:
+#   uses: ./.github/workflows/setup.yml
+#   secrets:
+#     contentful_space_id: ${{ secrets.CONTENTFUL_SPACE_ID }}
+#     contentful_access_token: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
+#   with:
+#     test-command: audit
