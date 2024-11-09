@@ -15,16 +15,8 @@ jobs:
     steps:
       - name: checkout ${{ env.GITHUB_REF }}
         uses: actions/checkout@v3
-      - name: pull images
-        run: docker compose pull
-        #- name: tmate session
-        #uses: mxschmitt/action-tmate@v3
-      - name: gatsby - npm install
-        run: docker compose run --rm -u root gatsby ci
-      - name: cypress - npm install
-        run: docker compose run --rm -u root e2e_client ci
-      - name: gatsby develop
-        run: docker compose -f docker-compose.yml -f docker-compose.actions.yml up --wait gatsby
+      - name: install + run dev server
+        uses: ./.github/actions/setup
       - name: run e2e tests
         run: docker compose -f docker-compose.yml -f docker-compose.actions.yml run --rm e2e_client run e2e
       - name: Upload image diff outputs
@@ -38,17 +30,9 @@ jobs:
     steps:
       - name: checkout ${{ env.GITHUB_REF }}
         uses: actions/checkout@v3
-      - name: pull images
-        run: docker compose pull
-        #- name: tmate session
-        #uses: mxschmitt/action-tmate@v3
-      - name: gatsby - npm install
-        run: docker compose run --rm -u root gatsby ci
-      - name: cypress - npm install
-        run: docker compose run --rm -u root e2e_client ci
-      - name: gatsby develop
-        run: docker compose -f docker-compose.yml -f docker-compose.actions.yml up --wait gatsby
-      - name: run e2e tests
+      - name: install + run dev server
+        uses: ./.github/actions/setup
+      - name: run audit tests
         run: docker compose -f docker-compose.yml -f docker-compose.actions.yml run --rm e2e_client run audit
       - name: Upload image diff outputs
         uses: actions/upload-artifact@v3
