@@ -3,16 +3,17 @@ name: setup and install
 env:
   NODE_VERSION: 22
   DISPLAY: ""
-  CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
-  CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
 
 permissions: read-all
 
 on:
   workflow_call:
-    inputs:
-      config-path:
-        required: false
+    secrets:
+      contentful_space_id:
+        required: true
+        type: string
+      contentful_access_token:
+        required: true
         type: string
 
 jobs:
@@ -21,7 +22,11 @@ jobs:
     steps:
       - name: checkout ${{ env.GITHUB_REF }}
         uses: actions/checkout@v3
-      - name: show secrets
+      - name: set secrets
+        run: echo $(CONTENTFUL_SPACE_ID=${{secrets.contentful_space_id}}) >> GITHUB_ENV
+      - name: set secrets
+        run: echo $(CONTENTFUL_ACCESS_TOKEN=${{secrets.contentful_space_id}}) >> GITHUB_ENV
+      - name: show contentful space id
         run: echo $CONTENTFUL_SPACE_ID
       - name: pull images
         run: docker compose pull
