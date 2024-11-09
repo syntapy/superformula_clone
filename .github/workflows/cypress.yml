@@ -12,8 +12,8 @@ env:
 jobs:
   e2e:
     uses: ./.github/workflows/setup.yml
-      with:
-        contentful-space-id: $CONTENTFUL_SPACE_ID
+    with:
+      contentful-space-id: $CONTENTFUL_SPACE_ID
     #runs-on: ubuntu-latest
     #steps:
     #  - name: run e2e tests
