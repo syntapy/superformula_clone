@@ -8,6 +8,10 @@ permissions: read-all
 
 on:
   workflow_call:
+    inputs:
+      test-command:
+        required: true
+        type: string
     secrets:
       contentful_space_id:
         required: true
@@ -33,3 +37,11 @@ jobs:
           CONTENTFUL_SPACE_ID: ${{secrets.contentful_space_id}}
           CONTENTFUL_ACCESS_TOKEN: ${{secrets.contentful_access_token}}
         run: docker compose -f docker-compose.yml -f docker-compose.actions.yml up --wait gatsby
+      - name: run test
+        run: docker compose -f docker-compose.yml -f docker-compose.actions.yml run --rm e2e_client run e2e ${{ inputs.test-command }}
+      - name: Upload image diff outputs
+        uses: actions/upload-artifact@v3
+        with:
+          name: e2e image output directory
+          path: gatsby/cypress/snapshots/
+        if: inputs .test-command == 'e2e' && failure()
