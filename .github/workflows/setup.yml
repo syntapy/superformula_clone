@@ -11,10 +11,8 @@ on:
     secrets:
       contentful_space_id:
         required: true
-        type: string
       contentful_access_token:
         required: true
-        type: string
 
 jobs:
   call-workflow:
@@ -22,12 +20,12 @@ jobs:
     steps:
       - name: checkout ${{ env.GITHUB_REF }}
         uses: actions/checkout@v3
-      - name: set secrets
-        run: echo $(CONTENTFUL_SPACE_ID=${{secrets.contentful_space_id}}) >> GITHUB_ENV
-      - name: set secrets
-        run: echo $(CONTENTFUL_ACCESS_TOKEN=${{secrets.contentful_space_id}}) >> GITHUB_ENV
-      - name: show contentful space id
-        run: echo $CONTENTFUL_SPACE_ID
+        #- name: set secrets
+        #run: echo $(CONTENTFUL_SPACE_ID=${{secrets.contentful_space_id}}) >> GITHUB_ENV
+        #- name: set secrets
+        #run: echo $(CONTENTFUL_ACCESS_TOKEN=${{secrets.contentful_space_id}}) >> GITHUB_ENV
+        #- name: show contentful space id
+        #run: echo $CONTENTFUL_SPACE_ID
       - name: pull images
         run: docker compose pull
         #- name: tmate session
