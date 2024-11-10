@@ -35,7 +35,7 @@ jobs:
         env:
           CONTENTFUL_SPACE_ID: ${{secrets.contentful_space_id}}
           CONTENTFUL_ACCESS_TOKEN: ${{secrets.contentful_access_token}}
-        run: docker compose -f docker-compose.yml -f docker-compose.actions.yml up --wait gatsby
+        run: docker compose -f docker-compose.yml -f docker-compose.actions.yml run --entrypoint bash gatsby env
       - name: gatsby - npm install
         run: docker compose run --rm -u root gatsby ci
       - name: cypress - npm install
