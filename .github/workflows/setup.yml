@@ -12,11 +12,6 @@ on:
       test-command:
         required: true
         type: string
-    secrets:
-      contentful_space_id:
-        required: true
-      contentful_access_token:
-        required: true
 
 jobs:
   call-workflow:
