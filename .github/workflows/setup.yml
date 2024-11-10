@@ -31,15 +31,15 @@ jobs:
         #  CONTENTFUL_ACCESS_TOKEN: ${{secrets.contentful_access_token}}
       - name: pull images
         run: docker compose pull
-      - name: gatsby - npm install
-        run: docker compose run --rm -u root gatsby ci
-      - name: cypress - npm install
-        run: docker compose run --rm -u root e2e_client ci
-      - name: gatsby develop
+      - name: gatsby env
         env:
           CONTENTFUL_SPACE_ID: ${{secrets.contentful_space_id}}
           CONTENTFUL_ACCESS_TOKEN: ${{secrets.contentful_access_token}}
         run: docker compose -f docker-compose.yml -f docker-compose.actions.yml up --wait gatsby
+      - name: gatsby - npm install
+        run: docker compose run --rm -u root gatsby ci
+      - name: cypress - npm install
+        run: docker compose run --rm -u root e2e_client ci
       - name: run test
         run: docker compose -f docker-compose.yml -f docker-compose.actions.yml run --rm e2e_client run e2e ${{ inputs.test-command }}
       - name: Upload image diff outputs
