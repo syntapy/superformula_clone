@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "e2e:help": "cypress run --e2e --help",
     "e2e": "cypress run --e2e --browser firefox --spec 'cypress/e2e/**/*.cy.js'",
     "e2e:desktop": "cypress run --e2e --browser firefox --spec 'cypress/e2e/**/desktop.cy.js'",
     "e2e:mobile": "cypress run --e2e --browser firefox --spec 'cypress/e2e/**/mobile.cy.js'",
