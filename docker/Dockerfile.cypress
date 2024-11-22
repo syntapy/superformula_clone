@@ -5,7 +5,10 @@ arg NODE_VERSION='22.9.0'
 #arg CHROME_VERSION='129.0.6668.70-1'
 #arg EDGE_VERSION='129.0.2792.52-1'
 arg FIREFOX_VERSION='130.0.1'
-#arg CYPRESS_VERSION='13.14.2'
+
+# Used to make the installation in /root/.cache/Cypress persist
+# Make sure this matches the version in cypress/package.json
+arg CYPRESS_VERSION='13.14.2' 
 
 from cypress/factory
 
