@@ -29,7 +29,7 @@ export const audit_devices = {
 }
 
 export const clickWaitTime = 100
-export const waitTime = 1400
+export const waitTime = 2400
 export const animationWaitTime = 750
 
 export function isDesktopMenuOnMobile(device, orientation) {
