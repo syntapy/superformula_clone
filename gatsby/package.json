@@ -8,7 +8,8 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "gatsby develop",
+    "develop": "gatsby clean; gatsby develop -H 0.0.0.0 -p 8000",
+    "wait": "wait-on -d 20000 -i 2000 -t 3m http://gatsby:8000",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "serve:help": "gatsby serve --help",
@@ -19,25 +20,9 @@
     "which": "which gatsby",
     "test": "jest",
     "test help": "jest --help",
-    "cy:install": "cypress install",
-    "cy:open": "cypress open",
-    "cy:help": "cypress run --help",
-    "audit": "cypress run --e2e --browser firefox --spec 'cypress/audit/**/*.cy.js'",
-    "audit:ci": "start-server-and-test develop http://localhost:8000 audit",
-    "audit:debug": "DEBUG='cypress:server:task' cypress run --e2e --browser firefox --spec 'cypress/audit/**/*.cy.js'",
-    "e2e": "cypress run --e2e --browser firefox --spec 'cypress/e2e/**/*.cy.js'",
-    "e2e:mobile": "cypress run --e2e --browser firefox --spec 'cypress/e2e/mobile.cy.js'",
-    "e2e:desktop": "cypress run --e2e --browser firefox --spec 'cypress/e2e/desktop.cy.js'",
-    "e2e:open": "cypress run --browser firefox --headed",
-    "e2e:ci": "start-server-and-test develop http://localhost:8000 e2e",
-    "e2e:reset": "cypress run --env type=base --e2e --browser firefox",
-    "e2e:view:mobile": "sh cypress/bin/compare_images",
-    "e2e:view:desktop": "sh cypress/bin/compare_images --desktop",
-    "e2e:clear": "sh cypress/bin/compare_images --clear",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@cypress/webpack-preprocessor": "^6.0.2",
     "dotenv": "^16.4.5",
     "gatsby": "^5.13.7",
     "gatsby-plugin-image": "^3.13.1",
@@ -51,7 +36,6 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@appsfactory/cypress-audit": "^3.0.4",
     "@babel/preset-typescript": "^7.24.7",
     "@cypress/grep": "^4.1.0",
     "@testing-library/jest-dom": "^6.5.0",
@@ -65,17 +49,12 @@
     "babel-preset-gatsby": "^3.13.2",
     "contentful-import": "^9.4.59",
     "css-mediaquery": "^0.1.2",
-    "cypress": "^13.14.2",
-    "cypress-real-events": "^1.13.0",
-    "cypress-terminal-report": "^7.0.2",
-    "cypress-visual-regression": "^5.2.2",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "jest-transform-css": "^6.0.1",
     "react-test-renderer": "^18.3.1",
     "start-server-and-test": "^2.0.8",
-    "ts-jest": "^29.2.5",
-    "typescript": "^5.6.2"
+    "typescript": "^5.6.2",
+    "wait-on": "^8.0.1"
   }
 }

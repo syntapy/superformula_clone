@@ -17,7 +17,7 @@ export default defineConfig({
   e2e: {
     screenshotsFolder: './cypress/snapshots/actual',
     video: false,
-    baseUrl: "http://localhost:8000",
+    baseUrl: "http://gatsby:8000",
     specPattern: ["cypress/e2e/**/*.cy.js", "cypress/audit/**/*.cy.js"],
     setupNodeEvents(on, config) {
       registerGrepPlugin(config)

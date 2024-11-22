@@ -1,17 +1,41 @@
 services:
-  page:
-    image: superformula/clone
+  gatsby:
+    image: syntapynew/gatsby_server
     tty: true
     stdin_open: true
-    entrypoint: [ 
-      "bash"
-    ]
-    network_mode: "host"
+    entrypoint: ["npm"]
+    command: ["run", "develop"]
+    volumes:
+      - type: bind
+        source: "./gatsby"
+        target: "/home/node/site"
+    networks:
+      - shared
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000"]
+      interval: 20s
+      timeout: 5s
+      retries: 3
+  e2e_client:
+    image: syntapynew/cypress_client
+    tty: true
+    stdin_open: true
+    entrypoint: ["npm"]
+    depends_on:
+      - gatsby
     environment:
-      DISPLAY: $DISPLAY
+      - DISPLAY=${DISPLAY}
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
       - ~/.Xauthority:/root/.Xauthority
       - type: bind
-        source: "./gatsby"
-        target: "/site"
+        source: "./cypress"
+        target: "/home/node/site"
+    networks:
+      - shared
+
+networks:
+  shared:
+    driver: bridge
