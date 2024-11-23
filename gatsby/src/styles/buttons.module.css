@@ -55,6 +55,7 @@
 
     .dropDownContent {
         display: flex;
+        list-style-type: none;
         flex-direction: column;
         position: relative;
         width: fit-content;
@@ -88,6 +89,9 @@
 }
 
 .subNavItem {
+}
+
+.subNavItemAnchor {
     overflow: hidden;
     white-space: nowrap;
     justify-content: flex-start; 
