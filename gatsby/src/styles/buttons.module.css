@@ -34,7 +34,7 @@
         max-width: 100%;
         width: 100%;
         height: 4rem;
-        visibility: visible;
+        visibility: collapse;
     }
 
     .left {
@@ -62,8 +62,8 @@
         row-gap: $subnav-padding;
         top: 0rem;
         direction: ltr;
-        opacity: 1;
-        visibility: visible;
+        opacity: 0;
+        visibility: invisible;
         background-color: $grey-color;
         padding: $subnav-padding;
         border: 2px solid $grey-color;
