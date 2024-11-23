@@ -53,7 +53,7 @@ interface ResponsiveProps {
 
 type ResponsiveNavItemsProps = NavItemsProps | ResponsiveProps
 
-const SUB_NAV_ICON_SIZE: number = 20
+const SUB_NAV_ICON_SIZE: number = 34
 
 function ServicesNavButton(props: ButtonProps & StyleProps & DataCyProps) {
   const servicesItems: SubNavItem[] = [
