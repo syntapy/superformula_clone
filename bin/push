@@ -1,4 +1,4 @@
 #! /bin/sh
 
-docker push syntapynew/cypress_client
-docker push syntapynew/gatsby_server
+podman push syntapynew/cypress_client
+podman push syntapynew/gatsby_server
