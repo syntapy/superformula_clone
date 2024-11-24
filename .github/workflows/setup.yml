@@ -23,6 +23,8 @@ jobs:
         uses: actions/checkout@v3
      #- name: tmate session
      #  uses: mxschmitt/action-tmate@v3
+      - name: help
+        run: podman --help
       - name: pull images
         run: podman compose pull
       - name: gatsby - npm install
