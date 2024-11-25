@@ -19,13 +19,13 @@ jobs:
   call-workflow:
     runs-on: ubuntu-latest
     steps:
-      - uses: webgtx/setup-podman-compose@v1
+      #- uses: webgtx/setup-podman-compose@v1
       - name: checkout ${{ env.GITHUB_REF }}
         uses: actions/checkout@v3
      #- name: tmate session
      #  uses: mxschmitt/action-tmate@v3
       - name: help
-        run: podman --help
+        run: podman-compose --help
       - name: pull images
         run: podman compose pull
       - name: gatsby - npm install
