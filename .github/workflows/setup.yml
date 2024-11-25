@@ -19,6 +19,7 @@ jobs:
   call-workflow:
     runs-on: ubuntu-latest
     steps:
+      - uses: webgtx/setup-podman-compose@v1
       - name: checkout ${{ env.GITHUB_REF }}
         uses: actions/checkout@v3
      #- name: tmate session
