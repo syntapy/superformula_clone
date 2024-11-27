@@ -6,20 +6,29 @@ then
     exit 1
 fi
 
+directories=("actual" "base" "diff")
+for dir in "${directories[@]}"; do
+    if [ ! -d "$dir" ]; then
+        echo "Script did not run"
+        echo "Run this from inside the 'cypress/snapshots' directory"
+        exit 1
+    fi
+done
+
 screen_folder="mobile.cy.js"
 if [[ $1 == "--desktop" ]]; then
     screen_folder="desktop.cy.js"
 fi
 
 # Define the directories
-dir_diff="cypress/snapshots/diff/cypress/e2e/${screen_folder}/"
-dir_base="cypress/snapshots/base/cypress/e2e/${screen_folder}/"
-dir_actual="cypress/snapshots/actual/${screen_folder}/cypress/e2e/${screen_folder}/"
+dir_diff="./diff/cypress/e2e/${screen_folder}/"
+dir_base="./base/cypress/e2e/${screen_folder}/"
+dir_actual="./actual/${screen_folder}/cypress/e2e/${screen_folder}/"
 
 # Option to clear actual & diff images
 if [[ $1 == "--clear" ]]; then
     rm -rfv $dir_diff $dir_actual
-    rm -rfv "cypress/snapshots/actual/*.png"
+    rm -rfv "./actual/*.png"
 # Loop through each file and open the corresponding images with feh
 elif [ -d $dir_diff ]; then
     echo "diff folder exists"
