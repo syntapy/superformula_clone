@@ -40,7 +40,7 @@ export function SubNavBar(props: SubNavProps) {
           {props.subNavItems.map((item) => (
             <li>
               <a href={item.url} className={classNameSubNavItemAnchor}>
-                <span className={classNameSubNavItemElement}>{item.icon}</span>
+                {item.icon}
                 <span className={classNameSubNavItemElement}>{item.text}</span>
               </a>
             </li>
