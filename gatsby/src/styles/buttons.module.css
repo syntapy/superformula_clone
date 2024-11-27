@@ -13,6 +13,7 @@
     }
 
     .dropDownContent {
+        list-style-type: none;
         padding: 0;
     }
 }
@@ -34,7 +35,7 @@
         max-width: 100%;
         width: 100%;
         height: 4rem;
-        visibility: collapse;
+        visibility: visible;
     }
 
     .left {
@@ -62,8 +63,8 @@
         row-gap: $subnav-padding;
         top: 0rem;
         direction: ltr;
-        opacity: 0;
-        visibility: invisible;
+        opacity: 1;
+        visibility: visible;
         background-color: $grey-color;
         padding: $subnav-padding;
         border: 2px solid $grey-color;
@@ -88,15 +89,19 @@
     }
 }
 
-.subNavItem {
+.subNavListItem {
 }
 
 .subNavItemAnchor {
-    overflow: hidden;
-    white-space: nowrap;
     justify-content: flex-start; 
     align-items: center;
     gap: $subnav-icon-text-gap;
+}
+
+.subNavItemElement {
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0px solid red;
 }
 
 .svgButton {

@@ -29,18 +29,20 @@ export function SubNavBar(props: SubNavProps) {
     }
 
     const classNameConnector: string = buttonStyles.dropDownConnector + " " + classNameDir
-    const classNameContent = buttonStyles.dropDownContent + " " + orientationStyles.spaceBetweenItems + " " + classContentDir
-    const classNameSubNavItem: string = buttonStyles.subNavItem
-    const classNameSubNavAnchor: string = buttonStyles.subNavItemAnchor + " " + orientationStyles.horizontalFlex
-
+    const classNameContent: string = buttonStyles.dropDownContent + " " + orientationStyles.spaceBetweenItems + " " + classContentDir
+    const classNameSubNavListItem: string = buttonStyles.subNavListItem
+    const classNameSubNavItemAnchor: string = buttonStyles.subNavItemAnchor + " " + orientationStyles.horizontalFlex
+    const classNameSubNavItemElement: string = buttonStyles.subNavItemElement
 
     return (
       <div className={classNameConnector}>
         <ul className={classNameContent}>
           {props.subNavItems.map((item) => (
-            <li className={classNameSubNavItem}>
-              <a href={item.url} className={classNameSubNavAnchor}>{item.icon}
-              <span>{item.text}</span></a>
+            <li>
+              <a href={item.url} className={classNameSubNavItemAnchor}>
+                <span className={classNameSubNavItemElement}>{item.icon}</span>
+                <span className={classNameSubNavItemElement}>{item.text}</span>
+              </a>
             </li>
           ))}
         </ul>
