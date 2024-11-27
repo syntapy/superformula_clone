@@ -11,7 +11,7 @@ mobile.devices.forEach((device) => {
 
       it('navbar non-expanded', () => {
         const svg = cy.get('[data-cy="chilidog-svg"]')
-        cy.log("Hello")
+        cy.log(`svg: ${svg}`)
         if (isDesktopMenuOnMobile(device, orientation)) {
           svg.should('not.be.visible')
         } else {
