@@ -25,6 +25,7 @@
 
     .navItems {
       position: fixed;
+      overflow: hidden;
       right: 0;
       left: 0;
       box-sizing: border-box;
