@@ -143,6 +143,7 @@ export function SvgButton(props: StyleProps & SvgProps) {
       title={props.title}
       aria-label={props.ariaLabel}
       onClick={props.onClick}
+      dataCy={props.dataCy}
     >
       {props.icon}
     </button>
