@@ -7,6 +7,7 @@ mobile.devices.forEach((device) => {
         cy.viewport(device, orientation)
         cy.visit('/')
         cy.wait(waitTime)
+        cy.get('#toast-close-button').click().wait(animationWaitTime)
       })
 
       it('navbar non-expanded', () => {
@@ -40,10 +41,8 @@ mobile.devices.forEach((device) => {
       })
 
       it('page screenshot', () => {
-        cy.get('#toast-close-button').click().wait(clickWaitTime).then(() => {
-          cy.compareSnapshot('page_mobile_' + device + '_' + orientation, {
-            errorThreshold: errorThreshold
-          })
+        cy.compareSnapshot('page_mobile_' + device + '_' + orientation, {
+          errorThreshold: errorThreshold
         })
       })
     })
