@@ -140,12 +140,11 @@ function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
   return (
     <div id={props.menuId} className={props.className}>
       <SvgButton
-        dataCy="mobile-menu-close"
         className={closeBtnStyle}
         onClick={onMenuCloseClick}
         aria-label="Close Navbar"
         title="Close Navbar"
-        icon={<Menuclose width={40} height={40} />}
+        icon={<Menuclose width={40} height={40} data-cy="mobile-menu-close"/>}
       />
       <HomeNavButton 
         dataCy="home-nav-item"
