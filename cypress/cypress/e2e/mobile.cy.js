@@ -32,6 +32,8 @@ mobile.devices.forEach((device) => {
 
             cy.compareSnapshot('navbar_expanded_' + device + '_' + orientation, {
               errorThreshold: errorThreshold
+            }).then(() => {
+              cy.get('[data-cy="mobile-menu-close"]').click().wait(animationWaitTime)
             })
           })
         }
