@@ -18,29 +18,30 @@ as well as similar definitions in Github Actions secrets or whatnot
 
 ## Usage
 
-### start docker container
+Content is hosted on my contentful.com account so probably you won't be able to run it at the moment
 
-`./bin/run`
+But otherwise needs Docker and Compose to run
 
-### run dev / prod server
-`npm run develop`
+Gatsby production server not set up yet
 
-`npm run build; npm run serve` (not yet working)
+### start gatsby development server
 
-### update npm packages
+First start gatsby service shell: `./bin/run_gatsby`
 
-`npx npm-check-updates -u` then `npm install`
+In service shell run `npm install` then close shell
 
-### run e2e tests
+Then start gatsby dev server with
 
-`npm run e2e`
+`./bin/up_gatsby`
 
-### view e2e test results (requires feh installed), probably only works on linux
+### start cypress tests
 
-`npm run e2e:view:desktop`
+Start cypress service shell with
 
-`npm run e2e:view:mobile`
+`./bin/run_cypress`
 
-### run accessibility tests
+Inside shell first run `npm install` and then possibly `npm run cy:install`
 
-`npm run audit`
+End to end tests: `npm run e2e`
+
+Audit tests: `npm run audit`
