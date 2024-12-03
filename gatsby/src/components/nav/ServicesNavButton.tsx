@@ -1,5 +1,7 @@
 import * as React from "react"
 import { NavButton } from "../buttons"
+import { ButtonProps, DataCyProps } from "../buttons"
+import { StyleProps } from "../../utils"
 
 import FlutterSvg from "../../images/svg/subnav/flutter.svg"
 import DigitalTransformationSvg from "../../images/svg/subnav/digital_transformation.svg"
