@@ -8,14 +8,11 @@ import { SubNavProps } from "./subnav.tsx"
 import { isMobile, ResponsiveProps } from "../utils"
 
 import ServicesNavButton from "./nav/ServicesNavButton.tsx"
+import AboutNavButton from "./nav/AboutNavButton.tsx"
 
 // Menu Icons
 import Chilidogmenu from "../images/svg/chilidogmenu.svg"
 import Menuclose from "../images/svg/menuclose.svg"
-
-// SubNav Icons
-import CareersSvg from "../images/svg/subnav/careers.svg"
-import CultureAndValuesSvg from "../images/svg/subnav/culture_and_values.svg"
 
 import { StyleProps } from "../utils"
 
@@ -50,28 +47,6 @@ interface ResponsiveProps {
 type ResponsiveNavItemsProps = NavItemsProps | ResponsiveProps
 
 import { SUB_NAV_ICON_SIZE } from "./nav/param.ts"
-
-function AboutNavButton(props: ButtonProps & StyleProps & DataCyProps) {
-  const servicesItems: SubNavItem[] = [
-    {
-      icon: <CareersSvg width={SUB_NAV_ICON_SIZE} height={SUB_NAV_ICON_SIZE} />,
-      text: "Careers",
-      url: "https://careers.superformula.com/"
-    },
-    {
-      icon: <CultureAndValuesSvg width={SUB_NAV_ICON_SIZE} height={SUB_NAV_ICON_SIZE} />,
-      text: "Culture & Values",
-      url: "https://careers.superformula.com/culture-values"
-    }
-  ]
-
-  return (<NavButton
-    dataCy="about-nav-item"
-    right={true}
-    className={props.className} href={props.href} text={props.text}
-    subNavItems={servicesItems}
-  />)
-}
 
 function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
   const closeBtnStyle: string = stylesMobile.closeBtn
