@@ -2,6 +2,7 @@ import { defineConfig } from "cypress"
 import { configureVisualRegression } from 'cypress-visual-regression'
 import { pa11y, lighthouse, prepareAudit } from '@appsfactory/cypress-audit'
 import cypressTerminalReport from 'cypress-terminal-report/src/installLogsPrinter'
+import registerGrepPlugin from '@cypress/grep/src/plugin'
 import path from 'path'
 import fs from 'fs'
 
@@ -19,6 +20,7 @@ export default defineConfig({
     baseUrl: "http://gatsby:8000",
     specPattern: ["cypress/e2e/**/*.cy.js", "cypress/audit/**/*.cy.js"],
     setupNodeEvents(on, config) {
+      registerGrepPlugin(config)
       configureVisualRegression(on)
       cypressTerminalReport(on)
       on('before:browser:launch', (browser = {}, launchOptions) => {
@@ -50,6 +52,7 @@ export default defineConfig({
           return null
         }
       })
+      return config
     },
   },
 })

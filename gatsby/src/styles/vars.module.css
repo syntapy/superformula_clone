@@ -1,6 +1,7 @@
 :export {
     light-font-color: #ffffff;
     nav-bg-color: #000000;
+    grey-color: #1a1a1a;
     toast-bg-color: #ffd940;
     toast-inset-shadow: #000000cc;
     transparent: #00000000;
@@ -10,5 +11,10 @@
 	max-mobile-width: 678px;
 	max-mobile-culture-offset: 153px;
 	nav-height: 3rem;
+    subnav-separation-top: -0.5rem;
+    subnav-icon-text-gap: 0.5rem;
+    desktop-nav-items-gap: 1.6rem;
 	padding-top: 1rem;
+    subnav-padding: 1rem;
+    subnav-border-radius: 0.5rem;
 }

@@ -2,6 +2,7 @@ import * as React from "react"
 import * as styles from "../styles/buttons.module.css"
 import * as visibilityStyles from "../styles/utilities/visibility.module.css"
 import * as orientationStyles from "../styles/utilities/orientation.module.css"
+import { SubNavProps, SubNavBar } from "./subnav.tsx"
 import { StyleProps } from "../utils"
 import { SvgRightArrow } from "./icons.tsx"
 import { HorizontalRule } from "./hr.tsx"
@@ -9,6 +10,7 @@ import { HorizontalRule } from "./hr.tsx"
 interface ButtonProps {
   href?: string
   text: string
+  right?: boolean
 }
 
 interface DataCyProps {
@@ -62,11 +64,14 @@ function NavAnchor(props: ButtonProps & StyleProps) {
   )
 }
 
-export function NavButton(props: ButtonProps & StyleProps & DataCyProps) {
-  const className: string = styles.navButton + " " + props.className
+export function NavButton(props: ButtonProps & StyleProps & DataCyProps & SubNavProps) {
+  const className: string = styles.navButton 
+                    + " " + styles.dropDown
+                    + " " + props.className
   return (
-    <div data-cy={props.dataCy} className={className}>
-      <NavAnchor href={props.href} text={props.text} />
+    <div className={className} data-cy={props.dataCy}>
+      <NavAnchor href={props.href} text={props.text}/>
+      {<SubNavBar right={props.right} subNavItems={props.subNavItems} />}
     </div>
   )
 }
@@ -138,6 +143,7 @@ export function SvgButton(props: StyleProps & SvgProps) {
       title={props.title}
       aria-label={props.ariaLabel}
       onClick={props.onClick}
+      data-cy={props.dataCy}
     >
       {props.icon}
     </button>

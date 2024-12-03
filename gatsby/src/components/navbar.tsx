@@ -1,11 +1,25 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { SubNavItem } from "./subnav.tsx"
 
 import { HomeNavButton, NavButton, NavButtonMobile, SvgButton, CareersNavButton } from "./buttons"
+import { ButtonProps, DataCyProps } from "./buttons"
+import { SubNavProps } from "./subnav.tsx"
 import { isMobile, ResponsiveProps } from "../utils"
 
+// Menu Icons
 import Chilidogmenu from "../images/svg/chilidogmenu.svg"
 import Menuclose from "../images/svg/menuclose.svg"
+
+// SubNav Icons
+import FlutterSvg from "../images/svg/subnav/flutter.svg"
+import DigitalTransformationSvg from "../images/svg/subnav/digital_transformation.svg"
+import DigitalProductsSvg from "../images/svg/subnav/digital_products.svg"
+import CustomerExperienceSvg from "../images/svg/subnav/customer_experience.svg"
+import CloudAndPlatformsSvg from "../images/svg/subnav/cloud_and_platforms.svg"
+import StrategyAndInnovationSvg from "../images/svg/subnav/strategy_and_innovation.svg"
+import CareersSvg from "../images/svg/subnav/careers.svg"
+import CultureAndValuesSvg from "../images/svg/subnav/culture_and_values.svg"
 
 import { StyleProps } from "../utils"
 
@@ -39,6 +53,72 @@ interface ResponsiveProps {
 
 type ResponsiveNavItemsProps = NavItemsProps | ResponsiveProps
 
+const SUB_NAV_ICON_SIZE: number = 34
+
+function ServicesNavButton(props: ButtonProps & StyleProps & DataCyProps) {
+  const servicesItems: SubNavItem[] = [
+    {
+      icon: <FlutterSvg width={SUB_NAV_ICON_SIZE} height={SUB_NAV_ICON_SIZE} />,
+      text: "Flutter",
+      url: "https://www.superformula.com/services/flutter/"
+    },
+    {
+      icon: <DigitalTransformationSvg width={SUB_NAV_ICON_SIZE} height={SUB_NAV_ICON_SIZE} />,
+      text: "Digital Transformation",
+      url: "https://www.superformula.com/services/digital-transformation/"
+    },
+    {
+      icon: <DigitalProductsSvg width={SUB_NAV_ICON_SIZE} height={SUB_NAV_ICON_SIZE} />,
+      text: "Digital Products",
+      url: "https://www.superformula.com/services/digital-products/"
+    },
+    {
+      icon: <CustomerExperienceSvg width={SUB_NAV_ICON_SIZE} height={SUB_NAV_ICON_SIZE} />,
+      text: "Customer Experience",
+      url: "https://www.superformula.com/services/customer-experience/"
+    },
+    {
+      icon: <CloudAndPlatformsSvg width={SUB_NAV_ICON_SIZE} height={SUB_NAV_ICON_SIZE} />,
+      text: "Cloud & Platforms",
+      url: "https://www.superformula.com/services/cloud-and-platforms/"
+    },
+    {
+      icon: <StrategyAndInnovationSvg width={SUB_NAV_ICON_SIZE} height={SUB_NAV_ICON_SIZE} />,
+      text: "Strategy & Innovation",
+      url: "https://www.superformula.com/services/strategy-innovation/"
+    }
+  ]
+
+  return (<NavButton
+    dataCy="services-nav-item"
+    right={false}
+    className={props.className} href={props.href} text={props.text}
+    subNavItems={servicesItems}
+  />)
+}
+
+function AboutNavButton(props: ButtonProps & StyleProps & DataCyProps) {
+  const servicesItems: SubNavItem[] = [
+    {
+      icon: <CareersSvg width={SUB_NAV_ICON_SIZE} height={SUB_NAV_ICON_SIZE} />,
+      text: "Careers",
+      url: "https://careers.superformula.com/"
+    },
+    {
+      icon: <CultureAndValuesSvg width={SUB_NAV_ICON_SIZE} height={SUB_NAV_ICON_SIZE} />,
+      text: "Culture & Values",
+      url: "https://careers.superformula.com/culture-values"
+    }
+  ]
+
+  return (<NavButton
+    dataCy="about-nav-item"
+    right={true}
+    className={props.className} href={props.href} text={props.text}
+    subNavItems={servicesItems}
+  />)
+}
+
 function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
   const closeBtnStyle: string = stylesMobile.closeBtn
   const homeNavItemStyle: string = stylesDesktop.navItemsHomeNav
@@ -64,19 +144,19 @@ function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
         onClick={onMenuCloseClick}
         aria-label="Close Navbar"
         title="Close Navbar"
-        icon={<Menuclose width={40} height={40} />}
+        icon={<Menuclose width={40} height={40} data-cy="mobile-menu-close"/>}
       />
       <HomeNavButton 
         dataCy="home-nav-item"
         className={homeNavItemStyle} text={props.title}
       />
       <NavButton
-        dataCy="services-nav-item"
+        dataCy="work-nav-item"
         className={navItem} href={props.items[0].href} text={props.items[0].text} 
       />
       <HorizontalRule className={mobile} />
-      <NavButton
-        dataCy="work-nav-item"
+      <ServicesNavButton
+        dataCy="services-nav-item"
         className={navItem} href={props.items[1].href} text={props.items[1].text}
       />
       <HorizontalRule className={mobile} />
@@ -85,13 +165,15 @@ function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
         className={navItem} href={props.items[2].href} text={props.items[2].text}
       />
       <HorizontalRule className={mobile} />
-      <NavButton
+      <AboutNavButton
         dataCy="about-nav-item"
         className={navItem} href={props.items[5].href} text={props.items[5].text}
       />
       <NavButton
         dataCy="contact-nav-item"
-        className={navItem + " " + desktop} href={props.items[3].href} text={props.items[3].text}
+        className={navItem + " " + desktop}
+        href={props.items[3].href}
+        text={props.items[3].text}
       />
     </div>
   )

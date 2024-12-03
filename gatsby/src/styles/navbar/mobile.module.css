@@ -30,7 +30,7 @@
       left: 0;
       box-sizing: border-box;
       justify-content: flex-start;
-      align-items: left;
+      align-items: stretch;
       padding: 2rem 1rem 0 1rem;
       row-gap: 2rem;
       height: 100%;
@@ -49,6 +49,6 @@
     }
 
     .navItemsHidden {
-      bottom: 100%;
+      bottom: 150%;
     }
 }

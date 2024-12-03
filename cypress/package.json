@@ -2,6 +2,7 @@
   "scripts": {
     "e2e:help": "cypress run --e2e --help",
     "e2e": "cypress run --e2e --browser firefox --spec 'cypress/e2e/**/*.cy.js'",
+    "e2e:open": "cypress run --browser firefox --headed",
     "e2e:desktop": "cypress run --e2e --browser firefox --spec 'cypress/e2e/**/desktop.cy.js'",
     "e2e:mobile": "cypress run --e2e --browser firefox --spec 'cypress/e2e/**/mobile.cy.js'",
     "e2e:reset": "cypress run --env type=base --e2e --browser firefox",
@@ -14,9 +15,11 @@
   },
   "devDependencies": {
     "@appsfactory/cypress-audit": "^3.0.4",
+    "@cypress/grep": "^4.1.0",
     "cypress-terminal-report": "^7.0.2",
     "cypress-visual-regression": "^5.2.2",
     "cypress": "13.14.2",
+    "cypress-real-events": "^1.13.0",
     "jest": "^29.7.0",
     "ts-jest": "^29.2.5"
   }
