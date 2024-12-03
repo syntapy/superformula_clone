@@ -14,8 +14,6 @@ import NavItems from "./nav/NavItems.tsx"
 // Menu Icons
 import Chilidogmenu from "../images/svg/chilidogmenu.svg"
 
-import { StyleProps } from "../utils"
-
 import * as stylesMobile from "../styles/navbar/mobile.module.css"
 import * as stylesDesktop from "../styles/navbar/desktop.module.css"
 import * as styles from "../styles/navbar/common.module.css"
