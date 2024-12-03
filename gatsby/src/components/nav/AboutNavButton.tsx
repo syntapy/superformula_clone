@@ -1,5 +1,7 @@
 import * as React from "react"
 import { NavButton } from "../buttons"
+import { ButtonProps, DataCyProps } from "../buttons"
+import { StyleProps } from "../../utils"
 
 import CareersSvg from "../../images/svg/subnav/careers.svg"
 import CultureAndValuesSvg from "../../images/svg/subnav/culture_and_values.svg"
