@@ -1,4 +1,5 @@
 import type { SvgProps } from '../../types.ts'
+import { StyleProps } from "../../utils.ts"
 
 export default function SvgButton(props: StyleProps & SvgProps) {
   const className: string = styles.svgButton + " " + props.className

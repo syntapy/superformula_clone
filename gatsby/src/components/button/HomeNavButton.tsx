@@ -1,4 +1,5 @@
-import type { ButtonProps, DataCyProps } from './types.ts'
+import type { ButtonProps } from './types.ts'
+import { DataCyProps } from "../../types.ts"
 import { StyleProps } from "../../utils"
 
 import { A } from './index.ts'

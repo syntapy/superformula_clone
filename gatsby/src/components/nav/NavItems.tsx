@@ -3,7 +3,7 @@ import * as stylesMobile from "../../styles/navbar/mobile.module.css"
 import * as stylesDesktop from "../../styles/navbar/desktop.module.css"
 import { hidden, desktop, mobile } from "../../styles/utilities/visibility.module.css"
 
-import { HomeNavButton, NavButton, SvgButton } from "../buttons"
+import { HomeNavButton, NavButton, SvgButton } from "../button/index.ts"
 import { HorizontalRule } from "../hr.tsx"
 
 import ServicesNavButton from "./ServicesNavButton"
