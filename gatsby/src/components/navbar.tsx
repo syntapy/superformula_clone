@@ -1,10 +1,10 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { SubNavItem } from "./subnav.tsx"
+import { SubNavItem } from "./nav/subnav.tsx"
 
 import { HomeNavButton, NavButton, NavButtonMobile, SvgButton, CareersNavButton } from "./buttons"
 import { ButtonProps, DataCyProps } from "./buttons"
-import { SubNavProps } from "./subnav.tsx"
+import { SubNavProps } from "./nav/subnav.tsx"
 import { isMobile, ResponsiveProps } from "../utils"
 
 import ServicesNavButton from "./nav/ServicesNavButton.tsx"
