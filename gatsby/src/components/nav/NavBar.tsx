@@ -1,29 +1,29 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { SubNavItem } from "./nav/subnav.tsx"
+import { SubNavItem } from "./subnav.tsx"
 
-import { HomeNavButton, NavButton, NavButtonMobile, SvgButton, CareersNavButton } from "./buttons"
-import { ButtonProps, DataCyProps } from "./buttons"
-import { SubNavProps } from "./nav/subnav.tsx"
-import { isMobile, ResponsiveProps } from "../utils"
+import { HomeNavButton, NavButton, NavButtonMobile, SvgButton, CareersNavButton } from "../buttons"
+import { ButtonProps, DataCyProps } from "../buttons"
+import { SubNavProps } from "./subnav.tsx"
+import { isMobile, ResponsiveProps } from "../../utils"
 
-import ServicesNavButton from "./nav/ServicesNavButton.tsx"
-import AboutNavButton from "./nav/AboutNavButton.tsx"
-import NavItems from "./nav/NavItems.tsx"
+import ServicesNavButton from "./ServicesNavButton.tsx"
+import AboutNavButton from "./AboutNavButton.tsx"
+import NavItems from "./NavItems.tsx"
 
 // Menu Icons
-import Chilidogmenu from "../images/svg/chilidogmenu.svg"
+import Chilidogmenu from "../../images/svg/chilidogmenu.svg"
 
-import * as stylesMobile from "../styles/navbar/mobile.module.css"
-import * as stylesDesktop from "../styles/navbar/desktop.module.css"
-import * as styles from "../styles/navbar/common.module.css"
-import * as orientationStyles from "../styles/utilities/orientation.module.css"
-import { mobile } from "../styles/utilities/visibility.module.css"
+import * as stylesMobile from "../../styles/navbar/mobile.module.css"
+import * as stylesDesktop from "../../styles/navbar/desktop.module.css"
+import * as styles from "../../styles/navbar/common.module.css"
+import * as orientationStyles from "../../styles/utilities/orientation.module.css"
+import { mobile } from "../../styles/utilities/visibility.module.css"
 
-import NavDesktop from "./desktop"
-import NavMobile from "./mobile"
+import NavDesktop from "../desktop"
+import NavMobile from "../mobile"
 
-import { SUB_NAV_ICON_SIZE } from "./nav/param.ts"
+import { SUB_NAV_ICON_SIZE } from "./param.ts"
 
 export default function NavBar() {
   const [mobileMenuActive, setMobileMenuActive] = React.useState(false)
