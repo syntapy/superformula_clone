@@ -37,7 +37,6 @@
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.24.7",
-    "@cypress/grep": "^4.1.0",
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.1",
     "@types/dotenv": "^8.2.0",
