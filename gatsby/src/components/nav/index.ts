@@ -1,3 +1,5 @@
-export NavBar from './NavBar.tsx'
-export SubNavBar from './SubNavBar.tsx'
-export type { SubNavProps } from './SubNavBar.tsx'
+import NavBar from './NavBar'
+import SubNavBar from './SubNavBar.tsx'
+import type { SubNavProps, SubNavItem } from './SubNavBar.tsx'
+
+export { NavBar, SubNavBar, SubNavProps }

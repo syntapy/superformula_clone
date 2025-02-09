@@ -3,6 +3,8 @@ import { NavButton } from "../buttons"
 import { ButtonProps, DataCyProps } from "../buttons"
 import { StyleProps } from "../../utils"
 
+import type { SubNavItem } from './index.ts'
+
 import CareersSvg from "../../images/svg/subnav/careers.svg"
 import CultureAndValuesSvg from "../../images/svg/subnav/culture_and_values.svg"
 

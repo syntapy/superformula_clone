@@ -3,6 +3,8 @@ import { NavButton } from "../buttons"
 import { ButtonProps, DataCyProps } from "../buttons"
 import { StyleProps } from "../../utils"
 
+import type { SubNavItem } from './index.ts'
+
 import FlutterSvg from "../../images/svg/subnav/flutter.svg"
 import DigitalTransformationSvg from "../../images/svg/subnav/digital_transformation.svg"
 import DigitalProductsSvg from "../../images/svg/subnav/digital_products.svg"
