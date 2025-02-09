@@ -34,7 +34,7 @@ jobs:
       - name: run test
         run: docker compose -f docker-compose.yml -f docker-compose.actions.yml run --rm e2e_client run ${{ inputs.test-command }}
       - name: Upload image diff outputs
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: e2e image output directory
           path: cypress/cypress/snapshots/
