@@ -15,7 +15,7 @@ export interface SubNavProps {
   right?: boolean
 }
 
-export function SubNavBar(props: SubNavProps) {
+export default function SubNavBar(props: SubNavProps) {
   if (props.subNavItems !== undefined) {
     let classNameDir: string = ""
     let classContentDir: string = ""
