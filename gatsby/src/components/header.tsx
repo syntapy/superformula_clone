@@ -1,7 +1,7 @@
 import * as React from "react"
 import type { HeadFC } from "gatsby"
 
-import NavBar from "../components/navbar"
+import NavBar from "../components/nav/NavBar"
 import Toast from "../components/toast"
 
 import * as styles from "../styles/header.module.css"
