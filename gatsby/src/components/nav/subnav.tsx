@@ -1,6 +1,6 @@
 import * as React from "react"
-import * as buttonStyles from "../styles/buttons.module.css"
-import * as orientationStyles from "../styles/utilities/orientation.module.css"
+import * as buttonStyles from "../../styles/buttons.module.css"
+import * as orientationStyles from "../../styles/utilities/orientation.module.css"
 import { useStaticQuery, graphql } from "gatsby"
 
 export type SubNavItem = {
