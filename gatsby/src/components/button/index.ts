@@ -15,5 +15,5 @@ export {
   ButtonLight,
   CareersNavButton,
   HomeNavButton,
-  HomNavButtonMobile
+  HomeNavButtonMobile
 }

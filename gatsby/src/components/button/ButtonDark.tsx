@@ -1,5 +1,5 @@
 import type { ButtonProps } from './types.ts'
-import * as styles from "../styles/buttons.module.css"
+import * as styles from "../../styles/buttons.module.css"
 
 import { ButtonArrow } from './index.ts'
 

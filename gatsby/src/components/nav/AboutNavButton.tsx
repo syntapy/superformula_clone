@@ -1,7 +1,8 @@
 import * as React from "react"
-import { NavButton } from "./button/index.ts"
-import { ButtonProps, DataCyProps } from "../buttons"
+import { NavButton } from "../button/index.ts"
+import { ButtonProps } from "../button/types.ts"
 import { StyleProps } from "../../utils"
+import { DataCyProps } from "../../types.ts"
 
 import type { SubNavItem } from './index.ts'
 
