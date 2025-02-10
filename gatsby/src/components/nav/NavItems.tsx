@@ -8,13 +8,9 @@ import { HorizontalRule } from "../hr.tsx"
 
 import ServicesNavButton from "./ServicesNavButton"
 import AboutNavButton from "./AboutNavButton"
+import type { NavItemInfo } from "./types.ts"
 
 import Menuclose from "../../images/svg/menuclose.svg"
-
-interface NavItemInfo {
-  href: string
-  text: string
-}
 
 type NavItemsList = [NavItemInfo, NavItemInfo, NavItemInfo, NavItemInfo, NavItemInfo]
 
