@@ -7,6 +7,7 @@ import CareersNavButton from './CareersNavButton.tsx'
 import NavButton from './NavButton.tsx'
 import HomeNavButton from './HomeNavButton.tsx'
 import HomeNavButtonMobile from './HomeNavButtonMobile.tsx'
+import SvgButton from './SvgButton.tsx'
 
 export { 
   A, 
@@ -17,5 +18,6 @@ export {
   CareersNavButton,
   NavButton,
   HomeNavButton,
-  HomeNavButtonMobile
+  HomeNavButtonMobile,
+  SvgButton,
 }
