@@ -1,8 +1,8 @@
 import * as React from "react"
 import type { HeadFC } from "gatsby"
 
-import NavBar from "../components/navbar"
-import Toast from "../components/toast"
+import { NavBar } from "./nav/index"
+import Toast from "./toast"
 
 import * as styles from "../styles/header.module.css"
 

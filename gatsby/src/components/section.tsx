@@ -3,7 +3,7 @@ import * as styles from "../styles/section/index.module.css"
 import * as servicesStyles from "../styles/section/services.module.css"
 import * as orientationStyles from "../styles/utilities/orientation.module.css"
 import * as styleVars from "../styles/vars.module.css"
-import { ButtonLight, ButtonDark } from "./buttons"
+import { ButtonLight, ButtonDark } from "./button/index"
 import { Ol, Li } from "./info"
 
 import * as utils from "../utils"

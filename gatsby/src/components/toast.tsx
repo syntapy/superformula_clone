@@ -5,7 +5,7 @@ import * as otherStyles from "../styles/utilities/orientation.module.css"
 import Check from "../images/svg/check.svg"
 import Exclamation from "../images/svg/exclamation.svg"
 import Close from "../images/svg/close.svg"
-import { SvgButton } from "./buttons"
+import { SvgButton } from "./button/index"
 
 interface ToastProps {
   message: string

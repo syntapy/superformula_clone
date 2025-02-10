@@ -1,6 +1,6 @@
 import * as React from "react"
-import * as buttonStyles from "../styles/buttons.module.css"
-import * as orientationStyles from "../styles/utilities/orientation.module.css"
+import * as buttonStyles from "../../styles/buttons.module.css"
+import * as orientationStyles from "../../styles/utilities/orientation.module.css"
 import { useStaticQuery, graphql } from "gatsby"
 
 export type SubNavItem = {
@@ -15,7 +15,7 @@ export interface SubNavProps {
   right?: boolean
 }
 
-export function SubNavBar(props: SubNavProps) {
+export default function SubNavBar(props: SubNavProps) {
   if (props.subNavItems !== undefined) {
     let classNameDir: string = ""
     let classContentDir: string = ""

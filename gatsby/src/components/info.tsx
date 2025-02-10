@@ -1,5 +1,5 @@
 import * as React from "react"
-import { A, ButtonDark } from "./buttons"
+import { A, ButtonDark } from "./button/index"
 import * as styles from "../styles/info.module.css"
 import * as orientationStyles from "../styles/utilities/orientation.module.css"
 
