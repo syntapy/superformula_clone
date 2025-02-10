@@ -1,5 +1,5 @@
 import * as React from "react"
-import { NavButton } from "../buttons"
+import { NavButton } from "../button/index"
 import { ButtonProps, DataCyProps } from "../button/index.ts"
 import { StyleProps } from "../../utils"
 
