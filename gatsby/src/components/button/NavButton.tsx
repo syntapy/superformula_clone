@@ -1,3 +1,4 @@
+import * as React from "react"
 import { NavAnchor } from './index.ts'
 import { SubNavBar } from '../nav/index.ts'
 import type { ButtonProps } from './types.ts'

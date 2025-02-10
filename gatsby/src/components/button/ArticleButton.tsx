@@ -1,3 +1,4 @@
+import * as React from "react"
 import type { ButtonProps } from './types.ts'
 import * as styles from "../../styles/buttons.module.css"
 import { A } from './index.ts'

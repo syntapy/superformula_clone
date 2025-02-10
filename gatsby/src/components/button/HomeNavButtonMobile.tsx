@@ -1,3 +1,4 @@
+import * as React from "react"
 import type { ButtonProps } from './types.ts'
 import { DataCyProps } from "../../types.ts"
 import { StyleProps } from "../../utils"

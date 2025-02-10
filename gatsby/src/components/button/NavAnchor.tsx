@@ -1,3 +1,4 @@
+import * as React from "react"
 import type { ButtonProps } from './types.ts'
 import { SvgRightArrow } from '../icon/index.ts'
 import { A } from './index.ts'
