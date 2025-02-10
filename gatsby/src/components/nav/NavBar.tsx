@@ -1,7 +1,7 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import { HomeNavButton, NavButton, NavButtonMobile, SvgButton } from "../button/index.ts"
+import { HomeNavButton, SvgButton } from "../button/index.ts"
 
 import type { NavItemInfo } from "./types"
 import NavItems from "./NavItems.tsx"
