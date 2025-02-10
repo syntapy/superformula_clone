@@ -5,7 +5,7 @@ import type { DataCyProps } from '../types.ts'
 import { StyleProps } from "../../utils"
 import * as styles from "../../styles/buttons.module.css"
 
-export function NavButton(props: ButtonProps & StyleProps & DataCyProps & SubNavProps) {
+export default function NavButton(props: ButtonProps & StyleProps & DataCyProps & SubNavProps) {
   const className: string = styles.navButton 
                     + " " + styles.dropDown
                     + " " + props.className

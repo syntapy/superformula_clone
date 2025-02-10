@@ -4,6 +4,7 @@ import ButtonArrow from './ButtonArrow.tsx'
 import ButtonDark from './ButtonDark.tsx'
 import ButtonLight from './ButtonLight.tsx'
 import CareersNavButton from './CareersNavButton.tsx'
+import NavButton from './NavButton.tsx'
 import HomeNavButton from './HomeNavButton.tsx'
 import HomeNavButtonMobile from './HomeNavButtonMobile.tsx'
 
@@ -14,6 +15,7 @@ export {
   ButtonDark,
   ButtonLight,
   CareersNavButton,
+  NavButton,
   HomeNavButton,
   HomeNavButtonMobile
 }
