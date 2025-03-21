@@ -1,3 +1,71 @@
-#! /bin/sh
+#!/bin/sh
 
-docker compose run --rm --entrypoint bash gatsby 
+print_help() {
+    cat <<EOF
+Usage: $0 [OPTION]
+Run Gatsby container commands with Docker Compose.
+
+Options:
+  -c    Run bash CLI (default behavior)
+  -d    Start development server
+  -b    Build project
+  -s    Serve production build
+  -h    Show this help message
+EOF
+}
+
+# Default values
+COMMAND="bash"
+ENTRYPOINT="--entrypoint bash"
+SERVICE="gatsby"
+FLAG_SET=0
+
+# Parse command-line options
+while getopts "cdbsh" opt; do
+    case $opt in
+        c)
+            COMMAND=""
+            ENTRYPOINT="--entrypoint bash"
+            FLAG_SET=1
+            ;;
+        d)
+            COMMAND="develop"
+            ENTRYPOINT=""
+            FLAG_SET=1
+            ;;
+        b)
+            COMMAND="build"
+            ENTRYPOINT=""
+            FLAG_SET=1
+            ;;
+        s)
+            COMMAND="serve"
+            ENTRYPOINT=""
+            FLAG_SET=1
+            ;;
+        h)
+            print_help
+            exit 0
+            ;;
+        *)
+            print_help
+            exit 1
+            ;;
+    esac
+done
+
+# Handle multiple flags or no flags
+if [ $FLAG_SET -gt 1 ]; then
+    echo "Error: Cannot specify multiple flags" >&2
+    print_help
+    exit 1
+fi
+
+# Handle default case (no flags = -c)
+if [ $FLAG_SET -eq 0 ]; then
+    COMMAND=""
+    ENTRYPOINT="--entrypoint bash"
+fi
+
+# Execute Docker command
+docker compose run -P --rm $ENTRYPOINT $SERVICE $COMMAND
