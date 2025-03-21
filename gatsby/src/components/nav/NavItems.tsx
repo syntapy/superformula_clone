@@ -33,6 +33,15 @@ export default function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
   const navItem: string = stylesMobile.mobileNavItem
 
   function onMenuCloseClick(): void {
+    // omfg !!!
+    try {
+      document
+    } catch(error) {
+      console.error("Document undefined in NavItems component `onMenuCloseClick` function")
+
+      return
+    }
+
     const menu: HTMLElement | null = document.getElementById(props.menuId)
     if (menu || !!menu) {
       menu.classList.remove(stylesMobile.navItemsActive)
