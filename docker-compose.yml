@@ -11,9 +11,6 @@ services:
         target: "/home/node/site"
     networks:
       - shared
-    environment:
-      CONTENTFUL_SPACE_ID: ${CONTENTFUL_SPACE_ID}
-      CONTENTFUL_ACCESS_TOKEN: ${CONTENTFUL_ACCESS_TOKEN}
     ports:
       - "8000:8000"
     healthcheck:
