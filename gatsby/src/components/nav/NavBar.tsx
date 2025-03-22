@@ -17,6 +17,7 @@ import { mobile } from "../../styles/utilities/visibility.module.css"
 
 export default function NavBar() {
   const [mobileMenuActive, setMobileMenuActive] = React.useState(false)
+  const [menuElement, setMenuElement] = React.useState(null)
   const data = useStaticQuery(
     graphql`
       query {
@@ -72,6 +73,15 @@ export default function NavBar() {
   const menuId: string = "nav-menu"
 
   function onChilidogClick(): void {
+    // omfg !!!
+    try {
+      document
+    } catch(error) {
+      console.error("Document undefined in NavBar component's `onChilidogClick` function")
+
+      return
+    }
+
     if (!mobileMenuActive) {
       const menu: HTMLElement | null = document.getElementById(menuId)
       if (menu || !!menu) {

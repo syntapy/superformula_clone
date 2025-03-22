@@ -34,6 +34,15 @@ export default function Toast(props: ToastProps) {
   const toastId: string = "toast-message"
 
   function onCloseClick(): void {
+    // omfg !!!
+    try {
+      document
+    } catch(error) {
+      console.error("Document undefined in Toast component's `onCloseClick` function")
+
+      return
+    }
+
     const toast: HTMLElement | null = document.getElementById(toastId)
     toast.classList.add(styles.hidden)
   }
