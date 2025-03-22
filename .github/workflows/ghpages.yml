@@ -43,7 +43,7 @@ jobs:
       - name: Install dependencies
         run: docker compose run --rm -u root gatsby ci
       - name: Build
-        run: docker compose run --rm -u root gatsby 'run build'
+        run: docker compose run --entrypoint "npm run" --rm -u root gatsby build
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
