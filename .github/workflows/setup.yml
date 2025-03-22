@@ -21,8 +21,8 @@ jobs:
     steps:
       - name: checkout ${{ env.GITHUB_REF }}
         uses: actions/checkout@v4
-      - name: tmate session
-        uses: mxschmitt/action-tmate@v3
+      #- name: tmate session
+      #  uses: mxschmitt/action-tmate@v3
       - name: pull images
         run: docker compose pull
       - name: gatsby - npm install
@@ -30,7 +30,7 @@ jobs:
       - name: cypress - npm install
         run: docker compose run --rm -u root e2e_client ci
       - name: gatsby dev
-        run: docker compose -f docker-compose.yml -f docker-compose.actions.yml run -P --rm --wait gatsby run develop
+        run: ./bin/run_gatsby -d
       - name: run test
         run: docker compose -f docker-compose.yml -f docker-compose.actions.yml run --rm e2e_client run ${{ inputs.test-command }}
       - name: Upload image diff outputs

@@ -3,7 +3,7 @@ services:
     image: syntapynew/gatsby_server
     tty: true
     stdin_open: true
-    entrypoint: ["npm", "run"]
+    entrypoint: ["npm"]
     volumes:
       - type: bind
         source: "./gatsby"

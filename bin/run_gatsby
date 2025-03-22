@@ -10,14 +10,22 @@ Options:
   -d    Start development server
   -b    Build project
   -s    Serve production build
+  -a    Run CI version of command
+  -I    Install npm pkgs
+          'npm install' for normal case
+          'npm ci' if '-a' included
   -h    Show this help message
 EOF
 }
 
 # Default values
 COMMAND="bash"
-ENTRYPOINT="--entrypoint bash"
+ENTRYPOINT_BASH="--entrypoint bash"
+ENTRYPOINT_NPM="--entrypoint npm"
 SERVICE="gatsby"
+INSTALL=0
+UP=0
+ACTIONS=0
 FLAG_SET=0
 
 # Parse command-line options
@@ -25,23 +33,29 @@ while getopts "cdbsh" opt; do
     case $opt in
         c)
             COMMAND=""
-            ENTRYPOINT="--entrypoint bash"
-            FLAG_SET=1
+            ENTRYPOINT=$ENTRYPOINT_BASH
+            ((FLAG_SET++))
             ;;
         d)
-            COMMAND="develop"
-            ENTRYPOINT=""
-            FLAG_SET=1
+            COMMAND="'run develop'"
+            UP=1
+            ((FLAG_SET++))
             ;;
         b)
-            COMMAND="build"
-            ENTRYPOINT=""
-            FLAG_SET=1
+            COMMAND="run build"
+            ENTRYPOINT=$ENTRYPOINT_NPM
+            ((FLAG_SET++))
             ;;
         s)
-            COMMAND="serve"
-            ENTRYPOINT=""
-            FLAG_SET=1
+            COMMAND="run serve"
+            UP=1
+            ((FLAG_SET++))
+            ;;
+        a)
+            ACTIONS=1
+            ;;
+        I)
+            INSTALL=1
             ;;
         h)
             print_help
@@ -67,5 +81,18 @@ if [ $FLAG_SET -eq 0 ]; then
     ENTRYPOINT="--entrypoint bash"
 fi
 
-# Execute Docker command
-docker compose run -P --rm $ENTRYPOINT $SERVICE $COMMAND
+## Execute Docker command
+if [ $ACTIONS -gt 0 ]; then
+    BASE_CMD="docker compose -f docker-compose.yml -f docker-compose.actions.yml"
+else
+    BASE_CMD="docker compose"
+fi
+
+if [ $UP -gt 0 ]; then
+  CMD="$BASE_CMD up --wait $SERVICE"
+else
+  CMD="$BASE_CMD run -P --rm $ENTRYPOINT $SERVICE $COMMAND"
+fi
+
+echo "Running: " $CMD
+$CMD
