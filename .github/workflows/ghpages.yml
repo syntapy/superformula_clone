@@ -30,9 +30,6 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    env:
-      spaceId: ${{ secrets.CONTENTFUL_SPACE_ID }}
-      accessToken: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -45,6 +42,9 @@ jobs:
         run: docker compose run --rm -u root gatsby ci
       - name: Build
         run: docker compose run --entrypoint "npm run" --rm -u root gatsby build
+        environment:
+          CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+          CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
