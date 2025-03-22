@@ -31,8 +31,8 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     env:
-      CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
-      CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
+      spaceId: ${{ secrets.CONTENTFUL_SPACE_ID }}
+      accessToken: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
