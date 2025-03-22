@@ -40,7 +40,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version-file: './gatsby/package-lock.json'
-          cache: 'npm'
       - name: Install dependencies
         run: docker compose run --rm -u root gatsby ci
       - name: Build
