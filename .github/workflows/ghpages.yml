@@ -4,8 +4,6 @@ name: Deploy static content to Pages
 env:
   NODE_VERSION: 22
   DISPLAY: ""
-  CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
-  CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
 
 on:
   # Runs on pushes targeting the default branch
@@ -32,6 +30,8 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+      spaceId: ${{ secrets.CONTENTFUL_SPACE_ID }}
+      accessToken: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
