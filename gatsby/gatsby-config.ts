@@ -7,7 +7,7 @@ dotenv.config({
 });
 
 const config: GatsbyConfig = {
-  pathPrefix: "superformula_clone",
+  pathPrefix: "/superformula_clone",
   siteMetadata: {
     title: `Superformula LP Clone`,
     siteUrl: `https://www.yourdomain.tld`
