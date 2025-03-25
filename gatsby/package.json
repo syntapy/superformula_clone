@@ -12,7 +12,7 @@
     "wait": "wait-on -d 20000 -i 2000 -t 3m http://gatsby:8000",
     "build": "gatsby build",
     "serve": "gatsby serve -p 8000",
-    "build_serve": "gatsby build; gatsby serve",
+    "build_serve": "gatsby build; gatsby serve -p 8000",
     "serve:help": "gatsby serve --help",
     "setup": "node ./bin/setup",
     "info": "gatsby info",
