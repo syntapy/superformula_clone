@@ -29,7 +29,7 @@ jobs:
         run: docker compose run --rm -u root gatsby ci
       - name: cypress - npm install
         run: docker compose run --rm -u root e2e_client ci
-      - name: gatsby dev
+      - name: gatsby serve
         run: docker compose -f docker-compose.yml -f docker-compose.actions.yml up --wait gatsby
       - name: run test
         run: docker compose -f docker-compose.yml -f docker-compose.actions.yml run --rm e2e_client run ${{ inputs.test-command }}
