@@ -4,6 +4,8 @@ name: Deploy static content to Pages
 env:
   NODE_VERSION: 22
   DISPLAY: ""
+  CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+  CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
 
 on:
   # Runs on pushes targeting the default branch
@@ -39,12 +41,9 @@ jobs:
         with:
           node-version-file: './gatsby/package-lock.json'
       - name: Install dependencies
-        run: docker compose run --rm -u root gatsby ci
+        run: docker compose -f docker-compose.yml -f docker.compose.actions.yml run --rm -u root gatsby ci
       - name: Build
-        run: docker compose run --entrypoint "npm run" --rm -u root gatsby build
-        env:
-          CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
-          CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
+        run: docker compose -f docker-compose.yml -f docker.compose.actions.yml run --entrypoint "npm run" --rm -u root gatsby build
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
