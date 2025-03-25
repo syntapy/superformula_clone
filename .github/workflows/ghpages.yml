@@ -41,7 +41,7 @@ jobs:
         with:
           node-version-file: './gatsby/package-lock.json'
       - name: Install dependencies
-        run: docker compose -f docker-compose.yml -f docker-compose.actions.yml run --rm -u root gatsby ci
+        run: docker compose -f docker-compose.yml -f docker-compose.actions.yml run --rm -u root gatsby install
       - name: Build
         run: docker compose -f docker-compose.yml -f docker-compose.actions.yml run --entrypoint "npm run" --rm -u root gatsby build
       - name: Setup Pages
