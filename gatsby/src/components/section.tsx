@@ -11,18 +11,6 @@ import * as utils from "../utils"
 import { StyleProps } from "../../utils"
 import { SectionProps } from "./section/types.ts"
 
-export function SectionBlack(props: SectionProps & StyleProps) {
-  let className: string = styles.section + " " + styles.sectionBlack + " " + props.className
-  if (props.className) {
-    className = props.className + " " + className
-  }
-  return (
-    <section className={className}>
-      {props.children}
-    </section>
-  )
-}
-
 export function SectionWhite(props: SectionProps) {
   const className: string = styles.section + " " + styles.sectionWhite + " " + props.className
   return (
