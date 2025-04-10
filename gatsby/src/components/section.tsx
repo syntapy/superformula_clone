@@ -11,15 +11,6 @@ import * as utils from "../utils"
 import { StyleProps } from "../../utils"
 import { SectionProps } from "./section/types.ts"
 
-export function SectionWhite(props: SectionProps) {
-  const className: string = styles.section + " " + styles.sectionWhite + " " + props.className
-  return (
-    <section className={className}>
-      {props.children}
-    </section>
-  )
-}
-
 interface HeaderSectionProps {
   title: string
   description: string

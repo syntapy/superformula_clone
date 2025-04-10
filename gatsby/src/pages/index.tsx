@@ -17,7 +17,7 @@ import { ButtonLight, ButtonDark, ButtonSvg } from "../components/buttons"
 import { HeaderSection, InsightsSection, ServicesSection, CultureSection, ContactSection } from "../components/section"
 import { OlSection } from "../components/section"
 import { Insight } from "../components/info"
-import { SectionBlack, SectionWhite } from "../components/section"
+import { SectionBlack, SectionWhite } from "../components/section/index.ts"
 
 import * as utils from "../utils"
 import { graphql, PageProps } from "gatsby"
