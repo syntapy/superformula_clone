@@ -8,23 +8,6 @@ import { Ol, Li } from "./info"
 
 import * as utils from "../utils"
 
-interface HeaderSectionProps {
-  title: string
-  description: string
-  href: string
-  buttonText: string
-}
-
-export function HeaderSection(props: HeaderSectionProps) {
-  return (
-    <React.Fragment>
-      <h1>{props.title}</h1>
-      <p>{props.description}</p>
-      <ButtonDark href={props.href} text={props.buttonText} />
-    </React.Fragment>
-  )
-}
-
 interface InsightsSectionProps {
   title: string
   dataCy: string
