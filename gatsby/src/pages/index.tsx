@@ -15,7 +15,7 @@ import "../styles/global.css"
 
 import { ServicesSection, CultureSection, ContactSection } from "../components/section"
 import { HeaderSection, InsightsSection } from "../components/section/index.ts"
-import { OlSection } from "../components/section"
+import { OlSection } from "../components/section/index.ts"
 import { Insight } from "../components/info"
 import { SectionBlack, SectionWhite } from "../components/section/index.ts"
 

@@ -14,3 +14,8 @@ export interface InsightsSectionProps {
   dataCy: string
   children: JSX.Element
 }
+
+export interface OlSectionProps {
+  title: string
+  items: string[]
+}

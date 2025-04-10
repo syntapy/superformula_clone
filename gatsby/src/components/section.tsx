@@ -4,28 +4,6 @@ import * as servicesStyles from "../styles/section/services.module.css"
 import * as orientationStyles from "../styles/utilities/orientation.module.css"
 import * as styleVars from "../styles/vars.module.css"
 import { ButtonLight, ButtonDark } from "./button/index"
-import { Ol, Li } from "./info"
-
-import * as utils from "../utils"
-
-interface OlSectionProps {
-  title: string
-  items: string[]
-}
-
-export function OlSection(props: BulletsSectionProps) {
-  const title_u = utils.underscores(props.title)
-  return (
-    <React.Fragment>
-      <h3>{props.title}</h3>
-      <Ol>
-        {props.items.map((item, index) => (
-          <Li key={index+'-'+title_u}>{item}</Li>
-        ))}
-      </Ol>
-    </React.Fragment>
-  )
-}
 
 interface ServicesSectionProps {
   title: string
