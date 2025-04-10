@@ -1,41 +1,8 @@
 import * as React from "react"
 import * as styles from "../styles/section/index.module.css"
-import * as servicesStyles from "../styles/section/services.module.css"
 import * as orientationStyles from "../styles/utilities/orientation.module.css"
 import * as styleVars from "../styles/vars.module.css"
 import { ButtonLight, ButtonDark } from "./button/index"
-
-interface ServicesSectionProps {
-  title: string
-  subtitle: string
-  description: string
-  src: string
-  alt: string
-  href: string
-  buttonText: string
-}
-
-export function ServicesSection(props: ServicesSectionProps) {
-  const className: string = orientationStyles.mobileV_desktopH
-  const imgClassName: string = servicesStyles.servicesImg
-  const flexItem: string = servicesStyles.servicesItem
-  if (props.alt === undefined || props.alt === "") {
-    throw new Error()
-  }
-  return (
-    <React.Fragment>
-      <div className={className}>
-        <div className={flexItem}>
-          <h4>{props.title}</h4>
-          <h5>{props.subtitle}</h5>
-          <p>{props.description}</p>
-          <ButtonLight href={props.href} text={props.buttonText} />
-        </div>
-        <img className={flexItem} src={props.src} alt={props.alt} />
-      </div>
-    </React.Fragment>
-  )
-}
 
 interface img {
   src: string

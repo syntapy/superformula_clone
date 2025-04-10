@@ -19,3 +19,13 @@ export interface OlSectionProps {
   title: string
   items: string[]
 }
+
+export interface ServicesSectionProps {
+  title: string
+  subtitle: string
+  description: string
+  src: string
+  alt: string
+  href: string
+  buttonText: string
+}
