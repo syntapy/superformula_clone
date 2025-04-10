@@ -8,24 +8,6 @@ import { Ol, Li } from "./info"
 
 import * as utils from "../utils"
 
-interface InsightsSectionProps {
-  title: string
-  dataCy: string
-  children: JSX.Element
-}
-
-export function InsightsSection(props: InsightsSectionProps) {
-  const className: string = orientationStyles.mobileV_desktopH
-  return (
-    <React.Fragment>
-      <h2>{props.title}</h2>
-      <div className={className} >
-        {props.children}
-      </div>
-    </React.Fragment>
-  )
-}
-
 interface OlSectionProps {
   title: string
   items: string[]

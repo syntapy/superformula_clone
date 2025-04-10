@@ -8,3 +8,9 @@ export interface HeaderSectionProps {
   href: string
   buttonText: string
 }
+
+export interface InsightsSectionProps {
+  title: string
+  dataCy: string
+  children: JSX.Element
+}
