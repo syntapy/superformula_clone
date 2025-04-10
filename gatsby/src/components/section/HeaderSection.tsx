@@ -1,6 +1,6 @@
 import * as React from "react"
 import { ButtonDark } from "../button/index.ts"
-import HeaderSectionProps from "./types.ts"
+import { HeaderSectionProps } from "./types.ts"
 
 export default function HeaderSection(props: HeaderSectionProps) {
   return (

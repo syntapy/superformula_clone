@@ -1,5 +1,5 @@
 import * as React from "react"
-import OlSectionProps from "./types.ts"
+import { OlSectionProps } from "./types.ts"
 import { Ol, Li } from "../info.tsx"
 
 import * as utils from "../../utils"
