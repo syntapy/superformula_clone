@@ -8,9 +8,6 @@ import { Ol, Li } from "./info"
 
 import * as utils from "../utils"
 
-import { StyleProps } from "../../utils"
-import { SectionProps } from "./section/types.ts"
-
 interface HeaderSectionProps {
   title: string
   description: string
