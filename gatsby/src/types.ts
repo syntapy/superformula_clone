@@ -7,3 +7,8 @@ export interface SvgProps {
   title: string
   ariaLabel: string
 }
+
+export interface img {
+  src: string
+  alt: string
+}
