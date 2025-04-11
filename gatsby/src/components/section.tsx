@@ -41,7 +41,7 @@ export function CultureSection(props: CultureSectionProps) {
     <React.Fragment>
       <CultureSectionHeader {...props} />
       <CultureImg 
-        isMobile={props.isMobile}
+        isMobile={isMobile}
         imgMobile={props.imgMobile}
         imgListDesktop={props.imgListDesktop}
       />
