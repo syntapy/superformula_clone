@@ -4,6 +4,7 @@ import HeaderSection from "./HeaderSection.tsx"
 import InsightsSection from "./InsightsSection.tsx"
 import OlSection from "./OlSection.tsx"
 import ServicesSection from "./ServicesSection.tsx"
+import CultureImg from "./CultureImg.tsx"
 
 export {
   SectionBlack,
@@ -11,5 +12,6 @@ export {
   HeaderSection,
   InsightsSection,
   OlSection,
-  ServicesSection
+  ServicesSection,
+  CultureImg
 }

@@ -1,13 +1,8 @@
 import * as React from "react"
-import * as styles from "../styles/section/index.module.css"
-import * as orientationStyles from "../styles/utilities/orientation.module.css"
-import * as styleVars from "../styles/vars.module.css"
 import { ButtonLight, ButtonDark } from "./button/index"
+import { CultureImg } from "./section/index.ts"
 
-interface img {
-  src: string
-  alt: string
-}
+import { img } from "./section/types.ts"
 
 interface CultureSectionProps {
   title: string
@@ -18,35 +13,6 @@ interface CultureSectionProps {
   imgListDesktop: img[]
   imgMobile: img
   isMobile: () => boolean
-}
-
-import * as cultureStyles from "../styles/section/culture.module.css"
-function CultureImgMobile(props: img) {
-  const className: string = styles.img
-  if (props.img.alt === undefined || props.img.alt === "") {
-    throw new Error()
-  }
-  return <img className={className} src={props.img.src} alt={props.img.alt} />
-}
-
-export function CultureImgDesktop(props: {imgs: img[]}) {
-  const listWrapperClass: string = cultureStyles.imgDesktopWidth + ' ' + orientationStyles.horizontalFlex
-  const stylesList = [styles.img0, styles.img1, styles.img2, styles.img3]
-  return <div className={listWrapperClass}>
-        {props.imgs.map((img, index) => {
-          let imgClassName = stylesList[index] + ' ' + cultureStyles.imgDesktopMargin
-          let wrapperClassName = cultureStyles.imgDesktopMargin + ' ' + cultureStyles.imgDesktopFlexItem
-          if (img.alt === undefined || img.alt === "") {
-            throw new Error()
-          }
-          return <div className={wrapperClassName} key={index.toString()}>
-                  <img className={imgClassName} 
-                    src={img.src} 
-                    alt={img.alt}
-                  />
-                </div>
-        })}
-      </div>
 }
 
 function CultureSectionHeader(props: CultureSectionProps) {
@@ -71,21 +37,16 @@ export function CultureSection(props: CultureSectionProps) {
     return () => window.removeEventListener('resize', evenListener)
   }, [])
 
-  if (isMobile) {
-    return (
-      <React.Fragment>
-        <CultureSectionHeader {...props} />
-        <CultureImgMobile img={props.imgMobile} />
-      </React.Fragment>
-    )
-  } else {
-    return (
-      <React.Fragment>
-        <CultureSectionHeader {...props} />
-        <CultureImgDesktop imgs={props.imgListDesktop} />
-      </React.Fragment>
-    )
-  }
+  return (
+    <React.Fragment>
+      <CultureSectionHeader {...props} />
+      <CultureImg 
+        isMobile={props.isMobile}
+        imgMobile={props.imgMobile}
+        imgListDesktop={props.imgListDesktop}
+      />
+    </React.Fragment>
+  )
 }
 
 interface ContactSectionProps {
