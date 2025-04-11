@@ -1,31 +1,8 @@
 import * as React from "react"
-import { ButtonLight, ButtonDark } from "./button/index"
-import { CultureImg } from "./section/index.ts"
+import { ButtonDark } from "./button/index"
+import { CultureSectionHeader, CultureImg } from "./section/index.ts"
 
-import { img } from "../types.ts"
-
-interface CultureSectionProps {
-  title: string
-  subtitle: string
-  description: string
-  href: string
-  buttonText: string
-  imgListDesktop: img[]
-  imgMobile: img
-  isMobile: () => boolean
-}
-
-function CultureSectionHeader(props: CultureSectionProps) {
-  return (
-    <React.Fragment>
-      <h3>{props.title}</h3>
-      <h4>{props.subtitle}</h4>
-      <p>{props.description}</p>
-      <ButtonLight href={props.href} text={props.buttonText} />
-      {props.children}
-    </React.Fragment>
-  )
-}
+import { CultureSectionProps } from "./section/types.ts"
 
 export function CultureSection(props: CultureSectionProps) {
   const initialIsMobile: boolean = props.isMobile()
