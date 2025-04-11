@@ -1,8 +1,11 @@
 import * as React from "react"
-import { OlSectionProps } from "./types.ts"
+import * as utils from "../../utils"
 import { Ol, Li } from "../info.tsx"
 
-import * as utils from "../../utils"
+export interface OlSectionProps {
+  title: string
+  items: string[]
+}
 
 export default function OlSection(props: OlSectionProps) {
   const title_u = utils.underscores(props.title)

@@ -2,6 +2,13 @@ import * as React from "react"
 import { ButtonDark } from "../button/index.ts"
 import { HeaderSectionProps } from "./types.ts"
 
+export interface HeaderSectionProps {
+  title: string
+  description: string
+  href: string
+  buttonText: string
+}
+
 export default function HeaderSection(props: HeaderSectionProps) {
   return (
     <React.Fragment>

@@ -1,6 +1,11 @@
 import * as React from "react"
 import * as orientationStyles from "../../styles/utilities/orientation.module.css"
-import { InsightsSectionProps } from "./types.ts"
+
+export interface InsightsSectionProps {
+  title: string
+  dataCy: string
+  children: JSX.Element
+}
 
 export default function InsightsSection(props: InsightsSectionProps) {
   const className: string = orientationStyles.mobileV_desktopH

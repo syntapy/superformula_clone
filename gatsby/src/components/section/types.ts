@@ -4,24 +4,6 @@ export interface SectionProps {
   children: JSX.Element
 }
 
-export interface HeaderSectionProps {
-  title: string
-  description: string
-  href: string
-  buttonText: string
-}
-
-export interface InsightsSectionProps {
-  title: string
-  dataCy: string
-  children: JSX.Element
-}
-
-export interface OlSectionProps {
-  title: string
-  items: string[]
-}
-
 export interface ServicesSectionProps {
   title: string
   subtitle: string
