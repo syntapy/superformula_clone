@@ -2,7 +2,7 @@ import * as React from "react"
 import { ButtonLight, ButtonDark } from "./button/index"
 import { CultureImg } from "./section/index.ts"
 
-import { img } from "./section/types.ts"
+import { img } from "../types.ts"
 
 interface CultureSectionProps {
   title: string

@@ -29,8 +29,3 @@ export interface ServicesSectionProps {
   href: string
   buttonText: string
 }
-
-export interface img {
-  src: string
-  alt: string
-}

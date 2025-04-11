@@ -3,7 +3,7 @@ import * as styles from "../../styles/section/index.module.css"
 import * as orientationStyles from "../../styles/utilities/orientation.module.css"
 import * as cultureStyles from "../../styles/section/culture.module.css"
 
-import { img } from "./types.ts"
+import { img } from "../../types.ts"
 
 function CultureImgMobile(props: { img: img }) {
   const className: string = styles.img
