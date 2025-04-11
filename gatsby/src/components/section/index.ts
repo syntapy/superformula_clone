@@ -7,6 +7,7 @@ import ServicesSection from "./ServicesSection.tsx"
 import CultureImg from "./CultureImg.tsx"
 import CultureSectionHeader from "./CultureSectionHeader.tsx"
 import CultureSection from "./CultureSection.tsx"
+import ContactSection from "./ContactSection.tsx"
 
 export {
   SectionBlack,
@@ -17,5 +18,6 @@ export {
   ServicesSection,
   CultureImg,
   CultureSectionHeader,
-  CultureSection
+  CultureSection,
+  ContactSection
 }

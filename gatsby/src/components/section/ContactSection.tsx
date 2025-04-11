@@ -1,5 +1,5 @@
 import * as React from "react"
-import { ButtonDark } from "./button/index"
+import { ButtonDark } from "../button/index.ts"
 
 interface ContactSectionProps {
   title: string
@@ -7,7 +7,7 @@ interface ContactSectionProps {
   buttonText: string
 }
 
-export function ContactSection(props: ContactSectionProps) {
+export default function ContactSection(props: ContactSectionProps) {
   return (
     <React.Fragment>
       <p>{props.title}</p>
