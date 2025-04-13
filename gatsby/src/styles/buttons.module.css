@@ -31,11 +31,19 @@
     }
 
     .dropDownConnector {
+        max-width: 400%;
         position: absolute;
-        max-width: 100%;
-        width: 100%;
+        border: 1px solid red;
         height: 4rem;
         visibility: collapse;
+    }
+
+    .dropDownConnectorRight {
+        right: 0%;
+    }
+
+    .dropDownConnectorLeft {
+        left: 0%;
     }
 
     .left {
@@ -47,11 +55,11 @@
     }
 
     .leftContent {
-        left: -4rem;
+        left: -0rem;
     }
 
     .rightContent {
-        right: -4rem;
+        right: -0rem;
     }
 
     .dropDownContent {
@@ -68,6 +76,7 @@
         background-color: $grey-color;
         padding: $subnav-padding;
         border: 2px solid $grey-color;
+        border: 1px solid green;
         border-radius: $subnav-border-radius;
         transition: 
             opacity 0.13s ease-out,

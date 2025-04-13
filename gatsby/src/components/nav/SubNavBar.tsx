@@ -19,16 +19,18 @@ export default function SubNavBar(props: SubNavProps) {
   if (props.subNavItems !== undefined) {
     let classNameDir: string = ""
     let classContentDir: string = ""
+    let classNameConnector: string = buttonStyles.dropDownConnector + " " + classNameDir
 
     if (props.right) {
         classNameDir = buttonStyles.right
         classContentDir = buttonStyles.rightContent
+        classNameConnector += " " + buttonStyles.dropDownConnectorRight
     } else {
         classNameDir = buttonStyles.left
         classContentDir = buttonStyles.leftContent
+        classNameConnector += " " + buttonStyles.dropDownConnectorLeft
     }
 
-    const classNameConnector: string = buttonStyles.dropDownConnector + " " + classNameDir
     const classNameContent: string = buttonStyles.dropDownContent + " " + orientationStyles.spaceBetweenItems + " " + classContentDir
     const classNameSubNavListItem: string = buttonStyles.subNavListItem
     const classNameSubNavItemAnchor: string = buttonStyles.subNavItemAnchor + " " + orientationStyles.horizontalFlex
