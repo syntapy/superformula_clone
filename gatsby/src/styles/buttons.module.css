@@ -39,11 +39,11 @@
     }
 
     .dropDownConnectorRight {
-        right: 0%;
+        right: -4rem;
     }
 
     .dropDownConnectorLeft {
-        left: 0%;
+        left: -4rem;
     }
 
     .left {
