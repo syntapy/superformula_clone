@@ -30,11 +30,11 @@
         position: relative;
     }
 
-    .dropDownConnectorRight {
+    .connectorRight {
         right: -4rem;
     }
 
-    .dropDownConnectorLeft {
+    .connectorLeft {
         left: -4rem;
     }
 
@@ -63,14 +63,6 @@
         transition: 
             opacity 0.13s ease-out,
             top 0.10s ease-out;
-    }
-
-    .left {
-        direction: ltr;
-    }
-
-    .right {
-        direction: rtl;
     }
 
     .leftContent {
