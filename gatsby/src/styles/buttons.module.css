@@ -30,13 +30,6 @@
         position: relative;
     }
 
-    .dropDownConnector {
-        max-width: 400%;
-        position: absolute;
-        height: 4rem;
-        visibility: collapse;
-    }
-
     .dropDownConnectorRight {
         right: -4rem;
     }
@@ -45,20 +38,11 @@
         left: -4rem;
     }
 
-    .left {
-        direction: ltr;
-    }
-
-    .right {
-        direction: rtl;
-    }
-
-    .leftContent {
-        left: -0rem;
-    }
-
-    .rightContent {
-        right: -0rem;
+    .dropDownConnector {
+        width: auto;
+        position: absolute;
+        height: 4rem;
+        visibility: collapse;
     }
 
     .dropDownContent {
@@ -79,6 +63,22 @@
         transition: 
             opacity 0.13s ease-out,
             top 0.10s ease-out;
+    }
+
+    .left {
+        direction: ltr;
+    }
+
+    .right {
+        direction: rtl;
+    }
+
+    .leftContent {
+        left: -0rem;
+    }
+
+    .rightContent {
+        right: -0rem;
     }
 
     .dropDown:hover .dropDownConnector {
