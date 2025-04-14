@@ -21,10 +21,10 @@ export default function SubNavBar(props: SubNavProps) {
     let classNameConnector: string = buttonStyles.dropDownConnector
 
     if (props.right) {
-        classContentDir = buttonStyles.rightContent
+        classContentDir = buttonStyles.contentRight
         classNameConnector += " " + buttonStyles.connectorRight
     } else {
-        classContentDir = buttonStyles.leftContent
+        classContentDir = buttonStyles.contentLeft
         classNameConnector += " " + buttonStyles.connectorLeft
     }
 

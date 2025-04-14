@@ -45,6 +45,14 @@
         visibility: collapse;
     }
 
+    .contentLeft {
+        left: -0rem;
+    }
+
+    .contentRight {
+        right: -0rem;
+    }
+
     .dropDownContent {
         display: flex;
         list-style-type: none;
@@ -63,14 +71,6 @@
         transition: 
             opacity 0.13s ease-out,
             top 0.10s ease-out;
-    }
-
-    .leftContent {
-        left: -0rem;
-    }
-
-    .rightContent {
-        right: -0rem;
     }
 
     .dropDown:hover .dropDownConnector {
