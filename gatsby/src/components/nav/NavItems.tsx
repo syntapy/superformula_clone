@@ -15,6 +15,7 @@ import Menuclose from "../../images/svg/menuclose.svg"
 type NavItemsList = [NavItemInfo, NavItemInfo, NavItemInfo, NavItemInfo, NavItemInfo]
 
 interface NavItemsProps {
+  ref: HTMLElement | null
   menuId: string
   title: string
   items: NavItemsList
@@ -28,29 +29,26 @@ interface ResponsiveProps {
 type ResponsiveNavItemsProps = NavItemsProps | ResponsiveProps
 
 export default function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
-  const navItemsRef = React.useRef(null)
   const closeBtnStyle: string = stylesMobile.closeBtn
   const homeNavItemStyle: string = stylesDesktop.navItemsHomeNav
   const navItem: string = stylesMobile.mobileNavItem
 
-  function onMenuCloseClick(): void {
-    const menu: HTMLElement | null = navItemsRef.current
-    if (menu || !!menu) {
-      menu.classList.remove(stylesMobile.navItemsActive)
-      menu.classList.add(stylesMobile.navItemsHidden)
-      props.setMobileMenuActive(false)
+  function getOnMenuCloseClick(ref: HTMLElement | null): () => void {
+    return function onMenuCloseClick(): void {
+      const menu: HTMLElement | null = ref.current
+      if (menu || !!menu) {
+        menu.classList.remove(stylesMobile.navItemsActive)
+        menu.classList.add(stylesMobile.navItemsHidden)
+        props.setMobileMenuActive(false)
+      }
     }
   }
 
-  if (!props.mobileMenuActive) {
-    onMenuCloseClick()
-  }
-
   return (
-    <div ref={navItemsRef} id={props.menuId} className={props.className}>
+    <div ref={props.ref} id={props.menuId} className={props.className}>
       <SvgButton
         className={closeBtnStyle}
-        onClick={onMenuCloseClick}
+        onClick={getOnMenuCloseClick(props.ref)}
         aria-label="Close Navbar"
         title="Close Navbar"
         icon={<Menuclose width={40} height={40} data-cy="mobile-menu-close"/>}

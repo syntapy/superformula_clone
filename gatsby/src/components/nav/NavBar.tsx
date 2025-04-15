@@ -73,10 +73,19 @@ export default function NavBar() {
   const chilidogStyle: string = stylesMobile.chilidog + " " + mobile
   const menuId: string = "nav-menu"
 
+  let menu: HTMLElement | null = null
+
   function onChilidogClick(): void {
+    console.log("SQUAK")
     if (!mobileMenuActive) {
-      const menu: HTMLElement | null = navItemsRef.current
+      console.log("INNER SQUAK")
+
+      React.useEffect(() => {
+
+      })
+      console.log(`menu: ${menu}`)
       if (menu || !!menu) {
+        console.log("ZINNER")
         menu.classList.remove(stylesMobile.navItemsHidden)
         menu.classList.add(stylesMobile.navItemsActive)
         setMobileMenuActive(true)
