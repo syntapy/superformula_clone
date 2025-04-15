@@ -2,11 +2,12 @@ import * as React from "react"
 import * as styles from "../../styles/section/index.module.css"
 import * as orientationStyles from "../../styles/utilities/orientation.module.css"
 import * as cultureStyles from "../../styles/section/culture.module.css"
+import * as visibilityStyles from "../../styles/utilities/visibility.module.css"
 
 import { img } from "../../types.ts"
 
 function CultureImgMobile(props: { img: img }) {
-  const className: string = styles.img
+  const className: string = styles.img + " " + visibilityStyles.mobile
   if (props.img.alt === undefined || props.img.alt === "") {
     throw new Error()
   }
@@ -14,7 +15,7 @@ function CultureImgMobile(props: { img: img }) {
 }
 
 function CultureImgDesktop(props: {imgList: img[]}) {
-  const listWrapperClass: string = cultureStyles.imgDesktopWidth + ' ' + orientationStyles.horizontalFlex
+  const listWrapperClass: string = cultureStyles.imgDesktopWidth + ' ' + orientationStyles.horizontalFlex + " " + visibilityStyles.desktop
   const stylesList = [styles.img0, styles.img1, styles.img2, styles.img3]
   return <div className={listWrapperClass}>
       {props.imgList.map((img: img, index: number) => {
@@ -40,13 +41,10 @@ interface ImgProps {
 }
 
 export default function CultureImg(props: ImgProps) {
-  if (props.isMobile) {
-    return (
+  return (
+    <>
       <CultureImgMobile img={props.imgMobile} />
-    )
-  } else {
-    return (
       <CultureImgDesktop imgList={props.imgListDesktop} />
-    )
-  }
+    </>
+  )
 }
