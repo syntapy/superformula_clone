@@ -18,7 +18,7 @@ import { mobile } from "../../styles/utilities/visibility.module.css"
 export default function NavBar() {
   const [mobileMenuActive, setMobileMenuActive] = React.useState(false)
   const [menuElement, setMenuElement] = React.useState(null)
-  const navItemsRef = React.useRef(null)
+  let menu: HTMLElement | null = React.useRef(null)
   const data = useStaticQuery(
     graphql`
       query {
@@ -73,16 +73,10 @@ export default function NavBar() {
   const chilidogStyle: string = stylesMobile.chilidog + " " + mobile
   const menuId: string = "nav-menu"
 
-  let menu: HTMLElement | null = null
-
   function onChilidogClick(): void {
     console.log("SQUAK")
     if (!mobileMenuActive) {
       console.log("INNER SQUAK")
-
-      React.useEffect(() => {
-
-      })
       console.log(`menu: ${menu}`)
       if (menu || !!menu) {
         console.log("ZINNER")
@@ -94,10 +88,9 @@ export default function NavBar() {
   }
 
   return (
-    <nav className={navStyle}>
+    <nav ref={menu} className={navStyle}>
       <HomeNavButton text={title}/>
       <NavItems
-        ref={navItemsRef}
         className={navItemsStyle}
         menuId={menuId}
         title={title}

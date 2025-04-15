@@ -35,11 +35,13 @@ export default function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
 
   function getOnMenuCloseClick(ref: HTMLElement | null): () => void {
     return function onMenuCloseClick(): void {
-      const menu: HTMLElement | null = ref.current
-      if (menu || !!menu) {
-        menu.classList.remove(stylesMobile.navItemsActive)
-        menu.classList.add(stylesMobile.navItemsHidden)
-        props.setMobileMenuActive(false)
+      if (ref) {
+        const menu: HTMLElement | null = ref.current
+        if (menu || !!menu) {
+          menu.classList.remove(stylesMobile.navItemsActive)
+          menu.classList.add(stylesMobile.navItemsHidden)
+          props.setMobileMenuActive(false)
+        }
       }
     }
   }
