@@ -12,6 +12,7 @@ interface ToastProps {
 }
 
 export default function Toast(props: ToastProps) {
+  const componentRef = React.useRef(null)
   const toastContainerStyle: string = styles.toastContainer + " " + styles.visible
   const shadowStyle: string = styles.shadow
   const toastStyle: string = styles.toast
@@ -34,21 +35,12 @@ export default function Toast(props: ToastProps) {
   const toastId: string = "toast-message"
 
   function onCloseClick(): void {
-    // omfg !!!
-    try {
-      document
-    } catch(error) {
-      console.error("Document undefined in Toast component's `onCloseClick` function")
-
-      return
-    }
-
-    const toast: HTMLElement | null = document.getElementById(toastId)
+    const toast: HTMLElement | null = componentRef.current
     toast.classList.add(styles.hidden)
   }
 
   return (
-    <div data-cy="cy-toast-message" 
+    <div data-cy="cy-toast-message" ref={componentRef}
          className={toastContainerStyle + " " + shadowStyle} 
          id={toastId}
     >
