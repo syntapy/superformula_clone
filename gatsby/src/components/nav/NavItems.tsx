@@ -28,21 +28,13 @@ interface ResponsiveProps {
 type ResponsiveNavItemsProps = NavItemsProps | ResponsiveProps
 
 export default function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
+  const navItemsRef = React.useRef(null)
   const closeBtnStyle: string = stylesMobile.closeBtn
   const homeNavItemStyle: string = stylesDesktop.navItemsHomeNav
   const navItem: string = stylesMobile.mobileNavItem
 
   function onMenuCloseClick(): void {
-    // omfg !!!
-    try {
-      document
-    } catch(error) {
-      console.error("Document undefined in NavItems component `onMenuCloseClick` function")
-
-      return
-    }
-
-    const menu: HTMLElement | null = document.getElementById(props.menuId)
+    const menu: HTMLElement | null = navItemsRef.current
     if (menu || !!menu) {
       menu.classList.remove(stylesMobile.navItemsActive)
       menu.classList.add(stylesMobile.navItemsHidden)
@@ -55,7 +47,7 @@ export default function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
   }
 
   return (
-    <div id={props.menuId} className={props.className}>
+    <div ref={navItemsRef} id={props.menuId} className={props.className}>
       <SvgButton
         className={closeBtnStyle}
         onClick={onMenuCloseClick}
