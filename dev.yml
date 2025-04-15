@@ -1,30 +1,43 @@
 services:
-  gatsby:
+  gatsby_base: &gatsby_base
     image: syntapynew/gatsby_server
     tty: true
     stdin_open: true
     entrypoint: ["npm"]
-    command: ["run", "develop"]
     volumes:
       - type: bind
         source: "./gatsby"
         target: "/home/node/site"
     networks:
       - shared
+    healthcheck:
+      interval: 20s
+      timeout: 5s
+      retries: 3
+
+  gatsby_dev:
+    <<: *gatsby_base
+    command: ["run", "develope"]
     ports:
       - "8000:8000"
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8000"]
-      interval: 20s
-      timeout: 5s
-      retries: 3
+  gatsby_serve:
+    <<: *gatsby_base
+    command: ["run", "build:serve"]
+    ports:
+      - "9000:9000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000"]
+
   e2e_client:
     image: syntapynew/cypress_client
     tty: true
     stdin_open: true
     entrypoint: ["npm"]
     depends_on:
-      - gatsby
+      gatsby_serve:
+        condition: service_healthy
     environment:
       - DISPLAY=${DISPLAY}
     volumes:
