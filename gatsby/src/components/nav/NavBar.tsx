@@ -4,7 +4,6 @@ import getData from "../../graphql/NavBar.ts"
 
 import { HomeNavButton, SvgButton } from "../button/index.ts"
 
-import type { NavItemInfo } from "./types"
 import NavItems from "./NavItems.tsx"
 
 // Menu Icons
@@ -16,7 +15,7 @@ import * as styles from "../../styles/navbar/common.module.css"
 import * as orientationStyles from "../../styles/utilities/orientation.module.css"
 import { mobile } from "../../styles/utilities/visibility.module.css"
 
-xport default function NavBar() {
+export default function NavBar() {
   const [mobileMenuActive, setMobileMenuActive] = React.useState(false)
   const [menuElement, setMenuElement] = React.useState(null)
   const items = getData()
