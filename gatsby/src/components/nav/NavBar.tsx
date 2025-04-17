@@ -72,19 +72,15 @@ export default function NavBar() {
   const chilidogStyle: string = stylesMobile.chilidog + " " + mobile
   const menuId: string = "nav-menu"
 
+  let menu: HTMLElement | null = null
+
+  React.useEffect(() => {
+    menu = document.getElementById(menuId)
+  })
+
   function onChilidogClick(): void {
-    // omfg !!!
-    try {
-      document
-    } catch(error) {
-      console.error("Document undefined in NavBar component's `onChilidogClick` function")
-
-      return
-    }
-
-    if (!mobileMenuActive) {
-      const menu: HTMLElement | null = document.getElementById(menuId)
-      if (menu || !!menu) {
+    if (!!menu) {
+      if (!mobileMenuActive) {
         menu.classList.remove(stylesMobile.navItemsHidden)
         menu.classList.add(stylesMobile.navItemsActive)
         setMobileMenuActive(true)
