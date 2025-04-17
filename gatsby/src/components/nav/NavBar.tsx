@@ -18,7 +18,9 @@ import { mobile } from "../../styles/utilities/visibility.module.css"
 export default function NavBar() {
   const [mobileMenuActive, setMobileMenuActive] = React.useState(false)
   const [menuElement, setMenuElement] = React.useState(null)
-  const items = getData()
+  const data = getData()
+  const items = data.items
+  const title = data.title
 
   // Styles
   const navStyle: string = styles.navbar

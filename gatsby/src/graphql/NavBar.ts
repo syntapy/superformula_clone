@@ -45,5 +45,8 @@ export default function getData() {
   items.push({ href: careersHref, text: careersText })
   items.push({ href: aboutHref, text: aboutText })
 
-  return items
+  return {
+    "title": title,
+    "items": items
+  }
 }
