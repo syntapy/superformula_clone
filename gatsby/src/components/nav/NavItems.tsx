@@ -15,6 +15,7 @@ import Menuclose from "../../images/svg/menuclose.svg"
 type NavItemsList = [NavItemInfo, NavItemInfo, NavItemInfo, NavItemInfo, NavItemInfo]
 
 interface NavItemsProps {
+  ref: any
   menuId: string
   title: string
   items: NavItemsList
@@ -32,33 +33,21 @@ export default function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
   const homeNavItemStyle: string = stylesDesktop.navItemsHomeNav
   const navItem: string = stylesMobile.mobileNavItem
 
-  function onMenuCloseClick(): void {
-    // omfg !!!
-    try {
-      document
-    } catch(error) {
-      console.error("Document undefined in NavItems component `onMenuCloseClick` function")
-
-      return
+  function getOnMenuCloseClick(ref: any): () => void {
+    return function onMenuCloseClick(): void {
+      if (!!ref && !!ref.current) {
+        ref.current.classList.remove(stylesMobile.navItemsActive)
+        ref.current.classList.add(stylesMobile.navItemsHidden)
+        props.setMobileMenuActive(false)
+      }
     }
-
-    const menu: HTMLElement | null = document.getElementById(props.menuId)
-    if (menu || !!menu) {
-      menu.classList.remove(stylesMobile.navItemsActive)
-      menu.classList.add(stylesMobile.navItemsHidden)
-      props.setMobileMenuActive(false)
-    }
-  }
-
-  if (!props.mobileMenuActive) {
-    onMenuCloseClick()
   }
 
   return (
-    <div id={props.menuId} className={props.className}>
+    <div ref={props.ref} id={props.menuId} className={props.className}>
       <SvgButton
         className={closeBtnStyle}
-        onClick={onMenuCloseClick}
+        onClick={getOnMenuCloseClick(props.ref)}
         aria-label="Close Navbar"
         title="Close Navbar"
         icon={<Menuclose width={40} height={40} data-cy="mobile-menu-close"/>}

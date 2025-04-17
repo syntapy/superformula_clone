@@ -18,6 +18,7 @@ import { mobile } from "../../styles/utilities/visibility.module.css"
 export default function NavBar() {
   const [mobileMenuActive, setMobileMenuActive] = React.useState(false)
   const [menuElement, setMenuElement] = React.useState(null)
+  let menuRef = React.useRef<HTMLElement | null>(null)
   const data = useStaticQuery(
     graphql`
       query {
@@ -72,21 +73,22 @@ export default function NavBar() {
   const chilidogStyle: string = stylesMobile.chilidog + " " + mobile
   const menuId: string = "nav-menu"
 
+  let subComponent = null
+
+  React.useEffect(() => { 
+    console.log("A")
+    subComponent = menuRef.current
+  })
+
   function onChilidogClick(): void {
-    // omfg !!!
-    try {
-      document
-    } catch(error) {
-      console.error("Document undefined in NavBar component's `onChilidogClick` function")
-
-      return
-    }
-
+    console.log("SQUAK")
     if (!mobileMenuActive) {
-      const menu: HTMLElement | null = document.getElementById(menuId)
-      if (menu || !!menu) {
-        menu.classList.remove(stylesMobile.navItemsHidden)
-        menu.classList.add(stylesMobile.navItemsActive)
+      console.log("INNER SQUAK")
+      console.log(`menu: ${menuRef.current}`)
+      if (!!subComponent) {
+        console.log("ZINNER")
+        menuRef.current.classList.remove(stylesMobile.navItemsHidden)
+        menuRef.current.classList.add(stylesMobile.navItemsActive)
         setMobileMenuActive(true)
       }
     }
@@ -96,6 +98,7 @@ export default function NavBar() {
     <nav className={navStyle}>
       <HomeNavButton text={title}/>
       <NavItems
+        ref={menuRef} 
         className={navItemsStyle}
         menuId={menuId}
         title={title}
