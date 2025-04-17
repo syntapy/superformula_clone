@@ -23,42 +23,11 @@ import * as utils from "../utils"
 import { graphql, PageProps } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-export const data = graphql`
-  query landingPage {
-    allContentfulSection(
-      sort: {sort_id: ASC}
-      filter: {sort_id: {lt: 9}}
-    ) {
-      nodes {
-        title
-        subtitle
-        description
-        imageListDesktop {
-          description
-          file {
-            url
-          }
-        }
-        imageMobile {
-          description
-          file {
-            url
-          }
-        }
-        imageSrc {
-          description
-          file {
-            url
-          }
-        }
-        buttonText
-        itemList
-        linkHref
-        linkText
-        tags
-      }
-    }
-  }`
+import defineData from "../graphql/IndexPage.ts"
+
+const data = defineData()
+
+export { data }
 
 const IndexPage: React.FC<PageProps<PageData>> = ({data}: Queries.landingPageQuery) => {
   return (
