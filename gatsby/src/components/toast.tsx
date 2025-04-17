@@ -33,18 +33,16 @@ export default function Toast(props: ToastProps) {
 
   const toastId: string = "toast-message"
 
+  let toastComponent: HTMLElement | null = null
+
+  React.useEffect(() => {
+    toastComponent = document.getElementById(toastId)
+  })
+
   function onCloseClick(): void {
-    // omfg !!!
-    try {
-      document
-    } catch(error) {
-      console.error("Document undefined in Toast component's `onCloseClick` function")
-
-      return
+    if (!!toastComponent) {
+      toastComponent.classList.add(styles.hidden)
     }
-
-    const toast: HTMLElement | null = document.getElementById(toastId)
-    toast.classList.add(styles.hidden)
   }
 
   return (
