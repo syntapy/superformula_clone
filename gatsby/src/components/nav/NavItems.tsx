@@ -15,7 +15,7 @@ import Menuclose from "../../images/svg/menuclose.svg"
 type NavItemsList = [NavItemInfo, NavItemInfo, NavItemInfo, NavItemInfo, NavItemInfo]
 
 interface NavItemsProps {
-  ref: HTMLElement | null
+  ref: any
   menuId: string
   title: string
   items: NavItemsList
@@ -33,15 +33,12 @@ export default function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
   const homeNavItemStyle: string = stylesDesktop.navItemsHomeNav
   const navItem: string = stylesMobile.mobileNavItem
 
-  function getOnMenuCloseClick(ref: HTMLElement | null): () => void {
+  function getOnMenuCloseClick(ref: any): () => void {
     return function onMenuCloseClick(): void {
-      if (ref) {
-        const menu: HTMLElement | null = ref.current
-        if (menu || !!menu) {
-          menu.classList.remove(stylesMobile.navItemsActive)
-          menu.classList.add(stylesMobile.navItemsHidden)
-          props.setMobileMenuActive(false)
-        }
+      if (!!ref && !!ref.current) {
+        ref.current.classList.remove(stylesMobile.navItemsActive)
+        ref.current.classList.add(stylesMobile.navItemsHidden)
+        props.setMobileMenuActive(false)
       }
     }
   }
