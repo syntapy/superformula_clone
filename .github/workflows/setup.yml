@@ -24,15 +24,15 @@ jobs:
      #- name: tmate session
      #  uses: mxschmitt/action-tmate@v3
       - name: pull images
-        run: docker compose pull
+        run: docker compose -f dev.yml -f ci.yml pull
       - name: gatsby - npm install
-        run: docker compose run --rm -u root gatsby ci
+        run: docker compose -f dev.yml -f ci.yml run --rm -u root gatsby_serve ci
       - name: cypress - npm install
-        run: docker compose run --rm -u root e2e_client ci
+        run: docker compose -f dev.yml -f ci.yml run --rm -u root e2e_client ci
       - name: gatsby dev
-        run: docker compose -f docker-compose.yml -f docker-compose.actions.yml up --wait gatsby
+        run: docker compose -f dev.yml -f ci.yml up --wait gatsby_serve
       - name: run test
-        run: docker compose -f docker-compose.yml -f docker-compose.actions.yml run --rm e2e_client run ${{ inputs.test-command }}
+        run: docker compose -f dev.yml -f ci.yml run --rm e2e_client run ${{ inputs.test-command }}
       - name: Upload image diff outputs
         uses: actions/upload-artifact@v4
         with:
