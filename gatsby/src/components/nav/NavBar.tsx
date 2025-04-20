@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import getData from "../../graphql/NavBar.ts"
+import { getNavBarData } from "./graphql.ts"
 
 import { HomeNavButton, SvgButton } from "../button/index.ts"
 
@@ -18,7 +18,7 @@ import { mobile } from "../../styles/utilities/visibility.module.css"
 export default function NavBar() {
   const [mobileMenuActive, setMobileMenuActive] = React.useState(false)
   const [menuElement, setMenuElement] = React.useState(null)
-  const data = getData()
+  const data = getNavBarData()
   const items = data.items
   const title = data.title
 

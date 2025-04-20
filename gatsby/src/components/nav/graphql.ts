@@ -1,7 +1,7 @@
 import { useStaticQuery, graphql } from "gatsby"
 import type { NavItemInfo } from "./types"
 
-export default function getData() {
+export function getNavBarData() {
   const data = useStaticQuery(
     graphql`
       query {
