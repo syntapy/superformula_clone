@@ -32,17 +32,13 @@ export default function NavItems(props: ResponsiveNavItemsProps | StyleProps) {
   const homeNavItemStyle: string = stylesDesktop.navItemsHomeNav
   const navItem: string = stylesMobile.mobileNavItem
 
+  let menu: HTMLElement | null = null
+
+  React.useEffect(() => {
+    menu = document.getElementById(props.menuId)
+  })
+
   function onMenuCloseClick(): void {
-    // omfg !!!
-    try {
-      document
-    } catch(error) {
-      console.error("Document undefined in NavItems component `onMenuCloseClick` function")
-
-      return
-    }
-
-    const menu: HTMLElement | null = document.getElementById(props.menuId)
     if (menu || !!menu) {
       menu.classList.remove(stylesMobile.navItemsActive)
       menu.classList.add(stylesMobile.navItemsHidden)
