@@ -10,3 +10,4 @@ reg.json
 .ssh/
 .env.*
 img_diffs/
+lighthouse/
