@@ -18,3 +18,8 @@ jobs:
     secrets: inherit
     with:
       test-command: audit
+  lighthouse_general:
+    uses: ./.github/workflows/setup.yml
+    secrets: inherit
+    with:
+      test-command: audit
